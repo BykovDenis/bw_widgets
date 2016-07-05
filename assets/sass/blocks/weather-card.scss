@@ -1,0 +1,62 @@
+.weather-card{
+
+  float: left;
+  margin-left: 10px;
+
+  &__layout{
+    padding: 0 14px;
+    margin-top: 16px;
+    @include clearfix;
+  }
+
+  &__img{
+    display: block;
+    float: left;
+    margin-top: -15px;
+  }
+
+  &__col{
+    float: right;
+  }
+
+  &__col span{
+    font: 400 #{$font-size} / $line-height $font-roboto;
+    color: $color-black;
+    padding-top: 16px;
+  }
+
+  &__number{
+    font: 600 #{ $font-size * 3 + 6px} / $line-height $font-oswald;
+    color: $color-black;
+    margin: 0 auto;
+    padding-top:20px;
+  }
+
+  &__degree{
+    font: 700 #{$font-size*2 + 2px} / $line-height $font-oswald;
+  }
+
+  &__row1{
+    @include clearfix;
+  }
+
+  &__row2{
+    padding-bottom: 20px;
+  }
+
+  &__means{
+    margin: 0;
+    font: 700 #{$font-size + 2px} / $line-height $font-roboto;
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__wind{
+    margin: 0;
+    font: 400 #{$font-size - 2px} / $line-height $font-roboto;
+    color: $color-black;
+    text-align: center;
+    padding:2px 0;
+  }
+
+}

@@ -4,16 +4,19 @@
   "description": "Чистый проект на gulp",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "imagemin-pngquant": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "browser-sync": "^2.13.0",
     "css-mqpacker": "^5.0.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
     "gulp-connect": "^4.1.0",
+    "gulp-copy": "0.0.2",
     "gulp-csso": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-jade": "^1.1.0",
