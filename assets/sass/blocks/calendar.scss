@@ -27,6 +27,12 @@
     height: 32px;
   }
 
-
+  &--small{
+    width: auto;
+    margin-left:0;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 5px;
+  }
 
 }

@@ -12,6 +12,19 @@
     border-bottom: 2px solid $color-black;
   }
 
+  &--small{
+    width: auto;
+    padding-right:10px;
+    padding-left:10px;
+  }
+
+  &--small h1{
+    padding-right: 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+
   &__layout{
     padding:0 14px;
     border-bottom: 2px solid $color-black;

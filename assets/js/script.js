@@ -1,4 +1,4 @@
-var graphic = document.getElementById("graphic");
+var render = (function(){var graphic = document.getElementById("graphic");
 
 var context = graphic.getContext('2d');
 graphic.width= 465;
@@ -54,3 +54,6 @@ context.strokeStyle = "#333";
 
 context.stroke();
 context.fill();
+});
+
+render();

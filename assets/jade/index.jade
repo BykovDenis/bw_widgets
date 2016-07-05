@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html
+html(lang="en")
   head
     meta(charset="utf-8")
     title Single page
@@ -58,8 +58,16 @@ html
               p.weather-card__wind Wind: 3 m/s West   
             .widget-menu__links.widget-menu__links--compact
               span More at
-              a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap                                       
-  script(src="js/script.js")
+              a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap  
+      .widget.widget--small
+        .widget-menu.widget-menu--small
+          h1.widget-menu__header Moscow  
+          ul.calendar.calendar--small
+            li.calendar__item  
+              img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+          p.weather-card__number.weather-card__number--small +16
+           sup.weather-card__degree 0        
+    script(src="js/script.js")
                                          
               
               

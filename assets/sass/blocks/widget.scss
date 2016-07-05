@@ -3,11 +3,20 @@
   border-radius: 6px;
   box-shadow: 1px 2px 18px 3px #aaa;
 
-  margin: 0 43px 53px;
+  margin: 0 43px 41px;
   background-color: $color-white;
 
+
   &--compact{
+    display: inline-block;
+    vertical-align: top;
     width: 225px;
+  }
+
+  &--small{
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
   }
 
   &__body{
@@ -27,7 +36,6 @@
   &__graphic{
     width: 465px;
     height: 79px;
-    margin-left:20px;
   }
 
 }
