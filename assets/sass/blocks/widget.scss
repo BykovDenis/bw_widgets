@@ -1,0 +1,41 @@
+.widget{
+
+  border-radius: 6px;
+  box-shadow: 1px 2px 18px 3px #aaa;
+
+  margin: 0 43px 41px;
+  background-color: $color-white;
+
+
+  &--compact{
+    display: inline-block;
+    vertical-align: top;
+    width: 225px;
+  }
+
+  &--small{
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+  }
+
+  &__body{
+    @include clearfix;
+  }
+
+  &__body--compact{
+    float:none;
+    margin: 0 auto;
+  }
+
+  &__calendar{
+    float: left;
+    margin-top: 5px;
+  }
+
+  &__graphic{
+    width: 465px;
+    height: 79px;
+  }
+
+}

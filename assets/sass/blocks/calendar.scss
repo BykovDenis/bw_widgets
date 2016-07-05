@@ -1,0 +1,38 @@
+.calendar{
+
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: baseline;
+  width: 425px;
+  margin-left: 40px;
+  padding:0;
+
+  &__item{
+    font: 600 #{$font-size} / $line-height $font-roboto;
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__item:last-child{
+    margin-right: 0;
+  }
+
+  &__item img{
+    display: block;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--small{
+    width: auto;
+    margin-left:0;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 5px;
+  }
+
+}

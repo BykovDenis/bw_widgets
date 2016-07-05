@@ -1,12 +1,18 @@
 /* Файл нормализации */
 @import "normalize";
 
+/* Шрифты */
+@import "fonts";
+
 /* Переменные */
 @import "variables";
 
-body{
+/* миксины */
+@import "mixin";
 
-  font-size:10px;
-  color: green;
-
-}
+/* Блоки */
+@import "blocks/main";
+@import "blocks/widget";
+@import "blocks/widget-menu";
+@import "blocks/weather-card";
+@import "blocks/calendar";

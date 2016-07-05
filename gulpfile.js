@@ -11,36 +11,10 @@ var jade = require('gulp-jade');
 var plumber = require('gulp-plumber');
 var postcss = require("gulp-postcss");
 var mqpacker = require("css-mqpacker");
-
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
-
-// Основные
-/*
-gulp.task('css', function () {
-gulp.src('./assets/css/*.css')
-.pipe(concatCss('style.min.css'))
-.pipe(minifyCss({compatibility: 'ie8'}))
-.pipe(autoprefixer({
-browsers: ['last 10 versions'],
-cascade: false
-}))
-.pipe(gulp.dest('./public/css/'));
-
-
-
-gulp.src('./assets/css/fight/*.css')
-.pipe(concatCss('fight.min.css'))
-.pipe(minifyCss({compatibility: 'ie8'}))
-.pipe(autoprefixer({
-browsers: ['last 10 versions'],
-cascade: false
-}))
-.pipe(gulp.dest('./public/css/'))
-.pipe(connect.reload());
-});
-
-*/
+var clean = require('gulp-clean');
+var pngquant = require('imagemin-pngquant');
 
 // browser-sync
 
@@ -68,7 +42,12 @@ gulp.task("serve", ["sass"], function(){
   });
 });
 
+/* оЧищаем папку product */
 
+gulp.task('clean', function () {
+	return gulp.src('./public/*', {force: true})
+		.pipe(clean());
+});
 
 gulp.task('html',function(){
 gulp.src('./assets/*.html')
@@ -133,6 +112,11 @@ livereload: true
 });
 
 
+gulp.task('copyFiles', function() {
+  // copy any html files in source/ to public/
+  gulp.src('./assets/fonts/*').pipe(gulp.dest('./public/fonts'));
+});
+
 
 // Watch
 gulp.task('watch',function(){
@@ -142,10 +126,12 @@ gulp.watch("./assets/*.html", ['html']);
 gulp.watch("./assets/js/*.js", ['js']);
 gulp.watch("./assets/js/libs/*.js", ['jslibs']);
 gulp.watch("./assets/js/modules/**/*.js", ['jsmods']);
+gulp.watch("./assets/*",['copyFiles']);
 gulp.watch("./public/*.html").on("change", server.reload );
 gulp.watch("./public/css/*.css").on("change", server.reload );
+
 });
 
 // Default
 //gulp.task('default', ['jade', 'html', 'css', 'sass', 'js','jslibs', 'jsmods', 'connect', 'watch']);
-gulp.task('default', ['jade', 'html', 'sass', 'js','jslibs', 'jsmods', 'connect', 'serve', 'watch']);
+gulp.task('default', ['clean','jade', 'sass', 'js','jslibs', 'jsmods', 'connect', 'serve', 'copyFiles','img','watch']);

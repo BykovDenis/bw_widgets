@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8"/>
     <title>Single page</title>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Hello world!!!  </h1>
+    <main class="main">
+      <div class="widget">
+        <div class="widget-menu widget-menu__layout">
+          <h1 class="widget-menu__header">Weather for Moscow</h1>
+          <div class="widget-menu__links"><span>More at</span><a href="http://openweathermap.org/" target="_blank" class="widget-menu__link">OpenWeatherMap</a></div>
+        </div>
+        <div class="widget__body">
+          <div class="weather-card">
+            <div class="weather-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-card__img"/>
+              <div class="weather-card__col">
+                <p class="weather-card__number">16<sup class="weather-card__degree">0 </sup></p><span>and rising</span>
+              </div>
+            </div>
+            <div class="weather-card__row2">
+              <p class="weather-card__means">Thunderstorm</p>
+              <p class="weather-card__wind">Wind: 3 m/s West</p>
+            </div>
+          </div>
+          <div class="widget__calendar">
+            <ul class="calendar">
+              <li class="calendar__item">Today<img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
+              <li class="calendar__item">Sat              <img src="img/04dbw@05x.png" width="32" height="32" alt="Sat"/></li>
+              <li class="calendar__item">Sun<img src="img/09dbw@05x.png" width="32" height="32" alt="Sun"/></li>
+              <li class="calendar__item">Mon <img src="img/01dbw@05x.png" width="32" height="32" alt="Mon"/></li>
+              <li class="calendar__item">Tue<img src="img/02dbw@05x.png" width="32" height="32" alt="Tue"/></li>
+              <li class="calendar__item">Wed<img src="img/02dbw@05x.png" width="32" height="32" alt="Wed"/></li>
+              <li class="calendar__item">Thu<img src="img/10dbw@05x.png" width="32" height="32" alt="Thu"/></li>
+              <li class="calendar__item">Fri<img src="img/02dbw@05x.png" width="32" height="32" alt="Fri"/></li>
+            </ul>
+            <canvas id="graphic" width="465" height="79" class="widget__graphic"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="widget widget--compact"> 
+        <div class="widget-menu widget-menu--compact widget-menu__layout">
+          <h1 class="widget-menu__header">Weather for Moscow          </h1>
+        </div>
+        <div class="widget__body widget__body--compact">
+          <div class="weather-card">
+            <div class="weather-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-card__img"/>
+              <div class="weather-card__col">
+                <p class="weather-card__number">16<sup class="weather-card__degree">0 </sup></p><span>and rising</span>
+              </div>
+            </div>
+            <div class="weather-card__row2">
+              <p class="weather-card__means">Thunderstorm</p>
+              <p class="weather-card__wind">Wind: 3 m/s West   </p>
+            </div>
+            <div class="widget-menu__links widget-menu__links--compact"><span>More at</span><a href="http://openweathermap.org/" target="_blank" class="widget-menu__link">OpenWeatherMap  </a></div>
+          </div>
+        </div>
+      </div>
+      <div class="widget widget--small">
+        <div class="widget-menu widget-menu--small">
+          <h1 class="widget-menu__header">Moscow  </h1>
+          <ul class="calendar calendar--small">
+            <li class="calendar__item"> <img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
+          </ul>
+          <p class="weather-card__number weather-card__number--small">+16<sup class="weather-card__degree">0        </sup></p>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
