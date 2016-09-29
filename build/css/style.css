@@ -415,7 +415,7 @@ th {
   .widget--small {
     display: inline-block;
     vertical-align: top;
-    width: 180px; }
+    /*width: 180px;*/ }
   .widget__body {
     display: table;
     clear: both;
@@ -451,6 +451,8 @@ th {
     float: none;
     display: inline-block;
     vertical-align: top; }
+  .widget-menu--small span {
+    display: none; }
   .widget-menu__layout {
     padding: 0 14px;
     border-bottom: 2px solid #333333; }
@@ -459,7 +461,9 @@ th {
     margin-bottom: 5px;
     margin-top: 21px;
     font: 700 18px / 1 "Roboto", Arial, sans-serif;
-    color: #333333; }
+    color: #333333;
+    word-break: break-all;
+    max-width: 470px; }
   .widget-menu__links {
     float: right;
     margin-top: 22px;
@@ -501,7 +505,9 @@ th {
   .weather-card__img {
     display: block;
     float: left;
-    margin-top: -15px; }
+    margin-top: -15px;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
   .weather-card__col {
     float: right; }
   .weather-card__col span {
@@ -534,7 +540,8 @@ th {
     margin: 0;
     font: 700 16px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
-    text-align: center; }
+    text-align: center;
+    text-transform: capitalize; }
   .weather-card__wind {
     margin: 0;
     font: 400 12px / 1 "Roboto", Arial, sans-serif;

@@ -13,6 +13,7 @@
     display: block;
     float: left;
     margin-top: -15px;
+    filter: grayscale(100%);
   }
 
   &__col{
@@ -62,6 +63,7 @@
     font: 700 #{$font-size + 2px} / $line-height $font-roboto;
     color: $color-black;
     text-align: center;
+    text-transform: capitalize;
   }
 
   &__wind{

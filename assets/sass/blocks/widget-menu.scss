@@ -25,6 +25,10 @@
     vertical-align: top;
   }
 
+  &--small span{
+    display: none;
+  }
+
   &__layout{
     padding:0 14px;
     border-bottom: 2px solid $color-black;
@@ -37,8 +41,8 @@
     margin-top: 21px;
     font: 700 #{$font-size+4px} / $line-height $font-roboto;
     color: $color-black;
-
-
+    word-break: break-all;
+    max-width: 470px;
   }
 
   &__links{
@@ -83,7 +87,5 @@
     background-size: 14.3px 14.3px ;
     padding-right:17px;
   }
-
-
 
 }
