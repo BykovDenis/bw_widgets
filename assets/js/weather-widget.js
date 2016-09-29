@@ -293,7 +293,7 @@ export default class WeatherWidget extends CustomDate{
 
         var context = this.controls.graphic.getContext('2d');
         this.controls.graphic.width= 465;
-        this.controls.graphic.height = 79;
+        this.controls.graphic.height = 70;
 
         context.fillStyle = "#fff";
         context.fillRect(0,0,600,300);
@@ -303,31 +303,34 @@ export default class WeatherWidget extends CustomDate{
         var step = 55;
         var i = 0;
         var zoom = 4;
+        var stepY = 64;
+        var stepYTextUp = 58;
+        var stepYTextDown = 75;
         context.beginPath();
-        context.moveTo(step-10, -1*arr[i].min*zoom+64);
-        context.strokeText(arr[i].max+'º', step, -1*arr[i].max*zoom+58);
-        context.lineTo(step-10, -1*arr[i++].max*zoom+64);
+        context.moveTo(step-10, -1*arr[i].min*zoom+stepY);
+        context.strokeText(arr[i].max+'º', step, -1*arr[i].max*zoom+stepYTextUp);
+        context.lineTo(step-10, -1*arr[i++].max*zoom+stepY);
         while(i<arr.length){
             step +=55;
-            context.lineTo(step, -1*arr[i].max*zoom+64);
-            context.strokeText(arr[i].max+'º', step, -1*arr[i].max*zoom+58);
+            context.lineTo(step, -1*arr[i].max*zoom+stepY);
+            context.strokeText(arr[i].max+'º', step, -1*arr[i].max*zoom+stepYTextUp);
             i++;
         }
-        context.lineTo(step+30, -1*arr[--i].max*zoom+64)
+        context.lineTo(step+30, -1*arr[--i].max*zoom+stepY)
         step = 55;
         i = 0 ;
-        context.moveTo(step-10, -1*arr[i].min*zoom+64);
-        context.strokeText(arr[i].min+'º', step, -1*arr[i].min*zoom+75);
-        context.lineTo(step-10, -1*arr[i++].min*zoom+64);
+        context.moveTo(step-10, -1*arr[i].min*zoom+stepY);
+        context.strokeText(arr[i].min+'º', step, -1*arr[i].min*zoom+stepYTextDown);
+        context.lineTo(step-10, -1*arr[i++].min*zoom+stepY);
         while(i<arr.length){
             step +=55;
-            context.lineTo(step, -1*arr[i].min*zoom+64);
-            context.strokeText(arr[i].min+'º', step, -1*arr[i].min*zoom+75);
+            context.lineTo(step, -1*arr[i].min*zoom+stepY);
+            context.strokeText(arr[i].min+'º', step, -1*arr[i].min*zoom+stepYTextDown);
             i++;
         }
-        context.lineTo(step+30, -1*arr[--i].min*zoom+64);
+        context.lineTo(step+30, -1*arr[--i].min*zoom+stepY);
         context.fillStyle = "#333";
-        context.lineTo(step+30, -1*arr[i].max*zoom+64);
+        context.lineTo(step+30, -1*arr[i].max*zoom+stepY);
         context.closePath();
 
         context.strokeStyle = "#333";
