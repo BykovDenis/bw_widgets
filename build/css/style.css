@@ -411,7 +411,7 @@ th {
   .widget--compact {
     display: inline-block;
     vertical-align: top;
-    width: 225px; }
+    width: 230px; }
   .widget--small {
     display: inline-block;
     vertical-align: top;
@@ -575,7 +575,9 @@ th {
   .calendar__item {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
-    text-align: center; }
+    text-align: center;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
   .calendar__item:last-child {
     margin-right: 0; }
   .calendar__item img {

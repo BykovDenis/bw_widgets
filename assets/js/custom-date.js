@@ -152,6 +152,17 @@ export default class CustomDate extends Date {
         return `${hours<10?`0${hours}`:hours}:${minutes<10?`0${minutes}`:minutes} `;
     }
 
+
+    /**
+     * Возращение номера дня в неделе по unixtime timestamp
+     * @param unixtime
+     * @returns {number}
+     */
+    getNumberDayInWeekByUnixTime(unixtime){
+        var date = new Date(unixtime*1000);
+        return date.getDay();
+    }
+
     /** Вернуть наименование дня недели
      * @param dayNumber
      * @returns {string}

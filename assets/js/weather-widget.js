@@ -106,7 +106,17 @@ export default class WeatherWidget extends CustomDate{
                                     .then(
                                         response => {
                                             this.weather.windSpeed = response[this.params.lang];
-                                            this.parseDataFromServer()
+                                            this.httpGet(this.urls.paramsUrlForeDaily)
+                                                .then(
+                                                    response => {
+                                                        this.weather.forecastDaily = response;
+                                                        this.parseDataFromServer()
+                                                    },
+                                                    error => {
+                                                        console.log(`Возникла ошибка ${error}`);
+                                                        this.parseDataFromServer();
+                                                    }
+                                                )
                                         },
                                         error => {
                                             console.log(`Возникла ошибка ${error}`);
@@ -206,7 +216,7 @@ export default class WeatherWidget extends CustomDate{
     renderWidget(metadata) {
         for (let elem in this.controls.cityName) {
             if (this.controls.cityName.hasOwnProperty(elem)) {
-                this.controls.cityName[elem].innerHTML = `<span>Weather in</span> ${metadata.cityName}`;
+                this.controls.cityName[elem].innerHTML = `<span>Weather for</span> ${metadata.cityName}`;
             }
         }
         for (let elem in this.controls.temperature) {
@@ -235,6 +245,95 @@ export default class WeatherWidget extends CustomDate{
                 }
             }
 
+        if(this.weather.forecastDaily)
+            this.prepareDataForGraphic();
+
+    }
+
+    prepareDataForGraphic(){
+        var arr = [];
+
+        arr.push({
+            'min':Math.round(this.weather.forecastDaily.list[0].temp.min),
+            'max': Math.round(this.weather.forecastDaily.list[0].temp.max),
+            'day': 'Today',
+            'icon': this.weather.forecastDaily.list[0].weather[0].icon
+        });
+
+        for(var elem in this.weather.forecastDaily.list){
+            arr.push({
+                'min': Math.round(this.weather.forecastDaily.list[elem].temp.min),
+                'max': Math.round(this.weather.forecastDaily.list[elem].temp.max),
+                'day': this.getDayNameOfWeekByDayNumber(this.getNumberDayInWeekByUnixTime(this.weather.forecastDaily.list[elem].dt)),
+                'icon': this.weather.forecastDaily.list[elem].weather[0].icon
+            });
+        }
+
+        return this.drawGraphic(arr);
+    }
+
+    /**
+     * Отрисовка названия дней недели и иконок с погодой
+     * @param data
+     */
+    renderIconsDaysOfWeek(data){
+        var that = this;
+        data.forEach(function(elem, index,data){
+            that.controls.calendarItem[index].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
+        });
+    }
+
+
+    /**
+     * Отображение графика погоды на неделю
+     */
+    drawGraphic(arr){
+
+        this.renderIconsDaysOfWeek(arr);
+
+        var context = this.controls.graphic.getContext('2d');
+        this.controls.graphic.width= 465;
+        this.controls.graphic.height = 79;
+
+        context.fillStyle = "#fff";
+        context.fillRect(0,0,600,300);
+
+        context.font = "Oswald-Medium, Arial, sans-seri 14px";
+
+        var step = 55;
+        var i = 0;
+        var zoom = 4;
+        context.beginPath();
+        context.moveTo(step-10, -1*arr[i].min*zoom+64);
+        context.strokeText(arr[i].max+'º', step, -1*arr[i].max*zoom+58);
+        context.lineTo(step-10, -1*arr[i++].max*zoom+64);
+        while(i<arr.length){
+            step +=55;
+            context.lineTo(step, -1*arr[i].max*zoom+64);
+            context.strokeText(arr[i].max+'º', step, -1*arr[i].max*zoom+58);
+            i++;
+        }
+        context.lineTo(step+30, -1*arr[--i].max*zoom+64)
+        step = 55;
+        i = 0 ;
+        context.moveTo(step-10, -1*arr[i].min*zoom+64);
+        context.strokeText(arr[i].min+'º', step, -1*arr[i].min*zoom+75);
+        context.lineTo(step-10, -1*arr[i++].min*zoom+64);
+        while(i<arr.length){
+            step +=55;
+            context.lineTo(step, -1*arr[i].min*zoom+64);
+            context.strokeText(arr[i].min+'º', step, -1*arr[i].min*zoom+75);
+            i++;
+        }
+        context.lineTo(step+30, -1*arr[--i].min*zoom+64);
+        context.fillStyle = "#333";
+        context.lineTo(step+30, -1*arr[i].max*zoom+64);
+        context.closePath();
+
+        context.strokeStyle = "#333";
+
+        context.stroke();
+        context.fill();
     }
 
     render(){

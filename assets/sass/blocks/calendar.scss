@@ -14,6 +14,7 @@
     font: 600 #{$font-size} / $line-height $font-roboto;
     color: $color-black;
     text-align: center;
+    filter: grayscale(100%);
   }
 
   &__item:last-child{
