@@ -4,6 +4,7 @@ html(lang="en")
     meta(charset="utf-8")
     title Single page
     link(href="css/style.css" rel="stylesheet")
+    script(src="js/libs/d3.min.js")
   body
     main.main
       .widget
@@ -41,7 +42,7 @@ html(lang="en")
                 img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")                            
               li.calendar__item Fri
                 img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri") 
-            canvas.widget__graphic(id="graphic" width="465" height="79")
+            div.widget__graphic(id="graphic")
       .widget.widget--compact 
         .widget-menu.widget-menu--compact.widget-menu__layout
           h1.widget-menu__header Weather for Moscow          

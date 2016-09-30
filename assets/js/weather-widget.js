@@ -4,6 +4,7 @@
 "use strict";
 
 import CustomDate from "./custom-date";
+import Graphic from './graphic-d3js';
 
 export default class WeatherWidget extends CustomDate{
 
@@ -253,23 +254,18 @@ export default class WeatherWidget extends CustomDate{
     prepareDataForGraphic(){
         var arr = [];
 
-        arr.push({
-            'min':Math.round(this.weather.forecastDaily.list[0].temp.min),
-            'max': Math.round(this.weather.forecastDaily.list[0].temp.max),
-            'day': 'Today',
-            'icon': this.weather.forecastDaily.list[0].weather[0].icon
-        });
-
         for(var elem in this.weather.forecastDaily.list){
+            let day = this.getDayNameOfWeekByDayNumber(this.getNumberDayInWeekByUnixTime(this.weather.forecastDaily.list[elem].dt));
             arr.push({
                 'min': Math.round(this.weather.forecastDaily.list[elem].temp.min),
                 'max': Math.round(this.weather.forecastDaily.list[elem].temp.max),
-                'day': this.getDayNameOfWeekByDayNumber(this.getNumberDayInWeekByUnixTime(this.weather.forecastDaily.list[elem].dt)),
-                'icon': this.weather.forecastDaily.list[elem].weather[0].icon
+                'day': (elem != 0) ? day : 'Today',
+                'icon': this.weather.forecastDaily.list[elem].weather[0].icon,
+                'date': this.timestampToDateTime(this.weather.forecastDaily.list[elem].dt)
             });
         }
 
-        return this.drawGraphic(arr);
+        return this.drawGraphicD3(arr);
     }
 
     /**
@@ -281,6 +277,36 @@ export default class WeatherWidget extends CustomDate{
         data.forEach(function(elem, index,data){
             that.controls.calendarItem[index].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
         });
+
+        return data;
+    }
+
+    /**
+     * Отрисовка графика с помощью библиотеки D3
+     */
+    drawGraphicD3(data){
+
+        this.renderIconsDaysOfWeek(data);
+
+        //Параметризуем область отрисовки графика
+        let params = {
+            id: "#graphic",
+            data: data,
+            offsetX: 15,
+            offsetY: 10,
+            width: 420,
+            height: 79,
+            rawData: [],
+            margin: 10,
+            colorPolilyne: "#333",
+            fontSize: "12px",
+            fontColor: "#333",
+            strokeWidth: "1px"
+        }
+
+        // Реконструкция процедуры рендеринга графика температуры
+        let objGraphicD3 =  new Graphic(params);
+        objGraphicD3.render();
     }
 
 

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let urls = {
         urlWeatherAPI: `${urlDomain}/data/2.5/weather?q=${paramsWidget.cityName}&units=${paramsWidget.units}&appid=${paramsWidget.appid}`,
-        paramsUrlForeDaily: `${urlDomain}/data/2.5/forecast/daily?q=${paramsWidget.cityName}&units=${paramsWidget.units}&appid=${paramsWidget.appid}`,
+        paramsUrlForeDaily: `${urlDomain}/data/2.5/forecast/daily?q=${paramsWidget.cityName}&units=${paramsWidget.units}&cnt=8&appid=${paramsWidget.appid}`,
         windSpeed: "data/wind-speed-data.json",
         windDirection: "data/wind-direction-data.json",
         clouds: "data/clouds-data.json",
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const objWidget = new WeatherWidget(paramsWidget, controlsWidget, urls);
-    let jsonFromAPI = objWidget.render();
+    var jsonFromAPI = objWidget.render();
+
 
 });

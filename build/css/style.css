@@ -427,8 +427,9 @@ th {
     float: left;
     margin-top: 5px; }
   .widget__graphic {
-    width: 465px;
-    height: 79px; }
+    width: 420px;
+    height: 79px;
+    margin-left: 38px; }
 
 .widget-menu {
   width: 650px;

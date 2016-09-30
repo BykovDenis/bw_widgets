@@ -186,5 +186,15 @@ export default class CustomDate extends Date {
     compareDatesWithToday(date) {
         return date.toLocaleDateString() === (new Date()).toLocaleDateString();
     }
+
+    convertStringDateMMDDYYYHHToDate(date){
+        let re =/(\d{2})(\.{1})(\d{2})(\.{1})(\d{4})/;
+        let resDate = re.exec(date);
+        if(resDate.length == 6){
+            return new Date(`${resDate[5]}-${resDate[3]}-${resDate[1]}`)
+        }
+        // Если дата не распарсена берем текущую
+        return new Date();
+    }
 }
 
