@@ -4,7 +4,14 @@ import WeatherWidget from './weather-widget';
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    var urlDomain = "http://api.openweathermap.org";
+    //Формируем параметр фильтра по городу
+    let q = '';
+    if(window.location.search)
+        q = window.location.search;
+    else
+        q = "?q=London";
+
+    let urlDomain = "http://api.openweathermap.org";
 
     let paramsWidget = {
         cityName: 'Moscow',
@@ -25,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     let urls = {
-        urlWeatherAPI: `${urlDomain}/data/2.5/weather?q=${paramsWidget.cityName}&units=${paramsWidget.units}&appid=${paramsWidget.appid}`,
-        paramsUrlForeDaily: `${urlDomain}/data/2.5/forecast/daily?q=${paramsWidget.cityName}&units=${paramsWidget.units}&cnt=8&appid=${paramsWidget.appid}`,
+        urlWeatherAPI: `${urlDomain}/data/2.5/weather${q}&units=${paramsWidget.units}&appid=${paramsWidget.appid}`,
+        paramsUrlForeDaily: `${urlDomain}/data/2.5/forecast/daily${q}&units=${paramsWidget.units}&cnt=8&appid=${paramsWidget.appid}`,
         windSpeed: "data/wind-speed-data.json",
         windDirection: "data/wind-direction-data.json",
         clouds: "data/clouds-data.json",
