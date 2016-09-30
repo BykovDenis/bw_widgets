@@ -596,3 +596,6 @@ th {
     display: inline-block;
     vertical-align: top;
     padding-right: 5px; }
+    .calendar--small img {
+      position: relative;
+      top: 3px; }
