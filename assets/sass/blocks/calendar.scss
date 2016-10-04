@@ -1,7 +1,6 @@
 .calendar{
 
   list-style: none;
-  list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -14,8 +13,12 @@
     font: 600 #{$font-size} / $line-height $font-roboto;
     color: $color-black;
     text-align: center;
+  }
+
+  &--grayscale li{
     filter: grayscale(100%);
   }
+
 
   &__item:last-child{
     margin-right: 0;
@@ -30,16 +33,25 @@
 
   &--small{
     width: auto;
-    margin-left:0;
+    margin:0;
     display: inline-block;
     vertical-align: top;
     padding-right: 5px;
-
-    img{
-      position: relative;
-      top: 3px;
-    }
+    font-size: 0;
   }
 
+  &--small &__item {
+    padding: 13px 2px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small &__item--blue{
+    background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  }
+
+  &--small &__item--brown{
+    background-color: $color-white;
+  }
 
 }

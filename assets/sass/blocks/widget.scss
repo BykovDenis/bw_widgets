@@ -1,17 +1,17 @@
 .widget{
 
   border-radius: 6px;
-  box-shadow: 10px -2px 20px 2px rgba(0,0,0,.1);
+  box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
 
   margin: 0 43px 41px;
   background-color: $color-white;
-  width: 691px;
+  width: 680px;
 
 
   &--compact{
     display: inline-block;
     vertical-align: top;
-    width: 230px;
+    width: 225px;
   }
 
   &--small{
@@ -22,11 +22,13 @@
 
   &__body{
     @include clearfix;
+    width: $width-normal-widget;
   }
 
   &__body--compact{
     float:none;
     margin: 0 auto;
+    width: $width-compact-widget;
   }
 
   &__calendar{
@@ -38,6 +40,18 @@
     width: 420px;
     height: 79px;
     margin-left: 38px;
+  }
+
+  &__body--blue {
+    background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  }
+
+  &--blue{
+    background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  }
+
+  &--brown{
+    background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
   }
 
 }

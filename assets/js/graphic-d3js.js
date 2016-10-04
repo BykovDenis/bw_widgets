@@ -277,7 +277,7 @@ export default class Graphic extends CustomDate{
 
             svg.append("text")
                 .attr("x", elem.x)
-                .attr("y", elem.minT + params.offsetY/2+10)
+                .attr("y", elem.minT + params.offsetY/2+7)
                 .attr("text-anchor", "middle")
                 .style("font-size", params.fontSize)
                 .style("stroke", params.fontColor)

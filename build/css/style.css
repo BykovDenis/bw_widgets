@@ -412,15 +412,15 @@ th {
 .widget {
   -webkit-border-radius: 6px;
           border-radius: 6px;
-  -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
   margin: 0 43px 41px;
   background-color: #ffffff;
-  width: 691px; }
+  width: 680px; }
   .widget--compact {
     display: inline-block;
     vertical-align: top;
-    width: 230px; }
+    width: 225px; }
   .widget--small {
     display: inline-block;
     vertical-align: top;
@@ -428,10 +428,12 @@ th {
   .widget__body {
     display: table;
     clear: both;
-    content: ''; }
+    content: '';
+    width: 680px; }
   .widget__body--compact {
     float: none;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 225px; }
   .widget__calendar {
     float: left;
     margin-top: 5px; }
@@ -439,27 +441,38 @@ th {
     width: 420px;
     height: 79px;
     margin-left: 38px; }
+  .widget__body--blue {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
+    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
+    background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
+  .widget--blue {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
+    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
+    background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
+  .widget--brown {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
+    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
+    background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
 
 .widget-menu {
-  width: 650px;
+  width: 680px;
   margin: 0 auto;
   display: table;
   clear: both;
   content: '';
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+  /* Описание цветовых схем */ }
   .widget-menu--compact {
-    width: auto;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-bottom: 2px solid #333333;
-    -webkit-border-radius: 6px 6px 0 0;
-            border-radius: 6px 6px 0 0; }
+    width: 225px; }
   .widget-menu--small {
     width: auto;
     padding-right: 10px;
     padding-left: 10px;
     -webkit-border-radius: 6px;
-            border-radius: 6px; }
+            border-radius: 6px;
+    min-height: 58px; }
   .widget-menu--small h1 {
     padding-right: 10px;
     float: none;
@@ -468,8 +481,14 @@ th {
   .widget-menu--small span {
     display: none; }
   .widget-menu__layout {
-    padding: 0 14px;
-    border-bottom: 2px solid #333333; }
+    display: table;
+    clear: both;
+    content: '';
+    margin: 0 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-bottom: 2px solid #333333;
+    width: 622px; }
   .widget-menu__header {
     float: left;
     margin-bottom: 5px;
@@ -481,19 +500,23 @@ th {
   .widget-menu__links {
     float: right;
     margin-top: 22px;
-    margin-bottom: 5px; }
+    -webkit-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px; }
   .widget-menu__links span {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
     padding-right: 3px; }
+  .widget-menu--compact .widget-menu__layout {
+    width: 167px; }
   .widget-menu__links--compact {
+    width: 225px;
     float: none;
-    text-align: center;
-    margin: 11px auto;
+    text-align: center; }
+  .widget-menu__links--compact .widget-menu__layout {
+    width: 195px;
+    border-bottom: none;
     border-top: 2px solid #333333;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin: 0; }
+    padding: 10.2px 0 14.5px; }
   .widget-menu__link {
     font: 700 14px "Roboto", Arial, sans-serif;
     color: #333333;
@@ -506,10 +529,37 @@ th {
     background: url(../img/logo.jpg) 50% 50% no-repeat;
     background-size: 14.3px 14.3px;
     padding-right: 17px; }
+  .widget-menu--blue {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
+    background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
+    background-image: linear-gradient(to top left, #DDF730, #F1F029); }
+  .widget-menu--blue .widget-menu__layout {
+    border-bottom: 2px solid #FF4F98; }
+  .widget-menu--brown {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));
+    background-image: -webkit-linear-gradient(bottom right, #FEB020, #FFD05C);
+    background-image: linear-gradient(to top left, #FEB020, #FFD05C); }
+  .widget-menu--brown .widget-menu__layout {
+    border-bottom: 2px solid #FF4F98; }
+  .widget-menu--small .widget-menu--blue {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
+    background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
+    background-image: linear-gradient(to top left, #DDF730, #F1F029); }
+  .widget-menu__links--blue {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
+    background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
+    background-image: linear-gradient(to top left, #DDF730, #F1F029); }
+  .widget-menu__links--brown {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));
+    background-image: -webkit-linear-gradient(bottom right, #FEB020, #FFD05C);
+    background-image: linear-gradient(to top left, #FEB020, #FFD05C); }
+  .widget-menu__links--compact .widget-menu__layout--blue {
+    border-top: 2px solid #FF4F98; }
+  .widget-menu__links--compact .widget-menu__layout--brown {
+    border-top: 2px solid #FF4F98; }
 
 .weather-card {
-  float: left;
-  margin-left: 10px; }
+  float: left; }
   .weather-card__layout {
     padding: 0 14px;
     margin-top: 16px;
@@ -519,7 +569,8 @@ th {
   .weather-card__img {
     display: block;
     float: left;
-    margin-top: -15px;
+    margin-top: -15px; }
+  .weather-card--grayscale {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
   .weather-card__col {
@@ -562,10 +613,12 @@ th {
     color: #333333;
     text-align: center;
     padding: 2px 0; }
+  .weather-card--compact {
+    float: none;
+    margin: 0 15px; }
 
 .calendar {
   list-style: none;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -589,7 +642,8 @@ th {
   .calendar__item {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
-    text-align: center;
+    text-align: center; }
+  .calendar--grayscale li {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
   .calendar__item:last-child {
@@ -601,10 +655,18 @@ th {
     height: 32px; }
   .calendar--small {
     width: auto;
-    margin-left: 0;
+    margin: 0;
     display: inline-block;
     vertical-align: top;
-    padding-right: 5px; }
-    .calendar--small img {
-      position: relative;
-      top: 3px; }
+    padding-right: 5px;
+    font-size: 0; }
+  .calendar--small .calendar__item {
+    padding: 13px 2px;
+    display: inline-block;
+    vertical-align: top; }
+  .calendar--small .calendar__item--blue {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
+    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
+    background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
+  .calendar--small .calendar__item--brown {
+    background-color: #ffffff; }

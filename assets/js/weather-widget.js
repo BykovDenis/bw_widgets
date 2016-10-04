@@ -229,7 +229,7 @@ export default class WeatherWidget extends CustomDate{
 
         for (let elem in this.controls.mainIconWeather) {
             if (this.controls.mainIconWeather.hasOwnProperty(elem)) {
-                this.controls.mainIconWeather[elem].src = this.getURLMainIcon(metadata.icon);
+                this.controls.mainIconWeather[elem].src = this.getURLMainIcon(metadata.icon, true);
                 this.controls.mainIconWeather[elem].alt = `Weather in ${metadata.cityName ? metadata.cityName : ''}`;
             }
         }
@@ -275,51 +275,61 @@ export default class WeatherWidget extends CustomDate{
      */
     renderIconsDaysOfWeek(data){
         var that = this;
+        debugger;
         data.forEach(function(elem, index,data){
             that.controls.calendarItem[index].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
+            that.controls.calendarItem[index+9].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
+            that.controls.calendarItem[index+18].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
         });
-
         return data;
     }
 
-    getURLMainIcon(nameIcon){
+    getURLMainIcon(nameIcon, color = false){
         // Создаем и инициализируем карту сопоставлений
         var mapIcons =  new Map();
-        // Дневные
-        mapIcons.set('01d', '01dbw');
-        mapIcons.set('02d', '02dbw');
-        mapIcons.set('03d', '03dbw');
-        mapIcons.set('03d', '03dbw');
-        mapIcons.set('04d', '04dbw');
-        mapIcons.set('05d', '05dbw');
-        mapIcons.set('06d', '06dbw');
-        mapIcons.set('07d', '07dbw');
-        mapIcons.set('08d', '08dbw');
-        mapIcons.set('09d', '09dbw');
-        mapIcons.set('10d', '10dbw');
-        mapIcons.set('11d', '11dbw');
-        mapIcons.set('13d', '13dbw');
-        // Ночные
-        mapIcons.set('01n', '01dbw');
-        mapIcons.set('02n', '02dbw');
-        mapIcons.set('03n', '03dbw');
-        mapIcons.set('03n', '03dbw');
-        mapIcons.set('04n', '04dbw');
-        mapIcons.set('05n', '05dbw');
-        mapIcons.set('06n', '06dbw');
-        mapIcons.set('07n', '07dbw');
-        mapIcons.set('08n', '08dbw');
-        mapIcons.set('09n', '09dbw');
-        mapIcons.set('10n', '10dbw');
-        mapIcons.set('11n', '11dbw');
-        mapIcons.set('13n', '13dbw');
 
-        if(mapIcons.get(nameIcon)) {
-            return `img/${mapIcons.get(nameIcon)}.png`;
+        if(!color) {
+            // Дневные
+            mapIcons.set('01d', '01dbw');
+            mapIcons.set('02d', '02dbw');
+            mapIcons.set('03d', '03dbw');
+            mapIcons.set('03d', '03dbw');
+            mapIcons.set('04d', '04dbw');
+            mapIcons.set('05d', '05dbw');
+            mapIcons.set('06d', '06dbw');
+            mapIcons.set('07d', '07dbw');
+            mapIcons.set('08d', '08dbw');
+            mapIcons.set('09d', '09dbw');
+            mapIcons.set('10d', '10dbw');
+            mapIcons.set('11d', '11dbw');
+            mapIcons.set('13d', '13dbw');
+            // Ночные
+            mapIcons.set('01n', '01dbw');
+            mapIcons.set('02n', '02dbw');
+            mapIcons.set('03n', '03dbw');
+            mapIcons.set('03n', '03dbw');
+            mapIcons.set('04n', '04dbw');
+            mapIcons.set('05n', '05dbw');
+            mapIcons.set('06n', '06dbw');
+            mapIcons.set('07n', '07dbw');
+            mapIcons.set('08n', '08dbw');
+            mapIcons.set('09n', '09dbw');
+            mapIcons.set('10n', '10dbw');
+            mapIcons.set('11n', '11dbw');
+            mapIcons.set('13n', '13dbw');
+
+            if(mapIcons.get(nameIcon)) {
+                return `img/${mapIcons.get(nameIcon)}.png`;
+            }
+            else {
+                return `http://openweathermap.org/img/w/${nameIcon}.png`;
+            }
+
         }
-        else {
-            return `http://openweathermap.org/img/w/${nameIcon}.png`;
+        else{
+            return `img/${nameIcon}.png`;
         }
+
     }
 
     /**
@@ -351,10 +361,12 @@ export default class WeatherWidget extends CustomDate{
 
         // отрисовка остальных графиков
         params.id = "#graphic1";
+        params.colorPolilyne = "#DDF730";
         objGraphicD3 =  new Graphic(params);
         objGraphicD3.render();
 
         params.id = "#graphic2";
+        params.colorPolilyne = "#FEB020";
         objGraphicD3 =  new Graphic(params);
         objGraphicD3.render();
     }
