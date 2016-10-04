@@ -7,54 +7,21 @@
     <script src="js/libs/d3.min.js"></script>
   </head>
   <body><!-- Бесцветный виджет -->
-    <main class="main main--gray">
-      <div class="container">
-        <div class="widget">
-          <div class="widget-menu">
-            <div class="widget-menu__layout">
-              <h1 class="widget-menu__header">Weather for Moscow</h1>
-              <div class="widget-menu__links"><span>More at</span><a href="//openweathermap.org/" target="_blank" class="widget-menu__link">OpenWeatherMap</a></div>
-            </div>
-          </div>
-          <div class="widget__body">
-            <div class="weather-card weather-card--grayscale">
-              <div class="weather-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-card__img"/>
-                <div class="weather-card__col">
-                  <p class="weather-card__number">0<sup class="weather-card__degree">0</sup></p><span>and rising</span>
-                </div>
-              </div>
-              <div class="weather-card__row2">
-                <p class="weather-card__means">-</p>
-                <p class="weather-card__wind">Wind:</p>
-              </div>
-            </div>
-            <div class="widget__calendar">
-              <ul class="calendar calendar--grayscale">
-                <li class="calendar__item">Today<img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
-                <li class="calendar__item">Sat<img src="img/04dbw@05x.png" width="32" height="32" alt="Sat"/></li>
-                <li class="calendar__item">Sun<img src="img/09dbw@05x.png" width="32" height="32" alt="Sun"/></li>
-                <li class="calendar__item">Mon<img src="img/01dbw@05x.png" width="32" height="32" alt="Mon"/></li>
-                <li class="calendar__item">Tue<img src="img/02dbw@05x.png" width="32" height="32" alt="Tue"/></li>
-                <li class="calendar__item">Wed<img src="img/02dbw@05x.png" width="32" height="32" alt="Wed"/></li>
-                <li class="calendar__item">Thu<img src="img/10dbw@05x.png" width="32" height="32" alt="Thu"/></li>
-                <li class="calendar__item">Fri<img src="img/02dbw@05x.png" width="32" height="32" alt="Fri"/></li>
-              </ul>
-              <div id="graphic" class="widget__graphic"></div>
-            </div>
-          </div>
-        </div>
-        <div class="container__item">
-          <div class="widget widget--compact">
-            <div class="widget-menu widget-menu--compact">
+    <div class="container__item">
+      <main class="main main--gray">
+        <div class="container">
+          <div class="widget">
+            <div class="widget-menu">
               <div class="widget-menu__layout">
                 <h1 class="widget-menu__header">Weather for Moscow</h1>
+                <div class="widget-menu__links"><span>More at</span><a href="//openweathermap.org/" target="_blank" class="widget-menu__link">OpenWeatherMap</a></div>
               </div>
             </div>
-            <div class="widget__body widget__body--compact">
-              <div class="weather-card weather-card--compact weather-card--grayscale">
+            <div class="widget__body">
+              <div class="weather-card weather-card--grayscale">
                 <div class="weather-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-card__img"/>
                   <div class="weather-card__col">
-                    <p class="weather-card__number">-<sup class="weather-card__degree">0</sup></p><span>and rising</span>
+                    <p class="weather-card__number">0<sup class="weather-card__degree">0</sup></p><span>and rising</span>
                   </div>
                 </div>
                 <div class="weather-card__row2">
@@ -62,35 +29,71 @@
                   <p class="weather-card__wind">Wind:</p>
                 </div>
               </div>
-              <div class="widget-menu__links widget-menu__links--compact">
-                <div class="widget-menu__layout"><span>More at</span><a href="http://openweathermap.org/" target="_blank" class="widget-menu__link">OpenWeatherMap</a></div>
+              <div class="widget__calendar">
+                <ul class="calendar calendar--grayscale">
+                  <li class="calendar__item">Today<img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
+                  <li class="calendar__item">Sat<img src="img/04dbw@05x.png" width="32" height="32" alt="Sat"/></li>
+                  <li class="calendar__item">Sun<img src="img/09dbw@05x.png" width="32" height="32" alt="Sun"/></li>
+                  <li class="calendar__item">Mon<img src="img/01dbw@05x.png" width="32" height="32" alt="Mon"/></li>
+                  <li class="calendar__item">Tue<img src="img/02dbw@05x.png" width="32" height="32" alt="Tue"/></li>
+                  <li class="calendar__item">Wed<img src="img/02dbw@05x.png" width="32" height="32" alt="Wed"/></li>
+                  <li class="calendar__item">Thu<img src="img/10dbw@05x.png" width="32" height="32" alt="Thu"/></li>
+                  <li class="calendar__item">Fri<img src="img/02dbw@05x.png" width="32" height="32" alt="Fri"/></li>
+                </ul>
+                <div id="graphic" class="widget__graphic"></div>
               </div>
             </div>
           </div>
-          <div class="container">
-            <div class="widget widget--small">
-              <div class="widget-menu widget-menu--small">
-                <h1 class="widget-menu__header">Moscow</h1>
-                <ul class="calendar calendar--grayscale calendar--small">
-                  <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-card__img"/></li>
-                </ul>
-                <p class="weather-card__number weather-card__number--small">0<sup class="weather-card__degree"></sup></p>
+          <div class="container__item">
+            <div class="widget widget--compact">
+              <div class="widget-menu widget-menu--compact">
+                <div class="widget-menu__layout">
+                  <h1 class="widget-menu__header">Weather for Moscow</h1>
+                </div>
+              </div>
+              <div class="widget__body widget__body--compact">
+                <div class="weather-card weather-card--compact weather-card--grayscale">
+                  <div class="weather-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-card__img"/>
+                    <div class="weather-card__col">
+                      <p class="weather-card__number">-<sup class="weather-card__degree">0</sup></p><span>and rising</span>
+                    </div>
+                  </div>
+                  <div class="weather-card__row2">
+                    <p class="weather-card__means">-</p>
+                    <p class="weather-card__wind">Wind:</p>
+                  </div>
+                </div>
+                <div class="widget-menu__links widget-menu__links--compact">
+                  <div class="widget-menu__layout"><span>More at</span><a href="http://openweathermap.org/" target="_blank" class="widget-menu__link">OpenWeatherMap</a></div>
+                </div>
               </div>
             </div>
-            <div class="widget widget--small">
-              <div class="widget-menu widget-menu--small">
-                <h1 class="widget-menu__header">Moscow</h1>
-                <ul class="calendar calendar--grayscale calendar--small2">
-                  <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-card__img"/></li>
-                </ul>
-                <p class="weather-card__number weather-card__number--small">0<sup class="weather-card__degree"></sup></p>
+            <div class="container">
+              <div class="widget widget--small">
+                <div class="widget-menu widget-menu--small">
+                  <h1 class="widget-menu__header">Moscow</h1>
+                  <ul class="calendar calendar--grayscale calendar--small">
+                    <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-card__img"/></li>
+                  </ul>
+                  <p class="weather-card__number weather-card__number--small">0<sup class="weather-card__degree"></sup></p>
+                </div>
+              </div>
+              <div class="widget widget--small">
+                <div class="widget-menu widget-menu--small">
+                  <h1 class="widget-menu__header">Moscow</h1>
+                  <ul class="calendar calendar--grayscale calendar--small2">
+                    <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-card__img"/></li>
+                  </ul>
+                  <p class="weather-card__number weather-card__number--small">0<sup class="weather-card__degree"></sup></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main><!-- Синий виджет -->
-    <div class="container">
+      </main>
+      <main class="main main--gray"></main>
+    </div><!-- Синий виджет -->
+    <div class="container__item">
       <main class="main main--blue">
         <div class="widget widget--blue">
           <div class="widget-menu widget-menu--blue">
@@ -172,8 +175,9 @@
           </div>
         </div>
       </main>
+      <main class="main main--blue"></main>
     </div><!-- Коричневый виджет -->
-    <div class="container">
+    <div class="container__item">
       <main class="main main--brown">
         <div class="widget">
           <div class="widget-menu widget-menu--brown">
@@ -255,6 +259,7 @@
           </div>
         </div>
       </main>
+      <main class="main main--brown"></main>
     </div>
     <script src="js/weather-widget.js"></script>
   </body>
