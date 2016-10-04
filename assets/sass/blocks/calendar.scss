@@ -40,6 +40,7 @@
     font-size: 0;
   }
 
+  /* маленький виджет */
   &--small &__item {
     padding: 13px 2px;
     display: inline-block;
@@ -51,6 +52,31 @@
   }
 
   &--small &__item--brown{
+    background-color: $color-white;
+  }
+
+  /* маленький виджет с увеличенным значком */
+
+  &--small2{
+    width: auto;
+    margin:0;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 5px;
+    font-size: 0;
+  }
+
+  &--small2 &__item {
+    padding: 13px 13px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small2 &__item--blue{
+    background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  }
+
+  &--small2 &__item--brown{
     background-color: $color-white;
   }
 

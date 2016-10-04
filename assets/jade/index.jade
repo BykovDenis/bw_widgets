@@ -8,202 +8,235 @@ html(lang="en")
     body
         <!-- Бесцветный виджет -->
         main.main.main--gray
-            .widget
-                .widget-menu
-                    .widget-menu__layout
-                        h1.widget-menu__header Weather for Moscow
-                        .widget-menu__links
-                            span More at
-                            a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-                .widget__body
-                    .weather-card.weather-card--grayscale
-                        .weather-card__row1
-                            img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                            .weather-card__col
-                                p.weather-card__number 0
-                                    sup.weather-card__degree 0
-                                span and rising
-                        .weather-card__row2
-                            p.weather-card__means -
-                            p.weather-card__wind Wind:
-                    .widget__calendar
-                        ul.calendar.calendar--grayscale
-                            li.calendar__item Today
-                                img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                            li.calendar__item Sat
-                                img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
-                            li.calendar__item Sun
-                                img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
-                            li.calendar__item Mon
-                                img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
-                            li.calendar__item Tue
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
-                            li.calendar__item Wed
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
-                            li.calendar__item Thu
-                                img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
-                            li.calendar__item Fri
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                        div.widget__graphic(id="graphic")
-            .widget.widget--compact
-                .widget-menu.widget-menu--compact
-                    .widget-menu__layout
-                        h1.widget-menu__header Weather for Moscow
-                .widget__body.widget__body--compact
-                    .weather-card.weather-card--compact.weather-card--grayscale
-                        .weather-card__row1
-                            img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                            .weather-card__col
-                                p.weather-card__number -
-                                    sup.weather-card__degree 0
-                                span and rising
-                        .weather-card__row2
-                            p.weather-card__means -
-                            p.weather-card__wind Wind:
-                    .widget-menu__links.widget-menu__links--compact
+            .container
+                .widget
+                    .widget-menu
                         .widget-menu__layout
-                            span More at
-                            a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-            .widget.widget--small
-                .widget-menu.widget-menu--small
-                    h1.widget-menu__header Moscow
-                    ul.calendar.calendar--grayscale.calendar--small
-                        li.calendar__item
-                            img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                    p.weather-card__number.weather-card__number--small 0
-                        sup.weather-card__degree
-        <!-- Синий виджет -->
-        main.main.main--blue
-            .widget.widget--blue
-                .widget-menu.widget-menu--blue
-                    .widget-menu__layout
-                        h1.widget-menu__header Weather for Moscow
-                        .widget-menu__links
-                            span More at
-                            a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-                .widget__body
-                    .weather-card
-                        .weather-card__row1
-                            img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                            .weather-card__col
-                                p.weather-card__number 0
-                                    sup.weather-card__degree 0
-                                span and rising
-                        .weather-card__row2
-                            p.weather-card__means -
-                            p.weather-card__wind Wind:
-                    .widget__calendar
-                        ul.calendar
-                            li.calendar__item Today
-                                img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                            li.calendar__item Sat
-                                img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
-                            li.calendar__item Sun
-                                img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
-                            li.calendar__item Mon
-                                img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
-                            li.calendar__item Tue
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
-                            li.calendar__item Wed
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
-                            li.calendar__item Thu
-                                img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
-                            li.calendar__item Fri
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                        div.widget__graphic(id="graphic1")
-            .widget.widget--compact.widget--blue
-                .widget-menu.widget-menu--compact.widget-menu--blue
-                    .widget-menu__layout.widget-menu__layout--blue
-                        h1.widget-menu__header Weather for Moscow
-                .widget__body.widget__body--compact.widget__body--blue
-                    .weather-card.weather-card--compact
-                        .weather-card__row1
-                            img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                            .weather-card__col
-                                p.weather-card__number -
-                                    sup.weather-card__degree 0
-                                span and rising
-                        .weather-card__row2
-                            p.weather-card__means -
-                            p.weather-card__wind Wind:
-                    .widget-menu__links.widget-menu__links--compact.widget-menu__links--blue
-                        .widget-menu__layout.widget-menu__layout--blue
-                            span More at
-                            a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-            .widget.widget--small.widget--blue
-                .widget-menu.widget-menu--small.widget-menu--blue
-                    h1.widget-menu__header Moscow
-                    ul.calendar.calendar--small
-                        li.calendar__item.calendar__item--blue
-                            img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                    p.weather-card__number.weather-card__number--small 0
-                        sup.weather-card__degree
-        <!-- Коричневый виджет -->
-        main.main.main--brown
-            .widget
-                .widget-menu.widget-menu--brown
-                    .widget-menu__layout
-                        h1.widget-menu__header Weather for Moscow
-                        .widget-menu__links
-                            span More at
-                            a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-                .widget__body
-                    .weather-card
-                        .weather-card__row1
-                            img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                            .weather-card__col
-                                p.weather-card__number 0
-                                    sup.weather-card__degree 0
+                            h1.widget-menu__header Weather for Moscow
+                            .widget-menu__links
+                                span More at
+                                a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                    .widget__body
+                        .weather-card.weather-card--grayscale
+                            .weather-card__row1
+                                img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                .weather-card__col
+                                    p.weather-card__number 0
+                                        sup.weather-card__degree 0
                                     span and rising
-                        .weather-card__row2
-                            p.weather-card__means -
-                            p.weather-card__wind Wind:
-                    .widget__calendar
-                        ul.calendar
-                            li.calendar__item Today
-                                img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                            li.calendar__item Sat
-                                img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
-                            li.calendar__item Sun
-                                img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
-                            li.calendar__item Mon
-                                img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
-                            li.calendar__item Tue
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
-                            li.calendar__item Wed
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
-                            li.calendar__item Thu
-                                img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
-                            li.calendar__item Fri
-                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                        div.widget__graphic(id="graphic2")
-            .widget.widget--compact
-                .widget-menu.widget-menu--compact.widget-menu--brown
-                    .widget-menu__layout.widget-menu__layout--brown
-                        h1.widget-menu__header Weather for Moscow
-                .widget__body.widget__body--compact
-                    .weather-card.weather-card--compact
-                        .weather-card__row1
-                            img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                            .weather-card__col
-                                p.weather-card__number -
-                                    sup.weather-card__degree 0
-                                span and rising
-                        .weather-card__row2
-                            p.weather-card__means -
-                            p.weather-card__wind Wind:
-                    .widget-menu__links.widget-menu__links--compact.widget-menu__links--brown
-                        .widget-menu__layout.widget-menu__layout--brown
-                            span More at
-                            a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-            .widget.widget--small.widget
-                .widget-menu.widget-menu--small.widget-menu--brown
-                    h1.widget-menu__header Moscow
-                    ul.calendar.calendar--small
-                        li.calendar__item.calendar__item--brown
-                            img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                    p.weather-card__number.weather-card__number--small 0
-                        sup.weather-card__degree
+                            .weather-card__row2
+                                p.weather-card__means -
+                                p.weather-card__wind Wind:
+                        .widget__calendar
+                            ul.calendar.calendar--grayscale
+                                li.calendar__item Today
+                                    img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                li.calendar__item Sat
+                                    img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                                li.calendar__item Sun
+                                    img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                                li.calendar__item Mon
+                                    img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                                li.calendar__item Tue
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                                li.calendar__item Wed
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                                li.calendar__item Thu
+                                    img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                                li.calendar__item Fri
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                            div.widget__graphic(id="graphic")
+                .container__item
+                    .widget.widget--compact
+                        .widget-menu.widget-menu--compact
+                            .widget-menu__layout
+                                h1.widget-menu__header Weather for Moscow
+                        .widget__body.widget__body--compact
+                            .weather-card.weather-card--compact.weather-card--grayscale
+                                .weather-card__row1
+                                    img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                    .weather-card__col
+                                        p.weather-card__number -
+                                            sup.weather-card__degree 0
+                                        span and rising
+                                .weather-card__row2
+                                    p.weather-card__means -
+                                    p.weather-card__wind Wind:
+                            .widget-menu__links.widget-menu__links--compact
+                                .widget-menu__layout
+                                    span More at
+                                    a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                    .container
+                        .widget.widget--small
+                            .widget-menu.widget-menu--small
+                                h1.widget-menu__header Moscow
+                                ul.calendar.calendar--grayscale.calendar--small
+                                    li.calendar__item
+                                        img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-card__number.weather-card__number--small 0
+                                    sup.weather-card__degree
+                        .widget.widget--small
+                            .widget-menu.widget-menu--small
+                                h1.widget-menu__header Moscow
+                                ul.calendar.calendar--grayscale.calendar--small2
+                                    li.calendar__item
+                                        img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-card__number.weather-card__number--small 0
+                                    sup.weather-card__degree
+        <!-- Синий виджет -->
+        .container
+            main.main.main--blue
+                .widget.widget--blue
+                    .widget-menu.widget-menu--blue
+                        .widget-menu__layout
+                            h1.widget-menu__header Weather for Moscow
+                            .widget-menu__links
+                                span More at
+                                a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                    .widget__body
+                        .weather-card
+                            .weather-card__row1
+                                img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                .weather-card__col
+                                    p.weather-card__number 0
+                                        sup.weather-card__degree 0
+                                    span and rising
+                            .weather-card__row2
+                                p.weather-card__means -
+                                p.weather-card__wind Wind:
+                        .widget__calendar
+                            ul.calendar
+                                li.calendar__item Today
+                                    img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                li.calendar__item Sat
+                                    img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                                li.calendar__item Sun
+                                    img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                                li.calendar__item Mon
+                                    img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                                li.calendar__item Tue
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                                li.calendar__item Wed
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                                li.calendar__item Thu
+                                    img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                                li.calendar__item Fri
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                            div.widget__graphic(id="graphic1")
+                .container__item
+                    .widget.widget--compact.widget--blue
+                        .widget-menu.widget-menu--compact.widget-menu--blue
+                            .widget-menu__layout.widget-menu__layout--blue
+                                h1.widget-menu__header Weather for Moscow
+                        .widget__body.widget__body--compact.widget__body--blue
+                            .weather-card.weather-card--compact
+                                .weather-card__row1
+                                    img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                    .weather-card__col
+                                        p.weather-card__number -
+                                            sup.weather-card__degree 0
+                                        span and rising
+                                .weather-card__row2
+                                    p.weather-card__means -
+                                    p.weather-card__wind Wind:
+                            .widget-menu__links.widget-menu__links--compact.widget-menu__links--blue
+                                .widget-menu__layout.widget-menu__layout--blue
+                                    span More at
+                                    a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                    .container
+                        .widget.widget--small.widget--blue
+                            .widget-menu.widget-menu--small.widget-menu--blue
+                                h1.widget-menu__header Moscow
+                                ul.calendar.calendar--small
+                                    li.calendar__item.calendar__item--blue
+                                        img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-card__number.weather-card__number--small 0
+                                    sup.weather-card__degree
+                        .widget.widget--small2.widget--blue
+                            .widget-menu.widget-menu--small2.widget-menu--blue
+                                h1.widget-menu__header Moscow
+                                ul.calendar.calendar--small2
+                                    li.calendar__item.calendar__item--blue
+                                        img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-card__number.weather-card__number--small2 0
+                                    sup.weather-card__degree
+        <!-- Коричневый виджет -->
+        .container
+            main.main.main--brown
+                .widget
+                    .widget-menu.widget-menu--brown
+                        .widget-menu__layout
+                            h1.widget-menu__header Weather for Moscow
+                            .widget-menu__links
+                                span More at
+                                a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                    .widget__body
+                        .weather-card
+                            .weather-card__row1
+                                img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                .weather-card__col
+                                    p.weather-card__number 0
+                                        sup.weather-card__degree 0
+                                        span and rising
+                            .weather-card__row2
+                                p.weather-card__means -
+                                p.weather-card__wind Wind:
+                        .widget__calendar
+                            ul.calendar
+                                li.calendar__item Today
+                                    img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                li.calendar__item Sat
+                                    img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                                li.calendar__item Sun
+                                    img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                                li.calendar__item Mon
+                                    img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                                li.calendar__item Tue
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                                li.calendar__item Wed
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                                li.calendar__item Thu
+                                    img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                                li.calendar__item Fri
+                                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                            div.widget__graphic(id="graphic2")
+                .container__item
+                    .widget.widget--compact
+                        .widget-menu.widget-menu--compact.widget-menu--brown
+                            .widget-menu__layout.widget-menu__layout--brown
+                                h1.widget-menu__header Weather for Moscow
+                        .widget__body.widget__body--compact
+                            .weather-card.weather-card--compact
+                                .weather-card__row1
+                                    img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                    .weather-card__col
+                                        p.weather-card__number -
+                                            sup.weather-card__degree 0
+                                        span and rising
+                                .weather-card__row2
+                                    p.weather-card__means -
+                                    p.weather-card__wind Wind:
+                            .widget-menu__links.widget-menu__links--compact.widget-menu__links--brown
+                                .widget-menu__layout.widget-menu__layout--brown
+                                    span More at
+                                    a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                    .container
+                        .widget.widget--small.widget--brown
+                            .widget-menu.widget-menu--small.widget-menu--brown
+                                h1.widget-menu__header Moscow
+                                ul.calendar.calendar--small
+                                    li.calendar__item.calendar__item--brown
+                                        img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-card__number.weather-card__number--small 0
+                                    sup.weather-card__degree
+                        .widget.widget--small2.widget--brown
+                            .widget-menu.widget-menu--small2.widget-menu--brown
+                                h1.widget-menu__header Moscow
+                                ul.calendar.calendar--small2
+                                    li.calendar__item.calendar__item--brown
+                                        img.weather-card__img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-card__number.weather-card__number--small2 0
+                                    sup.weather-card__degree
         script(src="js/weather-widget.js")
 
 

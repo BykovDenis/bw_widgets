@@ -1,41 +1,19 @@
 .widget-menu{
 
-  width: 680px;
+  width: 100%;
   margin: 0 auto;
   @include clearfix;
   background-color: $color-white;
   border-radius: 6px 6px 0 0;
 
-  &--compact{
-    width: 225px;
-  }
-
-  &--small{
-    width: auto;
-    padding-right:10px;
-    padding-left:10px;
-    border-radius: 6px;
-    min-height: 58px;
-  }
-
-  &--small h1{
-    padding-right: 10px;
-    float: none;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  &--small span{
-    display: none;
-  }
-
   &__layout{
     @include clearfix;
-    margin:0 15px;
+    margin: 0 auto;
     padding-left: 14px;
     padding-right: 14px;
     border-bottom: 2px solid $color-black;
     width: 622px;
+
   }
 
   &__header{
@@ -60,6 +38,22 @@
     padding-right: 3px;
   }
 
+  &__link{
+    font: 700 $font-size / $line-height $font-roboto;
+    color: $color-black;
+    text-decoration: none;
+    opacity: 0.9;
+  }
+
+  &__link:before{
+    content:'';
+    width: 14.3px;
+    height: 14.3px;
+    background: url(../img/logo.jpg) 50% 50% no-repeat;
+    background-size: 14.3px 14.3px ;
+    padding-right:17px;
+  }
+
   &--compact &__layout{
     width: 167px;
   }
@@ -76,23 +70,46 @@
     border-bottom: none;
     border-top: 2px solid $color-black;
     padding: 10.2px 0 14.5px;
-
   }
 
-  &__link{
-    font: 700 $font-size / $line-height $font-roboto;
-    color: $color-black;
-    text-decoration: none;
-    opacity: 0.9;
+  &--compact{
+    width: 225px;
   }
 
-  &__link:before{
-    content:'';
-    width: 14.3px;
-    height: 14.3px;
-    background: url(../img/logo.jpg) 50% 50% no-repeat;
-    background-size: 14.3px 14.3px ;
-    padding-right:17px;
+  &--small{
+    padding-right:10px;
+    padding-left:10px;
+    border-radius: 6px;
+    min-height: 58px;
+  }
+
+  &--small h1{
+    padding-right: 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small span{
+    display: none;
+  }
+
+  &--small2{
+    padding-right:10px;
+    padding-left:10px;
+    border-radius: 6px;
+    min-height: 58px;
+  }
+
+  &--small2 h1{
+    padding-right: 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small2 span{
+    display: none;
   }
 
   /* Описание цветовых схем */
@@ -132,5 +149,6 @@
   &__links--compact &__layout--brown{
     border-top: 2px solid $color-pink;
   }
+
 
 }

@@ -2,23 +2,9 @@
 
   border-radius: 6px;
   box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
-
   margin: 0 43px 41px;
   background-color: $color-white;
   width: 680px;
-
-
-  &--compact{
-    display: inline-block;
-    vertical-align: top;
-    width: 225px;
-  }
-
-  &--small{
-    display: inline-block;
-    vertical-align: top;
-    width: auto;
-  }
 
   &__body{
     @include clearfix;
@@ -52,6 +38,24 @@
 
   &--brown{
     background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+  }
+
+  &--compact{
+    display: inline-block;
+    vertical-align: top;
+    width: 225px;
+  }
+
+  &--small{
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+  }
+
+  &--small2{
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
   }
 
 }

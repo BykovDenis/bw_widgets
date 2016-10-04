@@ -275,11 +275,11 @@ export default class WeatherWidget extends CustomDate{
      */
     renderIconsDaysOfWeek(data){
         var that = this;
-        debugger;
+
         data.forEach(function(elem, index,data){
             that.controls.calendarItem[index].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
-            that.controls.calendarItem[index+9].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
-            that.controls.calendarItem[index+18].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
+            that.controls.calendarItem[index+10].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
+            that.controls.calendarItem[index+20].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
         });
         return data;
     }

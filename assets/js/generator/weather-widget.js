@@ -226,7 +226,7 @@ export default class WeatherWidget extends CustomDate{
                 this.controls.temperature[elem].innerHTML = `${metadata.temperature}<sup class="weather-card__degree">${this.params.textUnitTemp}</sup>`;
             }
         }
-
+        debugger;
         for (let elem in this.controls.mainIconWeather) {
             if (this.controls.mainIconWeather.hasOwnProperty(elem)) {
                 this.controls.mainIconWeather[elem].src = this.getURLMainIcon(metadata.icon);

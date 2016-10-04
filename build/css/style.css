@@ -417,14 +417,6 @@ th {
   margin: 0 43px 41px;
   background-color: #ffffff;
   width: 680px; }
-  .widget--compact {
-    display: inline-block;
-    vertical-align: top;
-    width: 225px; }
-  .widget--small {
-    display: inline-block;
-    vertical-align: top;
-    width: auto; }
   .widget__body {
     display: table;
     clear: both;
@@ -453,9 +445,21 @@ th {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
     background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
+  .widget--compact {
+    display: inline-block;
+    vertical-align: top;
+    width: 225px; }
+  .widget--small {
+    display: inline-block;
+    vertical-align: top;
+    width: auto; }
+  .widget--small2 {
+    display: inline-block;
+    vertical-align: top;
+    width: auto; }
 
 .widget-menu {
-  width: 680px;
+  width: 100%;
   margin: 0 auto;
   display: table;
   clear: both;
@@ -464,27 +468,11 @@ th {
   -webkit-border-radius: 6px 6px 0 0;
           border-radius: 6px 6px 0 0;
   /* Описание цветовых схем */ }
-  .widget-menu--compact {
-    width: 225px; }
-  .widget-menu--small {
-    width: auto;
-    padding-right: 10px;
-    padding-left: 10px;
-    -webkit-border-radius: 6px;
-            border-radius: 6px;
-    min-height: 58px; }
-  .widget-menu--small h1 {
-    padding-right: 10px;
-    float: none;
-    display: inline-block;
-    vertical-align: top; }
-  .widget-menu--small span {
-    display: none; }
   .widget-menu__layout {
     display: table;
     clear: both;
     content: '';
-    margin: 0 15px;
+    margin: 0 auto;
     padding-left: 14px;
     padding-right: 14px;
     border-bottom: 2px solid #333333;
@@ -506,17 +494,6 @@ th {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
     padding-right: 3px; }
-  .widget-menu--compact .widget-menu__layout {
-    width: 167px; }
-  .widget-menu__links--compact {
-    width: 225px;
-    float: none;
-    text-align: center; }
-  .widget-menu__links--compact .widget-menu__layout {
-    width: 195px;
-    border-bottom: none;
-    border-top: 2px solid #333333;
-    padding: 10.2px 0 14.5px; }
   .widget-menu__link {
     font: 700 14px "Roboto", Arial, sans-serif;
     color: #333333;
@@ -529,6 +506,45 @@ th {
     background: url(../img/logo.jpg) 50% 50% no-repeat;
     background-size: 14.3px 14.3px;
     padding-right: 17px; }
+  .widget-menu--compact .widget-menu__layout {
+    width: 167px; }
+  .widget-menu__links--compact {
+    width: 225px;
+    float: none;
+    text-align: center; }
+  .widget-menu__links--compact .widget-menu__layout {
+    width: 195px;
+    border-bottom: none;
+    border-top: 2px solid #333333;
+    padding: 10.2px 0 14.5px; }
+  .widget-menu--compact {
+    width: 225px; }
+  .widget-menu--small {
+    padding-right: 10px;
+    padding-left: 10px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+    min-height: 58px; }
+  .widget-menu--small h1 {
+    padding-right: 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top; }
+  .widget-menu--small span {
+    display: none; }
+  .widget-menu--small2 {
+    padding-right: 10px;
+    padding-left: 10px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+    min-height: 58px; }
+  .widget-menu--small2 h1 {
+    padding-right: 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top; }
+  .widget-menu--small2 span {
+    display: none; }
   .widget-menu--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
@@ -584,17 +600,8 @@ th {
     color: #333333;
     margin: 0 auto;
     padding-top: 20px; }
-  .weather-card__number--small {
-    font-size: 18px;
-    padding: 0;
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 5px;
-    margin-top: 21px; }
   .weather-card__degree {
     font: 700 30px / 1 "Oswald", Arial, sans-serif; }
-  .weather-card__number--small .weather-card__degree {
-    font-size: 14px; }
   .weather-card__row1 {
     display: table;
     clear: both;
@@ -613,6 +620,27 @@ th {
     color: #333333;
     text-align: center;
     padding: 2px 0; }
+  .weather-card__number--small {
+    font-size: 18px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    margin-top: 21px; }
+  .weather-card__number--small .weather-card__degree {
+    font-size: 14px; }
+  .weather-card--compact {
+    float: none;
+    margin: 0 15px; }
+  .weather-card__number--small2 {
+    font-size: 18px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    margin-top: 21px; }
+  .weather-card__number--small2 .weather-card__degree {
+    font-size: 14px; }
   .weather-card--compact {
     float: none;
     margin: 0 15px; }
@@ -638,7 +666,9 @@ th {
           align-items: baseline;
   width: 425px;
   margin-left: 40px;
-  padding: 0; }
+  padding: 0;
+  /* маленький виджет */
+  /* маленький виджет с увеличенным значком */ }
   .calendar__item {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
@@ -670,3 +700,47 @@ th {
     background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
   .calendar--small .calendar__item--brown {
     background-color: #ffffff; }
+  .calendar--small2 {
+    width: auto;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 5px;
+    font-size: 0; }
+  .calendar--small2 .calendar__item {
+    padding: 13px 13px;
+    display: inline-block;
+    vertical-align: top; }
+  .calendar--small2 .calendar__item--blue {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
+    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
+    background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
+  .calendar--small2 .calendar__item--brown {
+    background-color: #ffffff; }
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start; }
+  .container__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+            align-content: stretch; }
