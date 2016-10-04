@@ -348,15 +348,6 @@ export default class WeatherWidget extends CustomDate{
         // Реконструкция процедуры рендеринга графика температуры
         let objGraphicD3 =  new Graphic(params);
         objGraphicD3.render();
-
-        // отрисовка остальных графиков
-        params.id = "#graphic1";
-        objGraphicD3 =  new Graphic(params);
-        objGraphicD3.render();
-
-        params.id = "#graphic2";
-        objGraphicD3 =  new Graphic(params);
-        objGraphicD3.render();
     }
 
 

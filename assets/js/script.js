@@ -1,3 +1,4 @@
+// Модуль диспетчер для отрисовки баннерров на конструкторе
 'use strict';
 
 import WeatherWidget from './weather-widget';

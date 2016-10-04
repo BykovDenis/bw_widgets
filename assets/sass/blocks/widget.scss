@@ -1,10 +1,11 @@
 .widget{
 
   border-radius: 6px;
-  box-shadow: 1px 2px 18px 3px #aaa;
+  box-shadow: 10px -2px 20px 2px rgba(0,0,0,.1);
 
   margin: 0 43px 41px;
   background-color: $color-white;
+  width: 691px;
 
 
   &--compact{
@@ -16,7 +17,7 @@
   &--small{
     display: inline-block;
     vertical-align: top;
-    /*width: 180px;*/
+    width: auto;
   }
 
   &__body{

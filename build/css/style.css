@@ -393,21 +393,30 @@ th {
   padding-top: 40px;
   display: block;
   width: 777px;
-  height: 624px;
   font-size: 10px;
   color: green;
-  margin: 0 auto;
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(20%, #B9C4C5), color-stop(80%, #D4DBDC), to(#E3E7E8));
-  background-image: -webkit-linear-gradient(bottom right, #B9C4C5 20%, #D4DBDC 80%, #E3E7E8 100%);
-  background-image: linear-gradient(to top left, #B9C4C5 20%, #D4DBDC 80%, #E3E7E8 100%); }
+  margin: 0 auto; }
+  .main--gray {
+    background-image: -webkit-gradient(linear, right bottom, left top, color-stop(20%, #B9C4C5), color-stop(80%, #D4DBDC), to(#E3E7E8));
+    background-image: -webkit-linear-gradient(bottom right, #B9C4C5 20%, #D4DBDC 80%, #E3E7E8 100%);
+    background-image: linear-gradient(to top left, #B9C4C5 20%, #D4DBDC 80%, #E3E7E8 100%); }
+  .main--blue {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#637395), to(#637395));
+    background-image: -webkit-linear-gradient(bottom right, #637395, #637395);
+    background-image: linear-gradient(to top left, #637395, #637395); }
+  .main--brown {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#353432), to(#4e4d4a));
+    background-image: -webkit-linear-gradient(bottom right, #353432, #4e4d4a);
+    background-image: linear-gradient(to top left, #353432, #4e4d4a); }
 
 .widget {
   -webkit-border-radius: 6px;
           border-radius: 6px;
-  -webkit-box-shadow: 1px 2px 18px 3px #aaa;
-          box-shadow: 1px 2px 18px 3px #aaa;
+  -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.1);
   margin: 0 43px 41px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  width: 691px; }
   .widget--compact {
     display: inline-block;
     vertical-align: top;
@@ -415,7 +424,7 @@ th {
   .widget--small {
     display: inline-block;
     vertical-align: top;
-    /*width: 180px;*/ }
+    width: auto; }
   .widget__body {
     display: table;
     clear: both;

@@ -9,7 +9,6 @@ var plumber = require('gulp-plumber');
 var postcss = require("gulp-postcss");
 var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
-var rename = require("gulp-rename");
 var clean = require('gulp-clean');
 var pngquant = require('imagemin-pngquant');
 
@@ -100,6 +99,7 @@ gulp.src('./assets/js/modules/**/*.js')
 .pipe(connect.reload());
 });
 
+
 gulp.task('img',function(){
 gulp.src('./assets/img/*')
 .pipe(imagemin({
@@ -115,7 +115,7 @@ use: [pngquant()]
 gulp.task('jade', function() {
   var YOUR_LOCALS = {};
 
-  gulp.src('./assets/jade/*.jade')
+  gulp.src('./assets/jade/**/*.jade')
     .pipe(jade({
       locals: YOUR_LOCALS,
       pretty: true
@@ -186,6 +186,15 @@ gulp.task('build_js', function () {
         .pipe(gulp.dest('build/js'));
 });
 
+// Build generator
+gulp.task('build_js_gen', function () {
+    return browserify({entries: ['./assets/js/generator/script.js'], extensions: ['.js'], debug: true})
+        .transform('babelify', {presets: ['es2015']})
+        .bundle()
+        .pipe(source('weather-widget_generator.js'))
+        .pipe(gulp.dest('build/js'));
+});
+
 // Build Asserts JS
 gulp.task('asserts_js', function () {
     return browserify({entries: ['./assets/asserts/test.js'], extensions: ['.js'], debug: true})
@@ -215,6 +224,7 @@ gulp.task('watch',function(){
   gulp.watch("./assets/jade/*.jade", ['jade']);
   gulp.watch("./assets/*.html", ['html']);
   gulp.watch("./assets/js/*.js", ['build_js']);
+  gulp.watch("./assets/js/generator/*.js", ['build_js_gen']);
   gulp.watch("./assets/js/libs/*.js", ['jslibs']);
   gulp.watch("./assets/js/modules/**/*.js", ['jsmods']);
   gulp.watch("./assets/*",['copyFiles']);
@@ -224,8 +234,8 @@ gulp.task('watch',function(){
 });
 
 // Default
-gulp.task('default', ['clean','jade', 'sass', 'js','jslibs', 'jsmods', 'build_js', 'serve', 'copyFiles','img','watch']);
-gulp.task('run', ['jade',  'sass', 'js','jslibs', 'jsmods', 'serve', 'build_js', 'copyFiles','watch']);
+gulp.task('default', ['clean','jade', 'sass', 'js','jslibs', 'jsmods', 'build_js', 'build_js_gen', 'serve', 'copyFiles','img','watch']);
+gulp.task('run', ['jade',  'sass', 'js','jslibs', 'jsmods', 'serve', 'build_js', 'build_js_gen', 'copyFiles','watch']);
 gulp.task('build',['clean','svgSpriteBuild','img','copyFiles']);
 
 // Тестирование
