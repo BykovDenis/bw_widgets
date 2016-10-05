@@ -34,7 +34,8 @@ export default class Graphic extends CustomDate{
         let rawData = [];
 
         this.params.data.forEach((elem)=>{
-            rawData.push({x: i, date: this.convertStringDateMMDDYYYHHToDate(elem.date), maxT: elem.max,  minT: elem.min});
+            //rawData.push({x: i, date: this.convertStringDateMMDDYYYHHToDate(elem.date), maxT: elem.max,  minT: elem.min});
+            rawData.push({x: i, date: i*10, maxT: elem.max,  minT: elem.min});
             i +=1; // Смещение по оси X
         });
 
