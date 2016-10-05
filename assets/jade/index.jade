@@ -4,6 +4,8 @@ html(lang="en")
         meta(charset="utf-8")
         title Widgets generator
         link(href="css/style.css" rel="stylesheet")
+        link(href='https://fonts.googleapis.com/css?family=Oswald:100,400,700,300' rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,500,400italic,500italic,700italic' rel='stylesheet' type='text/css')
         script(src="js/libs/d3.min.js")
     body
         <!-- Бесцветный виджет -->
@@ -23,7 +25,7 @@ html(lang="en")
                                     img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
                                     .weather-dark-card__col
                                         p.weather-dark-card__number 0
-                                            sup.weather-dark-card__degree 0
+                                            span.weather-dark-card__degree &176;
                                         span and rising
                                 .weather-dark-card__row2
                                     p.weather-dark-card__means -
@@ -58,7 +60,7 @@ html(lang="en")
                                         img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
                                         .weather-dark-card__col
                                             p.weather-dark-card__number -
-                                                sup.weather-dark-card__degree 0
+                                                span.weather-dark-card__degree &176;
                                             span and rising
                                     .weather-dark-card__row2
                                         p.weather-dark-card__means -
@@ -75,7 +77,7 @@ html(lang="en")
                                         li.calendar__item
                                             img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
                                     p.weather-dark-card__number.weather-dark-card__number--small 0
-                                        sup.weather-dark-card__degree
+                                        span.weather-dark-card__degree
                             .widget-dark.widget-dark--small
                                 .widget-dark-menu.widget-dark-menu--small
                                     h1.widget-dark-menu__header Moscow
@@ -83,8 +85,8 @@ html(lang="en")
                                         li.calendar__item
                                             img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
                                     p.weather-dark-card__number.weather-dark-card__number--small 0
-                                        sup.weather-dark-card__degree
-            main.main.main--gray
+                                        span.weather-dark-card__degree
+            main.main.main--gray 
         <!-- Синий виджет -->
         .container__item
             main.main.main--blue
@@ -163,6 +165,42 @@ html(lang="en")
                                 p.weather-dark-card__number.weather-dark-card__number--small2 0
                                     sup.weather-dark-card__degree
             main.main.main--blue
+                .container
+                    .widget-lite
+                        .widget-lite__header.widget-lite__header--blue
+                            .widget-lite__layout
+                                h1.widget-lite__title Moscow
+                                p.weather-lite__description Cloudy Skies
+                            img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+                        .weather-lite
+                            .weather-lite__layout
+                                .weather-lite__temperature 10
+                                    span.widget-lite__units &#176;
+                                .weather-lite__weather
+                                    .weather-lite-card                                                                                    
+                                        table.weather-lite__table
+                                            tr.weather-lite__items
+                                                th(colspan="2").weather-lite__item Details
+                                            tr.weather-lite__items
+                                                td.weather-lite__item Feels like
+                                                td.weather-lite__item -13
+                                                    span.widget-lite-card__units &#176;
+                                            tr.weather-lite__items
+                                                td.weather-lite__item Wind
+                                                td.weather-lite__item 3 m/s West
+                                            tr.weather-lite-card__items
+                                                td.weather-lite__item Humidity
+                                                td.weather-lite__item 74%
+                                            tr.weather-lite-card__items
+                                                td.weather-lite__item Precip
+                                                td.weather-lite__item 50%
+                                            tr.weather-lite-card__items
+                                                td.weather-lite__item Pressure
+                                                td.weather-lite__item 1003.0 mb up
+                        .widget-lite__footer.widget-lite__footer--blue
+                            .widget-lite__layout
+                                a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                                .widget-lite__date 20:16 Mar 28
         <!-- Коричневый виджет -->
         .container__item
             main.main.main--brown
@@ -179,7 +217,7 @@ html(lang="en")
                                 img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
                                 .weather-dark-card__col
                                     p.weather-dark-card__number 0
-                                        sup.weather-dark-card__degree 0
+                                        span.weather-dark-card__degree &176;
                                         span and rising
                             .weather-dark-card__row2
                                 p.weather-dark-card__means -
@@ -214,7 +252,7 @@ html(lang="en")
                                     img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
                                     .weather-dark-card__col
                                         p.weather-dark-card__number -
-                                            sup.weather-dark-card__degree 0
+                                            span.weather-dark-card__degree &176;
                                         span and rising
                                 .weather-dark-card__row2
                                     p.weather-dark-card__means -
@@ -242,8 +280,3 @@ html(lang="en")
                                     sup.weather-dark-card__degree
             main.main.main--brown
         script(src="js/weather-widget.js")
-
-
-
-
-

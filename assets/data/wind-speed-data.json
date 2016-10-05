@@ -17,7 +17,7 @@
       "desc": "7-10 Leaves and twigs move. Wind extends light flag and pennants"
     },
     "Moderate breeze":{
-      "speed_interval": [5.5, 7.9],
+      "speed_interval": [5.5, 8.0],
       "desc": "11-16   The wind raises dust and loose papers, touches on the twigs and small branches, stretches larger flags and pennants"
     },
     "Fresh Breeze":{

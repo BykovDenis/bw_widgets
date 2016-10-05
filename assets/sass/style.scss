@@ -1,8 +1,8 @@
 /* Файл нормализации */
 @import "normalize";
-
+   
 /* Шрифты */
-@import "fonts";
+/* @import "fonts"; */
 
 /* Переменные */
 @import "variables";
@@ -20,10 +20,12 @@
 @import "components/widget-dark/calendar";
 
 /* Тип яркой отрисовки виджета */
+
+@import "components/widget-lite/weather-lite";
+@import "components/widget-lite/widget-lite";
 /*
-@import "components/widget-lite/widget";
-@import "components/widget-lite/widget-menu";
-@import "components/widget-lite/weather-card";
+@import "components/widget-lite.sass/widget-menu";
+@import "components/widget-lite.sass/weather-card";
 */
 
 @import "services/container";

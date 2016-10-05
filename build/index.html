@@ -4,6 +4,8 @@
     <meta charset="utf-8"/>
     <title>Widgets generator</title>
     <link href="css/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:100,400,700,300" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,500,400italic,500italic,700italic" rel="stylesheet" type="text/css"/>
     <script src="js/libs/d3.min.js"></script>
   </head>
   <body><!-- Бесцветный виджет -->
@@ -21,7 +23,7 @@
               <div class="weather-dark-card weather-dark-card--grayscale">
                 <div class="weather-dark-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-dark-card__img"/>
                   <div class="weather-dark-card__col">
-                    <p class="weather-dark-card__number">0<sup class="weather-dark-card__degree">0</sup></p><span>and rising</span>
+                    <p class="weather-dark-card__number">0<span class="weather-dark-card__degree">&176;</span></p><span>and rising</span>
                   </div>
                 </div>
                 <div class="weather-dark-card__row2">
@@ -55,7 +57,7 @@
                 <div class="weather-dark-card weather-dark-card--compact weather-dark-card--grayscale">
                   <div class="weather-dark-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-dark-card__img"/>
                     <div class="weather-dark-card__col">
-                      <p class="weather-dark-card__number">-<sup class="weather-dark-card__degree">0</sup></p><span>and rising</span>
+                      <p class="weather-dark-card__number">-<span class="weather-dark-card__degree">&176;</span></p><span>and rising</span>
                     </div>
                   </div>
                   <div class="weather-dark-card__row2">
@@ -75,7 +77,7 @@
                   <ul class="calendar calendar--grayscale calendar--small">
                     <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-dark-card__img weather-dark-card__img--small"/></li>
                   </ul>
-                  <p class="weather-dark-card__number weather-dark-card__number--small">0<sup class="weather-dark-card__degree"></sup></p>
+                  <p class="weather-dark-card__number weather-dark-card__number--small">0<span class="weather-dark-card__degree"></span></p>
                 </div>
               </div>
               <div class="widget-dark widget-dark--small">
@@ -84,14 +86,14 @@
                   <ul class="calendar calendar--grayscale calendar--small2">
                     <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-dark-card__img weather-dark-card__img--small"/></li>
                   </ul>
-                  <p class="weather-dark-card__number weather-dark-card__number--small">0<sup class="weather-dark-card__degree"></sup></p>
+                  <p class="weather-dark-card__number weather-dark-card__number--small">0<span class="weather-dark-card__degree"></span></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <main class="main main--gray"></main>
+      <main class="main main--gray"> </main>
     </div><!-- Синий виджет -->
     <div class="container__item">
       <main class="main main--blue">
@@ -175,7 +177,57 @@
           </div>
         </div>
       </main>
-      <main class="main main--blue"></main>
+      <main class="main main--blue">
+        <div class="container">
+          <div class="widget-lite">
+            <div class="widget-lite__header widget-lite__header--blue">
+              <div class="widget-lite__layout">
+                <h1 class="widget-lite__title">Moscow</h1>
+                <p class="weather-lite__description">Cloudy Skies</p>
+              </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-lite__icon"/>
+            </div>
+            <div class="weather-lite">
+              <div class="weather-lite__layout">
+                <div class="weather-lite__temperature">10<span class="widget-lite__units">&#176;</span></div>
+                <div class="weather-lite__weather">
+                  <div class="weather-lite-card">                                                                                   
+                    <table class="weather-lite__table">
+                      <tr class="weather-lite__items">
+                        <th colspan="2" class="weather-lite__item">Details</th>
+                      </tr>
+                      <tr class="weather-lite__items">
+                        <td class="weather-lite__item">Feels like</td>
+                        <td class="weather-lite__item">-13<span class="widget-lite-card__units">&#176;</span></td>
+                      </tr>
+                      <tr class="weather-lite__items">
+                        <td class="weather-lite__item">Wind</td>
+                        <td class="weather-lite__item">3 m/s West</td>
+                      </tr>
+                      <tr class="weather-lite-card__items">
+                        <td class="weather-lite__item">Humidity</td>
+                        <td class="weather-lite__item">74%</td>
+                      </tr>
+                      <tr class="weather-lite-card__items">
+                        <td class="weather-lite__item">Precip</td>
+                        <td class="weather-lite__item">50%</td>
+                      </tr>
+                      <tr class="weather-lite-card__items">
+                        <td class="weather-lite__item">Pressure</td>
+                        <td class="weather-lite__item">1003.0 mb up</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widget-lite__footer widget-lite__footer--blue">
+              <div class="widget-lite__layout"><a href="http://openweathermap.org/" target="_blank" class="widget-lite__link">OpenWeatherMap</a>
+                <div class="widget-lite__date">20:16 Mar 28</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div><!-- Коричневый виджет -->
     <div class="container__item">
       <main class="main main--brown">
@@ -190,7 +242,7 @@
             <div class="weather-dark-card">
               <div class="weather-dark-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-dark-card__img"/>
                 <div class="weather-dark-card__col">
-                  <p class="weather-dark-card__number">0<sup class="weather-dark-card__degree">0</sup><span>and rising</span></p>
+                  <p class="weather-dark-card__number">0<span class="weather-dark-card__degree">&176;</span><span>and rising</span></p>
                 </div>
               </div>
               <div class="weather-dark-card__row2">
@@ -224,7 +276,7 @@
               <div class="weather-dark-card weather-dark-card--compact">
                 <div class="weather-dark-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-dark-card__img"/>
                   <div class="weather-dark-card__col">
-                    <p class="weather-dark-card__number">-<sup class="weather-dark-card__degree">0</sup></p><span>and rising</span>
+                    <p class="weather-dark-card__number">-<span class="weather-dark-card__degree">&176;</span></p><span>and rising</span>
                   </div>
                 </div>
                 <div class="weather-dark-card__row2">
