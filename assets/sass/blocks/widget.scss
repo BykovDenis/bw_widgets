@@ -6,15 +6,19 @@
   background-color: $color-white;
   width: 680px;
 
+
   &__body{
     @include clearfix;
     width: $width-normal-widget;
+    padding-bottom: 16px;
+    border-radius: 0 0 6px 6px;
   }
 
   &__body--compact{
     float:none;
     margin: 0 auto;
     width: $width-compact-widget;
+    padding-bottom: 0;
   }
 
   &__calendar{

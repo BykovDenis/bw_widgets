@@ -421,11 +421,15 @@ th {
     display: table;
     clear: both;
     content: '';
-    width: 680px; }
+    width: 680px;
+    padding-bottom: 16px;
+    -webkit-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px; }
   .widget__body--compact {
     float: none;
     margin: 0 auto;
-    width: 225px; }
+    width: 225px;
+    padding-bottom: 0; }
   .widget__calendar {
     float: left;
     margin-top: 5px; }
@@ -475,19 +479,19 @@ th {
     margin: 0 auto;
     padding-left: 14px;
     padding-right: 14px;
+    margin-top: 15px;
+    padding-bottom: 5px;
     border-bottom: 2px solid #333333;
     width: 622px; }
   .widget-menu__header {
     float: left;
-    margin-bottom: 5px;
-    margin-top: 21px;
+    margin: 0;
     font: 700 18px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
     word-break: break-word;
     max-width: 470px; }
   .widget-menu__links {
     float: right;
-    margin-top: 22px;
     -webkit-border-radius: 0 0 6px 6px;
             border-radius: 0 0 6px 6px; }
   .widget-menu__links span {
@@ -520,8 +524,8 @@ th {
   .widget-menu--compact {
     width: 225px; }
   .widget-menu--small {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     -webkit-border-radius: 6px;
             border-radius: 6px;
     min-height: 58px; }
@@ -529,17 +533,19 @@ th {
     padding-right: 10px;
     float: none;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    margin-top: 21px; }
   .widget-menu--small span {
     display: none; }
   .widget-menu--small2 {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     -webkit-border-radius: 6px;
             border-radius: 6px;
     min-height: 58px; }
   .widget-menu--small2 h1 {
     padding-right: 10px;
+    margin-top: 21px;
     float: none;
     display: inline-block;
     vertical-align: top; }
@@ -587,7 +593,7 @@ th {
     display: block;
     position: absolute;
     left: -9px;
-    top: -17px; }
+    top: -14px; }
   .weather-card--grayscale {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
@@ -596,7 +602,8 @@ th {
   .weather-card__col span {
     font: 400 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
-    padding-top: 16px; }
+    padding-top: 16px;
+    padding-left: 7px; }
   .weather-card__number {
     font: 600 48px / 1 "Oswald", Arial, sans-serif;
     color: #333333;
@@ -611,10 +618,9 @@ th {
     position: relative;
     width: 192px;
     height: 112px; }
-  .weather-card__row2 {
-    padding-bottom: 20px; }
   .weather-card__means {
     margin: 0;
+    margin-bottom: 5px;
     font: 700 16px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
     text-align: center;
@@ -672,6 +678,8 @@ th {
           align-items: baseline;
   width: 425px;
   margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 17px;
   padding: 0;
   /* маленький виджет */
   /* маленький виджет с увеличенным значком */ }

@@ -13,7 +13,7 @@
     display: block;
     position: absolute;
     left: -9px;
-    top: -17px;
+    top: -14px;
   }
 
   &--grayscale{
@@ -28,6 +28,7 @@
     font: 400 #{$font-size} / $line-height $font-roboto;
     color: $color-black;
     padding-top: 16px;
+    padding-left: 7px;
   }
 
   &__number{
@@ -48,12 +49,9 @@
     height: 112px;
   }
 
-  &__row2{
-    padding-bottom: 20px;
-  }
-
   &__means{
     margin: 0;
+    margin-bottom: 5px;
     font: 700 #{$font-size + 2px} / $line-height $font-roboto;
     color: $color-black;
     text-align: center;

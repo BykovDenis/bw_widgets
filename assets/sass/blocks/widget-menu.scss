@@ -11,15 +11,15 @@
     margin: 0 auto;
     padding-left: 14px;
     padding-right: 14px;
+    margin-top: 15px;
+    padding-bottom: 5px;
     border-bottom: 2px solid $color-black;
     width: 622px;
-
   }
 
   &__header{
     float:left;
-    margin-bottom: 5px;
-    margin-top: 21px;
+    margin: 0;
     font: 700 #{$font-size+4px} / $line-height $font-roboto;
     color: $color-black;
     word-break: break-word;
@@ -28,7 +28,6 @@
 
   &__links{
     float: right;
-    margin-top:22px;
     border-radius: 0 0 6px 6px;
   }
 
@@ -77,8 +76,8 @@
   }
 
   &--small{
-    padding-right:10px;
-    padding-left:10px;
+    padding-right:15px;
+    padding-left:15px;
     border-radius: 6px;
     min-height: 58px;
   }
@@ -88,6 +87,7 @@
     float: none;
     display: inline-block;
     vertical-align: top;
+    margin-top: 21px;
   }
 
   &--small span{
@@ -95,14 +95,15 @@
   }
 
   &--small2{
-    padding-right:10px;
-    padding-left:10px;
+    padding-right:15px;
+    padding-left:15px;
     border-radius: 6px;
     min-height: 58px;
   }
 
   &--small2 h1{
     padding-right: 10px;
+    margin-top: 21px;
     float: none;
     display: inline-block;
     vertical-align: top;
