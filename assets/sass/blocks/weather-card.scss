@@ -10,8 +10,9 @@
 
   &__img{
     display: block;
-    float: left;
-    margin-top: -15px;
+    position: absolute;
+    left: -9px;
+    top: -17px;
   }
 
   &--grayscale{
@@ -41,6 +42,9 @@
 
   &__row1{
     @include clearfix;
+    position: relative;
+    width: 192px;
+    height: 112px;
   }
 
   &__row2{
@@ -74,6 +78,10 @@
 
   &__number--small &__degree{
     font-size: $font-size;
+  }
+
+  &__img--small{
+    position: static;
   }
 
   &--compact{

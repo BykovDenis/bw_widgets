@@ -198,7 +198,7 @@ export default class WeatherWidget extends CustomDate{
         };
 
         metadata.cityName = `${weather.fromAPI.name}, ${weather.fromAPI.sys.country}`;
-        metadata.temperature = `${weather.fromAPI.main.temp.toFixed(0)}`;
+        metadata.temperature = `${weather.fromAPI.main.temp.toFixed(0) > 0 ? `+${weather.fromAPI.main.temp.toFixed(0)}` : weather.fromAPI.main.temp.toFixed(0)}`;
         if(weather.naturalPhenomenon)
             metadata.weather = weather.naturalPhenomenon[weather.fromAPI.weather[0].id];
         if(weather["windSpeed"])
@@ -289,7 +289,7 @@ export default class WeatherWidget extends CustomDate{
         var mapIcons =  new Map();
 
         if(!color) {
-            // Дневные
+            //
             mapIcons.set('01d', '01dbw');
             mapIcons.set('02d', '02dbw');
             mapIcons.set('03d', '03dbw');

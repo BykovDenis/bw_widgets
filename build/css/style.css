@@ -584,8 +584,9 @@ th {
     content: ''; }
   .weather-card__img {
     display: block;
-    float: left;
-    margin-top: -15px; }
+    position: absolute;
+    left: -9px;
+    top: -17px; }
   .weather-card--grayscale {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
@@ -605,7 +606,10 @@ th {
   .weather-card__row1 {
     display: table;
     clear: both;
-    content: ''; }
+    content: '';
+    position: relative;
+    width: 192px;
+    height: 112px; }
   .weather-card__row2 {
     padding-bottom: 20px; }
   .weather-card__means {
@@ -629,6 +633,8 @@ th {
     margin-top: 21px; }
   .weather-card__number--small .weather-card__degree {
     font-size: 14px; }
+  .weather-card__img--small {
+    position: static; }
   .weather-card--compact {
     float: none;
     margin: 0 15px; }
