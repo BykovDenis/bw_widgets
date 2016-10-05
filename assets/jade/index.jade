@@ -10,25 +10,25 @@ html(lang="en")
         .container__item
             main.main.main--gray
                 .container
-                    .widget
-                        .widget-menu
-                            .widget-menu__layout
-                                h1.widget-menu__header Weather for Moscow
-                                .widget-menu__links
+                    .widget-dark
+                        .widget-dark-menu
+                            .widget-dark-menu__layout
+                                h1.widget-dark-menu__header Weather for Moscow
+                                .widget-dark-menu__links
                                     span More at
-                                    a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-                        .widget__body
-                            .weather-card.weather-card--grayscale
-                                .weather-card__row1
-                                    img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                                    .weather-card__col
-                                        p.weather-card__number 0
-                                            sup.weather-card__degree 0
+                                    a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                        .widget-dark__body
+                            .weather-dark-card.weather-dark-card--grayscale
+                                .weather-dark-card__row1
+                                    img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                    .weather-dark-card__col
+                                        p.weather-dark-card__number 0
+                                            sup.weather-dark-card__degree 0
                                         span and rising
-                                .weather-card__row2
-                                    p.weather-card__means -
-                                    p.weather-card__wind Wind:
-                            .widget__calendar
+                                .weather-dark-card__row2
+                                    p.weather-dark-card__means -
+                                    p.weather-dark-card__wind Wind:
+                            .widget-dark__calendar
                                 ul.calendar.calendar--grayscale
                                     li.calendar__item Today
                                         img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
@@ -46,67 +46,67 @@ html(lang="en")
                                         img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
                                     li.calendar__item Fri
                                         img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                                div.widget__graphic(id="graphic")
+                                div.widget-dark__graphic(id="graphic")
                     .container__item
-                        .widget.widget--compact
-                            .widget-menu.widget-menu--compact
-                                .widget-menu__layout
-                                    h1.widget-menu__header Weather for Moscow
-                            .widget__body.widget__body--compact
-                                .weather-card.weather-card--compact.weather-card--grayscale
-                                    .weather-card__row1
-                                        img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                                        .weather-card__col
-                                            p.weather-card__number -
-                                                sup.weather-card__degree 0
+                        .widget-dark.widget-dark--compact
+                            .widget-dark-menu.widget-dark-menu--compact
+                                .widget-dark-menu__layout
+                                    h1.widget-dark-menu__header Weather for Moscow
+                            .widget-dark__body.widget-dark__body--compact
+                                .weather-dark-card.weather-dark-card--compact.weather-dark-card--grayscale
+                                    .weather-dark-card__row1
+                                        img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                        .weather-dark-card__col
+                                            p.weather-dark-card__number -
+                                                sup.weather-dark-card__degree 0
                                             span and rising
-                                    .weather-card__row2
-                                        p.weather-card__means -
-                                        p.weather-card__wind Wind:
-                                .widget-menu__links.widget-menu__links--compact
-                                    .widget-menu__layout
+                                    .weather-dark-card__row2
+                                        p.weather-dark-card__means -
+                                        p.weather-dark-card__wind Wind:
+                                .widget-dark-menu__links.widget-dark-menu__links--compact
+                                    .widget-dark-menu__layout
                                         span More at
-                                        a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                                        a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                         .container
-                            .widget.widget--small
-                                .widget-menu.widget-menu--small
-                                    h1.widget-menu__header Moscow
+                            .widget-dark.widget-dark--small
+                                .widget-dark-menu.widget-dark-menu--small
+                                    h1.widget-dark-menu__header Moscow
                                     ul.calendar.calendar--grayscale.calendar--small
                                         li.calendar__item
-                                            img.weather-card__img.weather-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                                    p.weather-card__number.weather-card__number--small 0
-                                        sup.weather-card__degree
-                            .widget.widget--small
-                                .widget-menu.widget-menu--small
-                                    h1.widget-menu__header Moscow
+                                            img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                    p.weather-dark-card__number.weather-dark-card__number--small 0
+                                        sup.weather-dark-card__degree
+                            .widget-dark.widget-dark--small
+                                .widget-dark-menu.widget-dark-menu--small
+                                    h1.widget-dark-menu__header Moscow
                                     ul.calendar.calendar--grayscale.calendar--small2
                                         li.calendar__item
-                                            img.weather-card__img.weather-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                                    p.weather-card__number.weather-card__number--small 0
-                                        sup.weather-card__degree
+                                            img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                    p.weather-dark-card__number.weather-dark-card__number--small 0
+                                        sup.weather-dark-card__degree
             main.main.main--gray
         <!-- Синий виджет -->
         .container__item
             main.main.main--blue
-                .widget.widget--blue
-                    .widget-menu.widget-menu--blue
-                        .widget-menu__layout
-                            h1.widget-menu__header Weather for Moscow
-                            .widget-menu__links
+                .widget-dark.widget-dark--blue
+                    .widget-dark-menu.widget-dark-menu--blue
+                        .widget-dark-menu__layout
+                            h1.widget-dark-menu__header Weather for Moscow
+                            .widget-dark-menu__links
                                 span More at
-                                a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-                    .widget__body
-                        .weather-card
-                            .weather-card__row1
-                                img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                                .weather-card__col
-                                    p.weather-card__number 0
-                                        sup.weather-card__degree 0
+                                a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                    .widget-dark__body
+                        .weather-dark-card
+                            .weather-dark-card__row1
+                                img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                .weather-dark-card__col
+                                    p.weather-dark-card__number 0
+                                        sup.weather-dark-card__degree 0
                                     span and rising
-                            .weather-card__row2
-                                p.weather-card__means -
-                                p.weather-card__wind Wind:
-                        .widget__calendar
+                            .weather-dark-card__row2
+                                p.weather-dark-card__means -
+                                p.weather-dark-card__wind Wind:
+                        .widget-dark__calendar
                             ul.calendar
                                 li.calendar__item Today
                                     img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
@@ -124,67 +124,67 @@ html(lang="en")
                                     img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
                                 li.calendar__item Fri
                                     img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                            div.widget__graphic(id="graphic1")
+                            div.widget-dark__graphic(id="graphic1")
                 .container__item
-                    .widget.widget--compact.widget--blue
-                        .widget-menu.widget-menu--compact.widget-menu--blue
-                            .widget-menu__layout.widget-menu__layout--blue
-                                h1.widget-menu__header Weather for Moscow
-                        .widget__body.widget__body--compact.widget__body--blue
-                            .weather-card.weather-card--compact
-                                .weather-card__row1
-                                    img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                                    .weather-card__col
-                                        p.weather-card__number -
-                                            sup.weather-card__degree 0
+                    .widget-dark.widget-dark--compact.widget-dark--blue
+                        .widget-dark-menu.widget-dark-menu--compact.widget-dark-menu--blue
+                            .widget-dark-menu__layout.widget-dark-menu__layout--blue
+                                h1.widget-dark-menu__header Weather for Moscow
+                        .widget-dark__body.widget-dark__body--compact.widget-dark__body--blue
+                            .weather-dark-card.weather-dark-card--compact
+                                .weather-dark-card__row1
+                                    img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                    .weather-dark-card__col
+                                        p.weather-dark-card__number -
+                                            sup.weather-dark-card__degree 0
                                         span and rising
-                                .weather-card__row2
-                                    p.weather-card__means -
-                                    p.weather-card__wind Wind:
-                            .widget-menu__links.widget-menu__links--compact.widget-menu__links--blue
-                                .widget-menu__layout.widget-menu__layout--blue
+                                .weather-dark-card__row2
+                                    p.weather-dark-card__means -
+                                    p.weather-dark-card__wind Wind:
+                            .widget-dark-menu__links.widget-dark-menu__links--compact.widget-dark-menu__links--blue
+                                .widget-dark-menu__layout.widget-dark-menu__layout--blue
                                     span More at
-                                    a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                                    a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                     .container
-                        .widget.widget--small.widget--blue
-                            .widget-menu.widget-menu--small.widget-menu--blue
-                                h1.widget-menu__header Moscow
+                        .widget-dark.widget-dark--small.widget-dark--blue
+                            .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--blue
+                                h1.widget-dark-menu__header Moscow
                                 ul.calendar.calendar--small
                                     li.calendar__item.calendar__item--blue
-                                        img.weather-card__img.weather-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                                p.weather-card__number.weather-card__number--small 0
-                                    sup.weather-card__degree
-                        .widget.widget--small2.widget--blue
-                            .widget-menu.widget-menu--small2.widget-menu--blue
-                                h1.widget-menu__header Moscow
+                                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-dark-card__number.weather-dark-card__number--small 0
+                                    sup.weather-dark-card__degree
+                        .widget-dark.widget-dark--small2.widget-dark--blue
+                            .widget-dark-menu.widget-dark-menu--small2.widget-dark-menu--blue
+                                h1.widget-dark-menu__header Moscow
                                 ul.calendar.calendar--small2
                                     li.calendar__item.calendar__item--blue
-                                        img.weather-card__img.weather-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                                p.weather-card__number.weather-card__number--small2 0
-                                    sup.weather-card__degree
+                                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-dark-card__number.weather-dark-card__number--small2 0
+                                    sup.weather-dark-card__degree
             main.main.main--blue
         <!-- Коричневый виджет -->
         .container__item
             main.main.main--brown
-                .widget
-                    .widget-menu.widget-menu--brown
-                        .widget-menu__layout
-                            h1.widget-menu__header Weather for Moscow
-                            .widget-menu__links
+                .widget-dark
+                    .widget-dark-menu.widget-dark-menu--brown
+                        .widget-dark-menu__layout
+                            h1.widget-dark-menu__header Weather for Moscow
+                            .widget-dark-menu__links
                                 span More at
-                                a.widget-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-                    .widget__body
-                        .weather-card
-                            .weather-card__row1
-                                img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                                .weather-card__col
-                                    p.weather-card__number 0
-                                        sup.weather-card__degree 0
+                                a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                    .widget-dark__body
+                        .weather-dark-card
+                            .weather-dark-card__row1
+                                img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                .weather-dark-card__col
+                                    p.weather-dark-card__number 0
+                                        sup.weather-dark-card__degree 0
                                         span and rising
-                            .weather-card__row2
-                                p.weather-card__means -
-                                p.weather-card__wind Wind:
-                        .widget__calendar
+                            .weather-dark-card__row2
+                                p.weather-dark-card__means -
+                                p.weather-dark-card__wind Wind:
+                        .widget-dark__calendar
                             ul.calendar
                                 li.calendar__item Today
                                     img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
@@ -202,44 +202,44 @@ html(lang="en")
                                     img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
                                 li.calendar__item Fri
                                     img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                            div.widget__graphic(id="graphic2")
+                            div.widget-dark__graphic(id="graphic2")
                 .container__item
-                    .widget.widget--compact
-                        .widget-menu.widget-menu--compact.widget-menu--brown
-                            .widget-menu__layout.widget-menu__layout--brown
-                                h1.widget-menu__header Weather for Moscow
-                        .widget__body.widget__body--compact
-                            .weather-card.weather-card--compact
-                                .weather-card__row1
-                                    img.weather-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                                    .weather-card__col
-                                        p.weather-card__number -
-                                            sup.weather-card__degree 0
+                    .widget-dark.widget-dark--compact
+                        .widget-dark-menu.widget-dark-menu--compact.widget-dark-menu--brown
+                            .widget-dark-menu__layout.widget-dark-menu__layout--brown
+                                h1.widget-dark-menu__header Weather for Moscow
+                        .widget-dark__body.widget-dark__body--compact
+                            .weather-dark-card.weather-dark-card--compact
+                                .weather-dark-card__row1
+                                    img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                                    .weather-dark-card__col
+                                        p.weather-dark-card__number -
+                                            sup.weather-dark-card__degree 0
                                         span and rising
-                                .weather-card__row2
-                                    p.weather-card__means -
-                                    p.weather-card__wind Wind:
-                            .widget-menu__links.widget-menu__links--compact.widget-menu__links--brown
-                                .widget-menu__layout.widget-menu__layout--brown
+                                .weather-dark-card__row2
+                                    p.weather-dark-card__means -
+                                    p.weather-dark-card__wind Wind:
+                            .widget-dark-menu__links.widget-dark-menu__links--compact.widget-dark-menu__links--brown
+                                .widget-dark-menu__layout.widget-dark-menu__layout--brown
                                     span More at
-                                    a.widget-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                                    a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                     .container
-                        .widget.widget--small.widget--brown
-                            .widget-menu.widget-menu--small.widget-menu--brown
-                                h1.widget-menu__header Moscow
+                        .widget-dark.widget-dark--small.widget-dark--brown
+                            .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--brown
+                                h1.widget-dark-menu__header Moscow
                                 ul.calendar.calendar--small
                                     li.calendar__item.calendar__item--brown
-                                        img.weather-card__img.weather-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                                p.weather-card__number.weather-card__number--small 0
-                                    sup.weather-card__degree
-                        .widget.widget--small2.widget--brown
-                            .widget-menu.widget-menu--small2.widget-menu--brown
-                                h1.widget-menu__header Moscow
+                                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-dark-card__number.weather-dark-card__number--small 0
+                                    sup.weather-dark-card__degree
+                        .widget-dark.widget-dark--small2.widget-dark--brown
+                            .widget-dark-menu.widget-dark-menu--small2.widget-dark-menu--brown
+                                h1.widget-dark-menu__header Moscow
                                 ul.calendar.calendar--small2
                                     li.calendar__item.calendar__item--brown
-                                        img.weather-card__img.weather-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                                p.weather-card__number.weather-card__number--small2 0
-                                    sup.weather-card__degree
+                                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                                p.weather-dark-card__number.weather-dark-card__number--small2 0
+                                    sup.weather-dark-card__degree
             main.main.main--brown
         script(src="js/weather-widget.js")
 

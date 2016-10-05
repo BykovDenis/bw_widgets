@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     let controlsWidget = {
-        cityName: document.querySelectorAll(".widget-menu__header"),
-        temperature: document.querySelectorAll(".weather-card__number"),
-        naturalPhenomenon: document.querySelectorAll(".weather-card__means"),
-        windSpeed: document.querySelectorAll(".weather-card__wind"),
-        mainIconWeather: document.querySelectorAll(".weather-card__img"),
+        cityName: document.querySelectorAll(".widget-dark-menu__header"),
+        temperature: document.querySelectorAll(".weather-dark-card__number"),
+        naturalPhenomenon: document.querySelectorAll(".weather-dark-card__means"),
+        windSpeed: document.querySelectorAll(".weather-dark-card__wind"),
+        mainIconWeather: document.querySelectorAll(".weather-dark-card__img"),
         calendarItem: document.querySelectorAll(".calendar__item"),
         graphic: document.getElementById("graphic")
     };

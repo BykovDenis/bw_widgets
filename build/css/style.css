@@ -409,7 +409,8 @@ th {
     background-image: -webkit-linear-gradient(bottom right, #353432, #4e4d4a);
     background-image: linear-gradient(to top left, #353432, #4e4d4a); }
 
-.widget {
+/* Тип темной отрисовки виджета */
+.widget-dark {
   -webkit-border-radius: 6px;
           border-radius: 6px;
   -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
@@ -417,7 +418,7 @@ th {
   margin: 0 43px 41px;
   background-color: #ffffff;
   width: 680px; }
-  .widget__body {
+  .widget-dark__body {
     display: table;
     clear: both;
     content: '';
@@ -425,44 +426,44 @@ th {
     padding-bottom: 16px;
     -webkit-border-radius: 0 0 6px 6px;
             border-radius: 0 0 6px 6px; }
-  .widget__body--compact {
+  .widget-dark__body--compact {
     float: none;
     margin: 0 auto;
     width: 225px;
     padding-bottom: 0; }
-  .widget__calendar {
+  .widget-dark__calendar {
     float: left;
     margin-top: 5px; }
-  .widget__graphic {
+  .widget-dark__graphic {
     width: 420px;
     height: 79px;
     margin-left: 20px; }
-  .widget__body--blue {
+  .widget-dark__body--blue {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
     background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
-  .widget--blue {
+  .widget-dark--blue {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
     background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
-  .widget--brown {
+  .widget-dark--brown {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
     background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
-  .widget--compact {
+  .widget-dark--compact {
     display: inline-block;
     vertical-align: top;
     width: 225px; }
-  .widget--small {
+  .widget-dark--small {
     display: inline-block;
     vertical-align: top;
     width: auto; }
-  .widget--small2 {
+  .widget-dark--small2 {
     display: inline-block;
     vertical-align: top;
     width: auto; }
 
-.widget-menu {
+.widget-dark-menu {
   width: 100%;
   margin: 0 auto;
   display: table;
@@ -472,7 +473,7 @@ th {
   -webkit-border-radius: 6px 6px 0 0;
           border-radius: 6px 6px 0 0;
   /* Описание цветовых схем */ }
-  .widget-menu__layout {
+  .widget-dark-menu__layout {
     display: table;
     clear: both;
     content: '';
@@ -483,178 +484,178 @@ th {
     padding-bottom: 5px;
     border-bottom: 2px solid #333333;
     width: 622px; }
-  .widget-menu__header {
+  .widget-dark-menu__header {
     float: left;
     margin: 0;
     font: 700 18px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
     word-break: break-word;
     max-width: 470px; }
-  .widget-menu__links {
+  .widget-dark-menu__links {
     float: right;
     -webkit-border-radius: 0 0 6px 6px;
             border-radius: 0 0 6px 6px; }
-  .widget-menu__links span {
+  .widget-dark-menu__links span {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
     padding-right: 3px; }
-  .widget-menu__link {
+  .widget-dark-menu__link {
     font: 700 14px "Roboto", Arial, sans-serif;
     color: #333333;
     text-decoration: none;
     opacity: 0.9; }
-  .widget-menu__link:before {
+  .widget-dark-menu__link:before {
     content: '';
     width: 14.3px;
     height: 14.3px;
     background: url(../img/logo.jpg) 50% 50% no-repeat;
     background-size: 14.3px 14.3px;
     padding-right: 17px; }
-  .widget-menu--compact .widget-menu__layout {
+  .widget-dark-menu--compact .widget-dark-menu__layout {
     width: 167px; }
-  .widget-menu__links--compact {
+  .widget-dark-menu__links--compact {
     width: 225px;
     float: none;
     text-align: center; }
-  .widget-menu__links--compact .widget-menu__layout {
+  .widget-dark-menu__links--compact .widget-dark-menu__layout {
     width: 195px;
     border-bottom: none;
     border-top: 2px solid #333333;
     padding: 10.2px 0 14.5px; }
-  .widget-menu--compact {
+  .widget-dark-menu--compact {
     width: 225px; }
-  .widget-menu--small {
+  .widget-dark-menu--small {
     padding-right: 15px;
     padding-left: 15px;
     -webkit-border-radius: 6px;
             border-radius: 6px;
     min-height: 58px; }
-  .widget-menu--small h1 {
+  .widget-dark-menu--small h1 {
     padding-right: 10px;
     float: none;
     display: inline-block;
     vertical-align: top;
     margin-top: 21px; }
-  .widget-menu--small span {
+  .widget-dark-menu--small span {
     display: none; }
-  .widget-menu--small2 {
+  .widget-dark-menu--small2 {
     padding-right: 15px;
     padding-left: 15px;
     -webkit-border-radius: 6px;
             border-radius: 6px;
     min-height: 58px; }
-  .widget-menu--small2 h1 {
+  .widget-dark-menu--small2 h1 {
     padding-right: 10px;
     margin-top: 21px;
     float: none;
     display: inline-block;
     vertical-align: top; }
-  .widget-menu--small2 span {
+  .widget-dark-menu--small2 span {
     display: none; }
-  .widget-menu--blue {
+  .widget-dark-menu--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
     background-image: linear-gradient(to top left, #DDF730, #F1F029); }
-  .widget-menu--blue .widget-menu__layout {
+  .widget-dark-menu--blue .widget-dark-menu__layout {
     border-bottom: 2px solid #FF4F98; }
-  .widget-menu--brown {
+  .widget-dark-menu--brown {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));
     background-image: -webkit-linear-gradient(bottom right, #FEB020, #FFD05C);
     background-image: linear-gradient(to top left, #FEB020, #FFD05C); }
-  .widget-menu--brown .widget-menu__layout {
+  .widget-dark-menu--brown .widget-dark-menu__layout {
     border-bottom: 2px solid #FF4F98; }
-  .widget-menu--small .widget-menu--blue {
+  .widget-dark-menu--small .widget-dark-menu--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
     background-image: linear-gradient(to top left, #DDF730, #F1F029); }
-  .widget-menu__links--blue {
+  .widget-dark-menu__links--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
     background-image: linear-gradient(to top left, #DDF730, #F1F029); }
-  .widget-menu__links--brown {
+  .widget-dark-menu__links--brown {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));
     background-image: -webkit-linear-gradient(bottom right, #FEB020, #FFD05C);
     background-image: linear-gradient(to top left, #FEB020, #FFD05C); }
-  .widget-menu__links--compact .widget-menu__layout--blue {
+  .widget-dark-menu__links--compact .widget-dark-menu__layout--blue {
     border-top: 2px solid #FF4F98; }
-  .widget-menu__links--compact .widget-menu__layout--brown {
+  .widget-dark-menu__links--compact .widget-dark-menu__layout--brown {
     border-top: 2px solid #FF4F98; }
 
-.weather-card {
+.weather-dark-card {
   float: left;
   margin: 0 15px; }
-  .weather-card__layout {
+  .weather-dark-card__layout {
     padding: 0 14px;
     margin-top: 16px;
     display: table;
     clear: both;
     content: ''; }
-  .weather-card__img {
+  .weather-dark-card__img {
     display: block;
     position: absolute;
     left: -9px;
     top: -14px; }
-  .weather-card--grayscale {
+  .weather-dark-card--grayscale {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
-  .weather-card__col {
+  .weather-dark-card__col {
     float: right; }
-  .weather-card__col span {
+  .weather-dark-card__col span {
     font: 400 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
     padding-top: 16px;
     padding-left: 7px; }
-  .weather-card__number {
+  .weather-dark-card__number {
     font: 600 48px / 1 "Oswald", Arial, sans-serif;
     color: #333333;
     margin: 0 auto;
     padding-top: 20px; }
-  .weather-card__degree {
+  .weather-dark-card__degree {
     font: 700 30px / 1 "Oswald", Arial, sans-serif; }
-  .weather-card__row1 {
+  .weather-dark-card__row1 {
     display: table;
     clear: both;
     content: '';
     position: relative;
     width: 192px;
     height: 112px; }
-  .weather-card__means {
+  .weather-dark-card__means {
     margin: 0;
     margin-bottom: 5px;
     font: 700 16px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
     text-align: center;
     text-transform: capitalize; }
-  .weather-card__wind {
+  .weather-dark-card__wind {
     margin: 0;
     font: 400 12px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
     text-align: center;
     padding: 2px 0; }
-  .weather-card__number--small {
+  .weather-dark-card__number--small {
     font-size: 18px;
     padding: 0;
     display: inline-block;
     vertical-align: top;
     margin-bottom: 5px;
     margin-top: 21px; }
-  .weather-card__number--small .weather-card__degree {
+  .weather-dark-card__number--small .weather-dark-card__degree {
     font-size: 14px; }
-  .weather-card__img--small {
+  .weather-dark-card__img--small {
     position: static; }
-  .weather-card--compact {
+  .weather-dark-card--compact {
     float: none;
     margin: 0 15px; }
-  .weather-card__number--small2 {
+  .weather-dark-card__number--small2 {
     font-size: 18px;
     padding: 0;
     display: inline-block;
     vertical-align: top;
     margin-bottom: 5px;
     margin-top: 21px; }
-  .weather-card__number--small2 .weather-card__degree {
+  .weather-dark-card__number--small2 .weather-dark-card__degree {
     font-size: 14px; }
-  .weather-card--compact {
+  .weather-dark-card--compact {
     float: none; }
 
 .calendar {
@@ -732,6 +733,12 @@ th {
   .calendar--small2 .calendar__item--brown {
     background-color: #ffffff; }
 
+/* Тип яркой отрисовки виджета */
+/*
+@import "components/widget-lite/widget";
+@import "components/widget-lite/widget-menu";
+@import "components/widget-lite/weather-card";
+*/
 .container {
   display: -webkit-box;
   display: -webkit-flex;

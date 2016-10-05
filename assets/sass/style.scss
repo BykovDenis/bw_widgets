@@ -12,9 +12,18 @@
 
 /* Блоки */
 @import "blocks/main";
-@import "blocks/widget";
-@import "blocks/widget-menu";
-@import "blocks/weather-card";
-@import "blocks/calendar";
+
+/* Тип темной отрисовки виджета */
+@import "components/widget-dark/widget-dark";
+@import "components/widget-dark/widget-dark-menu";
+@import "components/widget-dark/weather-dark-card";
+@import "components/widget-dark/calendar";
+
+/* Тип яркой отрисовки виджета */
+/*
+@import "components/widget-lite/widget";
+@import "components/widget-lite/widget-menu";
+@import "components/widget-lite/weather-card";
+*/
 
 @import "services/container";
