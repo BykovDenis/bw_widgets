@@ -432,7 +432,7 @@ th {
   .widget__graphic {
     width: 420px;
     height: 79px;
-    margin-left: 38px; }
+    margin-left: 20px; }
   .widget__body--blue {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
@@ -575,7 +575,8 @@ th {
     border-top: 2px solid #FF4F98; }
 
 .weather-card {
-  float: left; }
+  float: left;
+  margin: 0 15px; }
   .weather-card__layout {
     padding: 0 14px;
     margin-top: 16px;
@@ -648,8 +649,7 @@ th {
   .weather-card__number--small2 .weather-card__degree {
     font-size: 14px; }
   .weather-card--compact {
-    float: none;
-    margin: 0 15px; }
+    float: none; }
 
 .calendar {
   list-style: none;
@@ -671,7 +671,7 @@ th {
       -ms-flex-align: baseline;
           align-items: baseline;
   width: 425px;
-  margin-left: 40px;
+  margin-left: 20px;
   padding: 0;
   /* маленький виджет */
   /* маленький виджет с увеличенным значком */ }

@@ -1,6 +1,7 @@
 .weather-card{
 
   float: left;
+  margin: 0 15px;
 
   &__layout{
     padding: 0 14px;
@@ -104,7 +105,6 @@
 
   &--compact{
     float: none;
-    margin: 0 15px;
   }
 
 }
