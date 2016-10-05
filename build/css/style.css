@@ -388,8 +388,7 @@ th {
 
 /* Тип темной отрисовки виджета */
 .widget-dark {
-  -webkit-border-radius: 6px;
-          border-radius: 6px;
+  border-radius: 6px;
   -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
           box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
   margin: 0 43px 41px;
@@ -401,8 +400,7 @@ th {
     content: '';
     width: 680px;
     padding-bottom: 16px;
-    -webkit-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px; }
+    border-radius: 0 0 6px 6px; }
   .widget-dark__body--compact {
     float: none;
     margin: 0 auto;
@@ -447,8 +445,7 @@ th {
   clear: both;
   content: '';
   background-color: #ffffff;
-  -webkit-border-radius: 6px 6px 0 0;
-          border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
   /* Описание цветовых схем */ }
   .widget-dark-menu__layout {
     display: table;
@@ -470,8 +467,7 @@ th {
     max-width: 470px; }
   .widget-dark-menu__links {
     float: right;
-    -webkit-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px; }
+    border-radius: 0 0 6px 6px; }
   .widget-dark-menu__links span {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
@@ -504,8 +500,7 @@ th {
   .widget-dark-menu--small {
     padding-right: 15px;
     padding-left: 15px;
-    -webkit-border-radius: 6px;
-            border-radius: 6px;
+    border-radius: 6px;
     min-height: 58px; }
   .widget-dark-menu--small h1 {
     padding-right: 10px;
@@ -518,8 +513,7 @@ th {
   .widget-dark-menu--small2 {
     padding-right: 15px;
     padding-left: 15px;
-    -webkit-border-radius: 6px;
-            border-radius: 6px;
+    border-radius: 6px;
     min-height: 58px; }
   .widget-dark-menu--small2 h1 {
     padding-right: 10px;
@@ -757,15 +751,13 @@ th {
 
 .widget-lite {
   width: 300px;
-  -webkit-border-radius: 6px;
-          border-radius: 6px;
+  border-radius: 6px;
   margin: 0 auto; }
   .widget-lite__layout {
     padding: 27px 0; }
   .widget-lite__header {
     position: relative;
-    -webkit-border-radius: 6px 6px 0 0;
-            border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
     width: 300px; }
   .widget-lite__header .widget-lite__layout {
     margin-left: 10px; }
@@ -816,8 +808,7 @@ th {
         -ms-flex-align: center;
             align-items: center; }
   .widget-lite__footer {
-    -webkit-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px; }
+    border-radius: 0 0 6px 6px; }
   .widget-lite__link {
     font: 600 20px / 1 "Roboto", Arial, sans-serif;
     color: #ffffff;
