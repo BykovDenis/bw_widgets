@@ -218,7 +218,7 @@ export default class WeatherWidget extends CustomDate{
 
         for (let elem in this.controls.cityName) {
             if (this.controls.cityName.hasOwnProperty(elem)) {
-                this.controls.cityName[elem].innerHTML = `<span>Weather for</span> ${metadata.cityName}`;
+                this.controls.cityName[elem].innerHTML = metadata.cityName;
             }
         }
         for (let elem in this.controls.temperature) {

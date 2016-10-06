@@ -79,6 +79,8 @@
 
   &__number--small &__degree{
     font-size: $font-size;
+    display: inline-block;
+    vertical-align: top;
   }
 
   &__img--small{
@@ -90,21 +92,11 @@
     margin: 0 15px;
   }
 
-  &__number--small2{
-    font-size: $font-size+4px;
-    padding:0;
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 5px;
-    margin-top: 21px;
-  }
+
 
   &__number--small2 &__degree{
     font-size: $font-size;
   }
 
-  &--compact{
-    float: none;
-  }
 
 }
