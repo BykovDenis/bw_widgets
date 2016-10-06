@@ -9,7 +9,7 @@
 
 /* миксины */
 @import "mixin";
-
+ 
 /* Блоки */
 @import "blocks/main";
 
@@ -23,6 +23,7 @@
 
 @import "components/widget-lite/weather-lite";
 @import "components/widget-lite/widget-lite";
+@import "components/widget-lite/weather-lite-table";
 /*
 @import "components/widget-lite.sass/widget-menu";
 @import "components/widget-lite.sass/weather-card";

@@ -2,12 +2,6 @@
 
     background-image: linear-gradient(to top left, $color-lime, $color-yellow);
 
-    &__description{
-        font: 100 #{$font-size} / 1 $font-roboto;
-        color: $color-white;
-        margin:0;
-    }
-
     &__icon{
         position: absolute;
         right: 14px;
@@ -41,6 +35,39 @@
 
     &__item:last-child{
         font-weight: 600;
+    }
+
+    /*  Типизация для второго виджета */
+
+    &--type2{
+        width: 120px;
+    }
+
+    &--type2 &__temperature{
+        font-size: #{$font-size*3 + 11px};
+        text-align: center;
+        padding-left: 10px;
+    }
+
+    /*  Типизация для третьго виджета */
+
+    &--type3{
+        width: 120px;
+    }
+
+    &--type3 &__layout{
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 98px;
+    }
+
+    &--type3 &__temperature{
+        padding-left: 6px;
+        margin-top: 11px;
+        font-size: #{$font-size * 2 + 2px};
     }
 
 }
