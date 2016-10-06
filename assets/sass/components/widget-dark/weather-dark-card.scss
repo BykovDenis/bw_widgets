@@ -24,13 +24,6 @@
     float: right;
   }
 
-  &__col span{
-    font: 400 #{$font-size} / $line-height $font-roboto;
-    color: $color-black;
-    padding-top: 16px;
-    padding-left: 7px;
-  }
-
   &__number{
     font: 600 #{ $font-size * 3 + 6px} / $line-height $font-oswald;
     color: $color-black;
@@ -39,13 +32,22 @@
   }
 
   &__degree{
-    font: 700 #{$font-size*2 + 2px} / $line-height $font-oswald;
+    font: 700 #{$font-size*3 + 6px} / $line-height $font-oswald;
+  }
+
+  &__rising{
+    font: 400 #{$font-size} / $line-height $font-roboto;
+  }
+
+  &__col span{
+    color: $color-black;
+    padding-top: 16px;
   }
 
   &__row1{
     @include clearfix;
     position: relative;
-    width: 192px;
+    width: 195px;
     height: 112px;
   }
 

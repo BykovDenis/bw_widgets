@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lang: 'en',
         appid: '2d90837ddbaeda36ab487f257829b667',
         units: 'metric',
-        textUnitTemp: '&176;'
+        textUnitTemp: String.fromCodePoint(0x00B0)  // 248
     };
 
     let controlsWidget = {

@@ -2,5 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{bw_widgets/node_modules}" />
+    <file url="file://$PROJECT_DIR$/assets/js/weather-widget.js" libraries="{ECMAScript 6}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>

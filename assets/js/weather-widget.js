@@ -223,7 +223,7 @@ export default class WeatherWidget extends CustomDate{
         }
         for (let elem in this.controls.temperature) {
             if (this.controls.temperature.hasOwnProperty(elem)) {
-                this.controls.temperature[elem].innerHTML = metadata.temperature+"<span class='weather-card__degree'>"+this.params.textUnitTemp+"</span>";
+                this.controls.temperature[elem].innerHTML = metadata.temperature+"<span class='weather-dark-card__degree'>"+this.params.textUnitTemp+"</span>";
             }
         }
 
@@ -276,7 +276,7 @@ export default class WeatherWidget extends CustomDate{
     renderIconsDaysOfWeek(data){
         var that = this;
 
-        data.forEach(function(elem, index,data){
+        data.forEach(function(elem, index){
             that.controls.calendarItem[index].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
             that.controls.calendarItem[index+10].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
             that.controls.calendarItem[index+20].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`
