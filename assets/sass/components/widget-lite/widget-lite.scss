@@ -4,6 +4,7 @@
     border-radius: 6px;
     margin: 0 auto;
 
+
     &__layout{
         padding: 27px 0;
     }
@@ -35,6 +36,10 @@
         font: 100 #{$font-size} / 1 $font-roboto;
         color: $color-white;
         margin:0;
+    }
+
+    &--yellow{
+        background-image: linear-gradient(to left, $color-lime, $color-yellow);
     }
 
     &__header--blue{
@@ -170,5 +175,35 @@
         font-size: #{$font-size - 2px};
         margin: 0;
     }
+
+    /*  Четвертый тип виджета */
+
+    &--type4{
+        margin-top: 30px;
+        color: $color-black;
+        font: 400 #{$font-size} / 1 $font-roboto;
+    }
+
+    &--type4 &__layout{
+        position: relative;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__interval{
+        font: 600 #{$font-size + 4px} / 1 $font-oswald;
+    }
+
+    &__interval td:first-child{
+        border-right: 1px solid $color-pink
+    }
+
+    &__interval td{
+        padding: 3px 5px;
+    }
+    
 
 }

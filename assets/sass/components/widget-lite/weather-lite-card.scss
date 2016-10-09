@@ -1,0 +1,17 @@
+.weather-lite-card{
+
+	color: $color-black;
+    font: 400 #{$font-size} / 1 $font-roboto;
+
+	&--type4 &__title{
+        font-weight: 600;
+        font-size: #{$font-size};
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    &--type4 &__description{
+        font-size: #{$font-size - 4px};
+        margin: 0;
+    }
+}

@@ -4,14 +4,14 @@
 /* Шрифты */
 /* @import "fonts"; */
 
-/* Переменные */
-@import "variables";
+/* Переменные */ 
+@import "variables"; 
 
 /* миксины */
 @import "mixin";
  
 /* Блоки */
-@import "blocks/main";
+@import "blocks/main";  
 
 /* Тип темной отрисовки виджета */
 @import "components/widget-dark/widget-dark";
@@ -24,9 +24,6 @@
 @import "components/widget-lite/weather-lite";
 @import "components/widget-lite/widget-lite";
 @import "components/widget-lite/weather-lite-table";
-/*
-@import "components/widget-lite.sass/widget-menu";
-@import "components/widget-lite.sass/weather-card";
-*/
+@import "components/widget-lite/weather-lite-card";
 
 @import "services/container";
