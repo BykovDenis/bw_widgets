@@ -36,15 +36,6 @@
         font-weight: 600;
     }
 
-    /*Типизация по цветовым схемам */
-    &--blue{
-        background-image: linear-gradient(to top left, $color-lime, $color-yellow);
-    }
-
-    &--brown{
-        background-color: $color-white;
-    }
-
     /*  Типизация для второго виджета */
 
     &--type2{
@@ -79,14 +70,45 @@
     }
 
     &--type4{
-        width: 128px;
+        width: 300px;
     }
 
     &--type4 &__icon{
         display: block;
-        top: -65px;
-        left: 23px;
+        top: -54px;
+        left: 42px;
         z-index: 100;
+    }
+
+    &--type5{
+        width: 300px;
+    }
+
+    &--type5 &__icon{
+        display: block;
+        top: -33px;
+        left: 58px;
+        z-index: 100;
+        border-radius: 4px;
+        transform-origin: left top;
+        transform: rotate(-2deg);
+    }
+
+    &--type5 &__icon--blue{
+        background-color: $color-white;background-image: -webkit-linear-gradient(bottom, $color-light-blue1, $color-light-blue2);
+    }
+
+    &--type5 &__icon--brown{
+        background-color: $color-white;
+    }
+
+    /*Типизация по цветовым схемам */
+    &--blue{
+        background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+    }
+
+    &--brown{
+        background-color: $color-white;
     }
 
 }

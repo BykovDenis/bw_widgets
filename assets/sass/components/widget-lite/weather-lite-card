@@ -1,9 +1,18 @@
 .weather-lite-card{
     font: 600 #{$font-size + 4px} / 1 $font-oswald;
-    color: $color-white;
+    color: $color-black;
+
+    &--type4{
+        color: $color-white;
+    }
 
     &__item{
-        padding-left: 5px;
+        padding: 5px 0 5px 5px;
+    }
+
+    &__item:first-child{
+        border-right: 2px solid $color-pink;
+        padding-right: 5px;
     }
 
     &--blue &__item:first-child{
@@ -11,8 +20,4 @@
         padding-right: 5px;
     }
 
-    &--brown &__item:first-child{
-        border-right: 2px solid $color-pink;
-        padding-right: 5px;
-    }
 }

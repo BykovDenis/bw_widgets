@@ -324,4 +324,58 @@
         color: $color-orange1;
     }
 
+
+    &--type5 &__footer--blue  &__link:before{
+        padding: 0;
+        padding-right: 3px;
+        content:'';
+        width: 13px;
+        height: 13px;
+        background: url(../img/logo_13x13_blue.png) 50% 50% no-repeat;
+        background-size: 13px 13px ;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &--type5 &__footer--blue &__date{
+        color: $color-light-blue3;
+    }
+
+    &--type5 &__layout{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+
+    &--type5  &__layout--blue {
+        background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+    }
+
+    &--type5 &__title{
+        font: 600 #{$font-size} / 1 $font-roboto;
+        color: $color-black;
+        margin-bottom: 5px;
+    }
+
+    &--type5 &__description{
+        font: 400 #{$font-size - 4px} / 1 $font-roboto;
+        color: $color-black;
+    }
+
+    &--type5 &__footer--blue &__layout{
+        background: none;
+    }
+
+    &--type5 &__footer{
+        background: none;
+    }
+
+    &--type5 &__footer--blue &__link{
+        color: $color-light-blue3;
+        font-size: #{$font-size - 2px};
+    }
+
 }

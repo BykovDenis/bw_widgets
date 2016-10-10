@@ -237,14 +237,29 @@ html(lang="en")
                                 .widget-lite__layout
                                     a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap  
                     .container
+                        .widget-lite.widget-lite--type5.widget-lite--blue
+                            .widget-lite__layout.widget-lite__layout--blue
+                                .widget-lite-card
+                                    .widget-lite__title Moscow
+                                    .widget-lite__description  Cloudy Skies 
+                                .weather-lite.weather-lite--blue.weather-lite--type5 
+                                    img.weather-lite__icon.weather-lite__icon--blue(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies") 
+                                table.weather-lite-card
+                                    tr.weather-lite-card__items
+                                        td.weather-lite-card__item -10&#176;                                                                                    
+                                        td.weather-lite-card__item -14&#176; 
+                            .widget-lite__footer.widget-lite__footer--blue
+                                .widget-lite__layout
+                                    a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                                    .widget-lite__date 20:16 Mar 28   
                         .widget-lite.widget-lite--type4.widget-lite--blue
                             .widget-lite__layout.widget-lite__layout--blue
                                 .widget-lite-card
                                     .widget-lite__title Moscow
                                     .widget-lite__description  Cloudy Skies 
                                 .weather-lite.weather-lite--type4 
-                                    img.weather-lite__icon(src="/img/11d.png" width="128" height="128" alt="Cloudy Skies") 
-                                table.weather-lite-card.weather-lite-card--blue
+                                    img.weather-lite__icon(src="/img/11d.png" width="100" alt="Cloudy Skies") 
+                                table.weather-lite-card.weather-lite-card--type4.weather-lite-card--blue
                                     tr.weather-lite-card__items
                                         td.weather-lite-card__item -10&#176;                                                                                    
                                         td.weather-lite-card__item -14&#176; 
@@ -407,14 +422,29 @@ html(lang="en")
                                 .widget-lite-card
                                     .widget-lite__title Moscow
                                     .widget-lite__description  Cloudy Skies 
-                                .weather-lite.weather-lite--type4 
-                                    img.weather-lite__icon(src="/img/11d.png" width="128" height="128" alt="Cloudy Skies") 
-                                table.weather-lite-card.weather-lite-card--brown
+                                .weather-lite.weather-lite--type5 
+                                    img.weather-lite__icon.weather-lite__icon--brown(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies") 
+                                table.weather-lite-card
                                     tr.weather-lite-card__items
                                         td.weather-lite-card__item -10&#176;                                                                                    
                                         td.weather-lite-card__item -14&#176; 
                             .widget-lite__footer.widget-lite__footer--brown
                                 .widget-lite__layout
                                     a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                                    .widget-lite__date 20:16 Mar 28               
+                                    .widget-lite__date 20:16 Mar 28                                      
+                        .widget-lite.widget-lite--type4.widget-lite--brown
+                            .widget-lite__layout.widget-lite__layout--brown
+                                .widget-lite-card
+                                    .widget-lite__title Moscow
+                                    .widget-lite__description  Cloudy Skies 
+                                .weather-lite.weather-lite--type4 
+                                    img.weather-lite__icon(src="/img/11d.png" width="100" alt="Cloudy Skies") 
+                                table.weather-lite-card
+                                    tr.weather-lite-card__items
+                                        td.weather-lite-card__item -10&#176;                                                                                    
+                                        td.weather-lite-card__item -14&#176; 
+                            .widget-lite__footer.widget-lite__footer--brown
+                                .widget-lite__layout
+                                    a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                                    .widget-lite__date 20:16 Mar 28                                                  
         script(src="js/weather-widget.js")
