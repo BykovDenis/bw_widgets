@@ -1158,10 +1158,20 @@ th {
     background-image: -webkit-linear-gradient(bottom, #74E881, #C9F671);
     background-image: linear-gradient(to top, #74E881, #C9F671); }
 
-/*
-@import "components/widget-lite.sass/widget-menu";
-@import "components/widget-lite.sass/weather-card";
-*/
+.weather-lite-card {
+  font: 600 18px/1 "Oswald", Arial, sans-serif;
+  color: #333333; }
+  .weather-lite-card--type4 {
+    color: #ffffff; }
+  .weather-lite-card__item {
+    padding: 5px 0 5px 5px; }
+  .weather-lite-card__item:first-child {
+    border-right: 2px solid #FF4F98;
+    padding-right: 5px; }
+  .weather-lite-card--blue .weather-lite-card__item:first-child {
+    border-right: 2px solid #02FFEA;
+    padding-right: 5px; }
+
 .container {
   display: -webkit-box;
   display: -webkit-flex;
