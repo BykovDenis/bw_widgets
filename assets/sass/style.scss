@@ -5,11 +5,11 @@
 /* @import "fonts"; */
 
 /* Переменные */
-@import "variables";
+@import "variables";  
 
 /* миксины */
 @import "mixin";
- 
+
 /* Блоки */
 @import "blocks/main";
 
@@ -22,6 +22,7 @@
 /* Тип яркой отрисовки виджета */
 
 @import "components/widget-lite/weather-lite";
+@import "components/widget-lite/weather-lite-card";
 @import "components/widget-lite/widget-lite";
 @import "components/widget-lite/weather-lite-table";
 /*

@@ -124,7 +124,7 @@
   }
 
   &--brown{
-    background-image: linear-gradient(to top left, $color-orange, $color-lite-oragne);
+    background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
   }
 
   &--brown &__layout{
@@ -140,7 +140,7 @@
   }
 
   &__links--brown{
-    background-image: linear-gradient(to top left, $color-orange, $color-lite-oragne);
+    background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
   }
 
   &__links--compact &__layout--blue{
