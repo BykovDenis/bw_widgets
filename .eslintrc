@@ -8,7 +8,7 @@ globals:
   define: true
 
 extends:
-  "airbnb-base/legacy"
+  "airbnb-base"
 
 rules:
   indent: [2, 2, {SwitchCase: 1}]
