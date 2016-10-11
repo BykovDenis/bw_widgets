@@ -151,11 +151,11 @@ export default class WeatherWidget extends CustomDate {
         if (element >= object[key][elementName][0] && element < object[key][elementName][1]) {
           return key;
         }
-      }
-      // Если сравнение производится со значением элемента элементарного типа с двумя элементами в JSON
-      else if (elementName2 != null) {
-        if (element >= object[key][elementName] && element < object[key][elementName2])
+        // сравнение производится со значением элементарного типа с двумя элементами в JSON
+      } else if (elementName2 != null) {
+        if (element >= object[key][elementName] && element < object[key][elementName2]) {
           return key;
+        }
       }
     }
   }
@@ -231,7 +231,7 @@ export default class WeatherWidget extends CustomDate {
     if (metadata.weather.trim()) {
       for (const elem in this.controls.naturalPhenomenon) {
         if (this.controls.naturalPhenomenon.hasOwnProperty(elem)) {
-        this.controls.naturalPhenomenon[elem].innerText = metadata.weather;
+          this.controls.naturalPhenomenon[elem].innerText = metadata.weather;
         }
       }
     }
@@ -383,34 +383,36 @@ export default class WeatherWidget extends CustomDate {
     const stepYTextUp = 58;
     const stepYTextDown = 75;
     context.beginPath();
-    context.moveTo(step - 10, -1 * arr[i].min * zoom + stepY);
-    context.strokeText(`${arr[i].max}º`, step, -1 * arr[i].max * zoom + stepYTextUp);
-    context.lineTo(step - 10, -1 * arr[i++].max * zoom + stepY);
+    context.moveTo(step - 10, (-1 * arr[i].min * zoom) + stepY);
+    context.strokeText(`${arr[i].max}º`, step, (-1 * arr[i].max * zoom) + stepYTextUp);
+    context.lineTo(step - 10, (-1 * arr[i].max * zoom) + stepY);
+    i += 1;
     while (i < arr.length) {
       step += 55;
-      context.lineTo(step, -1 * arr[i].max * zoom + stepY);
-      context.strokeText(`${arr[i].max}º`, step, -1 * arr[i].max * zoom + stepYTextUp);
-      i++;
+      context.lineTo(step, (-1 * arr[i].max * zoom) + stepY);
+      context.strokeText(`${arr[i].max}º`, step, (-1 * arr[i].max * zoom) + stepYTextUp);
+      i += 1;
     }
-    context.lineTo(step + 30, -1 * arr[--i].max * zoom + stepY);
+    i -= 1;
+    context.lineTo(step + 30, (-1 * arr[i].max * zoom) + stepY);
     step = 55;
     i = 0;
-    context.moveTo(step - 10, -1 * arr[i].min * zoom + stepY);
-    context.strokeText(`${arr[i].min}º`, step, -1 * arr[i].min * zoom + stepYTextDown);
-    context.lineTo(step - 10, -1 * arr[i++].min * zoom + stepY);
+    context.moveTo(step - 10, (-1 * arr[i].min * zoom) + stepY);
+    context.strokeText(`${arr[i].min}º`, step, (-1 * arr[i].min * zoom) + stepYTextDown);
+    context.lineTo(step - 10, (-1 * arr[i].min * zoom) + stepY);
+    i += 1;
     while (i < arr.length) {
       step += 55;
-      context.lineTo(step, -1 * arr[i].min * zoom + stepY);
-      context.strokeText(`${arr[i].min}º`, step, -1 * arr[i].min * zoom + stepYTextDown);
-      i++;
+      context.lineTo(step, (-1 * arr[i].min * zoom) + stepY);
+      context.strokeText(`${arr[i].min}º`, step, (-1 * arr[i].min * zoom) + stepYTextDown);
+      i += 1;
     }
-    context.lineTo(step + 30, -1 * arr[--i].min * zoom + stepY);
+    i -= 1;
+    context.lineTo(step + 30, (-1 * arr[i].min * zoom) + stepY);
     context.fillStyle = '#333';
-    context.lineTo(step + 30, -1 * arr[i].max * zoom + stepY);
+    context.lineTo(step + 30, (-1 * arr[i].max * zoom) + stepY);
     context.closePath();
-
     context.strokeStyle = '#333';
-
     context.stroke();
     context.fill();
   }
