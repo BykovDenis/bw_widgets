@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const controlsWidget = {
+    // Первая половина виджетов
     cityName: document.querySelectorAll('.widget-dark-menu__header'),
     temperature: document.querySelectorAll('.weather-dark-card__number'),
     naturalPhenomenon: document.querySelectorAll('.weather-dark-card__means'),
@@ -28,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     mainIconWeather: document.querySelectorAll('.weather-dark-card__img'),
     calendarItem: document.querySelectorAll('.calendar__item'),
     graphic: document.getElementById('graphic'),
+    // Вторая половина виджетов
+    cityName2: document.querySelectorAll('.widget-lite__title'),
+    temperature2: document.querySelectorAll('.weather-lite__temperature'),
+    naturalPhenomenon2: document.querySelectorAll('.widget-lite__description'),
+    windSpeed2: document.querySelectorAll('.weather-lite__wind'),
   };
 
   const urls = {
