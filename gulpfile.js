@@ -186,24 +186,6 @@ gulp.task('build_js', function() {
   .pipe(gulp.dest('build/js'));
 });
 
-// Build generator
-gulp.task('build_js_gen', function() {
-  return browserify({entries: ['./assets/js/generator/script.js'], extensions: ['.js'], debug: true})
-  .transform('babelify', {presets: ['es2015']})
-  .bundle()
-  .pipe(source('weather-widget_generator.js'))
-  .pipe(gulp.dest('build/js'));
-});
-
-// Build Asserts JS
-gulp.task('asserts_js', function() {
-  return browserify({entries: ['./assets/asserts/test.js'], extensions: ['.js'], debug: true})
-  .transform('babelify', {presets: ['es2015']})
-  .bundle()
-  .pipe(source('test.js'))
-  .pipe(gulp.dest('build/asserts'));
-});
-
 // Локальный сервер
 gulp.task('serve1', ['asserts_js'], function() {
   server.init({
@@ -234,8 +216,8 @@ gulp.task('watch', function() {
 });
 
 // Default
-gulp.task('default', ['clean', 'jade', 'sass', 'js', 'jslibs', 'jsmods', 'build_js', 'build_js_gen', 'serve', 'copyFiles', 'img', 'watch']);
-gulp.task('run', ['jade', 'sass', 'js', 'jslibs', 'jsmods', 'serve', 'build_js', 'build_js_gen', 'copyFiles', 'watch']);
+gulp.task('default', ['clean', 'jade', 'sass', 'js', 'jslibs', 'jsmods', 'build_js', 'serve', 'copyFiles', 'img', 'watch']);
+gulp.task('run', ['jade', 'sass', 'js', 'jslibs', 'jsmods', 'serve', 'build_js', 'copyFiles', 'watch']);
 gulp.task('build', ['clean', 'svgSpriteBuild', 'img', 'copyFiles']);
 
 // Тестирование

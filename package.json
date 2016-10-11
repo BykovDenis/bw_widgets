@@ -41,7 +41,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test": "eslint assets/js"
+    "test": "eslint --fix assets/js/weather-widget.js"
   },
   "repository": {
     "type": "git",
