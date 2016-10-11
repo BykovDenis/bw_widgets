@@ -1,4 +1,3 @@
-'use strict';
 
 var gulp = require('gulp');
 var autoprefixer = require('autoprefixer');
@@ -33,6 +32,16 @@ var jade = require('gulp-jade');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 /*  ----------------------------  */
+
+/* Устанавливаем линтер для jade */
+ var puglint = require('gulp-pug-lint');
+
+ gulp.task('lint-jade', function () {
+   return gulp
+     .src('assets/jade/index.jade')
+     .pipe(puglint());
+ });
+
 
 // browser-sync
 

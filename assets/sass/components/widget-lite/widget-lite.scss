@@ -131,7 +131,6 @@
 
     &--type2{
         width: 120px;
-        padding-top: 50px; /* Костылек */
     }
 
     &--type2 &__layout{
@@ -149,6 +148,7 @@
         font-size: #{$font-size - 3px};
         font-weight: 400;
         margin:0 auto;
+        padding-top: 2px;
     }
 
     &--type2 &__footer--blue &__link:before{
@@ -188,7 +188,6 @@
 
     &--type3{
         width: 120px;
-        padding-top: 50px; /* Костылек */
     }
 
     &--type3 &__layout{

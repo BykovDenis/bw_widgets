@@ -9,7 +9,9 @@ html(lang="en")
     script(src="js/libs/d3.min.js")
   body
     <!-- Бесцветный виджет -->
+    // Первый контейнер
     .container__item
+      // Основной виджет: 1,  цвет: 0
       main.main.main--gray
         .container
           .widget-dark
@@ -48,8 +50,9 @@ html(lang="en")
                     img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
                   li.calendar__item Fri
                     img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                div.widget-dark__graphic(id="graphic")
+                div.widget-dark__graphic(id="graphic")             
           .container__item
+            // Виджет: 2, цвет: 0 
             .widget-dark.widget-dark--compact
               .widget-dark-menu.widget-dark-menu--compact
                 .widget-dark-menu__layout
@@ -70,6 +73,7 @@ html(lang="en")
                     span More at
                     a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
             .container
+              // Виджет: 3, цвет: 0
               .widget-dark.widget-dark--small
                 .widget-dark-menu.widget-dark-menu--small
                   h1.widget-dark-menu__header Moscow
@@ -86,157 +90,165 @@ html(lang="en")
                       img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
                   p.weather-dark-card__number.weather-dark-card__number--small 0
                     span.weather-dark-card__degree
-      main.main.main--gray 
     <!-- Синий виджет -->
     .container__item
       main.main.main--blue
-        .widget-dark.widget-dark--blue
-          .widget-dark-menu.widget-dark-menu--blue
-            .widget-dark-menu__layout
-              h1.widget-dark-menu__header Weather for Moscow
-              .widget-dark-menu__links
-                span More at
-                a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-          .widget-dark__body
-            .weather-dark-card
-              .weather-dark-card__row1
-                img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                .weather-dark-card__col
-                  p.weather-dark-card__number 0
-                    sup.weather-dark-card__degree 0
-                  span.weather-dark-card__rising and rising
-              .weather-dark-card__row2
-                p.weather-dark-card__means -
-                p.weather-dark-card__wind Wind:
-            .widget-dark__calendar
-              ul.calendar
-                li.calendar__item Today
-                  img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                li.calendar__item Sat
-                  img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
-                li.calendar__item Sun
-                  img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
-                li.calendar__item Mon
-                  img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
-                li.calendar__item Tue
-                  img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
-                li.calendar__item Wed
-                  img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
-                li.calendar__item Thu
-                  img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
-                li.calendar__item Fri
-                  img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-              div.widget-dark__graphic(id="graphic1")
         .container__item
-          .widget-dark.widget-dark--compact.widget-dark--blue
-            .widget-dark-menu.widget-dark-menu--compact.widget-dark-menu--blue
-              .widget-dark-menu__layout.widget-dark-menu__layout--blue
-                h1.widget-dark-menu__header Weather for Moscow
-            .widget-dark__body.widget-dark__body--compact.widget-dark__body--blue
-              .weather-dark-card.weather-dark-card--compact
-                .weather-dark-card__row1
-                  img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                  .weather-dark-card__col
-                    p.weather-dark-card__number -
-                      span.weather-dark-card__degree 0
-                    span.weather-dark-card__rising and rising
-                .weather-dark-card__row2
-                  p.weather-dark-card__means -
-                  p.weather-dark-card__wind Wind:
-              .widget-dark-menu__links.widget-dark-menu__links--compact.widget-dark-menu__links--blue
-                .widget-dark-menu__layout.widget-dark-menu__layout--blue
-                  span More at
-                  a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
           .container
-            .widget-dark.widget-dark--small.widget-dark--blue
-              .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--blue
-                h1.widget-dark-menu__header Moscow
-                ul.calendar.calendar--small
-                  li.calendar__item.calendar__item--blue
-                    img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                p.weather-dark-card__number.weather-dark-card__number--small 0
-                  span.weather-dark-card__degree
-            .widget-dark.widget-dark--small.widget-dark--blue
-              .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--blue
-                h1.widget-dark-menu__header Moscow
-                ul.calendar.calendar--small2
-                  li.calendar__item.calendar__item--blue
-                    img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                p.weather-dark-card__number.weather-dark-card__number--small 0
-                  span.weather-dark-card__degree
-      main.main.main--blue
-        .container
-          .widget-lite
-            .widget-lite__header.widget-lite__header--blue
-              .widget-lite__layout
-                h1.widget-lite__title Moscow
-                p.widget-lite__description Cloudy Skies
-              img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
-            .weather-lite.weather-lite--blue
-              .weather-lite__layout
-                .weather-lite__temperature 10
-                  span.widget-lite__units &#176;
-                .weather-lite__weather
-                  .weather-lite-card
-                    table.weather-lite__table
-                      tr.weather-lite__items
-                        th(colspan="2").weather-lite__item Details
-                      tr.weather-lite__items
-                        td.weather-lite__item Feels like
-                        td.weather-lite__item -13
-                          span.widget-lite-card__units &#176;
-                      tr.weather-lite__items
-                        td.weather-lite__item Wind
-                        td.weather-lite__item 3 m/s West
-                      tr.weather-lite-card__items
-                        td.weather-lite__item Humidity
-                        td.weather-lite__item 74%
-                      tr.weather-lite-card__items
-                        td.weather-lite__item Precip
-                        td.weather-lite__item 50%
-                      tr.weather-lite-card__items
-                        td.weather-lite__item Pressure
-                        td.weather-lite__item 1003.0 mb up
-            .widget-lite__footer.widget-lite__footer--blue
-              .widget-lite__layout
-                a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                .widget-lite__date 20:16 Mar 28
-          .container__item          
-            .widget-lite.widget-lite--type2.widget-lite--blue
+            //Виджет: 1, цвет: blue
+            .widget-dark.widget-dark--blue
+              .widget-dark-menu.widget-dark-menu--blue
+                .widget-dark-menu__layout
+                  h1.widget-dark-menu__header Weather for Moscow
+                  .widget-dark-menu__links
+                    span More at
+                    a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+              .widget-dark__body
+                .weather-dark-card
+                  .weather-dark-card__row1
+                    img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                    .weather-dark-card__col
+                      p.weather-dark-card__number 0
+                        sup.weather-dark-card__degree 0
+                      span.weather-dark-card__rising and rising
+                  .weather-dark-card__row2
+                    p.weather-dark-card__means -
+                    p.weather-dark-card__wind Wind:
+                .widget-dark__calendar
+                  ul.calendar
+                    li.calendar__item Today
+                      img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                    li.calendar__item Sat
+                      img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                    li.calendar__item Sun
+                      img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                    li.calendar__item Mon
+                      img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                    li.calendar__item Tue
+                      img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                    li.calendar__item Wed
+                      img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                    li.calendar__item Thu
+                      img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                    li.calendar__item Fri
+                      img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                  div.widget-dark__graphic(id="graphic1")
+            .container__item
+              // Виджет: 2, цвет: blue
+              .widget-dark.widget-dark--compact.widget-dark--blue
+                .widget-dark-menu.widget-dark-menu--compact.widget-dark-menu--blue
+                  .widget-dark-menu__layout.widget-dark-menu__layout--blue
+                    h1.widget-dark-menu__header Weather for Moscow
+                .widget-dark__body.widget-dark__body--compact.widget-dark__body--blue
+                  .weather-dark-card.weather-dark-card--compact
+                    .weather-dark-card__row1
+                      img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                      .weather-dark-card__col
+                        p.weather-dark-card__number -
+                          span.weather-dark-card__degree 0
+                        span.weather-dark-card__rising and rising
+                    .weather-dark-card__row2
+                      p.weather-dark-card__means -
+                      p.weather-dark-card__wind Wind:
+                  .widget-dark-menu__links.widget-dark-menu__links--compact.widget-dark-menu__links--blue
+                    .widget-dark-menu__layout.widget-dark-menu__layout--blue
+                      span More at
+                      a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+              .container
+                // Виджет: 3, цвет: blue
+                .widget-dark.widget-dark--small.widget-dark--blue
+                  .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--blue
+                    h1.widget-dark-menu__header Moscow
+                    ul.calendar.calendar--small
+                      li.calendar__item.calendar__item--blue
+                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                    p.weather-dark-card__number.weather-dark-card__number--small 0
+                      span.weather-dark-card__degree
+                // Виджет: 4, цвет: blue
+                .widget-dark.widget-dark--small.widget-dark--blue
+                  .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--blue
+                    h1.widget-dark-menu__header Moscow
+                    ul.calendar.calendar--small2
+                      li.calendar__item.calendar__item--blue
+                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                    p.weather-dark-card__number.weather-dark-card__number--small 0
+                      span.weather-dark-card__degree
+          .container
+            // Виджет: 5, цвет: blue
+            .widget-lite
               .widget-lite__header.widget-lite__header--blue
                 .widget-lite__layout
                   h1.widget-lite__title Moscow
                   p.widget-lite__description Cloudy Skies
-              .weather-lite.weather-lite--blue.weather-lite--type2
+                img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+              .weather-lite.weather-lite--blue
                 .weather-lite__layout
-                  .weather-lite__temperature -10
-                    span.widget-lite__units &#176;                        
-              .widget-lite__footer.widget-lite__footer--blue
-                .widget-lite__layout
-                  a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap  
-            .widget-lite.widget-lite--type3.widget-lite--blue
-              .widget-lite__header.widget-lite__header--blue
-                .widget-lite__layout
-                  h1.widget-lite__title Moscow
-                  p.widget-lite__description Cloudy Skies
-              .weather-lite.weather-lite--blue.weather-lite--type3
-                .weather-lite__layout
-                  .weather-lite__temperature -10
+                  .weather-lite__temperature 10
                     span.widget-lite__units &#176;
-                  table.weather-lite-table.weather-lite-table--blue
-                    tr.weather-lite-table__items
-                      td.weather-lite-table__item Feels Like
-                      td.weather-lite-table__item -13 &#176;
-                    tr.weather-lite-table__items
-                      td.weather-lite-table__item Wind
-                      td.weather-lite-table__item 3 m/s W
-                    tr.weather-lite-table__items
-                      td.weather-lite-table__item Pessure
-                      td.weather-lite-table__item 1003.0 mb
+                  .weather-lite__weather
+                    .weather-lite-card
+                      table.weather-lite__table
+                        tr.weather-lite__items
+                          th(colspan="2").weather-lite__item Details
+                        tr.weather-lite__items
+                          td.weather-lite__item Feels like
+                          td.weather-lite__item -13
+                            span.widget-lite-card__units &#176;
+                        tr.weather-lite__items
+                          td.weather-lite__item Wind
+                          td.weather-lite__item 3 m/s West
+                        tr.weather-lite-card__items
+                          td.weather-lite__item Humidity
+                          td.weather-lite__item 74%
+                        tr.weather-lite-card__items
+                          td.weather-lite__item Precip
+                          td.weather-lite__item 50%
+                        tr.weather-lite-card__items
+                          td.weather-lite__item Pressure
+                          td.weather-lite__item 1003.0 mb up
               .widget-lite__footer.widget-lite__footer--blue
                 .widget-lite__layout
-                  a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
-          .container
+                  a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                  .widget-lite__date 20:16 Mar 28
+            .container__item.container__item--type1
+              // Виджет: 6, цвет: blue
+              .widget-lite.widget-lite--type2.widget-lite--blue
+                .widget-lite__header.widget-lite__header--blue
+                  .widget-lite__layout
+                    h1.widget-lite__title Moscow
+                    p.widget-lite__description Cloudy Skies
+                .weather-lite.weather-lite--blue.weather-lite--type2
+                  .weather-lite__layout
+                    .weather-lite__temperature -10
+                      span.widget-lite__units &#176;                        
+                .widget-lite__footer.widget-lite__footer--blue
+                  .widget-lite__layout
+                    a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap  
+              // Виджет: 7, цвет: blue
+              .widget-lite.widget-lite--type3.widget-lite--blue
+                .widget-lite__header.widget-lite__header--blue
+                  .widget-lite__layout
+                    h1.widget-lite__title Moscow
+                    p.widget-lite__description Cloudy Skies
+                .weather-lite.weather-lite--blue.weather-lite--type3
+                  .weather-lite__layout
+                    .weather-lite__temperature -10
+                      span.widget-lite__units &#176;
+                    table.weather-lite-table.weather-lite-table--blue
+                      tr.weather-lite-table__items
+                        td.weather-lite-table__item Feels Like
+                        td.weather-lite-table__item -13 &#176;
+                      tr.weather-lite-table__items
+                        td.weather-lite-table__item Wind
+                        td.weather-lite-table__item 3 m/s W
+                      tr.weather-lite-table__items
+                        td.weather-lite-table__item Pessure
+                        td.weather-lite-table__item 1003.0 mb
+                .widget-lite__footer.widget-lite__footer--blue
+                  .widget-lite__layout
+                    a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
+          .container.container--type1
+            // Виджет: 8, цвет: blue
             .widget-lite.widget-lite--type5.widget-lite--blue
               .widget-lite__layout.widget-lite__layout--blue
                 .widget-lite-card
@@ -252,6 +264,7 @@ html(lang="en")
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                   .widget-lite__date 20:16 Mar 28  
+            // Виджет: 9, цвет: blue
             .widget-lite.widget-lite--type4.widget-lite--blue
               .widget-lite__layout.widget-lite__layout--blue
                 .widget-lite-card
@@ -270,153 +283,162 @@ html(lang="en")
     <!-- Коричневый виджет -->
     .container__item
       main.main.main--brown
-        .widget-dark
-          .widget-dark-menu.widget-dark-menu--brown
-            .widget-dark-menu__layout
-              h1.widget-dark-menu__header Weather for Moscow
-              .widget-dark-menu__links
-                span More at
-                a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-          .widget-dark__body
-            .weather-dark-card
-              .weather-dark-card__row1
-                img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                .weather-dark-card__col
-                  p.weather-dark-card__number 0
-                    span.weather-dark-card__degree &176;
-                  span.weather-dark-card__rising and rising
-              .weather-dark-card__row2
-                p.weather-dark-card__means -
-                p.weather-dark-card__wind Wind:
-            .widget-dark__calendar
-              ul.calendar
-                li.calendar__item Today
-                  img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                li.calendar__item Sat
-                  img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
-                li.calendar__item Sun
-                  img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
-                li.calendar__item Mon
-                  img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
-                li.calendar__item Tue
-                  img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
-                li.calendar__item Wed
-                  img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
-                li.calendar__item Thu
-                  img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
-                li.calendar__item Fri
-                  img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-              div.widget-dark__graphic(id="graphic2")
         .container__item
-          .widget-dark.widget-dark--compact
-            .widget-dark-menu.widget-dark-menu--compact.widget-dark-menu--brown
-              .widget-dark-menu__layout.widget-dark-menu__layout--brown
-                h1.widget-dark-menu__header Weather for Moscow
-            .widget-dark__body.widget-dark__body--compact
-              .weather-dark-card.weather-dark-card--compact
-                .weather-dark-card__row1
-                  img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                  .weather-dark-card__col
-                    p.weather-dark-card__number -
-                      span.weather-dark-card__degree &176;
-                    span.weather-dark-card__rising and rising
-                .weather-dark-card__row2
-                  p.weather-dark-card__means -
-                  p.weather-dark-card__wind Wind:
-              .widget-dark-menu__links.widget-dark-menu__links--compact.widget-dark-menu__links--brown
-                .widget-dark-menu__layout.widget-dark-menu__layout--brown
-                  span More at
-                  a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+          .container      
+            // Виджет: 1, цвет: brown
+            .widget-dark
+              .widget-dark-menu.widget-dark-menu--brown
+                .widget-dark-menu__layout
+                  h1.widget-dark-menu__header Weather for Moscow
+                  .widget-dark-menu__links
+                    span More at
+                    a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+              .widget-dark__body
+                .weather-dark-card
+                  .weather-dark-card__row1
+                    img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                    .weather-dark-card__col
+                      p.weather-dark-card__number 0
+                        span.weather-dark-card__degree &176;
+                      span.weather-dark-card__rising and rising
+                  .weather-dark-card__row2
+                    p.weather-dark-card__means -
+                    p.weather-dark-card__wind Wind:
+                .widget-dark__calendar
+                  ul.calendar
+                    li.calendar__item Today
+                      img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                    li.calendar__item Sat
+                      img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                    li.calendar__item Sun
+                      img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                    li.calendar__item Mon
+                      img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                    li.calendar__item Tue
+                      img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                    li.calendar__item Wed
+                      img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                    li.calendar__item Thu
+                      img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                    li.calendar__item Fri
+                      img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                  div.widget-dark__graphic(id="graphic2")
+            .container__item
+              // Виджет: 2, цвет: brown
+              .widget-dark.widget-dark--compact
+                .widget-dark-menu.widget-dark-menu--compact.widget-dark-menu--brown
+                  .widget-dark-menu__layout.widget-dark-menu__layout--brown
+                    h1.widget-dark-menu__header Weather for Moscow
+                .widget-dark__body.widget-dark__body--compact
+                  .weather-dark-card.weather-dark-card--compact
+                    .weather-dark-card__row1
+                      img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                      .weather-dark-card__col
+                        p.weather-dark-card__number -
+                          span.weather-dark-card__degree &176;
+                        span.weather-dark-card__rising and rising
+                    .weather-dark-card__row2
+                      p.weather-dark-card__means -
+                      p.weather-dark-card__wind Wind:
+                  .widget-dark-menu__links.widget-dark-menu__links--compact.widget-dark-menu__links--brown
+                    .widget-dark-menu__layout.widget-dark-menu__layout--brown
+                      span More at
+                      a.widget-dark-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+              .container
+                // Виджет: 3, цвет: brown
+                .widget-dark.widget-dark--small.widget-dark--brown
+                  .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--brown
+                    h1.widget-dark-menu__header Moscow
+                    ul.calendar.calendar--small
+                      li.calendar__item.calendar__item--brown
+                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                    p.weather-dark-card__number.weather-dark-card__number--small 0
+                      sup.weather-dark-card__degree
+                // Виджет: 4, цвет: brown                  
+                .widget-dark.widget-dark--small.widget-dark--brown
+                  .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--brown
+                    h1.widget-dark-menu__header Moscow
+                    ul.calendar.calendar--small2
+                      li.calendar__item.calendar__item--brown
+                        img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                    p.weather-dark-card__number.weather-dark-card__number--small 0
+                      sup.weather-dark-card__degree                   
           .container
-            .widget-dark.widget-dark--small.widget-dark--brown
-              .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--brown
-                h1.widget-dark-menu__header Moscow
-                ul.calendar.calendar--small
-                  li.calendar__item.calendar__item--brown
-                    img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                p.weather-dark-card__number.weather-dark-card__number--small 0
-                  sup.weather-dark-card__degree
-            .widget-dark.widget-dark--small.widget-dark--brown
-              .widget-dark-menu.widget-dark-menu--small.widget-dark-menu--brown
-                h1.widget-dark-menu__header Moscow
-                ul.calendar.calendar--small2
-                  li.calendar__item.calendar__item--brown
-                    img.weather-dark-card__img.weather-dark-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                p.weather-dark-card__number.weather-dark-card__number--small 0
-                  sup.weather-dark-card__degree                   
-      main.main.main--brown
-        .container
-          .widget-lite.widget-lite--brown
-            .widget-lite__header.widget-lite__header--brown
-              .widget-lite__layout
-                h1.widget-lite__title Moscow
-                p.widget-lite__description Cloudy Skies
-              img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
-            .weather-lite.weather-lite--brown
-              .weather-lite__layout
-                .weather-lite__temperature 10
-                  span.widget-lite__units &#176;
-                .weather-lite__weather
-                  .weather-lite-card                                          
-                    table.weather-lite__table
-                      tr.weather-lite__items
-                        th(colspan="2").weather-lite__item Details
-                      tr.weather-lite__items
-                        td.weather-lite__item Feels like
-                        td.weather-lite__item -13
-                          span.widget-lite-card__units &#176;
-                      tr.weather-lite__items
-                        td.weather-lite__item Wind
-                        td.weather-lite__item 3 m/s West
-                      tr.weather-lite-card__items
-                        td.weather-lite__item Humidity
-                        td.weather-lite__item 74%
-                      tr.weather-lite-card__items
-                        td.weather-lite__item Precip
-                        td.weather-lite__item 50%
-                      tr.weather-lite-card__items
-                        td.weather-lite__item Pressure
-                        td.weather-lite__item 1003.0 mb up
-            .widget-lite__footer.widget-lite__footer--brown
-              .widget-lite__layout
-                a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                .widget-lite__date 20:16 Mar 28
-          .container__item          
-            .widget-lite.widget-lite--type2.widget-lite--brown
+            // Виджет: 5, цвет: brown
+            .widget-lite.widget-lite--brown
               .widget-lite__header.widget-lite__header--brown
                 .widget-lite__layout
                   h1.widget-lite__title Moscow
                   p.widget-lite__description Cloudy Skies
-              .weather-lite.weather-lite--brown.weather-lite--type2
+                img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+              .weather-lite.weather-lite--brown
                 .weather-lite__layout
-                  .weather-lite__temperature -10
-                    span.widget-lite__units &#176;                        
-              .widget-lite__footer.widget-lite__footer--brown
-                .widget-lite__layout
-                  a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap  
-            .widget-lite.widget-lite--type3.widget-lite--brown
-              .widget-lite__header.widget-lite__header--brown
-                .widget-lite__layout
-                  h1.widget-lite__title Moscow
-                  p.widget-lite__description Cloudy Skies
-              .weather-lite.weather-lite--brown.weather-lite--type3
-                .weather-lite__layout
-                  .weather-lite__temperature -10
+                  .weather-lite__temperature 10
                     span.widget-lite__units &#176;
-                  table.weather-lite-table
-                    tr.weather-lite-table__items
-                      td.weather-lite-table__item Feels Like
-                      td.weather-lite-table__item -13 &#176;
-                    tr.weather-lite-table__items
-                      td.weather-lite-table__item Wind
-                      td.weather-lite-table__item 3 m/s W
-                    tr.weather-lite-table__items
-                      td.weather-lite-table__item Pessure
-                      td.weather-lite-table__item 1003.0 mb
+                  .weather-lite__weather
+                    .weather-lite-card                                          
+                      table.weather-lite__table
+                        tr.weather-lite__items
+                          th(colspan="2").weather-lite__item Details
+                        tr.weather-lite__items
+                          td.weather-lite__item Feels like
+                          td.weather-lite__item -13
+                            span.widget-lite-card__units &#176;
+                        tr.weather-lite__items
+                          td.weather-lite__item Wind
+                          td.weather-lite__item 3 m/s West
+                        tr.weather-lite-card__items
+                          td.weather-lite__item Humidity
+                          td.weather-lite__item 74%
+                        tr.weather-lite-card__items
+                          td.weather-lite__item Precip
+                          td.weather-lite__item 50%
+                        tr.weather-lite-card__items
+                          td.weather-lite__item Pressure
+                          td.weather-lite__item 1003.0 mb up
               .widget-lite__footer.widget-lite__footer--brown
                 .widget-lite__layout
-                  a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
-          .container
+                  a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                  .widget-lite__date 20:16 Mar 28
+            .container__item.container__item--type1          
+              // Виджет: 6, цвет: brown
+              .widget-lite.widget-lite--type2.widget-lite--brown
+                .widget-lite__header.widget-lite__header--brown
+                  .widget-lite__layout
+                    h1.widget-lite__title Moscow
+                    p.widget-lite__description Cloudy Skies
+                .weather-lite.weather-lite--brown.weather-lite--type2
+                  .weather-lite__layout
+                    .weather-lite__temperature -10
+                      span.widget-lite__units &#176;                        
+                .widget-lite__footer.widget-lite__footer--brown
+                  .widget-lite__layout
+                    a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap  
+              // Виджет: 7, цвет: brown                  
+              .widget-lite.widget-lite--type3.widget-lite--brown
+                .widget-lite__header.widget-lite__header--brown
+                  .widget-lite__layout
+                    h1.widget-lite__title Moscow
+                    p.widget-lite__description Cloudy Skies
+                .weather-lite.weather-lite--brown.weather-lite--type3
+                  .weather-lite__layout
+                    .weather-lite__temperature -10
+                      span.widget-lite__units &#176;
+                    table.weather-lite-table
+                      tr.weather-lite-table__items
+                        td.weather-lite-table__item Feels Like
+                        td.weather-lite-table__item -13 &#176;
+                      tr.weather-lite-table__items
+                        td.weather-lite-table__item Wind
+                        td.weather-lite-table__item 3 m/s W
+                      tr.weather-lite-table__items
+                        td.weather-lite-table__item Pessure
+                        td.weather-lite-table__item 1003.0 mb
+                .widget-lite__footer.widget-lite__footer--brown
+                  .widget-lite__layout
+                    a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
+          .container.container--type1
+            // Виджет: 8, цвет: brown
             .widget-lite.widget-lite--type4.widget-lite--brown
               .widget-lite__layout.widget-lite__layout--brown
                 .widget-lite-card
@@ -432,6 +454,7 @@ html(lang="en")
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                   .widget-lite__date 20:16 Mar 28                   
+            // Виджет: 9, цвет: brown                  
             .widget-lite.widget-lite--type4.widget-lite--brown
               .widget-lite__layout.widget-lite__layout--brown
                 .widget-lite-card

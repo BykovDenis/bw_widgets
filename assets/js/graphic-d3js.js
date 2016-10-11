@@ -275,7 +275,13 @@ export default class Graphic extends CustomDate {
             .style('fill', this.params.colorPolilyne)
             .style('opacity', 1);
   }
-
+  /**
+   * Отрисовка надписей с показателями температуры на осях
+   * @param  {[type]} svg    [description]
+   * @param  {[type]} data   [description]
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
   drawLabelsTemperature(svg, data, params) {
     data.forEach((elem, item, data) => {
       // отрисовка текста

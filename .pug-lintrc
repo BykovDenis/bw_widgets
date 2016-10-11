@@ -1,0 +1,4 @@
+{
+  "disallowSpaceAfterCodeOperator": true,
+  "requireSpaceAfterCodeOperator": true
+}

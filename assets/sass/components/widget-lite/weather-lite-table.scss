@@ -6,8 +6,12 @@
     &__item:first-child{
         padding-right: 10px;
         padding-left: 6px;
-        padding-top: 2px;
         font-weight: 600;
+    }
+
+    &__item{
+      padding-top: 2px;
+      padding-bottom: 1px;  
     }
 
     &--blue{
