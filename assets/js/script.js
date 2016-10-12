@@ -32,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Вторая половина виджетов
     cityName2: document.querySelectorAll('.widget-lite__title'),
     temperature2: document.querySelectorAll('.weather-lite__temperature'),
+    temperatureFeels: document.querySelectorAll('.weather-lite__feels'),
     naturalPhenomenon2: document.querySelectorAll('.widget-lite__description'),
-    windSpeed2: document.querySelectorAll('.weather-lite__wind'),
+    windSpeed2: document.querySelectorAll('.weather-lite__wind-speed'),
   };
 
   const urls = {

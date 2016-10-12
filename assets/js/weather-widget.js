@@ -110,7 +110,17 @@ export default class WeatherWidget extends CustomDate {
                         .then(
                           (response) => {
                             this.weather.forecastDaily = response;
-                            this.parseDataFromServer();
+                            this.httpGet(this.urls.windDirection)
+                              .then(
+                                (response) => {
+                                  this.weather.windDirection = response[this.params.lang];
+                                  this.parseDataFromServer();
+                                },
+                                (error) => {
+                                  console.log(`Возникла ошибка ${error}`);
+                                  this.parseDataFromServer();
+                                }
+                            );
                           },
                           (error) => {
                             console.log(`Возникла ошибка ${error}`);
@@ -188,17 +198,18 @@ export default class WeatherWidget extends CustomDate {
       wind: ' ',
       weather: ' ',
     };
-
+    const temp = parseInt(weather.fromAPI.main.temp.toFixed(0), 10) + 0;
     metadata.cityName = `${weather.fromAPI.name}, ${weather.fromAPI.sys.country}`;
-    metadata.temperature = `${weather.fromAPI.main.temp.toFixed(0) > 0 ? `+${weather.fromAPI.main.temp.toFixed(0)}` : weather.fromAPI.main.temp.toFixed(0)}`;
+    metadata.temperature = `${temp > 0 ? `+${temp}` : temp}`;
     if (weather.naturalPhenomenon) {
       metadata.weather = weather.naturalPhenomenon[weather.fromAPI.weather[0].id];
     }
     if (weather.windSpeed) {
       metadata.windSpeed = `Wind: ${weather.fromAPI.wind.speed.toFixed(1)} m/s ${this.getParentSelectorFromObject(weather.windSpeed, weather.fromAPI.wind.speed.toFixed(1), 'speed_interval')}`;
+      metadata.windSpeed2 = `${weather.fromAPI.wind.speed.toFixed(1)} m/s`;
     }
     if (weather.windDirection) {
-      metadata.windDirection = `${this.getParentSelectorFromObject(weather.windDirection, weather.fromAPI.wind.deg, 'deg_interval')} ( ${weather.fromAPI.wind.deg} )`;
+      metadata.windDirection = `${this.getParentSelectorFromObject(weather["windDirection"], weather["fromAPI"]["wind"]["deg"], "deg_interval")}`
     }
     if (weather.clouds) {
       metadata.clouds = `${this.getParentSelectorFromObject(weather.clouds, weather.fromAPI.clouds.all, 'min', 'max')}`;
@@ -210,11 +221,13 @@ export default class WeatherWidget extends CustomDate {
   }
 
   renderWidget(metadata) {
+    // Оотрисовка первых четырех виджетов
     for (const elem in this.controls.cityName) {
       if (this.controls.cityName.hasOwnProperty(elem)) {
         this.controls.cityName[elem].innerHTML = metadata.cityName;
       }
     }
+
     for (const elem in this.controls.temperature) {
       if (this.controls.temperature.hasOwnProperty(elem)) {
         this.controls.temperature[elem].innerHTML = `${metadata.temperature}<span class='weather-dark-card__degree'>${this.params.textUnitTemp}</span>`;
@@ -242,6 +255,40 @@ export default class WeatherWidget extends CustomDate {
         }
       }
     }
+
+    // Отрисовка пяти последних виджетов
+    for (const elem in this.controls.cityName2) {
+      if (this.controls.cityName2.hasOwnProperty(elem)) {
+        this.controls.cityName2[elem].innerHTML = metadata.cityName;
+      }
+    }
+
+    for (const elem in this.controls.temperature2) {
+      if (this.controls.temperature2.hasOwnProperty(elem)) {
+        this.controls.temperature2[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+      }
+      if (this.controls.temperatureFeels.hasOwnProperty(elem)) {
+        this.controls.temperatureFeels[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+      }
+    }
+
+    if (metadata.weather.trim()) {
+      for (const elem in this.controls.naturalPhenomenon2) {
+        if (this.controls.naturalPhenomenon2.hasOwnProperty(elem)) {
+          this.controls.naturalPhenomenon2[elem].innerText = metadata.weather;
+        }
+      }
+    }
+
+    if (metadata.windSpeed2.trim() && metadata.windDirection.trim()) {
+      for (const elem in this.controls.windSpeed2) {
+        if (this.controls.windSpeed2.hasOwnProperty(elem)) {
+          this.controls.windSpeed2[elem].innerText = `${metadata.windSpeed2} ${metadata.windDirection}`;
+        }
+      }
+    }
+
+
 
     if (this.weather.forecastDaily) {
       this.prepareDataForGraphic();

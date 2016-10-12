@@ -7,11 +7,12 @@
         padding-right: 10px;
         padding-left: 6px;
         font-weight: 600;
+        min-width: 50px;        
     }
 
     &__item{
       padding-top: 2px;
-      padding-bottom: 1px;  
+      padding-bottom: 1px;
     }
 
     &--blue{

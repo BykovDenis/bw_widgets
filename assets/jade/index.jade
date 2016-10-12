@@ -192,11 +192,11 @@ html(lang="en")
                           th(colspan="2").weather-lite__item Details
                         tr.weather-lite__items
                           td.weather-lite__item Feels like
-                          td.weather-lite__item -13
+                          td.weather-lite__item.weather-lite__feels -13
                             span.widget-lite-card__units &#176;
                         tr.weather-lite__items
                           td.weather-lite__item Wind
-                          td.weather-lite__item.weather-lite__wind 3 m/s West
+                          td.weather-lite__item.weather-lite__wind-speed 3 m/s West
                         tr.weather-lite-card__items
                           td.weather-lite__item Humidity
                           td.weather-lite__item 74%
@@ -237,10 +237,10 @@ html(lang="en")
                     table.weather-lite-table.weather-lite-table--blue
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Feels Like
-                        td.weather-lite-table__item -13 &#176;
+                        td.weather-lite-table__item.weather-lite__feels -13 &#176;
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Wind
-                        td.weather-lite-table__item 3 m/s W
+                        td.weather-lite-table__item.weather-lite__wind-speed 3 m/s W
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Pessure
                         td.weather-lite-table__item 1003.0 mb
@@ -253,9 +253,8 @@ html(lang="en")
               .widget-lite__layout.widget-lite__layout--blue
                 .widget-lite-card
                   .widget-lite__title Moscow
-                  .widget-lite__description Cloudy Skies 
-                .weather-lite.weather-lite--blue.weather-lite--type5 
-                  img.weather-lite__icon.weather-lite__icon--blue(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies") 
+                  .widget-lite__description Cloudy Skies
+                img.weather-lite__icon.weather-lite__icon--type5.weather-lite__icon--blue(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies")
                 table.weather-lite-card
                   tr.weather-lite-card__items
                     td.weather-lite-card__item -10&#176;                                          
@@ -269,9 +268,8 @@ html(lang="en")
               .widget-lite__layout.widget-lite__layout--blue
                 .widget-lite-card
                   .widget-lite__title Moscow
-                  .widget-lite__description Cloudy Skies 
-                .weather-lite.weather-lite--type4 
-                  img.weather-lite__icon(src="/img/11d.png" width="100" alt="Cloudy Skies") 
+                  .widget-lite__description Cloudy Skies
+                img.weather-lite__icon.weather-lite__icon--type4.weather-lite__icon--blue(src="/img/11d.png" width="100" alt="Cloudy Skies")
                 table.weather-lite-card.weather-lite-card--type4.weather-lite-card--blue
                   tr.weather-lite-card__items
                     td.weather-lite-card__item -10&#176;                                          
@@ -439,13 +437,12 @@ html(lang="en")
                     a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
           .container.container--type1
             // Виджет: 8, цвет: brown
-            .widget-lite.widget-lite--type4.widget-lite--brown
+            .widget-lite.widget-lite--type5.widget-lite--brown
               .widget-lite__layout.widget-lite__layout--brown
                 .widget-lite-card
                   .widget-lite__title Moscow
-                  .widget-lite__description Cloudy Skies 
-                .weather-lite.weather-lite--type5 
-                  img.weather-lite__icon.weather-lite__icon--brown(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies") 
+                  .widget-lite__description Cloudy Skies
+                img.weather-lite__icon.weather-lite__icon--type5.weather-lite__icon--brown(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies")
                 table.weather-lite-card
                   tr.weather-lite-card__items
                     td.weather-lite-card__item -10&#176;                                          
@@ -459,9 +456,8 @@ html(lang="en")
               .widget-lite__layout.widget-lite__layout--brown
                 .widget-lite-card
                   .widget-lite__title Moscow
-                  .widget-lite__description Cloudy Skies 
-                .weather-lite.weather-lite--type4 
-                  img.weather-lite__icon(src="/img/11d.png" width="100" alt="Cloudy Skies") 
+                  .widget-lite__description Cloudy Skies
+                img.weather-lite__icon.weather-lite__icon--type4.weather-lite__icon--brown(src="/img/11d.png" width="100" alt="Cloudy Skies")
                 table.weather-lite-card
                   tr.weather-lite-card__items
                     td.weather-lite-card__item -10&#176;                                          

@@ -741,6 +741,9 @@ th {
     text-align: left; }
   .weather-lite__item {
     padding: 2px 0; }
+  .weather-lite__item:first-child {
+    padding-right: 19px;
+    min-width: 50px; }
   .weather-lite__item:last-child {
     font-weight: 600; }
   .weather-lite__items:first-child th {
@@ -785,31 +788,30 @@ th {
     font-size: 30px; }
   .weather-lite--type4 {
     width: 300px; }
-  .weather-lite--type4 .weather-lite__icon {
-    display: block;
-    top: -54px;
-    left: 42px;
-    z-index: 100; }
   .weather-lite--type5 {
     width: 300px; }
-  .weather-lite--type5 .weather-lite__icon {
+  .weather-lite__icon {
     display: block;
-    top: -33px;
-    left: 58px;
+    left: 50%;
+    top: -15px;
     z-index: 100;
     -webkit-border-radius: 4px;
             border-radius: 4px;
     -webkit-transform-origin: left top;
         -ms-transform-origin: left top;
             transform-origin: left top;
-    -webkit-transform: rotate(-2deg);
-        -ms-transform: rotate(-2deg);
-            transform: rotate(-2deg); }
-  .weather-lite--type5 .weather-lite__icon--blue {
-    background-color: #ffffff;
-    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
-  .weather-lite--type5 .weather-lite__icon--brown {
-    background-color: #ffffff; }
+    -webkit-transform: translateX(-50%) rotate(-2deg);
+        -ms-transform: translateX(-50%) rotate(-2deg);
+            transform: translateX(-50%) rotate(-2deg); }
+    .weather-lite__icon--blue {
+      background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
+    .weather-lite__icon--type4 {
+      display: block;
+      top: -34px;
+      z-index: 100;
+      background: none; }
+    .weather-lite__icon--type5 {
+      background-color: #ffffff; }
   .weather-lite--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
@@ -1034,6 +1036,7 @@ th {
     color: #ffffff;
     width: 300px; }
   .widget-lite--type4 .widget-lite__layout {
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1097,7 +1100,7 @@ th {
     vertical-align: top; }
   .widget-lite--type4 .widget-lite__footer--brown .widget-lite__date {
     color: #ea7e30; }
-  .widget-lite--type5 .widget-lite__footer--blue .widget-lite__link:before {
+  .widget-lite--type5 .widget-lite__link:before {
     padding: 0;
     padding-right: 3px;
     content: '';
@@ -1107,9 +1110,20 @@ th {
     background-size: 13px 13px;
     display: inline-block;
     vertical-align: top; }
-  .widget-lite--type5 .widget-lite__footer--blue .widget-lite__date {
+  .widget-lite--type5 .widget-lite__footer--brown .widget-lite__link:before {
+    padding: 0;
+    padding-right: 3px;
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: url(../img/logo_20x20_orange.png) 50% 50% no-repeat;
+    background-size: 13px 13px;
+    display: inline-block;
+    vertical-align: top; }
+  .widget-lite--type5 .widget-lite__date {
     color: #8CE1E1; }
   .widget-lite--type5 .widget-lite__layout {
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1134,6 +1148,8 @@ th {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
     background-image: linear-gradient(to top left, #DDF730, #F1F029); }
+  .widget-lite--type5 .widget-lite__layout--brown {
+    background-image: -webkit-linear-gradient(bottom, #FEB020, #FFD05C); }
   .widget-lite--type5 .widget-lite__title {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
@@ -1148,6 +1164,9 @@ th {
   .widget-lite--type5 .widget-lite__footer--blue .widget-lite__link {
     color: #8CE1E1;
     font-size: 12px; }
+  .widget-lite--type5 .widget-lite__footer--brown .widget-lite__link {
+    color: #ea7e30;
+    font-size: 12px; }
 
 .weather-lite-table {
   width: 100%;
@@ -1156,7 +1175,8 @@ th {
   .weather-lite-table__item:first-child {
     padding-right: 10px;
     padding-left: 6px;
-    font-weight: 600; }
+    font-weight: 600;
+    min-width: 50px; }
   .weather-lite-table__item {
     padding-top: 2px;
     padding-bottom: 1px; }

@@ -32,6 +32,11 @@
         padding: 2px 0;
     }
 
+    &__item:first-child{
+      padding-right: 19px;
+      min-width: 50px;
+    }
+
     &__item:last-child{
         font-weight: 600;
     }
@@ -87,33 +92,33 @@
         width: 300px;
     }
 
-    &--type4 &__icon{
-        display: block;
-        top: -54px;
-        left: 42px;
-        z-index: 100;
-    }
-
     &--type5{
         width: 300px;
     }
 
-    &--type5 &__icon{
+    &__icon{
         display: block;
-        top: -33px;
-        left: 58px;
+        left: 50%;
+        top: -15px;
         z-index: 100;
         border-radius: 4px;
         transform-origin: left top;
-        transform: rotate(-2deg);
-    }
+        transform: translateX(-50%) rotate(-2deg);
 
-    &--type5 &__icon--blue{
-        background-color: $color-white;background-image: -webkit-linear-gradient(bottom, $color-light-blue1, $color-light-blue2);
-    }
+        &--blue{
+            background-image: -webkit-linear-gradient(bottom, $color-light-blue1, $color-light-blue2);
+        }
 
-    &--type5 &__icon--brown{
-        background-color: $color-white;
+        &--type4{
+            display: block;
+            top: -34px;
+            z-index: 100;
+            background: none;
+        }
+
+        &--type5{
+            background-color: $color-white;
+        }
     }
 
     /*Типизация по цветовым схемам */
@@ -121,7 +126,7 @@
         background-image: linear-gradient(to top left, $color-lime, $color-yellow);
     }
 
-    &--brown{
+    &--brown {
         background-color: $color-white;
     }
 

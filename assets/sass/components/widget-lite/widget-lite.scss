@@ -249,6 +249,7 @@
     }
 
     &--type4 &__layout{
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -325,7 +326,7 @@
     }
 
 
-    &--type5 &__footer--blue  &__link:before{
+    &--type5 &__link:before{
         padding: 0;
         padding-right: 3px;
         content:'';
@@ -337,11 +338,24 @@
         vertical-align: top;
     }
 
-    &--type5 &__footer--blue &__date{
+    &--type5 &__footer--brown  &__link:before{
+      padding: 0;
+      padding-right: 3px;
+      content:'';
+      width: 13px;
+      height: 13px;
+      background: url(../img/logo_20x20_orange.png) 50% 50% no-repeat;
+      background-size: 13px 13px ;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &--type5 &__date{
         color: $color-light-blue3;
     }
 
     &--type5 &__layout{
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -352,6 +366,10 @@
 
     &--type5  &__layout--blue {
         background-image: linear-gradient(to top left, $color-lime, $color-yellow);
+    }
+
+    &--type5 &__layout--brown {
+        background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
     }
 
     &--type5 &__title{
@@ -376,6 +394,11 @@
     &--type5 &__footer--blue &__link{
         color: $color-light-blue3;
         font-size: #{$font-size - 2px};
+    }
+
+    &--type5 &__footer--brown &__link{
+      color: $color-orange1;
+      font-size: #{$font-size - 2px};
     }
 
 }
