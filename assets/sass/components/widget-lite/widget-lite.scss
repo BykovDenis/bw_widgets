@@ -92,6 +92,10 @@
         color: $color-black;
     }
 
+    &__footer--brown &__date{
+        color: $color-black;
+    }
+
     &__footer--blue &__link{
         font: 600 #{$font-size + 6px} / 1 $font-roboto;
         color: $color-white;
@@ -268,11 +272,13 @@
 
     &--type4 &__title{
         font: 600 #{$font-size} / 1 $font-roboto;
+        color: $color-black;
         margin-bottom: 5px;
     }
 
     &--type4 &__description{
         font: 400 #{$font-size - 4px} / 1 $font-roboto;
+        color: $color-black;
     }
 
     &--type4 &__footer--blue &__layout{
@@ -399,6 +405,10 @@
     &--type5 &__footer--brown &__link{
       color: $color-orange1;
       font-size: #{$font-size - 2px};
+    }
+
+    &--type5 &__footer--brown &__date{
+        color: $color-orange1;
     }
 
 }

@@ -180,8 +180,8 @@ html(lang="en")
                 .widget-lite__layout
                   h1.widget-lite__title Moscow
                   p.widget-lite__description Cloudy Skies
-                img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
-              .weather-lite.weather-lite--blue
+                img.weather-lite__icon.weather-lite__icon--type1(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+              .weather-lite.weather-lite--type1.weather-lite--blue
                 .weather-lite__layout
                   .weather-lite__temperature 10
                     span.widget-lite__units &#176;
@@ -199,13 +199,13 @@ html(lang="en")
                           td.weather-lite__item.weather-lite__wind-speed 3 m/s West
                         tr.weather-lite-card__items
                           td.weather-lite__item Humidity
-                          td.weather-lite__item 74%
+                          td.weather-lite__item.weather-lite__humidity 74%
                         tr.weather-lite-card__items
                           td.weather-lite__item Precip
-                          td.weather-lite__item 50%
+                          td.weather-lite__item
                         tr.weather-lite-card__items
                           td.weather-lite__item Pressure
-                          td.weather-lite__item 1003.0 mb up
+                          td.weather-lite__item.weather-lite__pressure 1003.0 mb
               .widget-lite__footer.widget-lite__footer--blue
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
@@ -243,7 +243,7 @@ html(lang="en")
                         td.weather-lite-table__item.weather-lite__wind-speed 3 m/s W
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Pessure
-                        td.weather-lite-table__item 1003.0 mb
+                        td.weather-lite-table__item.weather-lite__pressure  1003.0 mb
                 .widget-lite__footer.widget-lite__footer--blue
                   .widget-lite__layout
                     a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
@@ -257,8 +257,8 @@ html(lang="en")
                 img.weather-lite__icon.weather-lite__icon--type5.weather-lite__icon--blue(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies")
                 table.weather-lite-card
                   tr.weather-lite-card__items
-                    td.weather-lite-card__item -10&#176;                                          
-                    td.weather-lite-card__item -14&#176; 
+                    td.weather-lite-card__item.weather-lite-card__temperature-min -10&#176;
+                    td.weather-lite-card__item.weather-lite-card__temperature-max -14&#176;
               .widget-lite__footer.widget-lite__footer--blue
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
@@ -272,8 +272,8 @@ html(lang="en")
                 img.weather-lite__icon.weather-lite__icon--type4.weather-lite__icon--blue(src="/img/11d.png" width="100" alt="Cloudy Skies")
                 table.weather-lite-card.weather-lite-card--type4.weather-lite-card--blue
                   tr.weather-lite-card__items
-                    td.weather-lite-card__item -10&#176;                                          
-                    td.weather-lite-card__item -14&#176; 
+                    td.weather-lite-card__item.weather-lite-card__temperature-min -10&#176;
+                    td.weather-lite-card__item.weather-lite-card__temperature-max -14&#176;
               .widget-lite__footer.widget-lite__footer--blue
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
@@ -363,12 +363,12 @@ html(lang="en")
                       sup.weather-dark-card__degree                   
           .container
             // Виджет: 5, цвет: brown
-            .widget-lite.widget-lite--brown
+            .widget-lite.weather-lite--type1.widget-lite--brown
               .widget-lite__header.widget-lite__header--brown
                 .widget-lite__layout
                   h1.widget-lite__title Moscow
                   p.widget-lite__description Cloudy Skies
-                img.weather-lite__icon(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+                img.weather-lite__icon.weather-lite__icon--type1(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
               .weather-lite.weather-lite--brown
                 .weather-lite__layout
                   .weather-lite__temperature 10
@@ -384,16 +384,16 @@ html(lang="en")
                             span.widget-lite-card__units &#176;
                         tr.weather-lite__items
                           td.weather-lite__item Wind
-                          td.weather-lite__item.weather-lite__wind 3 m/s West
+                          td.weather-lite__item.weather-lite__wind-speed 3 m/s West
                         tr.weather-lite-card__items
                           td.weather-lite__item Humidity
-                          td.weather-lite__item 74%
+                          td.weather-lite__item.weather-lite__humidity 74%
                         tr.weather-lite-card__items
                           td.weather-lite__item Precip
-                          td.weather-lite__item 50%
+                          td.weather-lite__item
                         tr.weather-lite-card__items
                           td.weather-lite__item Pressure
-                          td.weather-lite__item 1003.0 mb up
+                          td.weather-lite__item.weather-lite__pressure 1003.0 mb
               .widget-lite__footer.widget-lite__footer--brown
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
@@ -428,10 +428,10 @@ html(lang="en")
                         td.weather-lite-table__item -13 &#176;
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Wind
-                        td.weather-lite-table__item 3 m/s W
+                        td.weather-lite-table__item.weather-lite__wind-speed  3 m/s W
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Pessure
-                        td.weather-lite-table__item 1003.0 mb
+                        td.weather-lite-table__item.weather-lite__pressure  1003.0 mb
                 .widget-lite__footer.widget-lite__footer--brown
                   .widget-lite__layout
                     a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap 
@@ -445,8 +445,8 @@ html(lang="en")
                 img.weather-lite__icon.weather-lite__icon--type5.weather-lite__icon--brown(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies")
                 table.weather-lite-card
                   tr.weather-lite-card__items
-                    td.weather-lite-card__item -10&#176;                                          
-                    td.weather-lite-card__item -14&#176; 
+                    td.weather-lite-card__item.weather-lite-card__temperature-min -10&#176;
+                    td.weather-lite-card__item.weather-lite-card__temperature-max -14&#176;
               .widget-lite__footer.widget-lite__footer--brown
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
@@ -460,8 +460,8 @@ html(lang="en")
                 img.weather-lite__icon.weather-lite__icon--type4.weather-lite__icon--brown(src="/img/11d.png" width="100" alt="Cloudy Skies")
                 table.weather-lite-card
                   tr.weather-lite-card__items
-                    td.weather-lite-card__item -10&#176;                                          
-                    td.weather-lite-card__item -14&#176; 
+                    td.weather-lite-card__item.weather-lite-card__temperature-min -10&#176;
+                    td.weather-lite-card__item.weather-lite-card__temperature-max -14&#176;
               .widget-lite__footer.widget-lite__footer--brown
                 .widget-lite__layout
                   a.widget-lite__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap

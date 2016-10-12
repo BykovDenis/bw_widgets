@@ -193,9 +193,9 @@
                 <div class="widget-lite__layout">
                   <h1 class="widget-lite__title">Moscow</h1>
                   <p class="widget-lite__description">Cloudy Skies</p>
-                </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-lite__icon"/>
+                </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-lite__icon weather-lite__icon--type1"/>
               </div>
-              <div class="weather-lite weather-lite--blue">
+              <div class="weather-lite weather-lite--type1 weather-lite--blue">
                 <div class="weather-lite__layout">
                   <div class="weather-lite__temperature">10<span class="widget-lite__units">&#176;</span></div>
                   <div class="weather-lite__weather">
@@ -214,15 +214,15 @@
                         </tr>
                         <tr class="weather-lite-card__items">
                           <td class="weather-lite__item">Humidity</td>
-                          <td class="weather-lite__item">74%</td>
+                          <td class="weather-lite__item weather-lite__humidity">74%</td>
                         </tr>
                         <tr class="weather-lite-card__items">
                           <td class="weather-lite__item">Precip</td>
-                          <td class="weather-lite__item">50%</td>
+                          <td class="weather-lite__item"></td>
                         </tr>
                         <tr class="weather-lite-card__items">
                           <td class="weather-lite__item">Pressure</td>
-                          <td class="weather-lite__item">1003.0 mb up</td>
+                          <td class="weather-lite__item weather-lite__pressure">1003.0 mb</td>
                         </tr>
                       </table>
                     </div>
@@ -275,7 +275,7 @@
                       </tr>
                       <tr class="weather-lite-table__items">
                         <td class="weather-lite-table__item">Pessure</td>
-                        <td class="weather-lite-table__item">1003.0 mb</td>
+                        <td class="weather-lite-table__item weather-lite__pressure"> 1003.0 mb</td>
                       </tr>
                     </table>
                   </div>
@@ -296,8 +296,8 @@
                 </div><img src="/img/11d.png" width="64" height="64" alt="Cloudy Skies" class="weather-lite__icon weather-lite__icon--type5 weather-lite__icon--blue"/>
                 <table class="weather-lite-card">
                   <tr class="weather-lite-card__items">
-                    <td class="weather-lite-card__item">-10&#176;                                          </td>
-                    <td class="weather-lite-card__item">-14&#176; </td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-min">-10&#176;</td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-max">-14&#176;</td>
                   </tr>
                 </table>
               </div>
@@ -316,8 +316,8 @@
                 </div><img src="/img/11d.png" width="100" alt="Cloudy Skies" class="weather-lite__icon weather-lite__icon--type4 weather-lite__icon--blue"/>
                 <table class="weather-lite-card weather-lite-card--type4 weather-lite-card--blue">
                   <tr class="weather-lite-card__items">
-                    <td class="weather-lite-card__item">-10&#176;                                          </td>
-                    <td class="weather-lite-card__item">-14&#176; </td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-min">-10&#176;</td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-max">-14&#176;</td>
                   </tr>
                 </table>
               </div>
@@ -421,12 +421,12 @@
           </div>
           <div class="container">
             <!-- Виджет: 5, цвет: brown-->
-            <div class="widget-lite widget-lite--brown">
+            <div class="widget-lite weather-lite--type1 widget-lite--brown">
               <div class="widget-lite__header widget-lite__header--brown">
                 <div class="widget-lite__layout">
                   <h1 class="widget-lite__title">Moscow</h1>
                   <p class="widget-lite__description">Cloudy Skies</p>
-                </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-lite__icon"/>
+                </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-lite__icon weather-lite__icon--type1"/>
               </div>
               <div class="weather-lite weather-lite--brown">
                 <div class="weather-lite__layout">
@@ -443,19 +443,19 @@
                         </tr>
                         <tr class="weather-lite__items">
                           <td class="weather-lite__item">Wind</td>
-                          <td class="weather-lite__item weather-lite__wind">3 m/s West</td>
+                          <td class="weather-lite__item weather-lite__wind-speed">3 m/s West</td>
                         </tr>
                         <tr class="weather-lite-card__items">
                           <td class="weather-lite__item">Humidity</td>
-                          <td class="weather-lite__item">74%</td>
+                          <td class="weather-lite__item weather-lite__humidity">74%</td>
                         </tr>
                         <tr class="weather-lite-card__items">
                           <td class="weather-lite__item">Precip</td>
-                          <td class="weather-lite__item">50%</td>
+                          <td class="weather-lite__item"></td>
                         </tr>
                         <tr class="weather-lite-card__items">
                           <td class="weather-lite__item">Pressure</td>
-                          <td class="weather-lite__item">1003.0 mb up</td>
+                          <td class="weather-lite__item weather-lite__pressure">1003.0 mb</td>
                         </tr>
                       </table>
                     </div>
@@ -504,11 +504,11 @@
                       </tr>
                       <tr class="weather-lite-table__items">
                         <td class="weather-lite-table__item">Wind</td>
-                        <td class="weather-lite-table__item">3 m/s W</td>
+                        <td class="weather-lite-table__item weather-lite__wind-speed"> 3 m/s W</td>
                       </tr>
                       <tr class="weather-lite-table__items">
                         <td class="weather-lite-table__item">Pessure</td>
-                        <td class="weather-lite-table__item">1003.0 mb</td>
+                        <td class="weather-lite-table__item weather-lite__pressure"> 1003.0 mb</td>
                       </tr>
                     </table>
                   </div>
@@ -529,8 +529,8 @@
                 </div><img src="/img/11d.png" width="64" height="64" alt="Cloudy Skies" class="weather-lite__icon weather-lite__icon--type5 weather-lite__icon--brown"/>
                 <table class="weather-lite-card">
                   <tr class="weather-lite-card__items">
-                    <td class="weather-lite-card__item">-10&#176;                                          </td>
-                    <td class="weather-lite-card__item">-14&#176; </td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-min">-10&#176;</td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-max">-14&#176;</td>
                   </tr>
                 </table>
               </div>
@@ -549,8 +549,8 @@
                 </div><img src="/img/11d.png" width="100" alt="Cloudy Skies" class="weather-lite__icon weather-lite__icon--type4 weather-lite__icon--brown"/>
                 <table class="weather-lite-card">
                   <tr class="weather-lite-card__items">
-                    <td class="weather-lite-card__item">-10&#176;                                          </td>
-                    <td class="weather-lite-card__item">-14&#176; </td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-min">-10&#176;</td>
+                    <td class="weather-lite-card__item weather-lite-card__temperature-max">-14&#176;</td>
                   </tr>
                 </table>
               </div>

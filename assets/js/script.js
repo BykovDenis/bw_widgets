@@ -33,8 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     cityName2: document.querySelectorAll('.widget-lite__title'),
     temperature2: document.querySelectorAll('.weather-lite__temperature'),
     temperatureFeels: document.querySelectorAll('.weather-lite__feels'),
+    temperatureMin: document.querySelectorAll('.weather-lite-card__temperature-min'),
+    temperatureMax: document.querySelectorAll('.weather-lite-card__temperature-max'),
     naturalPhenomenon2: document.querySelectorAll('.widget-lite__description'),
     windSpeed2: document.querySelectorAll('.weather-lite__wind-speed'),
+    mainIconWeather2: document.querySelectorAll('.weather-lite__icon'),
+    humidity: document.querySelectorAll('.weather-lite__humidity'),
+    pressure: document.querySelectorAll('.weather-lite__pressure'),
   };
 
   const urls = {

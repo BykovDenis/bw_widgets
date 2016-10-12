@@ -190,6 +190,8 @@ export default class WeatherWidget extends CustomDate {
       cityName: ' ',
       icon: ' ',
       temperature: ' ',
+      temperatureMin: ' ',
+      temperatureMAx: ' ',
       pressure: ' ',
       humidity: ' ',
       sunrise: ' ',
@@ -198,9 +200,11 @@ export default class WeatherWidget extends CustomDate {
       wind: ' ',
       weather: ' ',
     };
-    const temp = parseInt(weather.fromAPI.main.temp.toFixed(0), 10) + 0;
+    const temperature = parseInt(weather.fromAPI.main.temp.toFixed(0), 10) + 0;
     metadata.cityName = `${weather.fromAPI.name}, ${weather.fromAPI.sys.country}`;
-    metadata.temperature = `${temp > 0 ? `+${temp}` : temp}`;
+    metadata.temperature = temperature; // `${temp > 0 ? `+${temp}` : temp}`;
+    metadata.temperatureMin = parseInt(weather.fromAPI.main.temp_min.toFixed(0), 10) + 0;
+    metadata.temperatureMax = parseInt(weather.fromAPI.main.temp_max.toFixed(0), 10) + 0;
     if (weather.naturalPhenomenon) {
       metadata.weather = weather.naturalPhenomenon[weather.fromAPI.weather[0].id];
     }
@@ -215,6 +219,8 @@ export default class WeatherWidget extends CustomDate {
       metadata.clouds = `${this.getParentSelectorFromObject(weather.clouds, weather.fromAPI.clouds.all, 'min', 'max')}`;
     }
 
+    metadata.humidity = `${weather.fromAPI.main.humidity}%`;
+    metadata.pressure =  `${weather["fromAPI"]["main"]["pressure"]} mb`;
     metadata.icon = `${weather.fromAPI.weather[0].icon}`;
 
     this.renderWidget(metadata);
@@ -241,14 +247,14 @@ export default class WeatherWidget extends CustomDate {
       }
     }
 
-    if (metadata.weather.trim()) {
+    if (metadata.weather) {
       for (const elem in this.controls.naturalPhenomenon) {
         if (this.controls.naturalPhenomenon.hasOwnProperty(elem)) {
           this.controls.naturalPhenomenon[elem].innerText = metadata.weather;
         }
       }
     }
-    if (metadata.windSpeed.trim()) {
+    if (metadata.windSpeed) {
       for (const elem in this.controls.windSpeed) {
         if (this.controls.windSpeed.hasOwnProperty(elem)) {
           this.controls.windSpeed[elem].innerText = metadata.windSpeed;
@@ -272,7 +278,19 @@ export default class WeatherWidget extends CustomDate {
       }
     }
 
-    if (metadata.weather.trim()) {
+    for (const elem in this.controls.temperatureMin) {
+      if (this.controls.temperatureMin.hasOwnProperty(elem)) {
+        this.controls.temperatureMin[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+      }
+    }
+
+    for (const elem in this.controls.temperatureMax) {
+      if (this.controls.temperatureMax.hasOwnProperty(elem)) {
+        this.controls.temperatureMax[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+      }
+    }
+
+    if (metadata.weather) {
       for (const elem in this.controls.naturalPhenomenon2) {
         if (this.controls.naturalPhenomenon2.hasOwnProperty(elem)) {
           this.controls.naturalPhenomenon2[elem].innerText = metadata.weather;
@@ -280,7 +298,7 @@ export default class WeatherWidget extends CustomDate {
       }
     }
 
-    if (metadata.windSpeed2.trim() && metadata.windDirection.trim()) {
+    if (metadata.windSpeed2 && metadata.windDirection) {
       for (const elem in this.controls.windSpeed2) {
         if (this.controls.windSpeed2.hasOwnProperty(elem)) {
           this.controls.windSpeed2[elem].innerText = `${metadata.windSpeed2} ${metadata.windDirection}`;
@@ -288,7 +306,28 @@ export default class WeatherWidget extends CustomDate {
       }
     }
 
+    for (const elem in this.controls.mainIconWeather2) {
+      if (this.controls.mainIconWeather2.hasOwnProperty(elem)) {
+        this.controls.mainIconWeather2[elem].src = this.getURLMainIcon(metadata.icon, true);
+        this.controls.mainIconWeather2[elem].alt = `Weather in ${metadata.cityName ? metadata.cityName : ''}`;
+      }
+    }
 
+    if (metadata.humidity) {
+      for (const elem in this.controls.humidity) {
+        if (this.controls.humidity.hasOwnProperty(elem)) {
+          this.controls.humidity[elem].innerText = metadata.humidity;
+        }
+      }
+    }
+
+    if (metadata.pressure) {
+      for (const elem in this.controls.pressure) {
+        if (this.controls.pressure.hasOwnProperty(elem)) {
+          this.controls.pressure[elem].innerText = metadata.pressure;
+        }
+      }
+    }
 
     if (this.weather.forecastDaily) {
       this.prepareDataForGraphic();

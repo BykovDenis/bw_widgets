@@ -708,14 +708,10 @@ th {
   /*  Типизация для второго виджета */
   /*  Типизация для третьго виджета */
   /*Типизация по цветовым схемам */ }
-  .weather-lite__icon {
-    position: absolute;
-    right: 14px;
-    top: -20px;
-    z-index: 100; }
   .weather-lite__temperature {
     font: 600 76px / 1 "Oswald", Arial, sans-serif;
-    color: #333333; }
+    color: #333333;
+    width: 140px; }
   .weather-lite__layout {
     position: relative;
     padding: 6.5px 0;
@@ -751,6 +747,8 @@ th {
     padding-bottom: 5px; }
   .weather-lite__items:nth-child(2) .weather-lite__item {
     padding-top: 5px; }
+  .weather-lite--type1 .weather-lite__temperature {
+    text-align: center; }
   .weather-lite--type2 {
     width: 120px; }
   .weather-lite--type2 .weather-lite__layout {
@@ -785,33 +783,42 @@ th {
     padding-left: 6px;
     margin-top: 15px;
     margin-bottom: 14px;
+    width: 57px;
+    text-align: center;
     font-size: 30px; }
   .weather-lite--type4 {
     width: 300px; }
   .weather-lite--type5 {
     width: 300px; }
   .weather-lite__icon {
+    position: absolute;
     display: block;
     left: 50%;
     top: -15px;
     z-index: 100;
     -webkit-border-radius: 4px;
             border-radius: 4px;
-    -webkit-transform-origin: left top;
-        -ms-transform-origin: left top;
-            transform-origin: left top;
-    -webkit-transform: translateX(-50%) rotate(-2deg);
-        -ms-transform: translateX(-50%) rotate(-2deg);
-            transform: translateX(-50%) rotate(-2deg); }
+    z-index: 100; }
     .weather-lite__icon--blue {
       background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
+    .weather-lite__icon--type1 {
+      top: -20px; }
     .weather-lite__icon--type4 {
       display: block;
       top: -34px;
       z-index: 100;
-      background: none; }
+      background: none;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
     .weather-lite__icon--type5 {
-      background-color: #ffffff; }
+      background-color: #ffffff;
+      -webkit-transform-origin: left top;
+          -ms-transform-origin: left top;
+              transform-origin: left top;
+      -webkit-transform: translateX(-50%) rotate(-2deg);
+          -ms-transform: translateX(-50%) rotate(-2deg);
+              transform: translateX(-50%) rotate(-2deg); }
   .weather-lite--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
@@ -926,6 +933,8 @@ th {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));
     background-image: -webkit-linear-gradient(bottom right, #FEB020, #FFD05C);
     background-image: linear-gradient(to top left, #FEB020, #FFD05C);
+    color: #333333; }
+  .widget-lite__footer--brown .widget-lite__date {
     color: #333333; }
   .widget-lite__footer--blue .widget-lite__link {
     font: 600 20px / 1 "Roboto", Arial, sans-serif;
@@ -1063,9 +1072,11 @@ th {
     background-image: -webkit-linear-gradient(bottom, #FEB020, #FFD05C); }
   .widget-lite--type4 .widget-lite__title {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
+    color: #333333;
     margin-bottom: 5px; }
   .widget-lite--type4 .widget-lite__description {
-    font: 400 10px / 1 "Roboto", Arial, sans-serif; }
+    font: 400 10px / 1 "Roboto", Arial, sans-serif;
+    color: #333333; }
   .widget-lite--type4 .widget-lite__footer--blue .widget-lite__layout {
     background: none; }
   .widget-lite--type4 .widget-lite__footer {
@@ -1167,6 +1178,8 @@ th {
   .widget-lite--type5 .widget-lite__footer--brown .widget-lite__link {
     color: #ea7e30;
     font-size: 12px; }
+  .widget-lite--type5 .widget-lite__footer--brown .widget-lite__date {
+    color: #ea7e30; }
 
 .weather-lite-table {
   width: 100%;
