@@ -328,6 +328,13 @@ export default class WeatherWidget extends CustomDate {
         }
       }
     }
+    // Прописываем текущую дату в виджеты
+    for (const elem in this.controls.dateReport) {
+      if (this.controls.dateReport.hasOwnProperty(elem)) {
+        this.controls.dateReport[elem].innerText = this.getTimeDateHHMMMonthDay();
+      }
+    }
+
 
     if (this.weather.forecastDaily) {
       this.prepareDataForGraphic();

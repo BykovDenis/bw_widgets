@@ -172,6 +172,35 @@ export default class CustomDate extends Date {
     return days[dayNumber];
   }
 
+  /**
+   * Вернуть Наименование месяца по его номеру
+   * @param numMonth
+   * @returns {*}
+   */
+  getMonthNameByMonthNumber(numMonth){
+
+    if(typeof numMonth !== "number" || numMonth <=0 && numMonth >= 12) {
+      return null;
+    }
+
+    const monthName = {
+      0: "Jan",
+      1: "Feb",
+      2: "Mar",
+      3: "Apr",
+      4: "May",
+      5: "Jun",
+      6: "Jul",
+      7: "Aug",
+      8: "Sep",
+      9: "Oct",
+      10: "Nov",
+      11: "Dec"
+    };
+
+    return monthName[numMonth];
+  }
+
   /** Сравнение даты в формате dd.mm.yyyy = dd.mm.yyyy с текущим днем
   *
   */
@@ -187,5 +216,14 @@ export default class CustomDate extends Date {
     }
     // Если дата не распарсена берем текущую
     return new Date();
+  }
+
+  /**
+   * Возвращает дату в формате HH:MM MonthName NumberDate
+   * @returns {string}
+   */
+  getTimeDateHHMMMonthDay() {
+    const date = new Date();
+    return `${date.getHours()}:${date.getMinutes()} ${this.getMonthNameByMonthNumber(date.getMonth())} ${date.getDate()}`;
   }
 }

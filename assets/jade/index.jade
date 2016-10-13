@@ -14,43 +14,43 @@ html(lang="en")
       // Основной виджет: 1,  цвет: 0
       main.main.main--gray
         .container
-          .widget-dark
-            .widget-dark-menu
-              .widget-dark-menu__layout
-                h1.widget-dark-menu__header Weather for Moscow
-                .widget-dark-menu__links
-                  span More at
-                  a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
-            .widget-dark__body
-              .weather-dark-card.weather-dark-card--grayscale
-                .weather-dark-card__row1
-                  img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
-                  .weather-dark-card__col
-                    p.weather-dark-card__number 0
-                      span.weather-dark-card__degree &176;
-                    span.weather-dark-card__rising and rising
-                .weather-dark-card__row2
-                  p.weather-dark-card__means -
-                  p.weather-dark-card__wind Wind:
-              .widget-dark__calendar
-                ul.calendar.calendar--grayscale
-                  li.calendar__item Today
-                    img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
-                  li.calendar__item Sat
-                    img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
-                  li.calendar__item Sun
-                    img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
-                  li.calendar__item Mon
-                    img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
-                  li.calendar__item Tue
-                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
-                  li.calendar__item Wed
-                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
-                  li.calendar__item Thu
-                    img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
-                  li.calendar__item Fri
-                    img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
-                div.widget-dark__graphic(id="graphic")             
+            .widget-dark
+                .widget-dark-menu
+                    .widget-dark-menu__layout
+                        h1.widget-dark-menu__header Weather for Moscow
+                        .widget-dark-menu__links
+                            span More at
+                            a.widget-dark-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                .widget-dark__body
+                    .weather-dark-card.weather-dark-card--grayscale
+                        .weather-dark-card__row1
+                            img.weather-dark-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                            .weather-dark-card__col
+                                p.weather-dark-card__number 0
+                                    span.weather-dark-card__degree &176;
+                                span.weather-dark-card__rising and rising
+                        .weather-dark-card__row2
+                            p.weather-dark-card__means -
+                            p.weather-dark-card__wind Wind:
+                    .widget-dark__calendar
+                        ul.calendar.calendar--grayscale
+                            li.calendar__item Today
+                                img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                            li.calendar__item Sat
+                                img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                            li.calendar__item Sun
+                                img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                            li.calendar__item Mon
+                                img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                            li.calendar__item Tue
+                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                            li.calendar__item Wed
+                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                            li.calendar__item Thu
+                                img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                            li.calendar__item Fri
+                                img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                        div.widget-dark__graphic(id="graphic")
           .container__item
             // Виджет: 2, цвет: 0 
             .widget-dark.widget-dark--compact
@@ -380,7 +380,7 @@ html(lang="en")
                           th(colspan="2").weather-lite__item Details
                         tr.weather-lite__items
                           td.weather-lite__item Feels like
-                          td.weather-lite__item -13
+                          td.weather-lite__item.weather-lite__feels -13
                             span.widget-lite-card__units &#176;
                         tr.weather-lite__items
                           td.weather-lite__item Wind
@@ -425,7 +425,7 @@ html(lang="en")
                     table.weather-lite-table
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Feels Like
-                        td.weather-lite-table__item -13 &#176;
+                        td.weather-lite-table__item.weather-lite__feels -13 &#176;
                       tr.weather-lite-table__items
                         td.weather-lite-table__item Wind
                         td.weather-lite-table__item.weather-lite__wind-speed  3 m/s W

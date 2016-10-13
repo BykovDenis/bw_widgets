@@ -18,7 +18,7 @@
     &__header{
         position: relative;
         border-radius: 6px 6px 0 0;
-        width: inherited;
+        width: inherit;
     }
 
     &__header &__layout {
@@ -113,7 +113,7 @@
       width: 20px;
       height: 20px;
       background-size: 20px 20px ;
-      background: url(../img/logo_white.png) 50% 50% no-repeat;
+      background: url(../img/logo_white.png) 50% 0 no-repeat;
       padding-right: 5px;
       display: inline-block;
       vertical-align: top;
@@ -124,7 +124,7 @@
       width: 20px;
       height: 20px;
       background-size: 20px 20px ;
-      background: url(../img/logo_20x20_black.png) 50% 50% no-repeat;
+      background: url(../img/logo_20x20_black.png) 50% 0 no-repeat;
       padding-right: 5px;
       display: inline-block;
       vertical-align: top;
@@ -161,7 +161,7 @@
         content:'';
         width: 14px;
         height: 14px;
-        background: url(../img/logo_white.png) 50% 50% no-repeat;
+        background: url(../img/logo_white.png) 0 0 no-repeat;
         background-size: 14px 14px ;
         display: inline-block;
         vertical-align: top;
@@ -173,7 +173,7 @@
         content:'';
         width: 14px;
         height: 14px;
-        background: url(../img/logo_20x20_black.png) 50% 50% no-repeat;
+        background: url(../img/logo_20x20_black.png) 0 0 no-repeat;
         background-size: 14px 14px ;
         display: inline-block;
         vertical-align: top;
@@ -218,7 +218,7 @@
         content:'';
         width: 14px;
         height: 14px;
-        background: url(../img/logo_white.png) 50% 50% no-repeat;
+        background: url(../img/logo_white.png) 0 0 no-repeat;
         background-size: 14px 14px ;
         display: inline-block;
         vertical-align: top;
@@ -230,7 +230,7 @@
         content:'';
         width: 14px;
         height: 14px;
-        background: url(../img/logo_20x20_black.png) 50% 50% no-repeat;
+        background: url(../img/logo_20x20_black.png) 0 0 no-repeat;
         background-size: 14px 14px ;
         display: inline-block;
         vertical-align: top;
@@ -305,7 +305,7 @@
         content:'';
         width: 13px;
         height: 13px;
-        background: url(../img/logo_13x13_blue.png) 50% 50% no-repeat;
+        background: url(../img/logo_13x13_blue.png) 0 0 no-repeat;
         background-size: 13px 13px ;
         display: inline-block;
         vertical-align: top;
@@ -321,7 +321,7 @@
         content:'';
         width: 13px;
         height: 13px;
-        background: url(../img/logo_20x20_orange.png) 50% 50% no-repeat;
+        background: url(../img/logo_20x20_orange.png) 0 0 no-repeat;
         background-size: 13px 13px ;
         display: inline-block;
         vertical-align: top;
@@ -338,7 +338,7 @@
         content:'';
         width: 13px;
         height: 13px;
-        background: url(../img/logo_13x13_blue.png) 50% 50% no-repeat;
+        background: url(../img/logo_13x13_blue.png) 0 0 no-repeat;
         background-size: 13px 13px ;
         display: inline-block;
         vertical-align: top;
@@ -350,7 +350,7 @@
       content:'';
       width: 13px;
       height: 13px;
-      background: url(../img/logo_20x20_orange.png) 50% 50% no-repeat;
+      background: url(../img/logo_20x20_orange.png) 0 0 no-repeat;
       background-size: 13px 13px ;
       display: inline-block;
       vertical-align: top;

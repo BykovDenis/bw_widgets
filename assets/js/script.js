@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mainIconWeather2: document.querySelectorAll('.weather-lite__icon'),
     humidity: document.querySelectorAll('.weather-lite__humidity'),
     pressure: document.querySelectorAll('.weather-lite__pressure'),
+    dateReport: document.querySelectorAll(".widget-lite__date"),
   };
 
   const urls = {
