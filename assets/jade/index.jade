@@ -11,8 +11,9 @@ html(lang="en")
     // Попап окно с отображением js кода для вставки на страницу браузера
     .popup#popup
       .popup__layout
-        h2.popup__title Приведенный ниже, код нужно вставить на страницу сайта
-        textarea.popup__items#js-code-generate dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf
+        h2.popup__title Приведенный ниже, код нужно скопировать отсюда и вставить на страницу ващего сайта
+        textarea.popup__items#js-code-generate(readonly) dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf
+        a.popup__btn(href="#")#copy-js-code Скопировать JS код в буфер обмена
       .popup__close#popup-close
     <!-- Синий виджет -->
     form.widget
