@@ -1,5 +1,7 @@
 // Модуль диспетчер для отрисовки баннерров на конструкторе
 import WeatherWidget from './weather-widget';
+import Popup from './popup';
+import GeneratorWidget from './generator-widget';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Формируем параметр фильтра по городу

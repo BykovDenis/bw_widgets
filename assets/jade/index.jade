@@ -8,8 +8,15 @@ html(lang="en")
     link(href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,500,400italic,500italic,700italic' rel='stylesheet' type='text/css')
     script(src="js/libs/d3.min.js")
   body
+    // Попап окно с отображением js кода для вставки на страницу браузера
+    .popup#popup
+      .popup__layout
+        h2.popup__title Приведенный ниже, код нужно вставить на страницу сайта
+        textarea.popup__items#js-code-generate dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf
+      .popup__close#popup-close
     <!-- Синий виджет -->
-    main.widget
+    form.widget
+      // Лендинг с информацией по виджетам
       h1.widget__title Получить Код для размещения на сайте виджета с прогнозом погоды
       .container__item
         .main.main--blue

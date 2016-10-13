@@ -8,8 +8,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,500,400italic,500italic,700italic" rel="stylesheet" type="text/css"/>
     <script src="js/libs/d3.min.js"></script>
   </head>
-  <body><!-- Синий виджет -->
-    <main class="widget">
+  <body>
+    <!-- Попап окно с отображением js кода для вставки на страницу браузера-->
+    <div id="popup" class="popup">
+      <div class="popup__layout">
+        <h2 class="popup__title">Приведенный ниже, код нужно вставить на страницу сайта</h2>
+        <textarea id="js-code-generate" class="popup__items">dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf</textarea>
+      </div>
+      <div id="popup-close" class="popup__close"></div>
+    </div><!-- Синий виджет -->
+    <form class="widget">
+      <!-- Лендинг с информацией по виджетам-->
       <h1 class="widget__title">Получить Код для размещения на сайте виджета с прогнозом погоды</h1>
       <div class="container__item">
         <div class="main main--blue">
@@ -655,7 +664,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </form>
     <script src="js/weather-widget.js"></script>
   </body>
 </html>
