@@ -224,6 +224,6 @@ export default class CustomDate extends Date {
    */
   getTimeDateHHMMMonthDay() {
     const date = new Date();
-    return `${date.getHours()}:${date.getMinutes()} ${this.getMonthNameByMonthNumber(date.getMonth())} ${date.getDate()}`;
+    return `${date.getHours() < 10 ? `0${date.getHours()}` : date.getHours() }:${date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()} ${this.getMonthNameByMonthNumber(date.getMonth())} ${date.getDate()}`;
   }
 }

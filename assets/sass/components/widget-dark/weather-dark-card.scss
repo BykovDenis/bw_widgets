@@ -69,12 +69,14 @@
   }
 
   &__number--small{
-    font-size: $font-size+4px;
     padding:0;
     display: inline-block;
     vertical-align: top;
     margin-bottom: 5px;
     margin-top: 21px;
+    min-width: 36px;
+    text-align: center;
+    font-size: $font-size+4px;
   }
 
   &__number--small &__degree{
@@ -91,8 +93,6 @@
     float: none;
     margin: 0 15px;
   }
-
-
 
   &__number--small2 &__degree{
     font-size: $font-size;

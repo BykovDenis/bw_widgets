@@ -13,6 +13,8 @@
 /* Блоки */
 @import "blocks/main";
 
+@import "blocks/widget";
+
 /* Тип темной отрисовки виджета */
 @import "components/widget-dark/widget-dark";
 @import "components/widget-dark/widget-dark-menu";
@@ -27,4 +29,6 @@
 @import "components/widget-lite/weather-lite-table";
 @import "components/widget-lite/weather-lite-card";
 
+/* Сервисный контейнеры для лендинг страницы */
 @import "services/container";
+@import "services/container-card";
