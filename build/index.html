@@ -13,30 +13,30 @@
     <div id="popup" class="popup">
       <div class="popup__layout">
         <h2 class="popup__title">Приведенный ниже, код нужно скопировать отсюда и вставить на страницу ващего сайта</h2>
-        <textarea id="js-code-generate" readonly="readonly" class="popup__items">dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf</textarea><a href="#" id="copy-js-code" class="popup__btn">Скопировать JS код в буфер обмена</a>
+        <textarea id="js-code-generate" readonly="readonly" class="popup__items">dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf</textarea><span id="copy-js-code" class="popup__btn">Скопировать JS код в буфер обмена</span>
       </div>
       <div id="popup-close" class="popup__close"></div>
     </div><!-- Синий виджет -->
-    <form class="widget">
+    <form id="frm-landing-widget" class="widget">
       <!-- Лендинг с информацией по виджетам-->
       <h1 class="widget__title">Получить Код для размещения на сайте виджета с прогнозом погоды</h1>
-      <div class="container__item">
+      <div class="container-custom__item">
         <div class="main main--blue">
-          <div class="container__item">
-            <div class="container">
-              <div class="container-card">
-                <div class="container-card__item">
+          <div class="container-custom__item">
+            <div class="container-custom">
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
                   <!--Виджет: 1, цвет: blue-->
                   <div class="widget-left widget-left--blue">
                     <div class="widget-left-menu widget-left-menu--blue">
                       <div class="widget-left-menu__layout">
                         <h1 class="widget-left-menu__header">Weather for Moscow</h1>
-                        <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" target="_blank" class="widget-left-menu__link">OpenWeatherMap</a></div>
+                        <div class="widget-left-menu__links"><span>More at</span><span href="//openweathermap.org/" target="_blank" class="widget-left-menu__link">OpenWeatherMap</span></div>
                       </div>
                     </div>
                     <div class="widget-left__body">
                       <div class="weather-left-card">
-                        <div class="weather-left-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                        <div class="weather-left-card__row1"><img src="" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
                           <div class="weather-left-card__col">
                             <p class="weather-left-card__number">0<sup class="weather-left-card__degree">0</sup></p><span class="weather-left-card__rising">and rising</span>
                           </div>
@@ -48,24 +48,24 @@
                       </div>
                       <div class="widget-left__calendar">
                         <ul class="calendar">
-                          <li class="calendar__item">Today<img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
-                          <li class="calendar__item">Sat<img src="img/04dbw@05x.png" width="32" height="32" alt="Sat"/></li>
-                          <li class="calendar__item">Sun<img src="img/09dbw@05x.png" width="32" height="32" alt="Sun"/></li>
-                          <li class="calendar__item">Mon<img src="img/01dbw@05x.png" width="32" height="32" alt="Mon"/></li>
-                          <li class="calendar__item">Tue<img src="img/02dbw@05x.png" width="32" height="32" alt="Tue"/></li>
-                          <li class="calendar__item">Wed<img src="img/02dbw@05x.png" width="32" height="32" alt="Wed"/></li>
-                          <li class="calendar__item">Thu<img src="img/10dbw@05x.png" width="32" height="32" alt="Thu"/></li>
-                          <li class="calendar__item">Fri<img src="img/02dbw@05x.png" width="32" height="32" alt="Fri"/></li>
+                          <li class="calendar__item">Today<img src="" width="32" height="32" alt="Today"/></li>
+                          <li class="calendar__item">Sat<img src="" width="32" height="32" alt="Sat"/></li>
+                          <li class="calendar__item">Sun<img src="" width="32" height="32" alt="Sun"/></li>
+                          <li class="calendar__item">Mon<img src="" width="32" height="32" alt="Mon"/></li>
+                          <li class="calendar__item">Tue<img src="" width="32" height="32" alt="Tue"/></li>
+                          <li class="calendar__item">Wed<img src="" width="32" height="32" alt="Wed"/></li>
+                          <li class="calendar__item">Thu<img src="" width="32" height="32" alt="Thu"/></li>
+                          <li class="calendar__item">Fri<img src="" width="32" height="32" alt="Fri"/></li>
                         </ul>
                         <div id="graphic1" class="widget-left__graphic"></div>
                       </div>
                     </div>
                   </div>
-                </div><a id="widget-1-left-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                </div><span id="widget-1-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
               </div>
-              <div class="container__item">
-                <div class="container-card">
-                  <div class="container-card__item">
+              <div class="container-custom__item">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
                     <!-- Виджет: 2, цвет: blue-->
                     <div class="widget-left widget-left--compact widget-left--blue">
                       <div class="widget-left-menu widget-left-menu--compact widget-left-menu--blue">
@@ -75,7 +75,7 @@
                       </div>
                       <div class="widget-left__body widget-left__body--compact widget-left__body--blue">
                         <div class="weather-left-card weather-left-card--compact">
-                          <div class="weather-left-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                          <div class="weather-left-card__row1"><img src="" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
                             <div class="weather-left-card__col">
                               <p class="weather-left-card__number">-<span class="weather-left-card__degree">0</span></p><span class="weather-left-card__rising">and rising</span>
                             </div>
@@ -86,54 +86,54 @@
                           </div>
                         </div>
                         <div class="widget-left-menu__links widget-left-menu__links--compact widget-left-menu__links--blue">
-                          <div class="widget-left-menu__layout widget-left-menu__layout--blue"><span>More at</span><a href="http://openweathermap.org/" target="_blank" class="widget-left-menu__link">OpenWeatherMa</a></div>
+                          <div class="widget-left-menu__layout widget-left-menu__layout--blue"><span>More at</span><a href="http://openweathermap.org/" target="_blank" class="widget-left-menu__link">OpenWeatherMap</a></div>
                         </div>
                       </div>
                     </div>
-                  </div><a id="widget-2-left-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                  </div><span id="widget-2-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
                 </div>
-                <div class="container">
-                  <div class="container-card">
-                    <div class="container-card__item">
+                <div class="container-custom">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
                       <!-- Виджет: 3, цвет: blue-->
                       <div class="widget-left widget-left--small widget-left--blue">
                         <div class="widget-left-menu widget-left-menu--small widget-left-menu--blue">
                           <h1 class="widget-left-menu__header">Moscow</h1>
                           <ul class="calendar calendar--small">
-                            <li class="calendar__item calendar__item--blue"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                            <li class="calendar__item calendar__item--blue"><img src="" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                           </ul>
                           <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
                         </div>
                       </div>
-                    </div><a id="widget-3-left-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                    </div><span id="widget-3-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
                   </div>
-                  <div class="container-card">
-                    <div class="container-card__item">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
                       <!-- Виджет: 4, цвет: blue-->
                       <div class="widget-left widget-left--small widget-left--blue">
                         <div class="widget-left-menu widget-left-menu--small widget-left-menu--blue">
                           <h1 class="widget-left-menu__header">Moscow</h1>
                           <ul class="calendar calendar--small2">
-                            <li class="calendar__item calendar__item--blue"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                            <li class="calendar__item calendar__item--blue"><img src="" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                           </ul>
                           <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
                         </div>
                       </div>
-                    </div><a id="widget-4-left-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                    </div><span id="widget-4-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="container">
-              <div class="container-card">
-                <div class="container-card__item">
+            <div class="container-custom">
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
                   <!-- Виджет: 5, цвет: blue-->
                   <div class="widget-right">
                     <div class="widget-right__header widget-right__header--blue">
                       <div class="widget-right__layout">
                         <h1 class="widget-right__title">Moscow</h1>
                         <p class="widget-right__description">Cloudy Skies</p>
-                      </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
+                      </div><img src="" width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
                     </div>
                     <div class="weather-right weather-right--type1 weather-right--blue">
                       <div class="weather-right__layout">
@@ -175,11 +175,11 @@
                       </div>
                     </div>
                   </div>
-                </div><a id="widget-5-right-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                </div><span id="widget-5-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
               </div>
-              <div class="container__item container__item--type1">
-                <div class="container-card">
-                  <div class="container-card__item">
+              <div class="container-custom__item container-custom__item--type1">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
                     <!-- Виджет: 6, цвет: blue-->
                     <div class="widget-right widget-right--type2 widget-right--blue">
                       <div class="widget-right__header widget-right__header--blue">
@@ -197,10 +197,10 @@
                         <div class="widget-right__layout"><a href="http://openweathermap.org/" target="_blank" class="widget-right__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
-                  </div><a id="widget-6-right-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                  </div><span id="widget-6-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
                 </div>
-                <div class="container-card">
-                  <div class="container-card__item">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
                     <!-- Виджет: 7, цвет: blue-->
                     <div class="widget-right widget-right--type3 widget-right--blue">
                       <div class="widget-right__header widget-right__header--blue">
@@ -232,21 +232,21 @@
                         <div class="widget-right__layout"><a href="http://openweathermap.org/" target="_blank" class="widget-right__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
-                  </div><a id="widget-7-right-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+                  </div><span id="widget-7-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container container--type1">
-            <div class="container-card">
-              <div class="container-card__item">
+          <div class="container-custom container-custom--type1">
+            <div class="container-custom-card">
+              <div class="container-custom-card__item">
                 <!-- Виджет: 8, цвет: blue-->
                 <div class="widget-right widget-right--type5 widget-right--blue">
                   <div class="widget-right__layout widget-right__layout--blue">
                     <div class="widget-right-card">
                       <div class="widget-right__title">Moscow</div>
                       <div class="widget-right__description">Cloudy Skies</div>
-                    </div><img src="/img/11d.png" width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--blue"/>
+                    </div><img src="" width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--blue"/>
                     <table class="weather-right-card">
                       <tr class="weather-right-card__items">
                         <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
@@ -260,17 +260,17 @@
                     </div>
                   </div>
                 </div>
-              </div><a id="widget-8-right-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+              </div><span id="widget-8-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
             </div>
-            <div class="container-card">
-              <div class="container-card__item">
+            <div class="container-custom-card">
+              <div class="container-custom-card__item">
                 <!-- Виджет: 9, цвет: blue-->
                 <div class="widget-right widget-right--type4 widget-right--blue">
                   <div class="widget-right__layout widget-right__layout--blue">
                     <div class="widget-right-card">
                       <div class="widget-right__title">Moscow</div>
                       <div class="widget-right__description">Cloudy Skies</div>
-                    </div><img src="/img/11d.png" width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--blue"/>
+                    </div><img src="" width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--blue"/>
                     <table class="weather-right-card weather-right-card--type4 weather-right-card--blue">
                       <tr class="weather-right-card__items">
                         <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
@@ -284,17 +284,17 @@
                     </div>
                   </div>
                 </div>
-              </div><a id="widget-9-right-blue" href="" class="container-card__btn container-card__btn--blue">Получить код</a>
+              </div><span id="widget-9-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Получить код</span>
             </div>
           </div>
         </div>
       </div><!-- Коричневый виджет -->
-      <div class="container__item">
+      <div class="container-custom__item">
         <div class="main main--brown">
-          <div class="container__item">
-            <div class="container">
-              <div class="container-card">
-                <div class="container-card__item">
+          <div class="container-custom__item">
+            <div class="container-custom">
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
                   <!-- Виджет: 1, цвет: brown-->
                   <div class="widget-left">
                     <div class="widget-left-menu widget-left-menu--brown">
@@ -305,7 +305,7 @@
                     </div>
                     <div class="widget-left__body">
                       <div class="weather-left-card">
-                        <div class="weather-left-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                        <div class="weather-left-card__row1"><img src="" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
                           <div class="weather-left-card__col">
                             <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
                           </div>
@@ -317,24 +317,24 @@
                       </div>
                       <div class="widget-left__calendar">
                         <ul class="calendar">
-                          <li class="calendar__item">Today<img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
-                          <li class="calendar__item">Sat<img src="img/04dbw@05x.png" width="32" height="32" alt="Sat"/></li>
-                          <li class="calendar__item">Sun<img src="img/09dbw@05x.png" width="32" height="32" alt="Sun"/></li>
-                          <li class="calendar__item">Mon<img src="img/01dbw@05x.png" width="32" height="32" alt="Mon"/></li>
-                          <li class="calendar__item">Tue<img src="img/02dbw@05x.png" width="32" height="32" alt="Tue"/></li>
-                          <li class="calendar__item">Wed<img src="img/02dbw@05x.png" width="32" height="32" alt="Wed"/></li>
-                          <li class="calendar__item">Thu<img src="img/10dbw@05x.png" width="32" height="32" alt="Thu"/></li>
-                          <li class="calendar__item">Fri<img src="img/02dbw@05x.png" width="32" height="32" alt="Fri"/></li>
+                          <li class="calendar__item">Today<img src="" width="32" height="32" alt="Today"/></li>
+                          <li class="calendar__item">Sat<img src="" width="32" height="32" alt="Sat"/></li>
+                          <li class="calendar__item">Sun<img src="" width="32" height="32" alt="Sun"/></li>
+                          <li class="calendar__item">Mon<img src="" width="32" height="32" alt="Mon"/></li>
+                          <li class="calendar__item">Tue<img src="" width="32" height="32" alt="Tue"/></li>
+                          <li class="calendar__item">Wed<img src="" width="32" height="32" alt="Wed"/></li>
+                          <li class="calendar__item">Thu<img src="" width="32" height="32" alt="Thu"/></li>
+                          <li class="calendar__item">Fri<img src="" width="32" height="32" alt="Fri"/></li>
                         </ul>
                         <div id="graphic2" class="widget-left__graphic"></div>
                       </div>
                     </div>
                   </div>
-                </div><a id="widget-1-left-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                </div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
               </div>
-              <div class="container__item">
-                <div class="container-card">
-                  <div class="container-card__item">
+              <div class="container-custom__item">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
                     <!-- Виджет: 2, цвет: brown-->
                     <div class="widget-left widget-left--compact">
                       <div class="widget-left-menu widget-left-menu--compact widget-left-menu--brown">
@@ -344,7 +344,7 @@
                       </div>
                       <div class="widget-left__body widget-left__body--compact">
                         <div class="weather-left-card weather-left-card--compact">
-                          <div class="weather-left-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                          <div class="weather-left-card__row1"><img src="" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
                             <div class="weather-left-card__col">
                               <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
                             </div>
@@ -359,50 +359,50 @@
                         </div>
                       </div>
                     </div>
-                  </div><a id="widget-2-left-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                  </div><span id="widget-2-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
                 </div>
-                <div class="container">
-                  <div class="container-card">
-                    <div class="container-card__item">
+                <div class="container-custom">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
                       <!-- Виджет: 3, цвет: brown-->
                       <div class="widget-left widget-left--small widget-left--brown">
                         <div class="widget-left-menu widget-left-menu--small widget-left-menu--brown">
                           <h1 class="widget-left-menu__header">Moscow</h1>
                           <ul class="calendar calendar--small">
-                            <li class="calendar__item calendar__item--brown"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                            <li class="calendar__item calendar__item--brown"><img src="" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                           </ul>
                           <p class="weather-left-card__number weather-left-card__number--small">0<sup class="weather-left-card__degree"></sup></p>
                         </div>
                       </div>
-                    </div><a id="widget-3-left-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                    </div><span id="widget-3-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
                   </div>
-                  <div class="container-card">
-                    <div class="container-card__item">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
                       <!-- Виджет: 4, цвет: brown-->
                       <div class="widget-left widget-left--small widget-left--brown">
                         <div class="widget-left-menu widget-left-menu--small widget-left-menu--brown">
                           <h1 class="widget-left-menu__header">Moscow</h1>
                           <ul class="calendar calendar--small2">
-                            <li class="calendar__item calendar__item--brown"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                            <li class="calendar__item calendar__item--brown"><img src="" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                           </ul>
                           <p class="weather-left-card__number weather-left-card__number--small">0<sup class="weather-left-card__degree"></sup></p>
                         </div>
                       </div>
-                    </div><a id="widget-4-left-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                    </div><span id="widget-4-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="container">
-              <div class="container-card">
-                <div class="container-card__item">
+            <div class="container-custom">
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
                   <!-- Виджет: 5, цвет: brown-->
                   <div class="widget-right weather-right--type1 widget-right--brown">
                     <div class="widget-right__header widget-right__header--brown">
                       <div class="widget-right__layout">
                         <h1 class="widget-right__title">Moscow</h1>
                         <p class="widget-right__description">Cloudy Skies</p>
-                      </div><img src="/img/02d.png" width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
+                      </div><img src="" width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
                     </div>
                     <div class="weather-right weather-right--brown">
                       <div class="weather-right__layout">
@@ -444,11 +444,11 @@
                       </div>
                     </div>
                   </div>
-                </div><a id="widget-5-right-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                </div><span id="widget-5-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
               </div>
-              <div class="container__item container__item--type1">
-                <div class="container-card">
-                  <div class="container-card__item">
+              <div class="container-custom__item container-custom__item--type1">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
                     <!-- Виджет: 6, цвет: brown-->
                     <div class="widget-right widget-right--type2 widget-right--brown">
                       <div class="widget-right__header widget-right__header--brown">
@@ -466,10 +466,10 @@
                         <div class="widget-right__layout"><a href="http://openweathermap.org/" target="_blank" class="widget-right__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
-                  </div><a id="widget-6-right-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                  </div><span id="widget-6-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
                 </div>
-                <div class="container-card">
-                  <div class="container-card__item">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
                     <!-- Виджет: 7, цвет: brown-->
                     <div class="widget-right widget-right--type3 widget-right--brown">
                       <div class="widget-right__header widget-right__header--brown">
@@ -501,21 +501,21 @@
                         <div class="widget-right__layout"><a href="http://openweathermap.org/" target="_blank" class="widget-right__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
-                  </div><a id="widget-7-right-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+                  </div><span id="widget-7-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container container--type1">
-            <div class="container-card">
-              <div class="container-card__item">
+          <div class="container-custom container-custom--type1">
+            <div class="container-custom-card">
+              <div class="container-custom-card__item">
                 <!-- Виджет: 8, цвет: brown-->
                 <div class="widget-right widget-right--type5 widget-right--brown">
                   <div class="widget-right__layout widget-right__layout--brown">
                     <div class="widget-right-card">
                       <div class="widget-right__title">Moscow</div>
                       <div class="widget-right__description">Cloudy Skies</div>
-                    </div><img src="/img/11d.png" width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--brown"/>
+                    </div><img src="" width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--brown"/>
                     <table class="weather-right-card">
                       <tr class="weather-right-card__items">
                         <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
@@ -529,17 +529,17 @@
                     </div>
                   </div>
                 </div>
-              </div><a id="widget-8-right-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+              </div><span id="widget-8-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
             </div>
-            <div class="container-card">
-              <div class="container-card__item">
+            <div class="container-custom-card">
+              <div class="container-custom-card__item">
                 <!-- Виджет: 9, цвет: brown-->
                 <div class="widget-right widget-right--type4 widget-right--brown">
                   <div class="widget-right__layout widget-right__layout--brown">
                     <div class="widget-right-card">
                       <div class="widget-right__title">Moscow</div>
                       <div class="widget-right__description">Cloudy Skies</div>
-                    </div><img src="/img/11d.png" width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--brown"/>
+                    </div><img src="" width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--brown"/>
                     <table class="weather-right-card">
                       <tr class="weather-right-card__items">
                         <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
@@ -553,17 +553,17 @@
                     </div>
                   </div>
                 </div>
-              </div><a id="widget-9-right-brown" href="" class="container-card__btn container-card__btn--brown">Получить код</a>
+              </div><span id="widget-9-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Получить код</span>
             </div>
           </div>
         </div>
       </div><!-- Бесцветный виджет -->
       <!-- Первый контейнер-->
-      <div class="container__item">
+      <div class="container-custom__item">
         <div class="main main--gray">
-          <div class="container">
-            <div class="container-card">
-              <div class="container-card__item">
+          <div class="container-custom">
+            <div class="container-custom-card">
+              <div class="container-custom-card__item">
                 <!-- Основной виджет: 1,  цвет: 0-->
                 <div class="widget-left">
                   <div class="widget-left-menu">
@@ -574,7 +574,7 @@
                   </div>
                   <div class="widget-left__body">
                     <div class="weather-left-card weather-left-card--grayscale">
-                      <div class="weather-left-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                      <div class="weather-left-card__row1"><img src="" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
                         <div class="weather-left-card__col">
                           <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
                         </div>
@@ -586,25 +586,25 @@
                     </div>
                     <div class="widget-left__calendar">
                       <ul class="calendar calendar--grayscale">
-                        <li class="calendar__item">Today<img src="img/11dbw@05x.png" width="32" height="32" alt="Today"/></li>
-                        <li class="calendar__item">Sat<img src="img/04dbw@05x.png" width="32" height="32" alt="Sat"/></li>
-                        <li class="calendar__item">Sun<img src="img/09dbw@05x.png" width="32" height="32" alt="Sun"/></li>
-                        <li class="calendar__item">Mon<img src="img/01dbw@05x.png" width="32" height="32" alt="Mon"/></li>
-                        <li class="calendar__item">Tue<img src="img/02dbw@05x.png" width="32" height="32" alt="Tue"/></li>
-                        <li class="calendar__item">Wed<img src="img/02dbw@05x.png" width="32" height="32" alt="Wed"/></li>
-                        <li class="calendar__item">Thu<img src="img/10dbw@05x.png" width="32" height="32" alt="Thu"/></li>
-                        <li class="calendar__item">Fri<img src="img/02dbw@05x.png" width="32" height="32" alt="Fri"/></li>
+                        <li class="calendar__item">Today<img src="" width="32" height="32" alt="Today"/></li>
+                        <li class="calendar__item">Sat<img src="" width="32" height="32" alt="Sat"/></li>
+                        <li class="calendar__item">Sun<img src="" width="32" height="32" alt="Sun"/></li>
+                        <li class="calendar__item">Mon<img src="" width="32" height="32" alt="Mon"/></li>
+                        <li class="calendar__item">Tue<img src="" width="32" height="32" alt="Tue"/></li>
+                        <li class="calendar__item">Wed<img src="" width="32" height="32" alt="Wed"/></li>
+                        <li class="calendar__item">Thu<img src="" width="32" height="32" alt="Thu"/></li>
+                        <li class="calendar__item">Fri<img src="" width="32" height="32" alt="Fri"/></li>
                       </ul>
                       <div id="graphic" class="widget-left__graphic"></div>
                     </div>
                   </div>
                 </div>
-              </div><a id="widget-1-right-white" href="" class="container-card__btn">Получить код</a>
+              </div><span id="widget-1-left-white" class="container-custom-card__btn">Получить код</span>
             </div>
           </div>
-          <div class="container__item">
-            <div class="container-card">
-              <div class="container-card__item">
+          <div class="container-custom__item">
+            <div class="container-custom-card">
+              <div class="container-custom-card__item">
                 <!-- Виджет: 2, цвет: 0-->
                 <div class="widget-left widget-left--compact">
                   <div class="widget-left-menu widget-left-menu--compact">
@@ -614,7 +614,7 @@
                   </div>
                   <div class="widget-left__body widget-left__body--compact">
                     <div class="weather-left-card weather-left-card--compact weather-left-card--grayscale">
-                      <div class="weather-left-card__row1"><img src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                      <div class="weather-left-card__row1"><img src="" width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
                         <div class="weather-left-card__col">
                           <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
                         </div>
@@ -629,36 +629,36 @@
                     </div>
                   </div>
                 </div>
-              </div><a id="widget-2-right-white" href="" class="container-card__btn">Получить код</a>
+              </div><span id="widget-2-left-white" class="container-custom-card__btn">Получить код</span>
             </div>
-            <div class="container">
-              <div class="container-card">
-                <div class="container-card__item">
+            <div class="container-custom">
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
                   <!-- Виджет: 3, цвет: 0-->
                   <div class="widget-left widget-left--small">
                     <div class="widget-left-menu widget-left-menu--small">
                       <h1 class="widget-left-menu__header">Moscow</h1>
                       <ul class="calendar calendar--grayscale calendar--small">
-                        <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                        <li class="calendar__item"><img src="" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                       </ul>
                       <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
                     </div>
                   </div>
-                </div><a id="widget-3-right-white" href="" class="container-card__btn">Получить код</a>
+                </div><span id="widget-3-left-white" class="container-custom-card__btn">Получить код</span>
               </div>
-              <div class="container-card">
-                <div class="container-card__item">
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
                   <!-- Виджет: 4, цвет: 0-->
                   <div class="widget-left widget-left--small">
                     <div class="widget-left-menu widget-left-menu--small">
                       <h1 class="widget-left-menu__header">Moscow</h1>
                       <ul class="calendar calendar--grayscale calendar--small2">
-                        <li class="calendar__item"><img src="img/11dbw@05x.png" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                        <li class="calendar__item"><img src="" width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                       </ul>
                       <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
                     </div>
                   </div>
-                </div><a id="widget-4-right-white" href="" class="container-card__btn">Получить код</a>
+                </div><span id="widget-4-left-white" class="container-custom-card__btn">Получить код</span>
               </div>
             </div>
           </div>

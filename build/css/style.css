@@ -429,6 +429,12 @@ th {
             align-items: center;
     -webkit-transition: 1s;
     transition: 1s; }
+  .popup--blue {
+    /* background-image: linear-gradient(to top left, $color-orange, $color-light-orange);*/
+    border: 1px solid #333333; }
+  .popup--brown {
+    /* background-image: linear-gradient(to top left, $color-brown-bg-bottom, $color-brown-bg-top);*/
+    border: 1px solid #333333; }
   .popup__layout {
     padding: 20px 10px;
     display: -webkit-box;
@@ -495,7 +501,13 @@ th {
     .popup__btn:hover {
       -webkit-transition: 0.6s;
       transition: 0.6s;
-      opacity: 1; }
+      opacity: 1;
+      cursor: pointer; }
+    .popup__btn:active {
+      -webkit-transition: 0.9s;
+      transition: 0.9s;
+      opacity: .4;
+      cursor: pointer; }
 
 /* Тип темной отрисовки виджета */
 .widget-left {
@@ -589,7 +601,7 @@ th {
     padding-right: 3px; }
   .widget-left-menu__link {
     font: 700 14px "Roboto", Arial, sans-serif;
-    color: #333333;
+    color: #333333 !important;
     text-decoration: none;
     opacity: 0.9; }
   .widget-left-menu__link:before {
@@ -1325,7 +1337,7 @@ th {
     padding-right: 5px; }
 
 /* Сервисный контейнеры для лендинг страницы */
-.container {
+.container-custom {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1347,7 +1359,7 @@ th {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px; }
-  .container__item {
+  .container-custom__item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1361,7 +1373,7 @@ th {
         -ms-flex-line-pack: stretch;
             align-content: stretch;
     padding: 10px; }
-    .container__item--type1 {
+    .container-custom__item--type1 {
       -webkit-box-align: baseline;
       -webkit-align-items: baseline;
           -ms-flex-align: baseline;
@@ -1372,7 +1384,7 @@ th {
               justify-content: space-around;
       width: 100%;
       padding-top: 0; }
-  .container--type1 {
+  .container-custom--type1 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -1385,7 +1397,7 @@ th {
             align-items: stretch;
     margin-top: 10px; }
 
-.container-card {
+.container-custom-card {
   -webkit-transition: 1s;
   transition: 1s;
   display: -webkit-box;
@@ -1405,7 +1417,7 @@ th {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .container-card__btn {
+  .container-custom-card__btn {
     display: block;
     padding: 10px 40px;
     margin-top: 5px;
@@ -1416,31 +1428,40 @@ th {
     text-align: center;
     background-color: #ffffff;
     color: #333333; }
-    .container-card__btn:hover {
+    .container-custom-card__btn:hover {
       -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
               box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
       -webkit-transition: 0.6s;
       transition: 0.6s;
-      color: #B9C4C5; }
-    .container-card__btn--blue {
+      color: #B9C4C5;
+      cursor: pointer; }
+    .container-custom-card__btn:active {
+      -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+              box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+      -webkit-transition: 0.6s;
+      transition: 0.6s;
+      color: #B9C4C5;
+      opacity: .7;
+      cursor: pointer; }
+    .container-custom-card__btn--blue {
       color: #333333;
       background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
       background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
       background-image: linear-gradient(to top left, #DDF730, #F1F029); }
-    .container-card__btn--blue:hover {
+    .container-custom-card__btn--blue:hover {
       color: #FF4F98;
       background-image: -webkit-gradient(linear, left bottom, left top, from(#74E881), to(#C9F671));
       background-image: -webkit-linear-gradient(bottom, #74E881, #C9F671);
       background-image: linear-gradient(to top, #74E881, #C9F671); }
-    .container-card__btn--brown {
+    .container-custom-card__btn--brown {
       color: #333333;
       background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
-    .container-card__btn--brown:hover {
+    .container-custom-card__btn--brown:hover {
       color: #ffffff;
       background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));
       background-image: -webkit-linear-gradient(bottom right, #FEB020, #FFD05C);
       background-image: linear-gradient(to top left, #FEB020, #FFD05C); }
-  .container-card:hover {
+  .container-custom-card:hover {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);

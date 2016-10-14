@@ -13,18 +13,18 @@ html(lang="en")
       .popup__layout
         h2.popup__title Приведенный ниже, код нужно скопировать отсюда и вставить на страницу ващего сайта
         textarea.popup__items#js-code-generate(readonly) dsdskdjskdjskd.js?dsjds=dsds&dsdsds=fdfdf
-        a.popup__btn(href="#")#copy-js-code Скопировать JS код в буфер обмена
+        span.popup__btn#copy-js-code Скопировать JS код в буфер обмена
       .popup__close#popup-close
     <!-- Синий виджет -->
-    form.widget
+    form#frm-landing-widget.widget
       // Лендинг с информацией по виджетам
       h1.widget__title Получить Код для размещения на сайте виджета с прогнозом погоды
-      .container__item
+      .container-custom__item
         .main.main--blue
-          .container__item
-            .container
-              .container-card
-                .container-card__item
+          .container-custom__item
+            .container-custom
+              .container-custom-card
+                .container-custom-card__item
                   //Виджет: 1, цвет: blue
                   .widget-left.widget-left--blue
                     .widget-left-menu.widget-left-menu--blue
@@ -32,11 +32,11 @@ html(lang="en")
                         h1.widget-left-menu__header Weather for Moscow
                         .widget-left-menu__links
                           span More at
-                          a.widget-left-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
+                          span.widget-left-menu__link(href="//openweathermap.org/" target="_blank") OpenWeatherMap
                     .widget-left__body
                       .weather-left-card
                         .weather-left-card__row1
-                          img.weather-left-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                          img.weather-left-card__img(src="" width="128" height="128" alt="Weather for Moscow")
                           .weather-left-card__col
                             p.weather-left-card__number 0
                               sup.weather-left-card__degree 0
@@ -47,27 +47,27 @@ html(lang="en")
                       .widget-left__calendar
                         ul.calendar
                           li.calendar__item Today
-                            img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                            img(src="" width="32" height="32" alt="Today")
                           li.calendar__item Sat
-                            img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                            img(src="" width="32" height="32" alt="Sat")
                           li.calendar__item Sun
-                            img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                            img(src="" width="32" height="32" alt="Sun")
                           li.calendar__item Mon
-                            img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                            img(src="" width="32" height="32" alt="Mon")
                           li.calendar__item Tue
-                            img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                            img(src="" width="32" height="32" alt="Tue")
                           li.calendar__item Wed
-                            img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                            img(src="" width="32" height="32" alt="Wed")
                           li.calendar__item Thu
-                            img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                            img(src="" width="32" height="32" alt="Thu")
                           li.calendar__item Fri
-                            img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                            img(src="" width="32" height="32" alt="Fri")
                         div.widget-left__graphic(id="graphic1")
 
-                a.container-card__btn.container-card__btn--blue#widget-1-left-blue(href="") Получить код
-              .container__item
-                .container-card
-                  .container-card__item
+                span.container-custom-card__btn.container-custom-card__btn--blue#widget-1-left-blue Получить код
+              .container-custom__item
+                .container-custom-card
+                  .container-custom-card__item
                     // Виджет: 2, цвет: blue
                     .widget-left.widget-left--compact.widget-left--blue
                       .widget-left-menu.widget-left-menu--compact.widget-left-menu--blue
@@ -76,7 +76,7 @@ html(lang="en")
                       .widget-left__body.widget-left__body--compact.widget-left__body--blue
                         .weather-left-card.weather-left-card--compact
                           .weather-left-card__row1
-                            img.weather-left-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                            img.weather-left-card__img(src="" width="128" height="128" alt="Weather for Moscow")
                             .weather-left-card__col
                               p.weather-left-card__number -
                                 span.weather-left-card__degree 0
@@ -87,43 +87,43 @@ html(lang="en")
                         .widget-left-menu__links.widget-left-menu__links--compact.widget-left-menu__links--blue
                           .widget-left-menu__layout.widget-left-menu__layout--blue
                             span More at
-                            a.widget-left-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMa
-                  a.container-card__btn.container-card__btn--blue#widget-2-left-blue(href="") Получить код
-                .container
-                  .container-card
-                    .container-card__item
+                            a.widget-left-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-2-left-blue Получить код
+                .container-custom
+                  .container-custom-card
+                    .container-custom-card__item
                       // Виджет: 3, цвет: blue
                       .widget-left.widget-left--small.widget-left--blue
                         .widget-left-menu.widget-left-menu--small.widget-left-menu--blue
                           h1.widget-left-menu__header Moscow
                           ul.calendar.calendar--small
                             li.calendar__item.calendar__item--blue
-                              img.weather-left-card__img.weather-left-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                              img.weather-left-card__img.weather-left-card__img--small(src="" width="32" height="32" alt="Today")
                           p.weather-left-card__number.weather-left-card__number--small 0
                             span.weather-left-card__degree
-                    a.container-card__btn.container-card__btn--blue#widget-3-left-blue(href="") Получить код
-                  .container-card
-                    .container-card__item
+                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-3-left-blue Получить код
+                  .container-custom-card
+                    .container-custom-card__item
                       // Виджет: 4, цвет: blue
                       .widget-left.widget-left--small.widget-left--blue
                         .widget-left-menu.widget-left-menu--small.widget-left-menu--blue
                           h1.widget-left-menu__header Moscow
                           ul.calendar.calendar--small2
                             li.calendar__item.calendar__item--blue
-                              img.weather-left-card__img.weather-left-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                              img.weather-left-card__img.weather-left-card__img--small(src="" width="32" height="32" alt="Today")
                           p.weather-left-card__number.weather-left-card__number--small 0
                             span.weather-left-card__degree
-                    a.container-card__btn.container-card__btn--blue#widget-4-left-blue(href="") Получить код
-            .container
-              .container-card
-                .container-card__item
+                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-4-left-blue Получить код
+            .container-custom
+              .container-custom-card
+                .container-custom-card__item
                   // Виджет: 5, цвет: blue
                   .widget-right
                     .widget-right__header.widget-right__header--blue
                       .widget-right__layout
                         h1.widget-right__title Moscow
                         p.widget-right__description Cloudy Skies
-                      img.weather-right__icon.weather-right__icon--type1(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+                      img.weather-right__icon.weather-right__icon--type1(src="" width="128" height="128" alt="Cloudy Skies")
                     .weather-right.weather-right--type1.weather-right--blue
                       .weather-right__layout
                         .weather-right__temperature 10
@@ -153,10 +153,10 @@ html(lang="en")
                       .widget-right__layout
                         a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                         .widget-right__date 20:16 Mar 28
-                a.container-card__btn.container-card__btn--blue#widget-5-right-blue(href="") Получить код
-              .container__item.container__item--type1
-                .container-card
-                  .container-card__item
+                span.container-custom-card__btn.container-custom-card__btn--blue#widget-5-right-blue Получить код
+              .container-custom__item.container-custom__item--type1
+                .container-custom-card
+                  .container-custom-card__item
                     // Виджет: 6, цвет: blue
                     .widget-right.widget-right--type2.widget-right--blue
                       .widget-right__header.widget-right__header--blue
@@ -170,9 +170,9 @@ html(lang="en")
                       .widget-right__footer.widget-right__footer--blue
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                  a.container-card__btn.container-card__btn--blue#widget-6-right-blue(href="") Получить код
-                .container-card
-                  .container-card__item
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-6-right-blue Получить код
+                .container-custom-card
+                  .container-custom-card__item
                     // Виджет: 7, цвет: blue
                     .widget-right.widget-right--type3.widget-right--blue
                       .widget-right__header.widget-right__header--blue
@@ -196,17 +196,17 @@ html(lang="en")
                       .widget-right__footer.widget-right__footer--blue
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                  a.container-card__btn.container-card__btn--blue#widget-7-right-blue(href="") Получить код
-          .container.container--type1
-            .container-card
-              .container-card__item
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-7-right-blue Получить код
+          .container-custom.container-custom--type1
+            .container-custom-card
+              .container-custom-card__item
                 // Виджет: 8, цвет: blue
                 .widget-right.widget-right--type5.widget-right--blue
                   .widget-right__layout.widget-right__layout--blue
                     .widget-right-card
                       .widget-right__title Moscow
                       .widget-right__description Cloudy Skies
-                    img.weather-right__icon.weather-right__icon--type5.weather-right__icon--blue(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies")
+                    img.weather-right__icon.weather-right__icon--type5.weather-right__icon--blue(src="" width="64" height="64" alt="Cloudy Skies")
                     table.weather-right-card
                       tr.weather-right-card__items
                         td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
@@ -215,16 +215,16 @@ html(lang="en")
                     .widget-right__layout
                       a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                       .widget-right__date 20:16 Mar 28
-              a.container-card__btn.container-card__btn--blue#widget-8-right-blue(href="") Получить код
-            .container-card
-              .container-card__item
+              span.container-custom-card__btn.container-custom-card__btn--blue#widget-8-right-blue Получить код
+            .container-custom-card
+              .container-custom-card__item
                 // Виджет: 9, цвет: blue
                 .widget-right.widget-right--type4.widget-right--blue
                   .widget-right__layout.widget-right__layout--blue
                     .widget-right-card
                       .widget-right__title Moscow
                       .widget-right__description Cloudy Skies
-                    img.weather-right__icon.weather-right__icon--type4.weather-right__icon--blue(src="/img/11d.png" width="100" alt="Cloudy Skies")
+                    img.weather-right__icon.weather-right__icon--type4.weather-right__icon--blue(src="" width="100" alt="Cloudy Skies")
                     table.weather-right-card.weather-right-card--type4.weather-right-card--blue
                       tr.weather-right-card__items
                         td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
@@ -233,14 +233,14 @@ html(lang="en")
                     .widget-right__layout
                       a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                       .widget-right__date 20:16 Mar 28
-              a.container-card__btn.container-card__btn--blue#widget-9-right-blue(href="") Получить код
+              span.container-custom-card__btn.container-custom-card__btn--blue#widget-9-right-blue Получить код
       <!-- Коричневый виджет -->
-      .container__item
+      .container-custom__item
         .main.main--brown
-          .container__item
-            .container
-              .container-card
-                .container-card__item
+          .container-custom__item
+            .container-custom
+              .container-custom-card
+                .container-custom-card__item
                   // Виджет: 1, цвет: brown
                   .widget-left
                     .widget-left-menu.widget-left-menu--brown
@@ -252,7 +252,7 @@ html(lang="en")
                     .widget-left__body
                       .weather-left-card
                         .weather-left-card__row1
-                          img.weather-left-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                          img.weather-left-card__img(src="" width="128" height="128" alt="Weather for Moscow")
                           .weather-left-card__col
                             p.weather-left-card__number 0
                               span.weather-left-card__degree &176;
@@ -263,26 +263,26 @@ html(lang="en")
                       .widget-left__calendar
                         ul.calendar
                           li.calendar__item Today
-                            img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                            img(src="" width="32" height="32" alt="Today")
                           li.calendar__item Sat
-                            img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                            img(src="" width="32" height="32" alt="Sat")
                           li.calendar__item Sun
-                            img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                            img(src="" width="32" height="32" alt="Sun")
                           li.calendar__item Mon
-                            img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                            img(src="" width="32" height="32" alt="Mon")
                           li.calendar__item Tue
-                            img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                            img(src="" width="32" height="32" alt="Tue")
                           li.calendar__item Wed
-                            img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                            img(src="" width="32" height="32" alt="Wed")
                           li.calendar__item Thu
-                            img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                            img(src="" width="32" height="32" alt="Thu")
                           li.calendar__item Fri
-                            img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                            img(src="" width="32" height="32" alt="Fri")
                         div.widget-left__graphic(id="graphic2")
-                a.container-card__btn.container-card__btn--brown#widget-1-left-brown(href="") Получить код
-              .container__item
-                .container-card
-                  .container-card__item
+                span.container-custom-card__btn.container-custom-card__btn--brown#widget-1-left-brown Получить код
+              .container-custom__item
+                .container-custom-card
+                  .container-custom-card__item
                     // Виджет: 2, цвет: brown
                     .widget-left.widget-left--compact
                       .widget-left-menu.widget-left-menu--compact.widget-left-menu--brown
@@ -291,7 +291,7 @@ html(lang="en")
                       .widget-left__body.widget-left__body--compact
                         .weather-left-card.weather-left-card--compact
                           .weather-left-card__row1
-                            img.weather-left-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                            img.weather-left-card__img(src="" width="128" height="128" alt="Weather for Moscow")
                             .weather-left-card__col
                               p.weather-left-card__number -
                                 span.weather-left-card__degree &176;
@@ -303,42 +303,42 @@ html(lang="en")
                           .widget-left-menu__layout.widget-left-menu__layout--brown
                             span More at
                             a.widget-left-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                  a.container-card__btn.container-card__btn--brown#widget-2-left-brown(href="") Получить код
-                .container
-                  .container-card
-                    .container-card__item
+                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-2-left-brown Получить код
+                .container-custom
+                  .container-custom-card
+                    .container-custom-card__item
                       // Виджет: 3, цвет: brown
                       .widget-left.widget-left--small.widget-left--brown
                         .widget-left-menu.widget-left-menu--small.widget-left-menu--brown
                           h1.widget-left-menu__header Moscow
                           ul.calendar.calendar--small
                             li.calendar__item.calendar__item--brown
-                              img.weather-left-card__img.weather-left-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                              img.weather-left-card__img.weather-left-card__img--small(src="" width="32" height="32" alt="Today")
                           p.weather-left-card__number.weather-left-card__number--small 0
                             sup.weather-left-card__degree
-                    a.container-card__btn.container-card__btn--brown#widget-3-left-brown(href="") Получить код
-                  .container-card
-                    .container-card__item
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-3-left-brown Получить код
+                  .container-custom-card
+                    .container-custom-card__item
                       // Виджет: 4, цвет: brown
                       .widget-left.widget-left--small.widget-left--brown
                         .widget-left-menu.widget-left-menu--small.widget-left-menu--brown
                           h1.widget-left-menu__header Moscow
                           ul.calendar.calendar--small2
                             li.calendar__item.calendar__item--brown
-                              img.weather-left-card__img.weather-left-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                              img.weather-left-card__img.weather-left-card__img--small(src="" width="32" height="32" alt="Today")
                           p.weather-left-card__number.weather-left-card__number--small 0
                             sup.weather-left-card__degree
-                    a.container-card__btn.container-card__btn--brown#widget-4-left-brown(href="") Получить код
-            .container
-              .container-card
-                .container-card__item
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-4-left-brown Получить код
+            .container-custom
+              .container-custom-card
+                .container-custom-card__item
                   // Виджет: 5, цвет: brown
                   .widget-right.weather-right--type1.widget-right--brown
                     .widget-right__header.widget-right__header--brown
                       .widget-right__layout
                         h1.widget-right__title Moscow
                         p.widget-right__description Cloudy Skies
-                      img.weather-right__icon.weather-right__icon--type1(src="/img/02d.png" width="128" height="128" alt="Cloudy Skies")
+                      img.weather-right__icon.weather-right__icon--type1(src="" width="128" height="128" alt="Cloudy Skies")
                     .weather-right.weather-right--brown
                       .weather-right__layout
                         .weather-right__temperature 10
@@ -368,10 +368,10 @@ html(lang="en")
                       .widget-right__layout
                         a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                         .widget-right__date 20:16 Mar 28
-                a.container-card__btn.container-card__btn--brown#widget-5-right-brown(href="") Получить код
-              .container__item.container__item--type1
-                .container-card
-                  .container-card__item
+                span.container-custom-card__btn.container-custom-card__btn--brown#widget-5-right-brown Получить код
+              .container-custom__item.container-custom__item--type1
+                .container-custom-card
+                  .container-custom-card__item
                     // Виджет: 6, цвет: brown
                     .widget-right.widget-right--type2.widget-right--brown
                       .widget-right__header.widget-right__header--brown
@@ -385,9 +385,9 @@ html(lang="en")
                       .widget-right__footer.widget-right__footer--brown
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                  a.container-card__btn.container-card__btn--brown#widget-6-right-brown(href="") Получить код
-                .container-card
-                  .container-card__item
+                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-6-right-brown Получить код
+                .container-custom-card
+                  .container-custom-card__item
                     // Виджет: 7, цвет: brown
                     .widget-right.widget-right--type3.widget-right--brown
                       .widget-right__header.widget-right__header--brown
@@ -411,17 +411,17 @@ html(lang="en")
                       .widget-right__footer.widget-right__footer--brown
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-                  a.container-card__btn.container-card__btn--brown#widget-7-right-brown(href="") Получить код
-          .container.container--type1
-            .container-card
-              .container-card__item
+                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-7-right-brown Получить код
+          .container-custom.container-custom--type1
+            .container-custom-card
+              .container-custom-card__item
                 // Виджет: 8, цвет: brown
                 .widget-right.widget-right--type5.widget-right--brown
                   .widget-right__layout.widget-right__layout--brown
                     .widget-right-card
                       .widget-right__title Moscow
                       .widget-right__description Cloudy Skies
-                    img.weather-right__icon.weather-right__icon--type5.weather-right__icon--brown(src="/img/11d.png" width="64" height="64" alt="Cloudy Skies")
+                    img.weather-right__icon.weather-right__icon--type5.weather-right__icon--brown(src="" width="64" height="64" alt="Cloudy Skies")
                     table.weather-right-card
                       tr.weather-right-card__items
                         td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
@@ -430,16 +430,16 @@ html(lang="en")
                     .widget-right__layout
                       a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                       .widget-right__date 20:16 Mar 28
-              a.container-card__btn.container-card__btn--brown#widget-8-right-brown(href="") Получить код
-            .container-card
-              .container-card__item
+              span.container-custom-card__btn.container-custom-card__btn--brown#widget-8-right-brown Получить код
+            .container-custom-card
+              .container-custom-card__item
                 // Виджет: 9, цвет: brown
                 .widget-right.widget-right--type4.widget-right--brown
                   .widget-right__layout.widget-right__layout--brown
                     .widget-right-card
                       .widget-right__title Moscow
                       .widget-right__description Cloudy Skies
-                    img.weather-right__icon.weather-right__icon--type4.weather-right__icon--brown(src="/img/11d.png" width="100" alt="Cloudy Skies")
+                    img.weather-right__icon.weather-right__icon--type4.weather-right__icon--brown(src="" width="100" alt="Cloudy Skies")
                     table.weather-right-card
                       tr.weather-right-card__items
                         td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
@@ -448,14 +448,14 @@ html(lang="en")
                     .widget-right__layout
                       a.widget-right__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
                       .widget-right__date 20:16 Mar 28
-              a.container-card__btn.container-card__btn--brown#widget-9-right-brown(href="") Получить код
+              span.container-custom-card__btn.container-custom-card__btn--brown#widget-9-right-brown Получить код
       <!-- Бесцветный виджет -->
       // Первый контейнер
-      .container__item
+      .container-custom__item
         .main.main--gray
-          .container
-            .container-card
-              .container-card__item
+          .container-custom
+            .container-custom-card
+              .container-custom-card__item
                 // Основной виджет: 1,  цвет: 0
                 .widget-left
                   .widget-left-menu
@@ -467,7 +467,7 @@ html(lang="en")
                   .widget-left__body
                     .weather-left-card.weather-left-card--grayscale
                       .weather-left-card__row1
-                        img.weather-left-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                        img.weather-left-card__img(src="" width="128" height="128" alt="Weather for Moscow")
                         .weather-left-card__col
                           p.weather-left-card__number 0
                             span.weather-left-card__degree &176;
@@ -478,26 +478,26 @@ html(lang="en")
                     .widget-left__calendar
                       ul.calendar.calendar--grayscale
                         li.calendar__item Today
-                          img(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                          img(src="" width="32" height="32" alt="Today")
                         li.calendar__item Sat
-                          img(src="img/04dbw@05x.png" width="32" height="32" alt="Sat")
+                          img(src="" width="32" height="32" alt="Sat")
                         li.calendar__item Sun
-                          img(src="img/09dbw@05x.png" width="32" height="32" alt="Sun")
+                          img(src="" width="32" height="32" alt="Sun")
                         li.calendar__item Mon
-                          img(src="img/01dbw@05x.png" width="32" height="32" alt="Mon")
+                          img(src="" width="32" height="32" alt="Mon")
                         li.calendar__item Tue
-                          img(src="img/02dbw@05x.png" width="32" height="32" alt="Tue")
+                          img(src="" width="32" height="32" alt="Tue")
                         li.calendar__item Wed
-                          img(src="img/02dbw@05x.png" width="32" height="32" alt="Wed")
+                          img(src="" width="32" height="32" alt="Wed")
                         li.calendar__item Thu
-                          img(src="img/10dbw@05x.png" width="32" height="32" alt="Thu")
+                          img(src="" width="32" height="32" alt="Thu")
                         li.calendar__item Fri
-                          img(src="img/02dbw@05x.png" width="32" height="32" alt="Fri")
+                          img(src="" width="32" height="32" alt="Fri")
                       div.widget-left__graphic(id="graphic")
-              a.container-card__btn#widget-1-right-white(href="") Получить код
-          .container__item
-            .container-card
-              .container-card__item
+              span.container-custom-card__btn#widget-1-left-white Получить код
+          .container-custom__item
+            .container-custom-card
+              .container-custom-card__item
                 // Виджет: 2, цвет: 0
                 .widget-left.widget-left--compact
                   .widget-left-menu.widget-left-menu--compact
@@ -506,7 +506,7 @@ html(lang="en")
                   .widget-left__body.widget-left__body--compact
                     .weather-left-card.weather-left-card--compact.weather-left-card--grayscale
                       .weather-left-card__row1
-                        img.weather-left-card__img(src="img/10dbw.png" width="128" height="128" alt="Weather for Moscow")
+                        img.weather-left-card__img(src="" width="128" height="128" alt="Weather for Moscow")
                         .weather-left-card__col
                           p.weather-left-card__number -
                             span.weather-left-card__degree &176;
@@ -518,30 +518,30 @@ html(lang="en")
                       .widget-left-menu__layout
                         span More at
                         a.widget-left-menu__link(href="http://openweathermap.org/" target="_blank") OpenWeatherMap
-              a.container-card__btn#widget-2-right-white(href="") Получить код
-            .container
-              .container-card
-                .container-card__item
+              span.container-custom-card__btn#widget-2-left-white Получить код
+            .container-custom
+              .container-custom-card
+                .container-custom-card__item
                   // Виджет: 3, цвет: 0
                   .widget-left.widget-left--small
                     .widget-left-menu.widget-left-menu--small
                       h1.widget-left-menu__header Moscow
                       ul.calendar.calendar--grayscale.calendar--small
                         li.calendar__item
-                          img.weather-left-card__img.weather-left-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                          img.weather-left-card__img.weather-left-card__img--small(src="" width="32" height="32" alt="Today")
                       p.weather-left-card__number.weather-left-card__number--small 0
                         span.weather-left-card__degree
-                a.container-card__btn#widget-3-right-white(href="") Получить код
-              .container-card
-                .container-card__item
+                span.container-custom-card__btn#widget-3-left-white Получить код
+              .container-custom-card
+                .container-custom-card__item
                   // Виджет: 4, цвет: 0
                   .widget-left.widget-left--small
                     .widget-left-menu.widget-left-menu--small
                       h1.widget-left-menu__header Moscow
                       ul.calendar.calendar--grayscale.calendar--small2
                         li.calendar__item
-                          img.weather-left-card__img.weather-left-card__img--small(src="img/11dbw@05x.png" width="32" height="32" alt="Today")
+                          img.weather-left-card__img.weather-left-card__img--small(src="" width="32" height="32" alt="Today")
                       p.weather-left-card__number.weather-left-card__number--small 0
                         span.weather-left-card__degree
-                a.container-card__btn#widget-4-right-white(href="") Получить код
+                span.container-custom-card__btn#widget-4-left-white Получить код
     script(src="js/weather-widget.js")

@@ -39,7 +39,7 @@
 
   &__link{
     font: 700 $font-size / $line-height $font-roboto;
-    color: $color-black;
+    color: $color-black !important;
     text-decoration: none;
     opacity: 0.9;
   }
