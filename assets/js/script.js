@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const controlsWidget = {
     // Первая половина виджетов
-    cityName: document.querySelectorAll('.widget-dark-menu__header'),
+    cityName: document.querySelectorAll('.widget-left-menu__header'),
     temperature: document.querySelectorAll('.weather-dark-card__number'),
     naturalPhenomenon: document.querySelectorAll('.weather-dark-card__means'),
     windSpeed: document.querySelectorAll('.weather-dark-card__wind'),

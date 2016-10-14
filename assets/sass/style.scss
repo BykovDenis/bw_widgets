@@ -16,18 +16,18 @@
 @import "blocks/popup";
 
 /* Тип темной отрисовки виджета */
-@import "components/widget-dark/widget-dark";
-@import "components/widget-dark/widget-dark-menu";
-@import "components/widget-dark/weather-dark-card";
-@import "components/widget-dark/calendar";
+@import "components/widget-left/widget-left";
+@import "components/widget-left/widget-left-menu";
+@import "components/widget-left/weather-left-card";
+@import "components/widget-left/calendar";
 
 /* Тип яркой отрисовки виджета */
 
-@import "components/widget-lite/weather-lite";
-@import "components/widget-lite/weather-lite-card";
-@import "components/widget-lite/widget-lite";
-@import "components/widget-lite/weather-lite-table";
-@import "components/widget-lite/weather-lite-card";
+@import "components/widget-right/weather-right";
+@import "components/widget-right/weather-right-card";
+@import "components/widget-right/widget-right";
+@import "components/widget-right/weather-right-table";
+@import "components/widget-right/weather-right-card";
 
 /* Сервисный контейнеры для лендинг страницы */
 @import "services/container";
