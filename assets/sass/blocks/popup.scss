@@ -9,7 +9,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height: 300px;
   z-index: 1000;
   transition: 1s;
   
@@ -51,7 +50,7 @@
     display: block;
     margin: 10px auto;
     width: 570px;
-    height: 130px;
+    height: 500px;
   }
 
   &__close{
