@@ -4,6 +4,9 @@
 
 import CustomDate from './custom-date';
 import Graphic from './graphic-d3js';
+import * as naturalPhenomenon  from './data/natural-phenomenon-data';
+import * as windSpeed from './data/wind-speed-data';
+import * as windDirection from './data/wind-speed-data';
 
 export default class WeatherWidget extends CustomDate {
 
@@ -95,56 +98,28 @@ export default class WeatherWidget extends CustomDate {
    */
   getWeatherFromApi() {
     this.httpGet(this.urls.urlWeatherAPI)
-      .then(
-        (response) => {
-          this.weather.fromAPI = response;
-          this.httpGet(this.urls.naturalPhenomenon)
-            .then(
-              (response) => {
-                this.weather.naturalPhenomenon = response[this.params.lang].description;
-                this.httpGet(this.urls.windSpeed)
+        .then(
+            (response) => {
+              this.weather.fromAPI = response;
+              this.weather.naturalPhenomenon = naturalPhenomenon.naturalPhenomenon[this.params.lang].description;
+              this.weather.windSpeed = windSpeed.windSpeed[this.params.lang];
+              this.httpGet(this.urls.paramsUrlForeDaily)
                   .then(
-                    (response) => {
-                      this.weather.windSpeed = response[this.params.lang];
-                      this.httpGet(this.urls.paramsUrlForeDaily)
-                        .then(
-                          (response) => {
-                            this.weather.forecastDaily = response;
-                            this.httpGet(this.urls.windDirection)
-                              .then(
-                                (response) => {
-                                  this.weather.windDirection = response[this.params.lang];
-                                  this.parseDataFromServer();
-                                },
-                                (error) => {
-                                  console.log(`Возникла ошибка ${error}`);
-                                  this.parseDataFromServer();
-                                }
-                            );
-                          },
-                          (error) => {
-                            console.log(`Возникла ошибка ${error}`);
-                            this.parseDataFromServer();
-                          }
-                        );
-                    },
-                    (error) => {
-                      console.log(`Возникла ошибка ${error}`);
-                      this.parseDataFromServer();
-                    }
+                      (response) => {
+                        this.weather.forecastDaily = response;
+                        this.parseDataFromServer();
+                      },
+                      (error) => {
+                        console.log(`Возникла ошибка ${error}`);
+                        this.parseDataFromServer();
+                      }
                   );
-              },
-              (error) => {
-                console.log(`Возникла ошибка ${error}`);
-                this.parseDataFromServer();
-              }
-            );
-        },
-        (error) => {
-          console.log(`Возникла ошибка ${error}`);
-          this.parseDataFromServer();
-        }
-      );
+            },
+            (error) => {
+              console.log(`Возникла ошибка ${error}`);
+              this.parseDataFromServer();
+            }
+        );
   }
 
   /**
@@ -408,11 +383,11 @@ export default class WeatherWidget extends CustomDate {
       mapIcons.set('13n', '13dbw');
 
       if (mapIcons.get(nameIcon)) {
-        return `img/${mapIcons.get(nameIcon)}.png`;
+        return `${this.params.baseURL}/img/widgets/${mapIcons.get(nameIcon)}.png`;
       }
       return `http://openweathermap.org/img/w/${nameIcon}.png`;
     }
-    return `img/${nameIcon}.png`;
+    return `${this.params.baseURL}/img/widgets/${nameIcon}.png`;
   }
 
   /**

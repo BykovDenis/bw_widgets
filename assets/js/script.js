@@ -1,8 +1,12 @@
 // Модуль диспетчер для отрисовки баннерров на конструкторе
 import WeatherWidget from './weather-widget';
+import GeneratorWidget from './generator-widget';
+import Cities from './cities';
 import Popup from './popup';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const generateWidget = new GeneratorWidget();
     // Формируем параметр фильтра по городу
   let q = '';
   if (window.location.search) {
@@ -19,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     appid: '2d90837ddbaeda36ab487f257829b667',
     units: 'metric',
     textUnitTemp: String.fromCodePoint(0x00B0),  // 248
+    baseURL: generateWidget.baseURL,
+    urlDomain: 'http://api.openweathermap.org',
   };
 
   const controlsWidget = {
@@ -45,15 +51,27 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const urls = {
-    urlWeatherAPI: `${urlDomain}/data/2.5/weather${q}&units=${paramsWidget.units}&appid=${paramsWidget.appid}`,
-    paramsUrlForeDaily: `${urlDomain}/data/2.5/forecast/daily${q}&units=${paramsWidget.units}&cnt=8&appid=${paramsWidget.appid}`,
-    windSpeed: 'data/wind-speed-data.json',
-    windDirection: 'data/wind-direction-data.json',
-    clouds: 'data/clouds-data.json',
-    naturalPhenomenon: 'data/natural-phenomenon-data.json',
+    urlWeatherAPI: `${paramsWidget.urlDomain}/data/2.5/weather${q}&units=${paramsWidget.units}&appid=${paramsWidget.appid}`,
+    paramsUrlForeDaily: `${paramsWidget.urlDomain}/data/2.5/forecast/daily${q}&units=${paramsWidget.units}&cnt=8&appid=${paramsWidget.appid}`,
+    windSpeed: `${paramsWidget.baseURL}/data/wind-speed-data.json`,
+    windDirection: `${paramsWidget.baseURL}/data/wind-direction-data.json`,
+    clouds: `${paramsWidget.baseURL}data/clouds-data.json`,
+    naturalPhenomenon: `${paramsWidget.baseURL}/data/natural-phenomenon-data.json`,
   };
 
-  const objWidget = new WeatherWidget(paramsWidget, controlsWidget, urls);
-  objWidget.render();
+    const objWidget = new WeatherWidget(paramsWidget, controlsWidget, urls);
+    objWidget.render();
+
+    // Работа с формой для инициали
+    const cityNameValue = document.getElementById('city-name').valueOf();
+    const cityId = document.getElementById('city-id');
+    const cities = document.getElementById('cities').valueOf();
+    const searchCity = document.getElementById('search-city');
+    searchCity.addEventListener('click', function() {
+
+      var objCities = new Cities(cityNameValue, cities, cityId);
+      objCities.getCities();
+
+    });
 
 });

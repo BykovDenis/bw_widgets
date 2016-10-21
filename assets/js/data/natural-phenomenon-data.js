@@ -1,4 +1,7 @@
-{
+/**
+ * Created by Denis on 20.10.2016.
+ */
+export const naturalPhenomenon ={
     "en":{
         "name":"English",
         "main":"",
@@ -1939,4 +1942,4 @@
             "962":""
         }
     }
-}
+};

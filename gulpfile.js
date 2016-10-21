@@ -55,10 +55,10 @@ gulp.task('sass', function() {
     autoprefixer({browsers: ['last 10 versions']}),
     mqpacker({ sort: true })
   ]))
-  .pipe(gulp.dest('./build/css'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/css'))
   .pipe(minify())
-  .pipe(rename('weather-widget.min.css'))
-  .pipe(gulp.dest('./build/css'))
+  .pipe(rename('weather-widgets-constructor.min.css'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/css'))
   .pipe(server.reload({stream: true}));
 
 });
@@ -83,29 +83,29 @@ gulp.task('html', function() {
 });
 
 gulp.task('fonts', function() {
-  gulp.src('./assets/font/**/*')
-  .pipe(gulp.dest('./build/font/'))
+  gulp.src('./assets/fonts/**/*')
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/fonts/'))
   .pipe(connect.reload());
 });
 
 gulp.task('js', function() {
-  gulp.src('./build/js/*.js')
+  gulp.src('./build/themes/openweathermap/assets/vendor/owm/js/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('./build/js/'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/js/'))
   .pipe(connect.reload());
 });
 
 gulp.task('jslibs', function() {
   gulp.src('./assets/js/libs/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('./build/js/libs/'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/js/'))
   .pipe(connect.reload());
 });
 
 gulp.task('jsmods', function() {
   gulp.src('./assets/js/modules/**/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('./build/js/modules/'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/js/modules/'))
   .pipe(connect.reload());
 });
 
@@ -117,7 +117,7 @@ gulp.task('img', function() {
     svgoPlugins: [{removeViewBox: false}],
     use: [pngquant()]
   }))
-  .pipe(gulp.dest('./build/img/'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/img/widgets/'))
   .pipe(connect.reload());
 });
 
@@ -143,9 +143,9 @@ gulp.task('connect', function() {
 gulp.task('copyFiles', function() {
   // copy any html files in source/ to build/
   gulp.src('./assets/asserts/*').pipe(gulp.dest('./build/asserts'));
-  gulp.src('./assets/fonts/*').pipe(gulp.dest('./build/fonts'));
-  gulp.src('./assets/data/*').pipe(gulp.dest('./build/data'));
-  gulp.src('./assets/sprites/sprite.svg/sprite.svg').pipe(gulp.dest('./build/img/sprite.svg'));
+  gulp.src('./assets/fonts/*').pipe(gulp.dest('../build/themes/openweathermap/assets/vendor/owm/fonts'));
+  gulp.src('./assets/data/*').pipe(gulp.dest('../build/themes/openweathermap/assets/vendor/owm/data'));
+  gulp.src('./assets/sprites/sprite.svg/sprite.svg').pipe(gulp.dest('../build/themes/openweathermap/assets/vendor/owm/img/sprite.svg'));
 });
 
 // Задачи по созданию svg спрайтов
@@ -191,8 +191,8 @@ gulp.task('build_js', function() {
   return browserify({entries: ['./assets/js/script.js'], extensions: ['.jsx', '.js'], debug: true})
   .transform('babelify', {presets: ['es2015']})
   .bundle()
-  .pipe(source('weather-widget.js'))
-  .pipe(gulp.dest('build/js'));
+  .pipe(source('weather-widgets-constructor.js'))
+  .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/js'));
 });
 
 // Локальный сервер
@@ -219,9 +219,9 @@ gulp.task('watch', function() {
   gulp.watch('./assets/js/libs/*.js', ['jslibs']);
   gulp.watch('./assets/js/modules/**/*.js', ['jsmods']);
   gulp.watch('./assets/*', ['copyFiles']);
-  gulp.watch('./build/js/*.js').on('change', server.reload );
+  gulp.watch('../build/themes/openweathermap/assets/vendor/owm/js/*.js').on('change', server.reload );
   gulp.watch('./build/*.html').on('change', server.reload );
-  gulp.watch('./build/css/*.css').on('change', server.reload );
+  gulp.watch('../build/themes/openweathermap/assets/vendor/owm/css/*.css').on('change', server.reload );
 });
 
 // Default

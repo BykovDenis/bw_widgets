@@ -3,6 +3,11 @@
  */
 export default class GeneratorWidget {
     constructor(id = 1, city_id = 524901, key = '2d90837ddbaeda36ab487f257829b667' ){
+
+        this.baseURL = 'http://openweathermap.org/themes/openweathermap/assets/vendor/owm';
+        this.scriptD3SRC = `${this.baseURL}/js/libs/d3.min.js`;
+        this.scriptSRC = `${this.baseURL}/js/weather-widget-generator.js`;
+
         // объект-карта для сопоставления всех виджетов с кнопкой-инициатором их вызова для генерации кода
         this.mapWidgets = {
             'widget-1-left-blue' : {
@@ -122,4 +127,5 @@ export default class GeneratorWidget {
 
         return null;
     }
+
 }
