@@ -7,91 +7,93 @@ export default class GeneratorWidget {
         this.mapWidgets = {
             'widget-1-left-blue' : {
                 code: `<script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
-                       ${this.getCodeForGenerateWidget(id, city_id, key)}`,
+                       ${this.getCodeForGenerateWidget(1, city_id, key)}`,
                 schema: 'blue',
             },
             'widget-2-left-blue' : {
-                code: 'script.js?type=left&schema=blue&id=2',
+                code: this.getCodeForGenerateWidget(2, city_id, key),
                 schema: 'blue',
             },
             'widget-3-left-blue' : {
-                code: 'script.js?type=left&schema=blue&id=3',
+                code: this.getCodeForGenerateWidget(3, city_id, key),
                 schema: 'blue',
             },
             'widget-4-left-blue' : {
-                code: 'script.js?type=left&schema=blue&id=4',
+                code: this.getCodeForGenerateWidget(4, city_id, key),
                 schema: 'blue',
             },
             'widget-5-right-blue' : {
-                code: 'script.js?type=right&schema=blue&id=5',
+                code: this.getCodeForGenerateWidget(5, city_id, key),
                 schema: 'blue',
             },
             'widget-6-right-blue' : {
-                code: 'script.js?type=right&schema=blue&id=6',
+                code: this.getCodeForGenerateWidget(6, city_id, key),
                 schema: 'blue',
             },
             'widget-7-right-blue' : {
-                code: 'script.js?type=right&schema=blue&id=7',
+                code: this.getCodeForGenerateWidget(7, city_id, key),
                 schema: 'blue',
             },
             'widget-8-right-blue' : {
-                code: 'script.js?type=right&schema=blue&id=8',
+                code: this.getCodeForGenerateWidget(8, city_id, key),
                 schema: 'blue',
             },
             'widget-9-right-blue' : {
-                code: 'script.js?type=right&schema=blue&id=9',
+                code: this.getCodeForGenerateWidget(9, city_id, key),
                 schema: 'blue',
             },
             'widget-1-left-brown' : {
-                code: 'script.js?type=left&schema=brown&id=1',
+                code: `<script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+                       ${this.getCodeForGenerateWidget(11, city_id, key)}`,
                 schema: 'brown',
             },
             'widget-2-left-brown' : {
-                code: 'script.js?type=left&schema=brown&id=2',
+                code: this.getCodeForGenerateWidget(12, city_id, key),
                 schema: 'brown',
             },
             'widget-3-left-brown' : {
-                code: 'script.js?type=left&schema=brown&id=3',
+                code: this.getCodeForGenerateWidget(13, city_id, key),
                 schema: 'brown',
             },
             'widget-4-left-brown' : {
-                code: 'script.js?type=left&schema=brown&id=4',
+                code: this.getCodeForGenerateWidget(14, city_id, key),
                 schema: 'brown',
             },
             'widget-5-right-brown' : {
-                code: 'script.js?type=left&schema=brown&id=5',
+                code: this.getCodeForGenerateWidget(15, city_id, key),
                 schema: 'brown',
             },
             'widget-6-right-brown' : {
-                code: 'script.js?type=left&schema=brown&id=6',
+                code: this.getCodeForGenerateWidget(16, city_id, key),
                 schema: 'brown',
             },
             'widget-7-right-brown' : {
-                code: 'script.js?type=right&schema=brown&id=7',
+                code: this.getCodeForGenerateWidget(17, city_id, key),
                 schema: 'brown',
             },
             'widget-8-right-brown' : {
-                code: 'script.js?type=right&schema=brown&id=8',
+                code: this.getCodeForGenerateWidget(18, city_id, key),
                 schema: 'brown',
             },
             'widget-9-right-brown' : {
-                code: 'script.js?type=right&schema=brown&id=9',
+                code: this.getCodeForGenerateWidget(19, city_id, key),
                 schema: 'brown',
             },
             'widget-1-left-white' : {
-                code: 'script.js?type=left&schema=white&id=1',
+                code: `<script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+                       ${this.getCodeForGenerateWidget(21, city_id, key)}`,
                 schema: 'none',
             },
             'widget-2-left-white' : {
-                code: 'script.js?type=left&schema=white&id=2',
+                code: this.getCodeForGenerateWidget(22, city_id, key),
                 schema: 'none',
             },
             'widget-3-left-white' : {
-                code: 'script.js?type=left&schema=white&id=3',
+                code: this.getCodeForGenerateWidget(23, city_id, key),
                 schema: 'none',
             },
             'widget-4-left-white' : {
-                code: 'script.js?type=left&schema=white&id=4',
+                code: this.getCodeForGenerateWidget(24, city_id, key),
                 schema: 'none',
             },
         }

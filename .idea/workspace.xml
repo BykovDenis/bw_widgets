@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d3b710-2162-4e14-bd7d-1762d0106385" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/index1.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/weather-widgets-constructor.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/generator-widget.js" afterPath="$PROJECT_DIR$/assets/js/generator-widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/blocks/popup.scss" afterPath="$PROJECT_DIR$/assets/sass/blocks/popup.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/style.css" afterPath="$PROJECT_DIR$/build/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/weather-widget.min.css" afterPath="$PROJECT_DIR$/build/css/weather-widget.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/libs/d3.min.js" afterPath="$PROJECT_DIR$/build/js/libs/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index1.html" afterPath="$PROJECT_DIR$/build/index1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/weather-widget.js" afterPath="$PROJECT_DIR$/build/js/weather-widget.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
@@ -38,7 +32,7 @@
       <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="1958">
               <caret line="89" column="46" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="46" />
               <folding />
             </state>
@@ -48,7 +42,7 @@
       <file leaf-file-name="widget-left-menu.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="902">
               <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
               <folding />
             </state>
@@ -59,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="702">
-                <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="65" />
+              <first_editor relative-caret-position="570">
+                <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -74,13 +68,23 @@
       <file leaf-file-name="generator-widget.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+            <state relative-caret-position="306">
+              <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
               <folding>
-                <marker date="1476984024650" expanded="true" signature="3959:4746" ph="..." />
-                <marker date="1476984024650" expanded="true" signature="4004:4209" ph="{&quot;id&quot;: 15...}" />
-                <marker date="1476984024650" expanded="true" signature="4243:4715" ph="{...}" />
+                <marker date="1477048679686" expanded="true" signature="4382:5169" ph="..." />
+                <marker date="1477048679686" expanded="true" signature="4427:4632" ph="{&quot;id&quot;: 15...}" />
+                <marker date="1477048679686" expanded="true" signature="4666:5138" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/index1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,7 +92,7 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="330">
               <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="e#60#105#0" expanded="true" />
@@ -110,18 +114,8 @@
       <file leaf-file-name="popup.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/blocks/popup.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-352">
+            <state relative-caret-position="242">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/index1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -277,8 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -459,6 +451,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -584,19 +578,21 @@
       <workItem from="1476445602007" duration="1832000" />
       <workItem from="1476447607627" duration="669000" />
       <workItem from="1476456349122" duration="111000" />
-      <workItem from="1476979863281" duration="2166000" />
+      <workItem from="1476979863281" duration="2201000" />
+      <workItem from="1477038172520" duration="1513000" />
+      <workItem from="1477045948656" duration="2873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46718000" />
+    <option name="totallyTimeSpent" value="51139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -934,7 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="330">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
             <element signature="e#60#105#0" expanded="true" />
@@ -944,7 +940,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="902">
           <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding />
         </state>
@@ -952,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="1958">
           <caret line="89" column="46" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="46" />
           <folding />
         </state>
@@ -968,7 +964,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/blocks/popup.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
+        <state relative-caret-position="242">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -976,20 +972,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+        <state relative-caret-position="306">
+          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
           <folding>
-            <marker date="1476984024650" expanded="true" signature="3959:4746" ph="..." />
-            <marker date="1476984024650" expanded="true" signature="4004:4209" ph="{&quot;id&quot;: 15...}" />
-            <marker date="1476984024650" expanded="true" signature="4243:4715" ph="{...}" />
+            <marker date="1477048679686" expanded="true" signature="4382:5169" ph="..." />
+            <marker date="1477048679686" expanded="true" signature="4427:4632" ph="{&quot;id&quot;: 15...}" />
+            <marker date="1477048679686" expanded="true" signature="4666:5138" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/index1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="330">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -997,8 +993,8 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="702">
-            <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="65" />
+          <first_editor relative-caret-position="570">
+            <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
             <folding />
           </first_editor>
           <second_editor />
