@@ -75,7 +75,6 @@ export default class Cities {
         let selectedCity = event.target.parentElement.querySelector('#selectedCity');
         if (!selectedCity) {
           event.target.parentElement.insertBefore(that.selCitySign, event.target.parentElement.children[1]);
-          window.cityId = event.target.id;
 
           const generateWidget = new GeneratorWidget();
           
@@ -83,6 +82,8 @@ export default class Cities {
           generateWidget.paramsWidget.cityId = event.target.id;
           generateWidget.paramsWidget.cityName = event.target.textContent;
           generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
+          window.cityId = event.target.id;
+          window.cityName = event.target.textContent;
 
 
           const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
