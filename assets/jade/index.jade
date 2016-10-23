@@ -32,13 +32,13 @@ html(lang="en")
       .widget__layout
         // Лендинг с информацией по виджетам
         h1.widget__title Get a code for posting a weather forecast widget on your site.
-        form.widget-form.navbar-form#frm-landing-widget
+        form.widget-form.navbar-form
             .form-group
                 dl
                     dt
                         label.aria-label API key:
                     dd
-                        input.form-control#api-key(type="text")
+                        input.form-control#api-key(type="text" value="2d90837ddbaeda36ab487f257829b667")
                 dl
                     dt
                         label.aria-label Your city name
@@ -50,14 +50,7 @@ html(lang="en")
                         label.area-label  Select your city
                     dd
                         div#cities
-                dl
-                    dt
-                        label.aria-label Your id city
-                    dd
-                        input.form-control#city-id(type="text")
-                button.btn.btn-default(type="button") Save
-
-      .container-custom__item
+      .container-custom__item#frm-landing-widget
         .main.main--blue
           .container-custom__item
             .container-custom

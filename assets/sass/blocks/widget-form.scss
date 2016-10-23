@@ -40,4 +40,12 @@
     }
   }
 
+  &__item{
+    font-weight: 600;
+  }
+
+  &__selected{
+    color: $color-brown-bg-top;
+  }
+
 }

@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mainIconWeather2: document.querySelectorAll('.weather-right__icon'),
     humidity: document.querySelectorAll('.weather-right__humidity'),
     pressure: document.querySelectorAll('.weather-right__pressure'),
-    dateReport: document.querySelectorAll(".widget-right__date"),
+    dateReport: document.querySelectorAll('.widget-right__date'),
   };
 
   const urls = {
@@ -59,17 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
     naturalPhenomenon: `${paramsWidget.baseURL}/data/natural-phenomenon-data.json`,
   };
 
-    const objWidget = new WeatherWidget(paramsWidget, controlsWidget, urls);
-    objWidget.render();
-
     // Работа с формой для инициали
-    const cityNameValue = document.getElementById('city-name').valueOf();
-    const cityId = document.getElementById('city-id');
-    const cities = document.getElementById('cities').valueOf();
+    const cityNameValue = document.getElementById('city-name').value;
+    const cities = document.getElementById('cities');
     const searchCity = document.getElementById('search-city');
     searchCity.addEventListener('click', function() {
 
-      var objCities = new Cities(cityNameValue, cities, cityId);
+      const objWidget = new WeatherWidget(paramsWidget, controlsWidget, urls);
+      objWidget.render();
+
+      var objCities = new Cities(cityNameValue, cities);
       objCities.getCities();
 
     });
