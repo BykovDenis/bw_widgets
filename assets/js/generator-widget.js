@@ -2,11 +2,36 @@
  * Created by Denis on 13.10.2016.
  */
 export default class GeneratorWidget {
-    constructor(id = 1, city_id = 524901, key = '2d90837ddbaeda36ab487f257829b667' ){
+    constructor(id = 1, city_id = 524901, key = '2d90837ddbaeda36ab487f257829b66711') {
 
         this.baseURL = 'themes/openweathermap/assets/vendor/owm';
         this.scriptD3SRC = `${this.baseURL}/js/libs/d3.min.js`;
         this.scriptSRC = `${this.baseURL}/js/weather-widget-generator.js`;
+
+        this.controlsWidget = {
+            // Первая половина виджетов
+            cityName: document.querySelectorAll('.widget-left-menu__header'),
+            temperature: document.querySelectorAll('.weather-left-card__number'),
+            naturalPhenomenon: document.querySelectorAll('.weather-left-card__means'),
+            windSpeed: document.querySelectorAll('.weather-left-card__wind'),
+            mainIconWeather: document.querySelectorAll('.weather-left-card__img'),
+            calendarItem: document.querySelectorAll('.calendar__item'),
+            graphic: document.getElementById('graphic'),
+            // Вторая половина виджетов
+            cityName2: document.querySelectorAll('.widget-right__title'),
+            temperature2: document.querySelectorAll('.weather-right__temperature'),
+            temperatureFeels: document.querySelectorAll('.weather-right__feels'),
+            temperatureMin: document.querySelectorAll('.weather-right-card__temperature-min'),
+            temperatureMax: document.querySelectorAll('.weather-right-card__temperature-max'),
+            naturalPhenomenon2: document.querySelectorAll('.widget-right__description'),
+            windSpeed2: document.querySelectorAll('.weather-right__wind-speed'),
+            mainIconWeather2: document.querySelectorAll('.weather-right__icon'),
+            humidity: document.querySelectorAll('.weather-right__humidity'),
+            pressure: document.querySelectorAll('.weather-right__pressure'),
+            dateReport: document.querySelectorAll('.widget-right__date'),
+        };
+
+        this.setInitialStateForm();
 
         // объект-карта для сопоставления всех виджетов с кнопкой-инициатором их вызова для генерации кода
         this.mapWidgets = {
@@ -71,7 +96,7 @@ export default class GeneratorWidget {
                 schema: 'brown',
             },
             'widget-4-left-brown' : {
-                id:14,
+                id: 14,
                 code: this.getCodeForGenerateWidget(14, city_id, key),
                 schema: 'brown',
             },
@@ -149,6 +174,34 @@ export default class GeneratorWidget {
         }
 
         return null;
+    }
+
+    setInitialStateForm(cityId=524901, cityName='Moscow') {
+
+        this.paramsWidget = {
+            cityId: cityId,
+            cityName: cityName,
+            lang: 'en',
+            appid: document.getElementById('api-key').value,
+            units: 'metric',
+            textUnitTemp: String.fromCodePoint(0x00B0),  // 248
+            baseURL: this.baseURL,
+            urlDomain: 'http://api.openweathermap.org',
+        };
+
+        // Работа с формой для инициали
+        this.cityName = document.getElementById('city-name');
+        this.cities = document.getElementById('cities');
+        this.searchCity = document.getElementById('search-city');
+
+        this.urls = {
+        urlWeatherAPI: `${this.paramsWidget.urlDomain}/data/2.5/weather?id=${this.paramsWidget.cityId}&units=${this.paramsWidget.units}&appid=${this.paramsWidget.appid}`,
+        paramsUrlForeDaily: `${this.paramsWidget.urlDomain}/data/2.5/forecast/daily?id=${this.paramsWidget.cityId}&units=${this.paramsWidget.units}&cnt=8&appid=${this.paramsWidget.appid}`,
+        windSpeed: `${this.baseURL}/data/wind-speed-data.json`,
+        windDirection: `${this.baseURL}/data/wind-direction-data.json`,
+        clouds: `${this.baseURL}/data/clouds-data.json`,
+        naturalPhenomenon: `${this.baseURL}/data/natural-phenomenon-data.json`,
+        };
     }
 
 }

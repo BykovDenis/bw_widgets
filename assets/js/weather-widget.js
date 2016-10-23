@@ -396,6 +396,21 @@ export default class WeatherWidget extends CustomDate {
   drawGraphicD3(data) {
     this.renderIconsDaysOfWeek(data);
 
+    // Очистка контейнеров для графиков    
+    const svg = document.getElementById('graphic');
+    const svg1 = document.getElementById('graphic1');
+    const svg2 = document.getElementById('graphic2');
+
+    if(svg.querySelector('svg')) {
+      svg.removeChild(svg.querySelector('svg'));
+    }
+    if(svg1.querySelector('svg')) {
+      svg1.removeChild(svg1.querySelector('svg'));
+    }
+    if(svg2.querySelector('svg')){
+      svg2.removeChild(svg2.querySelector('svg'));
+    }
+
     // Параметризуем область отрисовки графика
     const params = {
       id: '#graphic',

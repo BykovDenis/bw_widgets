@@ -1,19 +1,32 @@
 /**
 * Created by Denis on 21.10.2016.
 */
+
+import WeatherWidget from './weather-widget';
+import GeneratorWidget from './generator-widget';
+
 export default class Cities {
 
   constructor(cityName, container) {
-    if (!cityName) {
-    return false;
+
+    const generateWidget = new GeneratorWidget();
+    generateWidget.setInitialStateForm();
+
+    if (!cityName.value) {
+      return false;
     }
-    this.url = 'http://openweathermap.org/data/2.5/find?callback=?&q=Moscow&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1';
-    this.cityName = cityName;
+
+    this.cityName = cityName.value;
     this.container = container || '';
+    this.url = `http://openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
 
     this.selCitySign = document.createElement('span');
     this.selCitySign.innerText = ' selected ';
     this.selCitySign.class = 'widget-form__selected';
+
+    const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
+    objWidget.render();
+
   }
 
   getCities() {
@@ -37,6 +50,13 @@ export default class Cities {
       console.log('City not found');
       return;
     }
+
+    // Удаляем таблицу, если есть
+    const tableCity = document.getElementById('table-cities');
+    if (tableCity) {
+      tableCity.parentNode.removeChild(tableCity);
+    }
+
     let html = '';
     for (let i = 0; i < JSONobject.list.length; i += 1) {
       const name = `${JSONobject.list[i].name}, ${JSONobject.list[i].sys.country}`;
@@ -56,6 +76,18 @@ export default class Cities {
         if (!selectedCity) {
           event.target.parentElement.insertBefore(that.selCitySign, event.target.parentElement.children[1]);
           window.cityId = event.target.id;
+
+          const generateWidget = new GeneratorWidget();
+          
+          // Подстановка найденого города
+          generateWidget.paramsWidget.cityId = event.target.id;
+          generateWidget.paramsWidget.cityName = event.target.textContent;
+          generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
+
+
+          const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
+          objWidget.render();
+          
         }
       }
       
@@ -73,7 +105,7 @@ export default class Cities {
       const xhr = new XMLHttpRequest();
       xhr.onload = function() {
         if (xhr.status === 200) {
-          resolve(JSON.parse(this.response.substring(2, this.response.length - 1)));
+          resolve(JSON.parse(this.response));
         } else {
           const error = new Error(this.statusText);
           error.code = this.status;
