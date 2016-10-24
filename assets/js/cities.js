@@ -16,7 +16,7 @@ export default class Cities {
       return false;
     }
 
-    this.cityName = cityName.value;
+    this.cityName = cityName.value.replace(/(\s)+/g,'').toLowerCase();
     this.container = container || '';
     this.url = `http://openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
 

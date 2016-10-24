@@ -395,7 +395,8 @@ th {
   padding: 20px;
   width: 680px;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 6px; }
+  -webkit-border-radius: 6px;
+          border-radius: 6px; }
   .widget-form__label {
     font: 400 14px "Roboto", Arial, sans-serif; }
   .widget-form__btn {
@@ -405,7 +406,8 @@ th {
     width: 200px;
     font: 600 19px / 1.3 "Roboto", Arial, sans-serif;
     text-decoration: none;
-    border-radius: 6px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
     text-align: center;
     background-color: #ffffff;
     color: #333333;
@@ -434,7 +436,8 @@ th {
 .popup {
   display: none;
   position: fixed;
-  border-radius: 15px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
   outline-color: 1px solid #F1F029;
   background-color: #ffffff;
   -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
@@ -529,7 +532,8 @@ th {
     font: 600 19px / 1.3 "Roboto", Arial, sans-serif;
     text-decoration: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
     text-align: center;
     background-color: #ffffff;
     color: #333333;
@@ -549,7 +553,8 @@ th {
 
 /* Тип темной отрисовки виджета */
 .widget-left {
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
   -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
           box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
   margin: 0 5px 5px;
@@ -561,7 +566,8 @@ th {
     content: '';
     width: 680px;
     padding-bottom: 16px;
-    border-radius: 0 0 6px 6px; }
+    -webkit-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px; }
   .widget-left__body--compact {
     float: none;
     margin: 0 auto;
@@ -606,7 +612,8 @@ th {
   clear: both;
   content: '';
   background-color: #ffffff;
-  border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
   /* Описание цветовых схем */ }
   .widget-left-menu__layout {
     display: table;
@@ -628,7 +635,8 @@ th {
     max-width: 470px; }
   .widget-left-menu__links {
     float: right;
-    border-radius: 0 0 6px 6px; }
+    -webkit-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px; }
   .widget-left-menu__links span {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
@@ -660,7 +668,8 @@ th {
     width: 225px; }
   .widget-left-menu--small {
     padding-left: 15px;
-    border-radius: 6px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
     min-height: 58px; }
   .widget-left-menu--small .widget-left-menu__header {
     padding-right: 10px;
@@ -671,7 +680,8 @@ th {
   .widget-left-menu--small2 {
     padding-right: 15px;
     padding-left: 15px;
-    border-radius: 6px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
     min-height: 58px; }
   .widget-left-menu--small2 .widget-left-menu__header {
     padding-right: 10px;
@@ -952,7 +962,8 @@ th {
     left: 50%;
     top: -15px;
     z-index: 100;
-    border-radius: 4px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
     z-index: 100; }
     .weather-right__icon--blue {
       background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
@@ -997,7 +1008,8 @@ th {
 
 .widget-right {
   width: 300px;
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
   margin: 0 auto;
   /* Модификация по цветовым схемам */
   /* Типизация для второго виджета */
@@ -1011,7 +1023,8 @@ th {
     letter-spacing: 1px; }
   .widget-right__header {
     position: relative;
-    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
     width: inherit; }
   .widget-right__header .widget-right__layout {
     margin-left: 10px; }
@@ -1050,7 +1063,8 @@ th {
         -ms-flex-align: center;
             align-items: center; }
   .widget-right__footer {
-    border-radius: 0 0 6px 6px; }
+    -webkit-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px; }
   .widget-right__date {
     font: 400 10px / 1 "Roboto", Arial, sans-serif;
     color: #ffffff; }
@@ -1216,7 +1230,8 @@ th {
         -ms-flex-align: center;
             align-items: center;
     padding: 5px 10px;
-    border-radius: 3px; }
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
   .widget-right--type4 .widget-right__layout--blue {
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
   .widget-right--type4 .widget-right__layout--brown {
@@ -1304,7 +1319,8 @@ th {
         -ms-flex-align: center;
             align-items: center;
     padding: 5px 10px;
-    border-radius: 3px; }
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
   .widget-right--type5 .widget-right__layout--blue {
     background-image: -webkit-gradient(linear, right bottom, left top, from(#DDF730), to(#F1F029));
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
@@ -1403,6 +1419,7 @@ th {
       -webkit-box-align: baseline;
       -webkit-align-items: baseline;
           -ms-flex-align: baseline;
+                  -ms-grid-row-align: baseline;
               align-items: baseline;
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
@@ -1418,6 +1435,7 @@ th {
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
             align-items: stretch;
     margin-top: 10px; }
 
@@ -1447,7 +1465,8 @@ th {
     margin-top: 5px;
     font: 600 19px / 1.3 "Roboto", Arial, sans-serif;
     text-decoration: none;
-    border-radius: 6px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
     text-align: center;
     background-color: #ffffff;
     color: #333333; }

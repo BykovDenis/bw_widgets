@@ -2,90 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d3b710-2162-4e14-bd7d-1762d0106385" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/cities.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/data/natural-phenomenon-data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/data/wind-direction-data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/data/wind-speed-data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sass/blocks/widget-form.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/weather-widget.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/data/clouds-data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/data/natural-phenomenon-data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/data/wind-direction-data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/data/wind-speed-data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/oswald-demibold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/roboto-bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/roboto-medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/fonts/roboto-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/01d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/01dbw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/01dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/01n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/01nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/02d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/02dbw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/02dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/02n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/02nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/03d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/03dbw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/03dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/03n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/03nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/04d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/04dbw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/04dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/04n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/04nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/09d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/09dbw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/09dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/09n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/09nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/10d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/10dbw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/10dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/10n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/10nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/11d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/11dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/11n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/11nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/13d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/13dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/13n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/13nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/50d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/50dbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/50n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/50nbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/icon-close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/logo_13x13_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/logo_20x20_black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/logo_20x20_orange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/logo_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/moon bw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/moon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/sun bw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/sun.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/img/sunbw@05x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/index1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/libs/d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/weather-widget.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04nbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04nbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09nbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09nbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13dbw@05x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13n.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/jade/index.jade" afterPath="$PROJECT_DIR$/assets/jade/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/generator-widget.js" afterPath="$PROJECT_DIR$/assets/js/generator-widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/script.js" afterPath="$PROJECT_DIR$/assets/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/weather-widget.js" afterPath="$PROJECT_DIR$/assets/js/weather-widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/blocks/popup.scss" afterPath="$PROJECT_DIR$/assets/sass/blocks/popup.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/blocks/widget.scss" afterPath="$PROJECT_DIR$/assets/sass/blocks/widget.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss" afterPath="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" afterPath="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/fonts.scss" afterPath="$PROJECT_DIR$/assets/sass/fonts.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/style.scss" afterPath="$PROJECT_DIR$/assets/sass/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/cities.js" afterPath="$PROJECT_DIR$/assets/js/cities.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/d3.min.js" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="bw_widgets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,12 +60,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="popup.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/popup.js">
+      <file leaf-file-name="cities.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="254">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <marker date="1477308032484" expanded="false" signature="0:4" ph="/** Created by Denis on 21.10.2016. ...*/" />
+                <marker date="1477308032484" expanded="true" signature="4082:4085" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,8 +80,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="658">
-                <caret line="39" column="113" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="113" />
+              <first_editor relative-caret-position="648">
+                <caret line="41" column="64" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="64" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -134,89 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="container-card.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/services/container-card.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget-left.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="e#60#105#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cities.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generator-widget.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2816">
-              <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
-              <folding>
-                <marker date="1477066096609" expanded="true" signature="4615:5402" ph="..." />
-                <marker date="1477066096609" expanded="true" signature="4660:4865" ph="{&quot;id&quot;: EXTERNAL_FRAGMENT...}" />
-                <marker date="1477066096609" expanded="true" signature="4899:5371" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weather-widget.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/weather-widget.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2464">
-              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget-form.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/blocks/widget-form.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -227,9 +104,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -265,16 +142,17 @@
         <option value="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" />
         <option value="$PROJECT_DIR$/assets/sass/fonts.scss" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/build/index1.html" />
         <option value="$PROJECT_DIR$/assets/sass/blocks/form.scss" />
         <option value="$PROJECT_DIR$/assets/sass/blocks/widget.scss" />
         <option value="$PROJECT_DIR$/assets/sass/style.scss" />
         <option value="$PROJECT_DIR$/assets/sass/blocks/widget-form.scss" />
         <option value="$PROJECT_DIR$/assets/js/generator-widget.js" />
         <option value="$PROJECT_DIR$/assets/jade/index.jade" />
-        <option value="$PROJECT_DIR$/assets/js/cities.js" />
         <option value="$PROJECT_DIR$/assets/js/script.js" />
         <option value="$PROJECT_DIR$/assets/js/popup.js" />
+        <option value="$PROJECT_DIR$/build/index2.html" />
+        <option value="$PROJECT_DIR$/build/index1.html" />
+        <option value="$PROJECT_DIR$/assets/js/cities.js" />
         <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
@@ -296,9 +174,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="width" value="1932" />
-    <option name="height" value="1048" />
+    <option name="x" value="-8" />
+    <option name="width" value="1924" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -409,11 +287,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,62 +302,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bw_widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bw_widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bw_widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bw_widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widget-left" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,20 +341,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bw_widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bw_widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -548,7 +352,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../66426-kekstagram" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../weather-widget" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js.eslint.nodeInterpreter" value="project" />
@@ -674,18 +478,20 @@
       <workItem from="1477053588761" duration="1074000" />
       <workItem from="1477054687330" duration="12302000" />
       <workItem from="1477081447628" duration="134000" />
+      <workItem from="1477240242821" duration="1126000" />
+      <workItem from="1477299907628" duration="1793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68778000" />
+    <option name="totallyTimeSpent" value="71697000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1932" height="1048" extended-state="0" />
+    <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18286312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18258132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -720,20 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/sass/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
@@ -939,14 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/index1.html" />
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -975,26 +759,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="410" column="21" selection-start-line="410" selection-start-column="21" selection-end-line="410" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" />
     <entry file="file://$PROJECT_DIR$/assets/js/cookies.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/blocks/widget-form.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1002,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,40 +789,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2816">
-          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
-          <folding>
-            <marker date="1477066096609" expanded="true" signature="4615:5402" ph="..." />
-            <marker date="1477066096609" expanded="true" signature="4660:4865" ph="{&quot;id&quot;: EXTERNAL_FRAGMENT...}" />
-            <marker date="1477066096609" expanded="true" signature="4899:5371" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/weather-widget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2464">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="54" />
+        <state relative-caret-position="2816">
+          <caret line="134" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="618" column="68" selection-start-line="618" selection-start-column="68" selection-end-line="618" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index2.html" />
     <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+        <state relative-caret-position="1034">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
+    <entry file="file://$PROJECT_DIR$/build/index1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="198">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="204" column="5" selection-start-line="204" selection-start-column="5" selection-end-line="204" selection-end-column="5" />
           <folding>
-            <element signature="e#0#42#0" expanded="false" />
+            <marker date="1477239920865" expanded="true" signature="6229:7053" ph="..." />
+            <marker date="1477239920865" expanded="true" signature="6274:6516" ph="{&quot;id&quot;: EXTERNAL_FRAGMENT...}" />
+            <marker date="1477239920865" expanded="true" signature="6550:7022" ph="{...}" />
+            <marker date="1477239920865" expanded="true" signature="8418:8425" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1055,17 +838,34 @@
     <entry file="file://$PROJECT_DIR$/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#60#105#0" expanded="true" />
-          </folding>
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/popup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        <state relative-caret-position="22">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <marker date="1477308032484" expanded="false" signature="0:4" ph="/** Created by Denis on 21.10.2016. ...*/" />
+            <marker date="1477308032484" expanded="true" signature="4082:4085" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1076,8 +876,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="658">
-            <caret line="39" column="113" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="113" />
+          <first_editor relative-caret-position="648">
+            <caret line="41" column="64" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="64" />
             <folding />
           </first_editor>
           <second_editor />
