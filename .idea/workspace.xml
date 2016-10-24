@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d3b710-2162-4e14-bd7d-1762d0106385" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/02n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/03n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04nbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/04nbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09nbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/09nbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/10n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/11n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13d.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13dbw@05x.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13dbw@05x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13n.png" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/img/widgets/13n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/cities.js" afterPath="$PROJECT_DIR$/assets/js/cities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/d3.min.js" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/d3.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="bw_widgets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,20 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="cities.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cities.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="298">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding>
-                <marker date="1477308032484" expanded="false" signature="0:4" ph="/** Created by Denis on 21.10.2016. ...*/" />
-                <marker date="1477308032484" expanded="true" signature="4082:4085" ph="{...}" />
+                <marker date="1477308619037" expanded="false" signature="0:4" ph="/** Created by Denis on 21.10.2016. ...*/" />
+                <marker date="1477308619037" expanded="true" signature="4083:4086" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
@@ -152,8 +118,8 @@
         <option value="$PROJECT_DIR$/assets/js/popup.js" />
         <option value="$PROJECT_DIR$/build/index2.html" />
         <option value="$PROJECT_DIR$/build/index1.html" />
-        <option value="$PROJECT_DIR$/assets/js/cities.js" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/assets/js/cities.js" />
       </list>
     </option>
   </component>
@@ -479,12 +445,12 @@
       <workItem from="1477054687330" duration="12302000" />
       <workItem from="1477081447628" duration="134000" />
       <workItem from="1477240242821" duration="1126000" />
-      <workItem from="1477299907628" duration="1793000" />
+      <workItem from="1477299907628" duration="2629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71697000" />
+    <option name="totallyTimeSpent" value="72533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
@@ -851,17 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <marker date="1477308032484" expanded="false" signature="0:4" ph="/** Created by Denis on 21.10.2016. ...*/" />
-            <marker date="1477308032484" expanded="true" signature="4082:4085" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -881,6 +836,17 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <marker date="1477308619037" expanded="false" signature="0:4" ph="/** Created by Denis on 21.10.2016. ...*/" />
+            <marker date="1477308619037" expanded="true" signature="4083:4086" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
