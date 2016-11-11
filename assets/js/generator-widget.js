@@ -29,8 +29,11 @@ export default class GeneratorWidget {
             humidity: document.querySelectorAll('.weather-right__humidity'),
             pressure: document.querySelectorAll('.weather-right__pressure'),
             dateReport: document.querySelectorAll('.widget-right__date'),
+            apiKey: document.getElementById('api-key'),
+            errorKey: document.getElementById('error-key'),
         };
 
+        this.validationAPIkey();
         this.setInitialStateForm();
 
         // объект-карта для сопоставления всех виджетов с кнопкой-инициатором их вызова для генерации кода
@@ -146,6 +149,42 @@ export default class GeneratorWidget {
                 schema: 'none',
             },
         }
+
+    }
+
+    validationAPIkey() {
+        let validationAPI = function() {
+        let url = `http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&units=metric&cnt=8&appid=${this.controlsWidget.apiKey.value}`;
+        const xhr = new XMLHttpRequest();
+        var that = this;
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                that.controlsWidget.errorKey.innerText = 'Validation accept';
+                that.controlsWidget.errorKey.classList.add('widget-form--good');
+                that.controlsWidget.errorKey.classList.remove('widget-form--error');
+                return;
+            }
+          that.controlsWidget.errorKey.innerText = 'Validation error';
+          that.controlsWidget.errorKey.classList.remove('widget-form--good');
+          that.controlsWidget.errorKey.classList.add('widget-form--error');
+        };
+
+        xhr.onerror = function(e){
+          console.log(`Ошибка валидации ${e}`);
+          that.controlsWidget.errorKey.innerText = 'Validation error';
+          that.controlsWidget.errorKey.classList.remove('widget-form--good');
+          that.controlsWidget.errorKey.classList.add('widget-form--error');
+        }
+
+          xhr.open('GET', url);
+          xhr.send();
+        }
+
+        this.boundValidationMethod = validationAPI.bind(this);
+        this.controlsWidget.apiKey.addEventListener('change',this.boundValidationMethod);
+        //this.removeEventListener(this.boundValidationMethod);
+
+
     }
 
     getCodeForGenerateWidget(id) {        

@@ -432,6 +432,12 @@ th {
     font-weight: 600; }
   .widget-form__selected {
     color: #4e4d4a; }
+  .widget-form--error {
+    color: #FF4F98;
+    padding-left: 10px; }
+  .widget-form--good {
+    color: #74E881;
+    padding-left: 10px; }
 
 .popup {
   display: none;

@@ -48,4 +48,14 @@
     color: $color-brown-bg-top;
   }
 
+  &--error{
+    color: $color-pink;
+    padding-left: 10px;
+  }
+
+  &--good{
+    color: $color-green;
+    padding-left: 10px;
+  }
+
 }
