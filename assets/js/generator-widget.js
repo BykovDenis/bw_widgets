@@ -152,14 +152,14 @@ export default class GeneratorWidget {
         if(id && (this.paramsWidget.cityId || this.paramsWidget.cityName) && this.paramsWidget.appid) {
             let code = '';
             if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21) {
-                code = `<script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>`;
+                code = `<script src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
             }
             return `${code}<div id='openweathermap-widget'></div>
-                    <script type="text/javascript">
+                    <script type='text/javascript'>
                     window.myWidgetParam = {
                         id: ${id},
                         cityid: ${this.paramsWidget.cityId},
-                        appid: "${this.paramsWidget.appid}",
+                        appid: '${this.paramsWidget.appid.replace(`2d90837ddbaeda36ab487f257829b667`,'')}',
                         containerid: 'openweathermap-widget',
                     };
                     (function() {
@@ -182,7 +182,7 @@ export default class GeneratorWidget {
             cityId: cityId,
             cityName: cityName,
             lang: 'en',
-            appid: document.getElementById('api-key').value,
+            appid: document.getElementById('api-key').value ||  '2d90837ddbaeda36ab487f257829b667',
             units: 'metric',
             textUnitTemp: String.fromCodePoint(0x00B0),  // 248
             baseURL: this.baseURL,
