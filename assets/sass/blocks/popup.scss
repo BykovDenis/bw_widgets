@@ -1,3 +1,24 @@
+@keyframes movement {
+  from{
+    top: -1000px;
+  }
+  30% {
+    top: 80%
+  }
+  40% {
+    top: 65%
+  }
+  60% {
+    top: 30%
+  }
+  80% {
+    top: 60%
+  }
+  to {
+    top: 50%;
+  }
+}
+
 .popup {
   display: none;
   position: fixed;
@@ -5,19 +26,21 @@
   outline-color: 1px solid $color-yellow;
   background-color: $color-white;
   box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
-  top: 50%;
+  top: -1000px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
-  z-index: 1000;
-  transition: 1s;
-  
+  z-index: 1010;
+
   &--visible{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     transition: 1s;
+    animation-name: movement;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
   }
 
   &--blue{

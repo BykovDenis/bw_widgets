@@ -21,14 +21,16 @@ html(lang="en")
 
   body
     // Попап окно с отображением js кода для вставки на страницу браузера
+    .popup-shadow
     .popup#popup
-      .popup__layout
-        h2.popup__title Get a code for posting a weather forecast widget on your site.
-        textarea.popup__items#js-code-generate(readonly)
-        span.popup__btn#copy-js-code Copy in buffer
-      .popup__close#popup-close
+      .popup__window
+        .popup__layout
+          h2.popup__title Get a code for posting a weather forecast widget on your site.
+          textarea.popup__items#js-code-generate(readonly)
+          span.popup__btn#copy-js-code Copy in buffer
+        .popup__close#popup-close
     <!-- Синий виджет -->
-    .container.widget
+    .container.widget#frm-landing-widget
       .widget__layout
         // Лендинг с информацией по виджетам
         h1.widget__title Get a code for posting a weather forecast widget on your site.
@@ -51,7 +53,7 @@ html(lang="en")
                         label.area-label  Select your city
                     dd
                         div#cities
-      .container-custom__item#frm-landing-widget
+      .container-custom__item
         .main.main--blue
           .container-custom__item
             .container-custom
