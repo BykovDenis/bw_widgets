@@ -8,6 +8,7 @@
 
   &__layout{
     @include clearfix;
+    position: relative;
     margin: 0 auto;
     padding-left: 14px;
     padding-right: 14px;
@@ -28,6 +29,7 @@
 
   &__links{
     float: right;
+    position: relative;
     border-radius: 0 0 6px 6px;
   }
 
@@ -148,6 +150,14 @@
 
   &__links--compact &__layout--brown{
     border-top: 2px solid $color-pink;
+  }
+
+  &__christmas {
+    position: absolute;
+    height: 77px;
+    top: -25px;
+    right: -7px;
+    z-index: 300;
   }
 
 

@@ -342,8 +342,8 @@ export default class WeatherWidget extends CustomDate {
 
     data.forEach((elem, index) => {
       that.controls.calendarItem[index].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
-      that.controls.calendarItem[index + 10].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
-      that.controls.calendarItem[index + 20].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
+      that.controls.calendarItem[index + 8].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
+      that.controls.calendarItem[index + 18].innerHTML = `${elem.day}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
     });
     return data;
   }
@@ -400,6 +400,7 @@ export default class WeatherWidget extends CustomDate {
     const svg = document.getElementById('graphic');
     const svg1 = document.getElementById('graphic1');
     const svg2 = document.getElementById('graphic2');
+    const svg3 = document.getElementById('graphic3');
 
     if(svg.querySelector('svg')) {
       svg.removeChild(svg.querySelector('svg'));
@@ -410,6 +411,10 @@ export default class WeatherWidget extends CustomDate {
     if(svg2.querySelector('svg')){
       svg2.removeChild(svg2.querySelector('svg'));
     }
+    if(svg3.querySelector('svg')){
+        svg3.removeChild(svg3.querySelector('svg'));
+    }
+
 
     // Параметризуем область отрисовки графика
     const params = {
@@ -438,6 +443,11 @@ export default class WeatherWidget extends CustomDate {
     objGraphicD3.render();
 
     params.id = '#graphic2';
+    params.colorPolilyne = '#FEB020';
+    objGraphicD3 = new Graphic(params);
+    objGraphicD3.render();
+
+    params.id = '#graphic3';
     params.colorPolilyne = '#FEB020';
     objGraphicD3 = new Graphic(params);
     objGraphicD3.render();

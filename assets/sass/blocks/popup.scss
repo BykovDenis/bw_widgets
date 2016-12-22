@@ -2,20 +2,8 @@
   from{
     top: -1000px;
   }
-  30% {
-    top: 80%
-  }
-  40% {
-    top: 65%
-  }
-  60% {
-    top: 30%
-  }
-  80% {
-    top: 60%
-  }
   to {
-    top: 50%;
+    top: 410px;
   }
 }
 
@@ -39,8 +27,9 @@
     align-items: center;
     transition: 1s;
     animation-name: movement;
-    animation-duration: 1.5s;
+    animation-duration: .3s;
     animation-fill-mode: forwards;
+
   }
 
   &--blue{
