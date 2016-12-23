@@ -148,9 +148,9 @@ export default class GeneratorWidget {
                 code: this.getCodeForGenerateWidget(24),
                 schema: 'none',
             },
-            'widget-10-right-brown' : {
-                id: 25,
-                code: this.getCodeForGenerateWidget(25),
+            'widget-31-right-brown' : {
+                id: 31,
+                code: this.getCodeForGenerateWidget(31),
                 schema: 'brown',
             },
         }
@@ -195,7 +195,7 @@ export default class GeneratorWidget {
     getCodeForGenerateWidget(id) {        
         if(id && (this.paramsWidget.cityId || this.paramsWidget.cityName) && this.paramsWidget.appid) {
             let code = '';
-            if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21 || parseInt(id) === 25) {
+            if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21 || parseInt(id) === 31) {
                 code = `<script src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
             }
             return `${code}<div id='openweathermap-widget'></div>
