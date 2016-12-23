@@ -2,7 +2,6 @@
  * Created by Denis on 29.09.2016.
  */
 
-
 import CustomDate from './custom-date';
 
 /**
