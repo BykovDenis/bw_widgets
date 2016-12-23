@@ -4,7 +4,7 @@
 export default class GeneratorWidget {
     constructor() {
 
-        this.baseURL = 'themes/openweathermap/assets/vendor/owm';
+        this.baseURL = 'http://phase.owm.io/themes/openweathermap/assets/vendor/owm';
         this.scriptD3SRC = `${this.baseURL}/js/libs/d3.min.js`;
         this.scriptSRC = `${this.baseURL}/js/weather-widget-generator.js`;
 
@@ -196,7 +196,7 @@ export default class GeneratorWidget {
         if(id && (this.paramsWidget.cityId || this.paramsWidget.cityName) && this.paramsWidget.appid) {
             let code = '';
             if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21 || parseInt(id) === 31) {
-                code = `<script src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
+                code = `<script src='http://phase.owm.io/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
             }
             return `${code}<div id='openweathermap-widget'></div>
                     <script type='text/javascript'>
@@ -210,7 +210,7 @@ export default class GeneratorWidget {
                         var script = document.createElement('script');
                         script.type = 'text/javascript';
                         script.async = true;
-                        script.src = 'https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
+                        script.src = 'http://phase.owm.io/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
                         var s = document.getElementsByTagName('script')[0];
                         s.parentNode.insertBefore(script, s);
                     })();
