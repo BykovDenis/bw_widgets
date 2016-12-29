@@ -2,6 +2,10 @@
 var gulp = require('gulp');
 var autoprefixer = require('autoprefixer');
 var uglify = require('gulp-uglify');
+
+var uglifyjs = require('uglify-js'); // can be a git checkout
+                                     // or another module (such as `uglify-js-harmony` for ES6 support)
+
 var imagemin = require('gulp-imagemin');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
@@ -10,6 +14,7 @@ var mqpacker = require('css-mqpacker');
 var minify = require('gulp-csso');
 var clean = require('gulp-clean');
 var pngquant = require('imagemin-pngquant');
+
 
 /* Работа с SVG файлами */
 var svgSprite = require('gulp-svg-sprite'); //  создание спрайта
@@ -88,9 +93,15 @@ gulp.task('fonts', function() {
   .pipe(connect.reload());
 });
 
+
+// the same options as described above
+var optionsUglify = {
+  preserveComments: 'license'
+};
+
 gulp.task('js', function() {
   gulp.src('./build/themes/openweathermap/assets/vendor/owm/js/*.js')
-  .pipe(uglify())
+  .pipe(uglify(optionsUglify, uglifyjs))
   .pipe(gulp.dest('./build/themes/openweathermap/assets/vendor/owm/js/'))
   .pipe(connect.reload());
 });
@@ -225,7 +236,7 @@ gulp.task('watch', function() {
 });
 
 // Default
-gulp.task('default', ['clean', 'jade', 'sass', 'js', 'jslibs', 'jsmods', 'build_js', 'serve', 'copyFiles', 'img', 'watch']);
+gulp.task('default', ['clean', 'jade', 'sass', 'jslibs', 'jsmods', 'build_js', 'js', 'serve', 'copyFiles', 'img', 'watch']);
 gulp.task('run', ['jade', 'sass', 'js', 'jslibs', 'jsmods', 'serve', 'build_js', 'copyFiles', 'watch']);
 gulp.task('build', ['clean', 'svgSpriteBuild', 'img', 'copyFiles']);
 

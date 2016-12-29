@@ -3,7 +3,15 @@
     width: 300px;
     border-radius: 6px;
     margin: 0 auto;
+    box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
 
+    &--brown{
+      background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+    }
+
+    &--blue{
+      background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+    }
 
     &__layout{
         padding: 27px 0;
@@ -13,6 +21,22 @@
         font: 600 #{$font-size + 4px} / 1 $font-roboto;
         margin:0;
         letter-spacing: 1px;
+    }
+
+    &--blue &__title{
+      filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+    }
+
+    &--blue &__description{
+      filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+    }
+
+    &--blue &__link{
+      filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
+    }
+
+    &--blue &__date {
+      filter: drop-shadow(1px 0 2px rgba(0,0,0,0.4));
     }
 
     &__header{
@@ -49,7 +73,8 @@
         color: $color-white;
     }
 
-    /* Модификация по цветовым схемам */
+
+   /* Модификация по цветовым схемам */
 
     &__header--blue &__title{
         color: $color-white;
@@ -122,6 +147,10 @@
     }
 
    /* Типизация для второго виджета */
+
+    &--type1{
+      background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
+    }
 
     &--type2{
         width: 120px;
@@ -237,19 +266,21 @@
 
     /* Типизация четвертого виджета */
     &--type4{
-        margin-top: 15px;
-        color: $color-white;
-        width: 300px;
+      margin-top: 15px;
+      color: $color-white;
+      width: 300px;
+      background: none;
+      box-shadow: none;
     }
 
     &--type4 &__layout{
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 10px;
-        border-radius: 3px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 3px;
     }
 
     &--type4  &__layout--blue {
@@ -264,11 +295,13 @@
         font: 600 #{$font-size} / 1 $font-roboto;
         color: $color-black;
         margin-bottom: 5px;
+        filter: none;
     }
 
     &--type4 &__description{
         font: 400 #{$font-size - 4px} / 1 $font-roboto;
         color: $color-black;
+        filter: none;
     }
 
     &--type4 &__footer--blue &__layout{
@@ -283,6 +316,7 @@
         color: $color-light-blue3;
         font-size: #{$font-size - 2px};
         margin-left: -5px;
+        filter: none;
     }
 
     &--type4 &__footer--brown &__link{
@@ -305,6 +339,7 @@
 
     &--type4 &__footer--blue &__date{
         color: $color-light-blue3;
+        filter: none;
     }
 
     &--type4 &__footer--brown  &__link:before{
@@ -321,6 +356,11 @@
 
     &--type4 &__footer--brown &__date{
         color: $color-orange1;
+    }
+
+    &--type5{
+      background: none;
+      box-shadow: none;
     }
 
     &--type5 &__link:before{
@@ -373,11 +413,13 @@
         font: 600 #{$font-size} / 1 $font-roboto;
         color: $color-black;
         margin-bottom: 5px;
+        filter: none;
     }
 
     &--type5 &__description{
         font: 400 #{$font-size - 4px} / 1 $font-roboto;
         color: $color-black;
+        filter: none;
     }
 
     &--type5 &__footer--blue &__layout{
@@ -392,6 +434,7 @@
         color: $color-light-blue3;
         font-size: #{$font-size - 2px};
         margin-left: -5px;
+        filter: none;
     }
 
     &--type5 &__footer--brown &__link{
@@ -402,6 +445,10 @@
 
     &--type5 &__footer--brown &__date{
         color: $color-orange1;
+    }
+
+    &--type5 &__footer--blue &__date{
+        filter: none;
     }
 
 }
