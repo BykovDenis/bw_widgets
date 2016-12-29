@@ -28,7 +28,7 @@ export default class GeneratorWidget {
             mainIconWeather2: document.querySelectorAll('.weather-right__icon'),
             humidity: document.querySelectorAll('.weather-right__humidity'),
             pressure: document.querySelectorAll('.weather-right__pressure'),
-            dateReport: document.querySelectorAll('.widget-right__date'),
+            dateReport: document.querySelectorAll('.widget__date'),
             apiKey: document.getElementById('api-key'),
             errorKey: document.getElementById('error-key'),
         };
