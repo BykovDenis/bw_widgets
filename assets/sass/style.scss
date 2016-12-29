@@ -34,3 +34,7 @@
 /* Сервисный контейнеры для лендинг страницы */
 @import "services/container";
 @import "services/container-card";
+
+body{
+  font-family: $font-oswald !important;
+}

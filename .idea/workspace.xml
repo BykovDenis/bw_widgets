@@ -4,6 +4,7 @@
     <list default="true" id="c9d3b710-2162-4e14-bd7d-1762d0106385" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss" afterPath="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/style.scss" afterPath="$PROJECT_DIR$/assets/sass/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" />
@@ -43,8 +44,8 @@
       <file leaf-file-name="weather-widgets-constructor.min.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="2" column="2224" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="33779" />
+            <state relative-caret-position="374">
+              <caret line="2" column="1905" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="33504" />
               <folding />
             </state>
           </provider>
@@ -70,6 +71,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="widget-form.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/blocks/widget-form.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,8 +94,28 @@
       <file leaf-file-name="widget-left.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="153" column="31" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="normalize.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/normalize.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="836">
-              <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -93,13 +124,11 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8778">
-              <caret line="411" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="1685" selection-end-column="0" />
+            <state relative-caret-position="8954">
+              <caret line="415" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="1688" selection-end-column="0" />
               <folding>
-                <marker date="1483023033905" expanded="true" signature="16540:16604" ph="{...}" />
-                <marker date="1483023033905" expanded="true" signature="18318:18321" ph="{...}" />
-                <marker date="1483023033905" expanded="true" signature="18508:18583" ph="{...}" />
-                <marker date="1483023033905" expanded="true" signature="19337:19341" ph="{...}" />
+                <marker date="1483025232849" expanded="true" signature="16592:16689" ph="{...}" />
+                <marker date="1483025232849" expanded="true" signature="19184:19189" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -165,14 +194,14 @@
         <option value="$PROJECT_DIR$/assets/js/generator-widget.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/assets/js/weather-widget.js" />
-        <option value="$PROJECT_DIR$/assets/sass/style.scss" />
         <option value="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss" />
         <option value="$PROJECT_DIR$/assets/jade/index.jade" />
         <option value="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/assets/sass/blocks/widget-form.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss" />
         <option value="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" />
+        <option value="$PROJECT_DIR$/assets/sass/style.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss" />
       </list>
     </option>
   </component>
@@ -276,6 +305,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -527,7 +557,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,11 +709,12 @@
       <workItem from="1482920895450" duration="11585000" />
       <workItem from="1483017882841" duration="3774000" />
       <workItem from="1483022811048" duration="243000" />
+      <workItem from="1483023558352" duration="1182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115881000" />
+    <option name="totallyTimeSpent" value="117063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -749,13 +779,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3652">
-          <caret line="166" column="66" selection-start-line="166" selection-start-column="66" selection-end-line="166" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -981,21 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="911">
@@ -1027,13 +1035,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8778">
-          <caret line="411" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="1685" selection-end-column="0" />
+        <state relative-caret-position="8954">
+          <caret line="415" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="1688" selection-end-column="0" />
           <folding>
-            <marker date="1483023033905" expanded="true" signature="16540:16604" ph="{...}" />
-            <marker date="1483023033905" expanded="true" signature="18318:18321" ph="{...}" />
-            <marker date="1483023033905" expanded="true" signature="18508:18583" ph="{...}" />
-            <marker date="1483023033905" expanded="true" signature="19337:19341" ph="{...}" />
+            <marker date="1483025232849" expanded="true" signature="16592:16689" ph="{...}" />
+            <marker date="1483025232849" expanded="true" signature="19184:19189" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1046,18 +1052,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/blocks/widget-form.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="275" selection-start-line="0" selection-start-column="0" selection-end-line="3814" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/normalize.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1070,18 +1084,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss">
+    <entry file="file://$PROJECT_DIR$/assets/sass/blocks/widget-form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
-          <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-left/widget-left.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="153" column="31" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="2" column="2224" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="33779" />
+        <state relative-caret-position="374">
+          <caret line="2" column="1905" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="33504" />
           <folding />
         </state>
       </provider>

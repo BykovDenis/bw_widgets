@@ -599,7 +599,8 @@ th {
   background-color: #ffffff;
   width: 680px;
   -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3); }
+          box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+  font: 400 14px / 1.3 "Oswald", Arial, sans-serif; }
   .widget-left__body {
     display: table;
     clear: both;
@@ -648,8 +649,8 @@ th {
     color: #ea7e30;
     font-size: 12px;
     margin-left: 5px;
-    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
+    -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1)); }
   .widget-left--small .widget-left__footer--brown .widget-left__link:before {
     padding: 0;
     margin-right: 3px;
@@ -663,26 +664,25 @@ th {
   .widget-left--small .widget-left__footer--brown .widget-left__date {
     float: right;
     margin-right: 5px;
-    padding-top: 2px;
+    padding-top: 1px;
     color: #ea7e30;
-    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
+    font-size: 12px;
+    -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1)); }
   .widget-left--small .widget-left__footer--blue {
     background: none !important;
     padding-top: 3px; }
   .widget-left--small .widget-left__footer--blue .widget-left__link {
-    color: #8CE1E1;
+    color: #333333;
     font-size: 12px;
-    margin-left: 5px;
-    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
+    margin-left: 5px; }
   .widget-left--small .widget-left__footer--blue .widget-left__link:before {
     padding: 0;
     margin-right: 3px;
     content: '';
     width: 15px;
     height: 15px;
-    background: url(../img/widgets/logo_13x13_blue.png) 0 2px no-repeat;
+    background: url(../img/widgets/logo_20x20_black.png) 0 2px no-repeat;
     background-size: 13px 13px;
     display: inline-block;
     vertical-align: top; }
@@ -690,9 +690,8 @@ th {
     float: right;
     margin-right: 5px;
     padding-top: 2px;
-    color: #8CE1E1;
-    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
+    color: #333333;
+    font-size: 12px; }
   .widget-left--small .widget-left__footer--grayscale {
     background: none !important;
     padding-top: 3px; }
@@ -700,8 +699,8 @@ th {
     color: rgba(0, 0, 0, 0.9);
     font-size: 12px;
     margin-left: 5px;
-    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
+    -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1)); }
   .widget-left--small .widget-left__footer--grayscale .widget-left__link:before {
     padding: 0;
     margin-right: 3px;
@@ -715,10 +714,11 @@ th {
   .widget-left--small .widget-left__footer--grayscale .widget-left__date {
     float: right;
     margin-right: 5px;
-    padding-top: 2px;
+    padding-top: 1px;
     color: rgba(0, 0, 0, 0.9);
-    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
+    font-size: 12px;
+    -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1)); }
   .widget-left--small2 {
     display: inline-block;
     vertical-align: top;
@@ -1683,3 +1683,6 @@ th {
     z-index: 100;
     -webkit-transition: 1s;
     transition: 1s; }
+
+body {
+  font-family: "Oswald", Arial, sans-serif !important; }
