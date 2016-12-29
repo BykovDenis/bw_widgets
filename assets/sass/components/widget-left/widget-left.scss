@@ -1,7 +1,6 @@
 .widget-left{
 
   border-radius: 6px;
-  box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
   margin: 0 5px 5px;
   background-color: $color-white;
   width: 680px;
@@ -54,6 +53,97 @@
     display: inline-block;
     vertical-align: top;
     width: auto;
+    background: none;
+  }
+
+  &--small &__footer--brown {
+    background: none !important;
+    padding-top: 3px;
+  }
+
+  &--small &__footer--brown &__link{
+    color: $color-orange1;
+    font-size: #{$font-size - 2px};
+    margin-left: 5px;
+  }
+
+  &--small &__footer--brown  &__link:before{
+    padding: 0;
+    margin-right: 3px;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background: url(../img/widgets/logo_20x20_orange.png) 0 2px no-repeat;
+    background-size: 13px 13px ;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small &__footer--brown &__date{
+    float: right;
+    margin-right: 5px;
+    padding-top: 2px;
+    color: $color-orange1;
+  }
+
+  &--small &__footer--blue {
+    background: none !important;
+    padding-top: 3px;
+  }
+
+  &--small &__footer--blue &__link{
+    color: $color-light-blue3;
+    font-size: #{$font-size - 2px};
+    margin-left: 5px;
+  }
+
+  &--small &__footer--blue  &__link:before{
+    padding: 0;
+    margin-right: 3px;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background: url(../img/widgets/logo_13x13_blue.png) 0 2px no-repeat;
+    background-size: 13px 13px ;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small &__footer--blue &__date{
+    float: right;
+    margin-right: 5px;
+    padding-top: 2px;
+    color: $color-light-blue3;
+  }
+
+  &--small &__footer--grayscale {
+    background: none !important;
+    padding-top: 3px;
+  }
+
+  &--small &__footer--grayscale &__link{
+    color: rgba(0,0,0,.9);
+    font-size: #{$font-size - 2px};
+    margin-left: 5px;
+  }
+
+  &--small &__footer--grayscale  &__link:before{
+    padding: 0;
+    margin-right: 3px;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background: url(../img/widgets/logo_20x20_black.png) 0 2px no-repeat;
+    background-size: 13px 13px ;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--small &__footer--grayscale &__date{
+    float: right;
+    margin-right: 5px;
+    padding-top: 2px;
+    color: rgba(0,0,0,.9);
   }
 
   &--small2{

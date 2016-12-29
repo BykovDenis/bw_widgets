@@ -71,23 +71,7 @@
         margin:0;
     }
 
-    &__header--blue{
-        background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
-        color: $color-white;
-    }
-
-    &__footer--blue{
-        background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
-        color: $color-white;
-    }
-
-
     &__header--brown{
-        background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
-        color: $color-black;
-    }
-
-    &__footer--brown{
         background-image: linear-gradient(to top left, $color-orange, $color-light-orange);
         color: $color-black;
     }
@@ -96,42 +80,48 @@
         color: $color-black;
     }
 
-    &__footer--blue &__link{
-        font: 600 #{$font-size + 6px} / 1 $font-roboto;
-        color: $color-white;
-        text-decoration: none;
-    }
-
     &__footer--brown &__link{
         font: 600 #{$font-size + 6px} / 1 $font-roboto;
         color: $color-black;
         text-decoration: none;
-    }
-
-    &__footer--blue &__link:before{
-      content:'';
-      width: 20px;
-      height: 20px;
-      background-size: 20px 20px ;
-      background: url(../img/widgets/logo_white.png) 50% 0 no-repeat;
-      padding-right: 5px;
-      display: inline-block;
-      vertical-align: top;
+        padding-left: 3px;
     }
 
     &__footer--brown &__link:before{
       content:'';
-      width: 20px;
+      width: 23px;
       height: 20px;
       background-size: 20px 20px ;
-      background: url(../img/widgets/logo_20x20_black.png) 50% 0 no-repeat;
+      background: url(../img/widgets/logo_20x20_black.png) 0 0 no-repeat;
       padding-right: 5px;
       display: inline-block;
       vertical-align: top;
     }
 
+    &__footer--blue{
+      background-image: linear-gradient(to top, $color-light-blue1, $color-light-blue2);
+      color: $color-white;
+    }
 
-    /* Типизация для второго виджета */
+    &__footer--blue &__link{
+      font: 600 #{$font-size + 6px} / 1 $font-roboto;
+      color: $color-white;
+      text-decoration: none;
+      padding-left: 3px;
+    }
+
+    &__footer--blue &__link:before{
+      content:'';
+      width: 23px;
+      height: 20px;
+      background-size: 20px 20px ;
+      background: url(../img/widgets/logo_white.png) 0 0 no-repeat;
+      padding-right: 5px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+   /* Типизация для второго виджета */
 
     &--type2{
         width: 120px;
@@ -157,7 +147,7 @@
 
     &--type2 &__footer--blue &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 14px;
         height: 14px;
@@ -169,7 +159,7 @@
 
     &--type2 &__footer--brown &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 14px;
         height: 14px;
@@ -214,7 +204,7 @@
 
     &--type3 &__footer--blue &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 14px;
         height: 14px;
@@ -226,7 +216,7 @@
 
     &--type3 &__footer--brown &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 14px;
         height: 14px;
@@ -292,20 +282,22 @@
     &--type4 &__footer--blue &__link{
         color: $color-light-blue3;
         font-size: #{$font-size - 2px};
+        margin-left: -5px;
     }
 
     &--type4 &__footer--brown &__link{
         color: $color-orange1;
         font-size: #{$font-size - 2px};
+        margin-left: -5px;
     }
 
     &--type4 &__footer--blue  &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 13px;
         height: 13px;
-        background: url(../img/logo_13x13_blue.png) 0 0 no-repeat;
+        background: url(../img/widgets/logo_13x13_blue.png) 0 0 no-repeat;
         background-size: 13px 13px ;
         display: inline-block;
         vertical-align: top;
@@ -317,11 +309,11 @@
 
     &--type4 &__footer--brown  &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 13px;
         height: 13px;
-        background: url(../img/logo_20x20_orange.png) 0 0 no-repeat;
+        background: url(../img/widgets/logo_20x20_orange.png) 0 0 no-repeat;
         background-size: 13px 13px ;
         display: inline-block;
         vertical-align: top;
@@ -331,14 +323,13 @@
         color: $color-orange1;
     }
 
-
     &--type5 &__link:before{
         padding: 0;
-        padding-right: 3px;
+        margin-right: 3px;
         content:'';
         width: 13px;
         height: 13px;
-        background: url(../img/logo_13x13_blue.png) 0 0 no-repeat;
+        background: url(../img/widgets/logo_13x13_blue.png) 0 0 no-repeat;
         background-size: 13px 13px ;
         display: inline-block;
         vertical-align: top;
@@ -346,11 +337,11 @@
 
     &--type5 &__footer--brown  &__link:before{
       padding: 0;
-      padding-right: 3px;
+      margin-right: 3px;
       content:'';
       width: 13px;
       height: 13px;
-      background: url(../img/logo_20x20_orange.png) 0 0 no-repeat;
+      background: url(../img/widgets/logo_20x20_orange.png) 0 0 no-repeat;
       background-size: 13px 13px ;
       display: inline-block;
       vertical-align: top;
@@ -400,11 +391,13 @@
     &--type5 &__footer--blue &__link{
         color: $color-light-blue3;
         font-size: #{$font-size - 2px};
+        margin-left: -5px;
     }
 
     &--type5 &__footer--brown &__link{
-      color: $color-orange1;
-      font-size: #{$font-size - 2px};
+        color: $color-orange1;
+        font-size: #{$font-size - 2px};
+        margin-left: -5px;
     }
 
     &--type5 &__footer--brown &__date{
