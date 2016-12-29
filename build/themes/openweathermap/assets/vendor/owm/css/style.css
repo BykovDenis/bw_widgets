@@ -647,7 +647,9 @@ th {
   .widget-left--small .widget-left__footer--brown .widget-left__link {
     color: #ea7e30;
     font-size: 12px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
   .widget-left--small .widget-left__footer--brown .widget-left__link:before {
     padding: 0;
     margin-right: 3px;
@@ -662,14 +664,18 @@ th {
     float: right;
     margin-right: 5px;
     padding-top: 2px;
-    color: #ea7e30; }
+    color: #ea7e30;
+    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
   .widget-left--small .widget-left__footer--blue {
     background: none !important;
     padding-top: 3px; }
   .widget-left--small .widget-left__footer--blue .widget-left__link {
     color: #8CE1E1;
     font-size: 12px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
   .widget-left--small .widget-left__footer--blue .widget-left__link:before {
     padding: 0;
     margin-right: 3px;
@@ -684,14 +690,18 @@ th {
     float: right;
     margin-right: 5px;
     padding-top: 2px;
-    color: #8CE1E1; }
+    color: #8CE1E1;
+    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
   .widget-left--small .widget-left__footer--grayscale {
     background: none !important;
     padding-top: 3px; }
   .widget-left--small .widget-left__footer--grayscale .widget-left__link {
     color: rgba(0, 0, 0, 0.9);
     font-size: 12px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
   .widget-left--small .widget-left__footer--grayscale .widget-left__link:before {
     padding: 0;
     margin-right: 3px;
@@ -706,7 +716,9 @@ th {
     float: right;
     margin-right: 5px;
     padding-top: 2px;
-    color: rgba(0, 0, 0, 0.9); }
+    color: rgba(0, 0, 0, 0.9);
+    -webkit-filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(1px 0 2px rgba(0, 0, 0, 0.4)); }
   .widget-left--small2 {
     display: inline-block;
     vertical-align: top;
