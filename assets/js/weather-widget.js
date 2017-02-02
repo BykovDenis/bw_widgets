@@ -341,7 +341,14 @@ export default class WeatherWidget extends CustomDate {
     const that = this;
 
     data.forEach((elem, index) => {
-      let date = new Date(elem.date.replace(/(\d+).(\d+).(\d+)/, '$3/$2/$1'));
+      let date;
+      date = new Date(elem.date.replace(/(\d+).(\d+).(\d+)/, '$3-$2-$1'));
+      // для edge строим другой алгоритм даты
+      if (date.toString() === 'Invalid Date') {
+        var reg = /(\d)+/ig;
+        var found = (elem.date).match(reg);
+        date = new Date(`${found[2]}-${found[1]}-${found[0]} ${found[3]}:${found[4]}:${found[5]}`);
+      }
       that.controls.calendarItem[index].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
       that.controls.calendarItem[index + 8].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
       that.controls.calendarItem[index + 18].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
