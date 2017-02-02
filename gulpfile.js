@@ -14,6 +14,7 @@ var mqpacker = require('css-mqpacker');
 var minify = require('gulp-csso');
 var clean = require('gulp-clean');
 var pngquant = require('imagemin-pngquant');
+var minifyJS = require('gulp-minifier');
 
 
 /* Работа с SVG файлами */
@@ -218,6 +219,21 @@ gulp.task('jslint', function() {
   .pipe(jslint())
   .pipe(jslint.reporter('default', errorsOnly))
   .pipe(jslint.reporter('stylish', options));
+});
+
+//Минификация файлов
+gulp.task('minifyFiles', function() {
+  return gulp.src('./build/themes/openweathermap/**/*').pipe(minifyJS({
+    minify: true,
+    collapseWhitespace: true,
+    conservativeCollapse: true,
+    minifyJS: true,
+    minifyCSS: true,
+    getKeptComment: function (content, filePath) {
+      var m = content.match(/\/\*![\s\S]*?\*\//img);
+      return m && m.join('\n') + '\n' || '';
+    }
+  })).pipe(gulp.dest('./build/themes/openweathermap/'));
 });
 
 // Watch
