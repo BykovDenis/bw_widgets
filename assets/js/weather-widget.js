@@ -2,6 +2,7 @@
  * Created by Denis on 29.09.2016.
  */
 
+const Promise = require('es6-promise').Promise;
 import CustomDate from './custom-date';
 import Graphic from './graphic-d3js';
 import * as naturalPhenomenon  from './data/natural-phenomenon-data';

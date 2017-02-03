@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const objCities = new Cities(cityName, cities);
     objCities.getCities();
 
-
-    searchCity.addEventListener('click', function() {
+      searchCity.addEventListener('click', function() {
 
       const objCities = new Cities(cityName, cities);
       objCities.getCities();

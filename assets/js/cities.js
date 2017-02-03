@@ -2,8 +2,11 @@
 * Created by Denis on 21.10.2016.
 */
 
+const Promise = require('es6-promise').Promise;
+require('String.fromCodePoint');
 import WeatherWidget from './weather-widget';
 import GeneratorWidget from './generator-widget';
+
 
 export default class Cities {
 
@@ -25,6 +28,7 @@ export default class Cities {
     this.selCitySign.class = 'widget-form__selected';
 
     const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
+
     objWidget.render();
 
   }
