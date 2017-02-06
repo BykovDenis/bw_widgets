@@ -1678,7 +1678,9 @@ th {
       background-image: linear-gradient(to top, #74E881, #C9F671); }
     .container-custom-card__btn--brown {
       color: #333333;
-      background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#5FD6D6), to(#A1E6E6));
+      background-image: -webkit-linear-gradient(top, #5FD6D6, #A1E6E6);
+      background-image: linear-gradient(to bottom, #5FD6D6, #A1E6E6); }
     .container-custom-card__btn--brown:hover {
       color: #ffffff;
       background-image: -webkit-gradient(linear, right bottom, left top, from(#FEB020), to(#FFD05C));

@@ -43,7 +43,7 @@
 
     &--brown{
       color: $color-black;
-      background-image: -webkit-linear-gradient(bottom, $color-light-blue1, $color-light-blue2);
+      background-image: linear-gradient(to bottom, $color-light-blue1, $color-light-blue2);
     }
 
     &--brown:hover{
