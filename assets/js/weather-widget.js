@@ -247,10 +247,14 @@ export default class WeatherWidget extends CustomDate {
 
     for (let elem in this.controls.temperature2) {
       if (this.controls.temperature2.hasOwnProperty(elem)) {
-        this.controls.temperature2[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+        if (this.controls.temperature2[elem]) {
+          this.controls.temperature2[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+        }
       }
       if (this.controls.temperatureFeels.hasOwnProperty(elem)) {
-        this.controls.temperatureFeels[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+        if (this.controls.temperatureFeels[elem]) {
+          this.controls.temperatureFeels[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
+        }
       }
     }
 

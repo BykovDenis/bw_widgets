@@ -6,7 +6,7 @@
     box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
 
     &--brown{
-      background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+      background-image: linear-gradient(to bottom, $color-orange, $color-light-orange);
     }
 
     &--blue{
@@ -284,11 +284,11 @@
     }
 
     &--type4  &__layout--blue {
-        background-image: -webkit-linear-gradient(bottom, $color-light-blue1, $color-light-blue2);
+        background-image: linear-gradient(to bottom, $color-light-blue1, $color-light-blue2);
     }
 
     &--type4 &__layout--brown {
-        background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+        background-image: linear-gradient(to bottom, $color-orange, $color-light-orange);
     }
 
     &--type4 &__title{
@@ -406,7 +406,7 @@
     }
 
     &--type5 &__layout--brown {
-        background-image: -webkit-linear-gradient(bottom, $color-orange, $color-light-orange);
+        background-image: linear-gradient(to bottom, $color-orange, $color-light-orange);
     }
 
     &--type5 &__title{

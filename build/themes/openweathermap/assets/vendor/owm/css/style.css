@@ -1147,7 +1147,9 @@ th {
   /* Типизация для третьего виджета */
   /* Типизация четвертого виджета */ }
   .widget-right--brown {
-    background-image: -webkit-linear-gradient(bottom, #FEB020, #FFD05C); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEB020), to(#FFD05C));
+    background-image: -webkit-linear-gradient(top, #FEB020, #FFD05C);
+    background-image: linear-gradient(to bottom, #FEB020, #FFD05C); }
   .widget-right--blue {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#5FD6D6), to(#A1E6E6));
     background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6);
@@ -1381,9 +1383,13 @@ th {
     -webkit-border-radius: 3px;
             border-radius: 3px; }
   .widget-right--type4 .widget-right__layout--blue {
-    background-image: -webkit-linear-gradient(bottom, #5FD6D6, #A1E6E6); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5FD6D6), to(#A1E6E6));
+    background-image: -webkit-linear-gradient(top, #5FD6D6, #A1E6E6);
+    background-image: linear-gradient(to bottom, #5FD6D6, #A1E6E6); }
   .widget-right--type4 .widget-right__layout--brown {
-    background-image: -webkit-linear-gradient(bottom, #FEB020, #FFD05C); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEB020), to(#FFD05C));
+    background-image: -webkit-linear-gradient(top, #FEB020, #FFD05C);
+    background-image: linear-gradient(to bottom, #FEB020, #FFD05C); }
   .widget-right--type4 .widget-right__title {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;
@@ -1488,7 +1494,9 @@ th {
     background-image: -webkit-linear-gradient(bottom right, #DDF730, #F1F029);
     background-image: linear-gradient(to top left, #DDF730, #F1F029); }
   .widget-right--type5 .widget-right__layout--brown {
-    background-image: -webkit-linear-gradient(bottom, #FEB020, #FFD05C); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEB020), to(#FFD05C));
+    background-image: -webkit-linear-gradient(top, #FEB020, #FFD05C);
+    background-image: linear-gradient(to bottom, #FEB020, #FFD05C); }
   .widget-right--type5 .widget-right__title {
     font: 600 14px / 1 "Roboto", Arial, sans-serif;
     color: #333333;

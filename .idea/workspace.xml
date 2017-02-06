@@ -4,6 +4,9 @@
     <list default="true" id="c9d3b710-2162-4e14-bd7d-1762d0106385" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/weather-widget.js" afterPath="$PROJECT_DIR$/assets/js/weather-widget.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" afterPath="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js" afterPath="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js" />
     </list>
     <ignored path="bw_widgets.iws" />
@@ -30,8 +33,8 @@
       <file leaf-file-name="weather-widget.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/weather-widget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="168" column="4" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="4" />
+            <state relative-caret-position="538">
+              <caret line="254" column="48" selection-start-line="254" selection-start-column="48" selection-end-line="254" selection-end-column="48" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
                 <element signature="e#92#131#0" expanded="true" />
@@ -40,10 +43,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="weather-right.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-right/weather-right.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2257">
+              <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget-right.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-751">
+              <caret line="290" column="45" selection-start-line="290" selection-start-column="45" selection-end-line="290" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cities.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="176">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#123#168#0" expanded="true" />
@@ -52,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generator-widget.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generator-widget.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="80" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="80" />
+            <state relative-caret-position="286">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
               <folding>
                 <marker date="1483081219956" expanded="true" signature="8071:8941" ph="..." />
                 <marker date="1483081219956" expanded="true" signature="8116:8405" ph="{&quot;id&quot;: EXTERNAL_FRAGMENT...}" />
@@ -69,7 +92,7 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="462">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#60#90#0" expanded="true" />
@@ -111,7 +134,7 @@
       <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1108">
+            <state relative-caret-position="14234">
               <caret line="647" column="0" selection-start-line="647" selection-start-column="0" selection-end-line="647" selection-end-column="0" />
               <folding />
             </state>
@@ -175,7 +198,6 @@
         <option value="$PROJECT_DIR$/assets/js/graphic-d3js.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/assets/sass/components/widget-left/widget-left-menu.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" />
         <option value="$PROJECT_DIR$/assets/sass/blocks/widget-form.scss" />
         <option value="$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/weather-widgets-constructor.min.css" />
         <option value="$PROJECT_DIR$/assets/sass/style.scss" />
@@ -187,6 +209,7 @@
         <option value="$PROJECT_DIR$/assets/js/fromcodepoint.js" />
         <option value="$PROJECT_DIR$/assets/js/cities.js" />
         <option value="$PROJECT_DIR$/assets/js/weather-widget.js" />
+        <option value="$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss" />
       </list>
     </option>
   </component>
@@ -207,10 +230,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -292,7 +313,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,6 +384,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,7 +393,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../weathermap" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js.eslint.nodeInterpreter" value="project" />
@@ -525,35 +546,36 @@
       <workItem from="1486046252735" duration="4853000" />
       <workItem from="1486065928219" duration="1308000" />
       <workItem from="1486128849033" duration="2252000" />
-      <workItem from="1486372306603" duration="2167000" />
+      <workItem from="1486372306603" duration="2689000" />
+      <workItem from="1486387963229" duration="1263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130466000" />
+    <option name="totallyTimeSpent" value="132251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.32395834" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.67604166" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.67604166" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -751,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-right/weather-right.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/themes/openweathermap/assets/vendor/owm/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9130">
@@ -776,13 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -864,7 +872,7 @@
     <entry file="file://$PROJECT_DIR$/assets/js/fromcodepoint.js" />
     <entry file="file://$PROJECT_DIR$/assets/jade/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1108">
+        <state relative-caret-position="14234">
           <caret line="647" column="0" selection-start-line="647" selection-start-column="0" selection-end-line="647" selection-end-column="0" />
           <folding />
         </state>
@@ -872,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="462">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#60#90#0" expanded="true" />
@@ -882,7 +890,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/cities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="176">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#123#168#0" expanded="true" />
@@ -890,10 +898,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <marker date="1483081219956" expanded="true" signature="8071:8941" ph="..." />
+            <marker date="1483081219956" expanded="true" signature="8116:8405" ph="{&quot;id&quot;: EXTERNAL_FRAGMENT...}" />
+            <marker date="1483081219956" expanded="true" signature="8439:8910" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/weather-widget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="168" column="4" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="4" />
+        <state relative-caret-position="538">
+          <caret line="254" column="48" selection-start-line="254" selection-start-column="48" selection-end-line="254" selection-end-column="48" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
             <element signature="e#92#131#0" expanded="true" />
@@ -901,15 +921,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/generator-widget.js">
+    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-right/weather-right.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="80" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="80" />
-          <folding>
-            <marker date="1483081219956" expanded="true" signature="8071:8941" ph="..." />
-            <marker date="1483081219956" expanded="true" signature="8116:8405" ph="{&quot;id&quot;: EXTERNAL_FRAGMENT...}" />
-            <marker date="1483081219956" expanded="true" signature="8439:8910" ph="{...}" />
-          </folding>
+        <state relative-caret-position="-2257">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/components/widget-right/widget-right.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-751">
+          <caret line="290" column="45" selection-start-line="290" selection-start-column="45" selection-end-line="290" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
