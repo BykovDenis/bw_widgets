@@ -131,7 +131,7 @@ export default class WeatherWidget extends CustomDate {
    * @return {string} Наименование искомого селектора
    */
   getParentSelectorFromObject(object, element, elementName, elementName2) {
-    for (const key in object) {
+    for (let key in object) {
       // Если сравнение производится с объектом из двух элементов ввиде интервала
       if (typeof object[key][elementName] === 'object' && elementName2 == null) {
         if (element >= object[key][elementName][0] && element < object[key][elementName][1]) {
@@ -204,19 +204,19 @@ export default class WeatherWidget extends CustomDate {
 
   renderWidget(metadata) {
     // Оотрисовка первых четырех виджетов
-    for (const elem in this.controls.cityName) {
+    for (let elem in this.controls.cityName) {
       if (this.controls.cityName.hasOwnProperty(elem)) {
         this.controls.cityName[elem].innerHTML = metadata.cityName;
       }
     }
 
-    for (const elem in this.controls.temperature) {
+    for (let elem in this.controls.temperature) {
       if (this.controls.temperature.hasOwnProperty(elem)) {
         this.controls.temperature[elem].innerHTML = `${metadata.temperature}<span class='weather-left-card__degree'>${this.params.textUnitTemp}</span>`;
       }
     }
 
-    for (const elem in this.controls.mainIconWeather) {
+    for (let elem in this.controls.mainIconWeather) {
       if (this.controls.mainIconWeather.hasOwnProperty(elem)) {
         this.controls.mainIconWeather[elem].src = this.getURLMainIcon(metadata.icon, true);
         this.controls.mainIconWeather[elem].alt = `Weather in ${metadata.cityName ? metadata.cityName : ''}`;
@@ -224,14 +224,14 @@ export default class WeatherWidget extends CustomDate {
     }
 
     if (metadata.weather) {
-      for (const elem in this.controls.naturalPhenomenon) {
+      for (let elem in this.controls.naturalPhenomenon) {
         if (this.controls.naturalPhenomenon.hasOwnProperty(elem)) {
           this.controls.naturalPhenomenon[elem].innerText = metadata.weather;
         }
       }
     }
     if (metadata.windSpeed) {
-      for (const elem in this.controls.windSpeed) {
+      for (let elem in this.controls.windSpeed) {
         if (this.controls.windSpeed.hasOwnProperty(elem)) {
           this.controls.windSpeed[elem].innerText = metadata.windSpeed;
         }
@@ -239,13 +239,13 @@ export default class WeatherWidget extends CustomDate {
     }
 
     // Отрисовка пяти последних виджетов
-    for (const elem in this.controls.cityName2) {
+    for (let elem in this.controls.cityName2) {
       if (this.controls.cityName2.hasOwnProperty(elem)) {
         this.controls.cityName2[elem].innerHTML = metadata.cityName;
       }
     }
 
-    for (const elem in this.controls.temperature2) {
+    for (let elem in this.controls.temperature2) {
       if (this.controls.temperature2.hasOwnProperty(elem)) {
         this.controls.temperature2[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
       }
@@ -254,20 +254,20 @@ export default class WeatherWidget extends CustomDate {
       }
     }
 
-    for (const elem in this.controls.temperatureMin) {
+    for (let elem in this.controls.temperatureMin) {
       if (this.controls.temperatureMin.hasOwnProperty(elem)) {
         this.controls.temperatureMin[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
       }
     }
 
-    for (const elem in this.controls.temperatureMax) {
+    for (let elem in this.controls.temperatureMax) {
       if (this.controls.temperatureMax.hasOwnProperty(elem)) {
         this.controls.temperatureMax[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
       }
     }
 
     if (metadata.weather) {
-      for (const elem in this.controls.naturalPhenomenon2) {
+      for (let elem in this.controls.naturalPhenomenon2) {
         if (this.controls.naturalPhenomenon2.hasOwnProperty(elem)) {
           this.controls.naturalPhenomenon2[elem].innerText = metadata.weather;
         }
@@ -275,14 +275,14 @@ export default class WeatherWidget extends CustomDate {
     }
 
     if (metadata.windSpeed2 && metadata.windDirection) {
-      for (const elem in this.controls.windSpeed2) {
+      for (let elem in this.controls.windSpeed2) {
         if (this.controls.windSpeed2.hasOwnProperty(elem)) {
           this.controls.windSpeed2[elem].innerText = `${metadata.windSpeed2} ${metadata.windDirection}`;
         }
       }
     }
 
-    for (const elem in this.controls.mainIconWeather2) {
+    for (let elem in this.controls.mainIconWeather2) {
       if (this.controls.mainIconWeather2.hasOwnProperty(elem)) {
         this.controls.mainIconWeather2[elem].src = this.getURLMainIcon(metadata.icon, true);
         this.controls.mainIconWeather2[elem].alt = `Weather in ${metadata.cityName ? metadata.cityName : ''}`;
@@ -290,7 +290,7 @@ export default class WeatherWidget extends CustomDate {
     }
 
     if (metadata.humidity) {
-      for (const elem in this.controls.humidity) {
+      for (let elem in this.controls.humidity) {
         if (this.controls.humidity.hasOwnProperty(elem)) {
           this.controls.humidity[elem].innerText = metadata.humidity;
         }
@@ -298,14 +298,14 @@ export default class WeatherWidget extends CustomDate {
     }
 
     if (metadata.pressure) {
-      for (const elem in this.controls.pressure) {
+      for (let elem in this.controls.pressure) {
         if (this.controls.pressure.hasOwnProperty(elem)) {
           this.controls.pressure[elem].innerText = metadata.pressure;
         }
       }
     }
     // Прописываем текущую дату в виджеты
-    for (const elem in this.controls.dateReport) {
+    for (let elem in this.controls.dateReport) {
       if (this.controls.dateReport.hasOwnProperty(elem)) {
         this.controls.dateReport[elem].innerText = this.getTimeDateHHMMMonthDay();
       }
@@ -320,7 +320,7 @@ export default class WeatherWidget extends CustomDate {
   prepareDataForGraphic() {
     const arr = [];
 
-    for (const elem in this.weather.forecastDaily.list) {
+    for (let elem in this.weather.forecastDaily.list) {
       const day = this.getDayNameOfWeekByDayNumber(this.getNumberDayInWeekByUnixTime(this.weather.forecastDaily.list[elem].dt));
       arr.push({
         min: Math.round(this.weather.forecastDaily.list[elem].temp.min),
