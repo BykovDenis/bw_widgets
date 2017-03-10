@@ -1,7 +1,6 @@
 .weather-left-card{
 
   float: left;
-  margin: 0 15px;
 
   &__layout{
     padding: 0 14px;
@@ -9,11 +8,20 @@
     @include clearfix;
   }
 
+
+  &__row1{
+    width: auto;
+    height: 128px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   &__img{
     display: block;
-    position: absolute;
-    left: -9px;
-    top: -14px;
+    width: 128px;
+    height: 128px;
   }
 
   &--grayscale{
@@ -21,7 +29,10 @@
   }
 
   &__col{
-    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   &__number{
@@ -29,6 +40,7 @@
     color: $color-black;
     margin: 0 auto;
     padding-top:20px;
+    letter-spacing: -4px;
   }
 
   &__degree{
@@ -41,16 +53,8 @@
 
   &__col span{
     color: $color-black;
-    padding-top: 16px;
+    padding-top: 3px;
   }
-
-  &__row1{
-    @include clearfix;
-    position: relative;
-    width: 195px;
-    height: 112px;
-  }
-
   &__means{
     margin: 0;
     margin-bottom: 5px;

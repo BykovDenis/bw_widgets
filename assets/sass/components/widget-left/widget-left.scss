@@ -8,10 +8,13 @@
   font: 400 #{$font-size} / 1.3 $font-oswald;
 
   &__body{
-    @include clearfix;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: $width-normal-widget;
     padding-bottom: 16px;
     border-radius: 0 0 6px 6px;
+
   }
 
   &__body--compact{

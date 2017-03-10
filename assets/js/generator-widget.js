@@ -1,6 +1,8 @@
 /**
  * Created by Denis on 13.10.2016.
  */
+import Cookies from './Cookies';
+
 export default class GeneratorWidget {
     constructor() {
 
@@ -33,6 +35,7 @@ export default class GeneratorWidget {
             errorKey: document.getElementById('error-key'),
         };
 
+        this.initialMetricTemperature();
         this.validationAPIkey();
         this.setInitialStateForm();
 
@@ -153,13 +156,79 @@ export default class GeneratorWidget {
                 code: this.getCodeForGenerateWidget(31),
                 schema: 'brown',
             },
+        };
+
+    }
+
+    /**
+     * Инициализация единиц измерения в виджетах
+     * */
+    initialMetricTemperature() {
+
+        const setUnits = function(checkbox, cookie){
+            var units = 'metric';
+            if(checkbox.checked == false){
+                checkbox.checked = false;
+                units = 'imperial';
+            }
+            cookie.setCookie('units', units);
+        };
+
+        const getUnits = function(units){
+            switch(units){
+                case 'metric':
+                    return [units, '°C'];
+                case 'imperial':
+                    return [units, '°F'];
+            }
+            return ['metric', '°C'];
+        };
+
+        var cookie = new Cookies();
+        //Определение единиц измерения
+        var unitsCheck = document.getElementById("units_check");
+
+        unitsCheck.addEventListener("change", function(event){
+            setUnits(unitsCheck, cookie);
+            window.location.reload();
+        });
+
+        var units = "metric";
+        var text_unit_temp = null;
+        if(cookie.getCookie('units')){
+            this.unitsTemp = getUnits(cookie.getCookie('units')) || ['metric', '°C'];
+            [units, text_unit_temp] = this.unitsTemp;
+            if(units == "metric")
+                unitsCheck.checked = true;
+            else
+                unitsCheck.checked = false;
+        }
+        else{
+            unitsCheck.checked = true;
+            setUnits(unitsCheck, cookie);
+            this.unitsTemp = getUnits(units);
+            [units, text_unit_temp] = this.unitsTemp;
         }
 
+    }
+    /**
+     * Свойство установки единиц измерения для виджетов
+     * @param units
+     */
+    set unitsTemp(units) {
+        this.units = units;
+    }
+    /**
+     * Свойство получения единиц измерения для виджетов
+     * @returns {*}
+     */
+    get unitsTemp() {
+        return this.units;
     }
 
     validationAPIkey() {
         let validationAPI = function() {
-        let url = `http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&units=metric&cnt=8&appid=${this.controlsWidget.apiKey.value}`;
+        let url = `http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&units=${this.unitsTemp[0]}&cnt=8&appid=${this.controlsWidget.apiKey.value}`;
         const xhr = new XMLHttpRequest();
         var that = this;
         xhr.onload = function () {
@@ -220,15 +289,15 @@ export default class GeneratorWidget {
         return null;
     }
 
-    setInitialStateForm(cityId=524901, cityName='Moscow') {
+    setInitialStateForm(cityId=2022572, cityName='Moscow') {
 
         this.paramsWidget = {
             cityId: cityId,
             cityName: cityName,
             lang: 'en',
             appid: document.getElementById('api-key').value ||  '2d90837ddbaeda36ab487f257829b667',
-            units: 'metric',
-            textUnitTemp: String.fromCodePoint(0x00B0),  // 248
+            units: this.unitsTemp[0],
+            textUnitTemp: this.unitsTemp[1],  // 248
             baseURL: this.baseURL,
             urlDomain: 'http://api.openweathermap.org',
         };

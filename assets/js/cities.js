@@ -14,7 +14,7 @@ export default class Cities {
 
     const generateWidget = new GeneratorWidget();
     generateWidget.setInitialStateForm();
-
+    this.units = generateWidget.unitsTemp[1];
     if (!cityName.value) {
       return false;
     }
@@ -85,6 +85,7 @@ export default class Cities {
           // Подстановка найденого города
           generateWidget.paramsWidget.cityId = event.target.id;
           generateWidget.paramsWidget.cityName = event.target.textContent;
+          generateWidget.paramsWidget.units = this.units;
           generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
           window.cityId = event.target.id;
           window.cityName = event.target.textContent;
