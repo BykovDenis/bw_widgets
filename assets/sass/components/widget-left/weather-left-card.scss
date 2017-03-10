@@ -81,10 +81,11 @@
     min-width: 36px;
     text-align: center;
     font-size: $font-size+4px;
+    letter-spacing: 0;
   }
 
   &__number--small &__degree{
-    font-size: $font-size;
+    font-size: #{$font-size + 4px};
     display: inline-block;
     vertical-align: top;
   }

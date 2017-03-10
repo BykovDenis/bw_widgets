@@ -763,9 +763,23 @@ th {
           border-radius: 6px 6px 0 0;
   /* Описание цветовых схем */ }
   .widget-left-menu__layout {
-    display: table;
-    clear: both;
-    content: '';
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     position: relative;
     margin: 0 auto;
     padding: 0;
@@ -784,8 +798,7 @@ th {
     float: right;
     position: relative;
     -webkit-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px;
-    margin-top: 15px; }
+            border-radius: 0 0 6px 6px; }
   .widget-left-menu__links span {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
@@ -805,7 +818,7 @@ th {
     background-size: 14px 14px;
     padding-right: 17px; }
   .widget-left-menu--compact .widget-left-menu__layout {
-    width: 167px; }
+    width: 195px; }
   .widget-left-menu__links--compact {
     width: 225px;
     float: none;
@@ -818,7 +831,8 @@ th {
   .widget-left-menu--compact {
     width: 225px; }
   .widget-left-menu--small {
-    padding-left: 15px;
+    padding-left: 7px;
+    padding-right: 8px;
     -webkit-border-radius: 6px;
             border-radius: 6px;
     min-height: 58px;
@@ -968,9 +982,10 @@ th {
     margin-top: 21px;
     min-width: 36px;
     text-align: center;
-    font-size: 18px; }
+    font-size: 18px;
+    letter-spacing: 0; }
   .weather-left-card__number--small .weather-left-card__degree {
-    font-size: 14px;
+    font-size: 18px;
     display: inline-block;
     vertical-align: top; }
   .weather-left-card__img--small {
@@ -1062,9 +1077,10 @@ th {
   /*  Типизация для третьго виджета */
   /*Типизация по цветовым схемам */ }
   .weather-right__temperature {
-    font: 600 76px / 1 "Oswald", Arial, sans-serif;
+    font: 600 70px / 1 "Oswald", Arial, sans-serif;
     color: #333333;
-    width: 140px; }
+    width: auto;
+    letter-spacing: -5px; }
   .weather-right__layout {
     position: relative;
     padding: 6.5px 0;
@@ -1108,8 +1124,7 @@ th {
     padding: 27px 0; }
   .weather-right--type2 .weather-right__temperature {
     font-size: 53px;
-    text-align: center;
-    padding-left: 10px; }
+    text-align: center; }
   .weather-right--type3 {
     width: 120px; }
   .weather-right--type3 .weather-right__layout {
@@ -1138,7 +1153,8 @@ th {
     margin-bottom: 14px;
     width: 57px;
     text-align: center;
-    font-size: 30px; }
+    font-size: 30px;
+    letter-spacing: 0; }
   .weather-right--type4 {
     width: 300px; }
   .weather-right--type5 {
