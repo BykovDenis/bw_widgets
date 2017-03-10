@@ -618,11 +618,34 @@ th {
     padding-bottom: 16px;
     -webkit-border-radius: 0 0 6px 6px;
             border-radius: 0 0 6px 6px; }
+  .widget-left--compact {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 225px; }
   .widget-left__body--compact {
-    float: none;
     margin: 0 auto;
     width: 225px;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
   .widget-left__calendar {
     float: left;
     margin-top: 5px;
@@ -640,10 +663,6 @@ th {
     background-image: linear-gradient(to top, #5FD6D6, #A1E6E6); }
   .widget-left--brown {
     background-image: -webkit-linear-gradient(bottom, #FEB020, #FFD05C); }
-  .widget-left--compact {
-    display: inline-block;
-    vertical-align: top;
-    width: 225px; }
   .widget-left--small {
     display: inline-block;
     vertical-align: top;
@@ -749,12 +768,11 @@ th {
     content: '';
     position: relative;
     margin: 0 auto;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding: 0;
     margin-top: 15px;
     padding-bottom: 5px;
     border-bottom: 2px solid #333333;
-    width: 622px; }
+    width: 660px; }
   .widget-left-menu__header {
     float: left;
     margin: 0;
@@ -766,11 +784,14 @@ th {
     float: right;
     position: relative;
     -webkit-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px; }
+            border-radius: 0 0 6px 6px;
+    margin-top: 15px; }
   .widget-left-menu__links span {
     font: 400 14px "Roboto", Arial, sans-serif;
     color: #333333;
     padding-right: 3px; }
+  .widget-left-menu__links .widget-left-menu__layout {
+    margin-top: 0; }
   .widget-left-menu__link {
     font: 700 14px "Roboto", Arial, sans-serif;
     color: #333333 !important;
@@ -956,7 +977,7 @@ th {
     position: static; }
   .weather-left-card--compact {
     float: none;
-    margin: 0 15px; }
+    margin-right: 5px; }
   .weather-left-card__number--small2 .weather-left-card__degree {
     font-size: 14px; }
 

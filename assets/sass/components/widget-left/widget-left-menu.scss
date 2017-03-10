@@ -10,12 +10,11 @@
     @include clearfix;
     position: relative;
     margin: 0 auto;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding: 0;
     margin-top: 15px;
     padding-bottom: 5px;
     border-bottom: 2px solid $color-black;
-    width: 622px;
+    width: 660px;
   }
 
   &__header{
@@ -31,12 +30,17 @@
     float: right;
     position: relative;
     border-radius: 0 0 6px 6px;
+    margin-top: 15px;
   }
 
   &__links span {
     font: 400 $font-size / $line-height $font-roboto;
     color: $color-black;
     padding-right: 3px;
+  }
+
+  &__links &__layout {
+    margin-top: 0;
   }
 
   &__link{
