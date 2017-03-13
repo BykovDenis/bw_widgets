@@ -186,7 +186,7 @@ export default class WeatherWidget extends CustomDate {
     }
     if (weather.windSpeed) {
       metadata.windSpeed = `Wind: ${weather.fromAPI.wind.speed.toFixed(1)} m/s ${this.getParentSelectorFromObject(weather.windSpeed, weather.fromAPI.wind.speed.toFixed(1), 'speed_interval')}`;
-      metadata.windSpeed2 = `${weather.fromAPI.wind.speed.toFixed(1)} m/s`;
+      metadata.windSpeed2 = `${weather.fromAPI.wind.speed.toFixed(1)} m/s ${this.getParentSelectorFromObject(weather.windSpeed, weather.fromAPI.wind.speed.toFixed(1), 'speed_interval').substr(0,1)}`;
     }
     if (weather.windDirection) {
       metadata.windDirection = `${this.getParentSelectorFromObject(weather["windDirection"], weather["fromAPI"]["wind"]["deg"], "deg_interval")}`

@@ -1151,7 +1151,7 @@ th {
     padding-left: 6px;
     margin-top: 15px;
     margin-bottom: 14px;
-    width: 57px;
+    width: auto;
     text-align: center;
     font-size: 30px;
     letter-spacing: 0; }
