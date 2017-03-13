@@ -257,8 +257,6 @@ export default class GeneratorWidget {
         this.boundValidationMethod = validationAPI.bind(this);
         this.controlsWidget.apiKey.addEventListener('change',this.boundValidationMethod);
         //this.removeEventListener(this.boundValidationMethod);
-
-
     }
 
     getCodeForGenerateWidget(id) {        
@@ -273,7 +271,8 @@ export default class GeneratorWidget {
                         id: ${id},
                         cityid: ${this.paramsWidget.cityId},
                         appid: '${this.paramsWidget.appid.replace(`2d90837ddbaeda36ab487f257829b667`,'')}',
-                        containerid: 'openweathermap-widget',
+                        units: '${this.paramsWidget.units}',
+                        containerid: 'openweathermap-widget',                        
                     };
                     (function() {
                         var script = document.createElement('script');
@@ -316,5 +315,4 @@ export default class GeneratorWidget {
         naturalPhenomenon: `${this.baseURL}/data/natural-phenomenon-data.json`,
         };
     }
-
 }
