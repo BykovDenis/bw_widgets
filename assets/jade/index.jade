@@ -11,11 +11,12 @@ html(lang="en")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
     // Optional theme
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
     // jQuery (necessary for Bootstrap's JavaScript plugins)
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
     // Latest compiled and minified JavaScript
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-  body
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")  
+  body.body-orange
     // Переключатель параметров единиц измерения температуры
     label.toggle.candy.blue(style="width:100px"  onclick="")
       input#units_check(type="checkbox" checked="checked")
@@ -39,7 +40,7 @@ html(lang="en")
         // Лендинг с информацией по виджетам
         h1.widget__title Get a code for posting a weather forecast widget on your site.
         form.widget-form.navbar-form
-          .form-group.col-xs-4.col-sm-4.col-lg-4
+          .form-group.col-xs-3.col-sm-3.col-lg-3
             dl
                 dt
                     label.aria-label Your API key:
@@ -51,14 +52,16 @@ html(lang="en")
                     label.aria-label Your city name
                 dd
                     input.form-control#city-name(type="text" value="London")
-                    button(type="button").btn-btn-default#search-city Search city
+            button#search-city.container-custom-card__btn-search(type="button") 
+              i.fa.fa-question-circle
+              |  Search city
+          .container-custom-card__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
             dl
                 dt
                     label.area-label  Select your city
                 dd
                     div#cities
-          .container-custom-card.col-xs-8.col-sm-8.col-lg-8(style="padding-top: 30px;")
-            .container-custom-card__item
+            .container-custom-card__item(style="display:none;")
               // Виджет: 1, цвет: brown
               .widget-left
                 .widget-left-menu.widget-left-menu--brown
@@ -98,7 +101,9 @@ html(lang="en")
                       li.calendar__item Fri
                         img( width="32" height="32" alt="Fri")
                     div.widget-left__graphic(id="graphic3")
-            span.container-custom-card__btn.container-custom-card__btn--brown#widget-31-right-brown Get a code
+            span.container-custom-card__btn.container-custom-card__btn--brown#widget-31-right-brown(style="display:none;") 
+              i.fa.fa-clone
+              |  Get a code
         <!-- Коричневый виджет -->
         .container-custom__item.col-xs-12.col-sm-12.col-lg-12
           .main.main--brown
@@ -144,7 +149,9 @@ html(lang="en")
                             li.calendar__item Fri
                               img( width="32" height="32" alt="Fri")
                           div.widget-left__graphic(id="graphic2")
-                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-1-left-brown Get a code
+                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-1-left-brown
+                    i.fa.fa-clone
+                    |  Get a code
                 .container-custom__item
                   .container-custom-card
                     .container-custom-card__item
@@ -168,7 +175,9 @@ html(lang="en")
                             .widget-left-menu__layout.widget-left-menu__layout--brown
                               span More at
                               a.widget-left-menu__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-2-left-brown Get a code
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-2-left-brown
+                      i.fa.fa-clone
+                      |  Get a code
                   .container-custom
                     .container-custom-card
                       .container-custom-card__item
@@ -185,7 +194,9 @@ html(lang="en")
                             .widget-left__layout
                               a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
                               .widget-left__date.widget__date 20:16 Mar 28
-                      span.container-custom-card__btn.container-custom-card__btn--brown#widget-3-left-brown Get a code
+                      span.container-custom-card__btn.container-custom-card__btn--brown#widget-3-left-brown
+                        i.fa.fa-clone
+                        |  Get a code                      
                     .container-custom-card
                       .container-custom-card__item
                         // Виджет: 4, цвет: brown
@@ -201,7 +212,9 @@ html(lang="en")
                             .widget-left__layout
                               a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
                               .widget-left__date.widget__date 20:16 Mar 28
-                      span.container-custom-card__btn.container-custom-card__btn--brown#widget-4-left-brown Get a code
+                      span.container-custom-card__btn.container-custom-card__btn--brown#widget-4-left-brown
+                        i.fa.fa-clone
+                        |  Get a code                      
               .container-custom
                 .container-custom-card
                   .container-custom-card__item
@@ -241,7 +254,9 @@ html(lang="en")
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
                           .widget-right__date.widget__date 20:16 Mar 28
-                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-5-right-brown Get a code
+                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-5-right-brown
+                    i.fa.fa-clone
+                    |  Get a code                  
                 .container-custom__item.container-custom__item--type1
                   .container-custom-card
                     .container-custom-card__item
@@ -258,7 +273,9 @@ html(lang="en")
                         .widget-right__footer.widget-right__footer--brown
                           .widget-right__layout
                             a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-6-right-brown Get a code
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-6-right-brown
+                      i.fa.fa-clone
+                      |  Get a code                    
                   .container-custom-card
                     .container-custom-card__item
                       // Виджет: 7, цвет: brown
@@ -284,7 +301,9 @@ html(lang="en")
                         .widget-right__footer.widget-right__footer--brown
                           .widget-right__layout
                             a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-7-right-brown Get a code
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-7-right-brown
+                      i.fa.fa-clone
+                      |  Get a code
             .container-custom.container-custom--type1
               .container-custom-card
                 .container-custom-card__item
@@ -303,7 +322,9 @@ html(lang="en")
                       .widget-right__layout
                         a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
                         .widget-right__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn.container-custom-card__btn--brown#widget-8-right-brown Get a code
+                span.container-custom-card__btn.container-custom-card__btn--brown#widget-8-right-brown
+                  i.fa.fa-clone
+                  |  Get a code                
               .container-custom-card
                 .container-custom-card__item
                   // Виджет: 9, цвет: brown
@@ -321,7 +342,9 @@ html(lang="en")
                       .widget-right__layout
                         a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
                         .widget-right__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn.container-custom-card__btn--brown#widget-9-right-brown Get a code
+                span.container-custom-card__btn.container-custom-card__btn--brown#widget-9-right-brown
+                  i.fa.fa-clone
+                  |  Get a code                
       .container-custom__item
         .main.main--blue
           .container-custom__item
@@ -366,8 +389,9 @@ html(lang="en")
                           li.calendar__item Fri
                             img( width="32" height="32" alt="Fri")
                         div.widget-left__graphic(id="graphic1")
-
-                span.container-custom-card__btn.container-custom-card__btn--blue#widget-1-left-blue Get a code
+                span.container-custom-card__btn.container-custom-card__btn--blue#widget-1-left-blue
+                  i.fa.fa-clone
+                  |  Get a code                
               .container-custom__item
                 .container-custom-card
                   .container-custom-card__item
@@ -391,7 +415,9 @@ html(lang="en")
                           .widget-left-menu__layout.widget-left-menu__layout--blue
                             span More at
                             a.widget-left-menu__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-2-left-blue Get a code
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-2-left-blue
+                    i.fa.fa-clone
+                    |  Get a code                  
                 .container-custom
                   .container-custom-card
                     .container-custom-card__item
@@ -424,7 +450,9 @@ html(lang="en")
                             .widget-left__layout
                                 a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
                                 .widget-left__date.widget__date 20:16 Mar 28
-                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-4-left-blue Get a code
+                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-4-left-blue
+                      i.fa.fa-clone
+                      |  Get a code
             .container-custom
               .container-custom-card
                 .container-custom-card__item
@@ -464,7 +492,9 @@ html(lang="en")
                       .widget-right__layout
                         a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
                         .widget-right__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn.container-custom-card__btn--blue#widget-5-right-blue Get a code
+                span.container-custom-card__btn.container-custom-card__btn--blue#widget-5-right-blue
+                  i.fa.fa-clone
+                  |  Get a code
               .container-custom__item.container-custom__item--type1
                 .container-custom-card
                   .container-custom-card__item
@@ -481,7 +511,9 @@ html(lang="en")
                       .widget-right__footer.widget-right__footer--blue
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-6-right-blue Get a code
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-6-right-blue
+                    i.fa.fa-clone
+                    |  Get a code                  
                 .container-custom-card
                   .container-custom-card__item
                     // Виджет: 7, цвет: blue
@@ -507,7 +539,9 @@ html(lang="en")
                       .widget-right__footer.widget-right__footer--blue
                         .widget-right__layout
                           a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-7-right-blue Get a code
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-7-right-blue
+                    i.fa.fa-clone
+                    |  Get a code                  
           .container-custom.container-custom--type1
             .container-custom-card
               .container-custom-card__item
@@ -526,7 +560,9 @@ html(lang="en")
                     .widget-right__layout
                       a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
                       .widget-right__date.widget__date 20:16 Mar 28
-              span.container-custom-card__btn.container-custom-card__btn--blue#widget-8-right-blue Get a code
+              span.container-custom-card__btn.container-custom-card__btn--blue#widget-8-right-blue
+                i.fa.fa-clone
+                |  Get a code              
             .container-custom-card
               .container-custom-card__item
                 // Виджет: 9, цвет: blue
@@ -544,7 +580,9 @@ html(lang="en")
                     .widget-right__layout
                       a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
                       .widget-right__date.widget__date 20:16 Mar 28
-              span.container-custom-card__btn.container-custom-card__btn--blue#widget-9-right-blue Get a code
+              span.container-custom-card__btn.container-custom-card__btn--blue#widget-9-right-blue
+                i.fa.fa-clone
+                |  Get a code              
       <!-- Бесцветный виджет -->
       // Первый контейнер
       .container-custom__item
@@ -590,7 +628,9 @@ html(lang="en")
                         li.calendar__item Fri
                           img( width="32" height="32" alt="Fri")
                       div.widget-left__graphic(id="graphic")
-              span.container-custom-card__btn#widget-1-left-white Get a code
+              span.container-custom-card__btn#widget-1-left-white
+                i.fa.fa-clone
+                |  Get a code              
           .container-custom__item
             .container-custom-card
               .container-custom-card__item
@@ -614,7 +654,9 @@ html(lang="en")
                       .widget-left-menu__layout
                         span More at
                         a.widget-left-menu__link(href="http://openweathermap.org/" ) OpenWeatherMap
-              span.container-custom-card__btn#widget-2-left-white Get a code
+              span.container-custom-card__btn#widget-2-left-white
+                i.fa.fa-clone
+                |  Get a code              
             .container-custom
               .container-custom-card
                 .container-custom-card__item
@@ -631,7 +673,9 @@ html(lang="en")
                         .widget-left__layout
                             a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
                             .widget-left__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn#widget-3-left-white Get a code
+                span.container-custom-card__btn#widget-3-left-white
+                  i.fa.fa-clone
+                  |  Get a code                
               .container-custom-card
                 .container-custom-card__item
                   // Виджет: 4, цвет: 0
@@ -647,5 +691,7 @@ html(lang="en")
                         .widget-left__layout
                             a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
                             .widget-left__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn#widget-4-left-white Get a code
+                span.container-custom-card__btn#widget-4-left-white
+                  i.fa.fa-clone
+                  |  Get a code                
     script(src="/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js")

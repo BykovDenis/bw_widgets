@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <!-- Optional theme-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"> </script>
   </head>
-  <body>
+  <body class="body-orange">
     <!-- Переключатель параметров единиц измерения температуры-->
     <label style="width:100px" onclick="" class="toggle candy blue">
       <input id="units_check" type="checkbox" checked="checked"/>
@@ -38,7 +39,7 @@
         <!-- Лендинг с информацией по виджетам-->
         <h1 class="widget__title">Get a code for posting a weather forecast widget on your site.</h1>
         <form class="widget-form navbar-form">
-          <div class="form-group col-xs-4 col-sm-4 col-lg-4">
+          <div class="form-group col-xs-3 col-sm-3 col-lg-3">
             <dl>
               <dt>
                 <label class="aria-label">Your API key:</label>
@@ -53,9 +54,11 @@
               </dt>
               <dd>
                 <input id="city-name" type="text" value="London" class="form-control"/>
-                <button type="button" id="search-city" class="btn-btn-default">Search city</button>
               </dd>
             </dl>
+            <button id="search-city" type="button" class="container-custom-card__btn-search"> <i class="fa fa-question-circle"></i> Search city</button>
+          </div>
+          <div class="container-custom-card__cities col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <dl>
               <dt>
                 <label class="area-label"> Select your city</label>
@@ -64,9 +67,7 @@
                 <div id="cities"></div>
               </dd>
             </dl>
-          </div>
-          <div style="padding-top: 30px;" class="container-custom-card col-xs-8 col-sm-8 col-lg-8">
-            <div class="container-custom-card__item">
+            <div style="display:none;" class="container-custom-card__item">
               <!-- Виджет: 1, цвет: brown-->
               <div class="widget-left">
                 <div class="widget-left-menu widget-left-menu--brown">
@@ -102,7 +103,7 @@
                   </div>
                 </div>
               </div>
-            </div><span id="widget-31-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+            </div><span id="widget-31-right-brown" style="display:none;" class="container-custom-card__btn container-custom-card__btn--brown"> <i class="fa fa-clone"></i> Get a code</span>
           </div>
         </form><!-- Коричневый виджет -->
         <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">
@@ -146,7 +147,7 @@
                         </div>
                       </div>
                     </div>
-                  </div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                  </div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
                 </div>
                 <div class="container-custom__item">
                   <div class="container-custom-card">
@@ -175,7 +176,7 @@
                           </div>
                         </div>
                       </div>
-                    </div><span id="widget-2-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                    </div><span id="widget-2-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
                   </div>
                   <div class="container-custom">
                     <div class="container-custom-card">
@@ -195,7 +196,7 @@
                             </div>
                           </div>
                         </div>
-                      </div><span id="widget-3-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                      </div><span id="widget-3-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                      </span>
                     </div>
                     <div class="container-custom-card">
                       <div class="container-custom-card__item">
@@ -214,7 +215,7 @@
                             </div>
                           </div>
                         </div>
-                      </div><span id="widget-4-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                      </div><span id="widget-4-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                      </span>
                     </div>
                   </div>
                 </div>
@@ -270,7 +271,7 @@
                         </div>
                       </div>
                     </div>
-                  </div><span id="widget-5-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                  </div><span id="widget-5-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                  </span>
                 </div>
                 <div class="container-custom__item container-custom__item--type1">
                   <div class="container-custom-card">
@@ -292,7 +293,7 @@
                           <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
                         </div>
                       </div>
-                    </div><span id="widget-6-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                    </div><span id="widget-6-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                    </span>
                   </div>
                   <div class="container-custom-card">
                     <div class="container-custom-card__item">
@@ -327,7 +328,7 @@
                           <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
                         </div>
                       </div>
-                    </div><span id="widget-7-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                    </div><span id="widget-7-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
                   </div>
                 </div>
               </div>
@@ -355,7 +356,7 @@
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-8-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                </div><span id="widget-8-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                </span>
               </div>
               <div class="container-custom-card">
                 <div class="container-custom-card__item">
@@ -379,7 +380,7 @@
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-9-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                </div><span id="widget-9-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                </span>
               </div>
             </div>
           </div>
@@ -426,7 +427,7 @@
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-1-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                </div><span id="widget-1-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                </span>
               </div>
               <div class="container-custom__item">
                 <div class="container-custom-card">
@@ -455,7 +456,7 @@
                         </div>
                       </div>
                     </div>
-                  </div><span id="widget-2-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                  </div><span id="widget-2-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                  </span>
                 </div>
                 <div class="container-custom">
                   <div class="container-custom-card">
@@ -494,7 +495,7 @@
                           </div>
                         </div>
                       </div>
-                    </div><span id="widget-4-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                    </div><span id="widget-4-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code</span>
                   </div>
                 </div>
               </div>
@@ -550,7 +551,7 @@
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-5-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                </div><span id="widget-5-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code</span>
               </div>
               <div class="container-custom__item container-custom__item--type1">
                 <div class="container-custom-card">
@@ -572,7 +573,7 @@
                         <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
-                  </div><span id="widget-6-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                  </div><span id="widget-6-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                  </span>
                 </div>
                 <div class="container-custom-card">
                   <div class="container-custom-card__item">
@@ -607,7 +608,7 @@
                         <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
-                  </div><span id="widget-7-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                  </div><span id="widget-7-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                  </span>
                 </div>
               </div>
             </div>
@@ -635,7 +636,7 @@
                     </div>
                   </div>
                 </div>
-              </div><span id="widget-8-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+              </div><span id="widget-8-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code              </span>
             </div>
             <div class="container-custom-card">
               <div class="container-custom-card__item">
@@ -659,7 +660,7 @@
                     </div>
                   </div>
                 </div>
-              </div><span id="widget-9-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+              </div><span id="widget-9-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code              </span>
             </div>
           </div>
         </div>
@@ -705,7 +706,7 @@
                     </div>
                   </div>
                 </div>
-              </div><span id="widget-1-left-white" class="container-custom-card__btn">Get a code</span>
+              </div><span id="widget-1-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code              </span>
             </div>
           </div>
           <div class="container-custom__item">
@@ -735,7 +736,7 @@
                     </div>
                   </div>
                 </div>
-              </div><span id="widget-2-left-white" class="container-custom-card__btn">Get a code</span>
+              </div><span id="widget-2-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code              </span>
             </div>
             <div class="container-custom">
               <div class="container-custom-card">
@@ -755,7 +756,7 @@
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-3-left-white" class="container-custom-card__btn">Get a code</span>
+                </div><span id="widget-3-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code                </span>
               </div>
               <div class="container-custom-card">
                 <div class="container-custom-card__item">
@@ -774,7 +775,7 @@
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-4-left-white" class="container-custom-card__btn">Get a code</span>
+                </div><span id="widget-4-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code                </span>
               </div>
             </div>
           </div>

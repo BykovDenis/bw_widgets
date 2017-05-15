@@ -33,8 +33,7 @@
 
 /* Сервисный контейнеры для лендинг страницы */
 @import "services/container";
-@import "services/container-card";
+@import "services/container-custom-card";
 
 /* При переносе в общую сборку закоментить */
 @import "toggle-switch";
-
