@@ -6,13 +6,18 @@
     <link href="themes/openweathermap/assets/vendor/owm/css/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald:100,400,700,300" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,500,400italic,500italic,700italic" rel="stylesheet" type="text/css"/>
-    <script src="themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script><!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/><!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- Latest compiled and minified JavaScript -->
+    <script src="themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+    <!-- Latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- Optional theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
-  <body><!-- Переключатель параметров единиц измерения температуры -->
+  <body>
+    <!-- Переключатель параметров единиц измерения температуры-->
     <label style="width:100px" onclick="" class="toggle candy blue">
       <input id="units_check" type="checkbox" checked="checked"/>
       <p><span id="metric">  °C</span><span id="imperial">°F</span></p><a class="slide-button"></a><a class="slide-button"></a>
@@ -47,7 +52,7 @@
                 <label class="aria-label">Your city name</label>
               </dt>
               <dd>
-                <input id="city-name" type="text" value="Moscow" class="form-control"/>
+                <input id="city-name" type="text" value="London" class="form-control"/>
                 <button type="button" id="search-city" class="btn-btn-default">Search city</button>
               </dd>
             </dl>

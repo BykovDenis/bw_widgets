@@ -21,7 +21,7 @@ export default class Cities {
 
     this.cityName = cityName.value.replace(/(\s)+/g,'-').toLowerCase();
     this.container = container || '';
-    this.url = `http://openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
+    this.url = `${document.location.protocol}//openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
 
     this.selCitySign = document.createElement('span');
     this.selCitySign.innerText = ' selected ';
@@ -81,7 +81,7 @@ export default class Cities {
           event.target.parentElement.insertBefore(that.selCitySign, event.target.parentElement.children[1]);
 
           const generateWidget = new GeneratorWidget();
-          
+
           // Подстановка найденого города
           generateWidget.paramsWidget.cityId = event.target.id;
           generateWidget.paramsWidget.cityName = event.target.textContent;
@@ -93,10 +93,10 @@ export default class Cities {
 
           const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
           objWidget.render();
-          
+
         }
       }
-      
+
     });
   }
 
