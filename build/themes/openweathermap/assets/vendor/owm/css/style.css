@@ -399,6 +399,10 @@ th {
   width: 100% !important;
   min-width: 1130px;
   border-radius: 6px; }
+  .widget-form::after {
+    display: table;
+    content: '';
+    clear: both; }
   .widget-form__label {
     font: 400 14px "Roboto", Arial, sans-serif; }
   .widget-form__btn {

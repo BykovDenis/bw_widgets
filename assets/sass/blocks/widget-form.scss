@@ -7,6 +7,12 @@
   min-width: 1130px;
   border-radius: 6px;
 
+  &::after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+
   &__label{
     font: 400 $font-size / 1 $font-roboto;
   }
