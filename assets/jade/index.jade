@@ -63,6 +63,13 @@ html(lang="en")
                     label.area-label  Select your city
                 dd
                     div#cities
+          .container-custom-card__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
+            dl
+                dt
+                    label.area-label  Select type widgets
+                dd
+                  a(href="#widgets-type-gray")
+                    img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type gray")                    
             .container-custom-card__item(style="display:none;")
               // Виджет: 1, цвет: brown
               .widget-left
@@ -587,7 +594,7 @@ html(lang="en")
                 |  Get a code              
       <!-- Бесцветный виджет -->
       // Первый контейнер
-      .container-custom__item
+      div#widgets-type-gray.container-custom__item
         .main.main--gray
           .container-custom
             .container-custom-card
