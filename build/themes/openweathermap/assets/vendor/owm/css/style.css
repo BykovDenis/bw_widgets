@@ -405,6 +405,8 @@ th {
     clear: both; }
   .widget-form__label {
     font: 400 14px "Roboto", Arial, sans-serif; }
+  .widget-form__link {
+    display: block; }
   .widget-form__btn {
     display: block;
     padding: 10px 40px;

@@ -17,6 +17,10 @@
     font: 400 $font-size / 1 $font-roboto;
   }
 
+  &__link {
+    display: block;
+  }
+
   &__btn {
     display: block;
     padding: 10px 40px;
