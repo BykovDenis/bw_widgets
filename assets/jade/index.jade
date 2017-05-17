@@ -63,13 +63,19 @@ html(lang="en")
                     label.area-label  Select your city
                 dd
                     div#cities
-          .container-custom-card__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
+          .widget-form__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
             dl
                 dt
                     label.area-label  Select type widgets
                 dd
-                  a.widget-form__link(href="#widgets-type-gray")
+                  a.widget-form__link(href="#widgets-type-brown")
+                    img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                                            
+                dd
+                  a.widget-form__link(href="#widgets-type-blue")
                     img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type gray")                    
+                dd
+                  a.widget-form__link(href="#widgets-type-gray")
+                    img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                        
             .container-custom-card__item(style="display:none;")
               // Виджет: 1, цвет: brown
               .widget-left
@@ -115,6 +121,7 @@ html(lang="en")
               |  Get a code
         <!-- Коричневый виджет -->
         .widget__layout
+          a(name="widgets-type-brown")        
           .container-custom__item.col-xs-12.col-sm-12.col-lg-12
             .main.main--brown
               .container-custom__item
@@ -355,7 +362,8 @@ html(lang="en")
                   span.container-custom-card__btn.container-custom-card__btn--brown#widget-9-right-brown
                     i.fa.fa-clone
                     |  Get a code
-      .widget__layout                    
+      .widget__layout       
+        a(name="widgets-type-blue")             
         .container-custom__item
           .main.main--blue
             .container-custom__item
@@ -596,7 +604,8 @@ html(lang="en")
                   |  Get a code              
       <!-- Бесцветный виджет -->
       // Первый контейнер
-      div#widgets-type-gray.widget__layout
+      div.widget__layout
+        a(name="widgets-type-gray")
         .container-custom__item
           .main.main--gray
             .container-custom

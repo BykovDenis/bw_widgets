@@ -405,7 +405,11 @@ th {
     clear: both; }
   .widget-form__label {
     font: 400 14px "Roboto", Arial, sans-serif; }
-  .widget-form__link {
+  .widget-form__cities {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+  .widget-form__cities .widget-form__link {
     display: block; }
   .widget-form__btn {
     display: block;
@@ -1704,10 +1708,6 @@ th {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .container-custom-card__cities {
-    -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
-            align-self: flex-start; }
   .container-custom-card__btn-search {
     display: inline-block;
     margin-bottom: 0;

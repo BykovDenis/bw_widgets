@@ -17,7 +17,11 @@
     font: 400 $font-size / 1 $font-roboto;
   }
 
-  &__link {
+  &__cities {
+    align-self: flex-start;
+  }
+
+  &__cities &__link {
     display: block;
   }
 
@@ -33,7 +37,6 @@
     background-color: $color-white;
     color: $color-black;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
-
 
     &:hover {
       box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
