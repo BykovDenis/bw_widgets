@@ -353,7 +353,7 @@ export default class WeatherWidget extends CustomDate {
         var found = (elem.date).match(reg);
         date = new Date(`${found[2]}-${found[1]}-${found[0]} ${found[3]}:${found[4] ? found[4] : '00' }:${found[5] ? found[5] : '00'}`);
         if (date.toString() === 'Invalid Date') {
-          date = new Date(found[2],found[0] - 1,found[1],found[3],found[4] ? found[4] : '00', found[5] ? found[5] : '00');
+          date = new Date(found[2],found[1] - 1,found[0],found[3],found[4] ? found[4] : '00', found[5] ? found[5] : '00');
         }
       }
       that.controls.calendarItem[index].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
