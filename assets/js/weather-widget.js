@@ -331,7 +331,8 @@ export default class WeatherWidget extends CustomDate {
         max: Math.round(elem.temp.max),
         day: (elem != 0) ? day : 'Today',
         icon: elem.weather[0].icon,
-        date: this.timestampToDateTime(elem.dt)
+        date: this.timestampToDateTime(elem.dt),
+        dt: elem.dt,
       });
     });
     return this.drawGraphicD3(arr);
@@ -345,17 +346,7 @@ export default class WeatherWidget extends CustomDate {
     const that = this;
 
     data.forEach((elem, index) => {
-      let date;
-      date = new Date(elem.date.replace(/(\d+).(\d+).(\d+)/, '$3-$2-$1'));
-      // для edge строим другой алгоритм даты
-      if (date.toString() === 'Invalid Date') {
-        var reg = /(\d+)/ig;
-        var found = (elem.date).match(reg);
-        date = new Date(`${found[2]}-${found[1]}-${found[0]} ${found[3]}:${found[4] ? found[4] : '00' }:${found[5] ? found[5] : '00'}`);
-        if (date.toString() === 'Invalid Date') {
-          date = new Date(found[2],found[1] - 1,found[0],found[3],found[4] ? found[4] : '00', found[5] ? found[5] : '00');
-        }
-      }
+      const date = new Date(elem.dt * 1000);
       that.controls.calendarItem[index].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
       that.controls.calendarItem[index + 8].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
       that.controls.calendarItem[index + 18].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
