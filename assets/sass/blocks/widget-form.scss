@@ -1,10 +1,9 @@
 .widget-form {
 
   margin: 0 auto;
-  margin-bottom: 80px;
   padding: 20px;
   width: 100% !important;
-  min-width: 1130px;
+  min-width: 1050px;
   border-radius: 6px;
 
   &::after {
@@ -21,7 +20,7 @@
     align-self: flex-start;
   }
 
-  &__cities &__link {
+  &__link-cities {
     display: block;
   }
 

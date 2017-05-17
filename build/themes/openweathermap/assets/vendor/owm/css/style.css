@@ -388,16 +388,19 @@ th {
 
 .widget {
   max-width: 1050px; }
+  .widget__layout::after {
+    display: table;
+    content: '';
+    clear: both; }
   .widget__title {
     text-align: center;
     font-family: "Roboto", Arial, sans-serif; }
 
 .widget-form {
   margin: 0 auto;
-  margin-bottom: 80px;
   padding: 20px;
   width: 100% !important;
-  min-width: 1130px;
+  min-width: 1050px;
   border-radius: 6px; }
   .widget-form::after {
     display: table;
@@ -409,7 +412,7 @@ th {
     -webkit-align-self: flex-start;
         -ms-flex-item-align: start;
             align-self: flex-start; }
-  .widget-form__cities .widget-form__link {
+  .widget-form__link-cities {
     display: block; }
   .widget-form__btn {
     display: block;
