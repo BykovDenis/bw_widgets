@@ -125,8 +125,8 @@ html(lang="en")
         .container-custom__item.col-xs-12.col-sm-12.col-lg-12
           .main
             .container-custom__item
-              .container-custom
-                .container-custom-card
+              .container-custom__left
+                .container-custom__left-row1
                   .container-custom-card__item
                     // Виджет: 1, цвет: brown
                     .widget-left
@@ -169,8 +169,8 @@ html(lang="en")
                   span.container-custom-card__btn.container-custom-card__btn--brown#widget-1-left-brown
                     i.fa.fa-clone
                     |  Get a code
-                .container-custom__item
-                  .container-custom-card
+                .container-custom__left-row2
+                  .container-custom__left-row2-col1
                     .container-custom-card__item
                       // Виджет: 2, цвет: brown
                       .widget-left.widget-left--compact
@@ -195,7 +195,7 @@ html(lang="en")
                     span.container-custom-card__btn.container-custom-card__btn--brown#widget-2-left-brown
                       i.fa.fa-clone
                       |  Get a code
-                  .container-custom
+                  .container-custom__left-row2-col1
                     .container-custom-card
                       .container-custom-card__item
                         // Виджет: 3, цвет: brown
@@ -232,9 +232,56 @@ html(lang="en")
                       span.container-custom-card__btn.container-custom-card__btn--brown#widget-4-left-brown
                         i.fa.fa-clone
                         |  Get a code                      
-              .container-custom
+                  .container-custom__left-row2-col1.container-custom__item--type1
+                        .container-custom-card
+                          .container-custom-card__item
+                            // Виджет: 6, цвет: brown
+                            .widget-right.widget-right--type2.widget-right--brown
+                              .widget-right__header.widget-right__header--brown
+                                .widget-right__layout
+                                  h1.widget-right__title Moscow
+                                  p.widget-right__description Cloudy Skies
+                              .weather-right.weather-right--brown.weather-right--type2
+                                .weather-right__layout
+                                  .weather-right__temperature -10
+                                    span.widget-right__units &#176;
+                              .widget-right__footer.widget-right__footer--brown
+                                .widget-right__layout
+                                  a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                          span.container-custom-card__btn.container-custom-card__btn--brown#widget-6-right-brown
+                            i.fa.fa-clone
+                            |  Get a code                    
+                        .container-custom-card
+                          .container-custom-card__item
+                            // Виджет: 7, цвет: brown
+                            .widget-right.widget-right--type3.widget-right--brown
+                              .widget-right__header.widget-right__header--brown
+                                .widget-right__layout
+                                  h1.widget-right__title Moscow
+                                  p.widget-right__description Cloudy Skies
+                              .weather-right.weather-right--brown.weather-right--type3
+                                .weather-right__layout
+                                  .weather-right__temperature -10
+                                    span.widget-right__units &#176;
+                                  table.weather-right-table
+                                    tr.weather-right-table__items
+                                      td.weather-right-table__item Feels Like
+                                      td.weather-right-table__item.weather-right__feels -13 &#176;
+                                    tr.weather-right-table__items
+                                      td.weather-right-table__item Wind
+                                      td.weather-right-table__item.weather-right__wind-speed  3 m/s W
+                                    tr.weather-right-table__items
+                                      td.weather-right-table__item Pessure
+                                      td.weather-right-table__item.weather-right__pressure  1003.0 mb
+                              .widget-right__footer.widget-right__footer--brown
+                                .widget-right__layout
+                                  a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                          span.container-custom-card__btn.container-custom-card__btn--brown#widget-7-right-brown
+                            i.fa.fa-clone
+                            |  Get a code                           
+              .container-custom__right
                 .container-custom-card
-                  .container-custom-card__item
+                  .container-custom-card
                     // Виджет: 5, цвет: brown
                     .widget-right.weather-right--type1.widget-right--brown
                       .widget-right__header.widget-right__header--brown
@@ -273,95 +320,48 @@ html(lang="en")
                           .widget-right__date.widget__date 20:16 Mar 28
                   span.container-custom-card__btn.container-custom-card__btn--brown#widget-5-right-brown
                     i.fa.fa-clone
-                    |  Get a code                  
-                .container-custom__item.container-custom__item--type1
+                    |  Get a code
+                .container-custom.container-custom--type1
                   .container-custom-card
                     .container-custom-card__item
-                      // Виджет: 6, цвет: brown
-                      .widget-right.widget-right--type2.widget-right--brown
-                        .widget-right__header.widget-right__header--brown
-                          .widget-right__layout
-                            h1.widget-right__title Moscow
-                            p.widget-right__description Cloudy Skies
-                        .weather-right.weather-right--brown.weather-right--type2
-                          .weather-right__layout
-                            .weather-right__temperature -10
-                              span.widget-right__units &#176;
+                      // Виджет: 8, цвет: brown
+                      .widget-right.widget-right--type5.widget-right--brown
+                        .widget-right__layout.widget-right__layout--brown
+                          .widget-right-card
+                            .widget-right__title Moscow
+                            .widget-right__description Cloudy Skies
+                          img.weather-right__icon.weather-right__icon--type5.weather-right__icon--brown( width="64" height="64" alt="Cloudy Skies")
+                          table.weather-right-card
+                            tr.weather-right-card__items
+                              td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
+                              td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
                         .widget-right__footer.widget-right__footer--brown
                           .widget-right__layout
                             a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-6-right-brown
+                            .widget-right__date.widget__date 20:16 Mar 28
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-8-right-brown
                       i.fa.fa-clone
-                      |  Get a code                    
+                      |  Get a code                
                   .container-custom-card
                     .container-custom-card__item
-                      // Виджет: 7, цвет: brown
-                      .widget-right.widget-right--type3.widget-right--brown
-                        .widget-right__header.widget-right__header--brown
-                          .widget-right__layout
-                            h1.widget-right__title Moscow
-                            p.widget-right__description Cloudy Skies
-                        .weather-right.weather-right--brown.weather-right--type3
-                          .weather-right__layout
-                            .weather-right__temperature -10
-                              span.widget-right__units &#176;
-                            table.weather-right-table
-                              tr.weather-right-table__items
-                                td.weather-right-table__item Feels Like
-                                td.weather-right-table__item.weather-right__feels -13 &#176;
-                              tr.weather-right-table__items
-                                td.weather-right-table__item Wind
-                                td.weather-right-table__item.weather-right__wind-speed  3 m/s W
-                              tr.weather-right-table__items
-                                td.weather-right-table__item Pessure
-                                td.weather-right-table__item.weather-right__pressure  1003.0 mb
+                      // Виджет: 9, цвет: brown
+                      .widget-right.widget-right--type4.widget-right--brown
+                        .widget-right__layout.widget-right__layout--brown
+                          .widget-right-card
+                            .widget-right__title Moscow
+                            .widget-right__description Cloudy Skies
+                          img.weather-right__icon.weather-right__icon--type4.weather-right__icon--brown( width="100" alt="Cloudy Skies")
+                          table.weather-right-card
+                            tr.weather-right-card__items
+                              td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
+                              td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
                         .widget-right__footer.widget-right__footer--brown
                           .widget-right__layout
                             a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-7-right-brown
+                            .widget-right__date.widget__date 20:16 Mar 28
+                    span.container-custom-card__btn.container-custom-card__btn--brown#widget-9-right-brown
                       i.fa.fa-clone
-                      |  Get a code
-            .container-custom.container-custom--type1
-              .container-custom-card
-                .container-custom-card__item
-                  // Виджет: 8, цвет: brown
-                  .widget-right.widget-right--type5.widget-right--brown
-                    .widget-right__layout.widget-right__layout--brown
-                      .widget-right-card
-                        .widget-right__title Moscow
-                        .widget-right__description Cloudy Skies
-                      img.weather-right__icon.weather-right__icon--type5.weather-right__icon--brown( width="64" height="64" alt="Cloudy Skies")
-                      table.weather-right-card
-                        tr.weather-right-card__items
-                          td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
-                          td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
-                    .widget-right__footer.widget-right__footer--brown
-                      .widget-right__layout
-                        a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                        .widget-right__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn.container-custom-card__btn--brown#widget-8-right-brown
-                  i.fa.fa-clone
-                  |  Get a code                
-              .container-custom-card
-                .container-custom-card__item
-                  // Виджет: 9, цвет: brown
-                  .widget-right.widget-right--type4.widget-right--brown
-                    .widget-right__layout.widget-right__layout--brown
-                      .widget-right-card
-                        .widget-right__title Moscow
-                        .widget-right__description Cloudy Skies
-                      img.weather-right__icon.weather-right__icon--type4.weather-right__icon--brown( width="100" alt="Cloudy Skies")
-                      table.weather-right-card
-                        tr.weather-right-card__items
-                          td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
-                          td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
-                    .widget-right__footer.widget-right__footer--brown
-                      .widget-right__layout
-                        a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                        .widget-right__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn.container-custom-card__btn--brown#widget-9-right-brown
-                  i.fa.fa-clone
-                  |  Get a code         
+                      |  Get a code                             
       a(name="widgets-type-blue")                     
       .widget__layout                         
         .container-custom__item
