@@ -1,12 +1,12 @@
-.container-custom{
+.container-custom {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
   align-items: baseline;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 !important;
 
-  &__item{
+  &__item {
     display: flex;
     flex-direction: row;
     align-content: stretch;
@@ -28,4 +28,12 @@
     margin-top: 10px;
   }
 
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    &__item {
+      padding: 0 !important;
+    }
+  }
 }

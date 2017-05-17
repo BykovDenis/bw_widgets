@@ -42,7 +42,7 @@ html(lang="en")
         // Лендинг с информацией по виджетам
         h1.widget__title Get a code for posting a weather forecast widget on your site.
         form.widget-form.navbar-form                
-          .form-group.col-xs-3.col-sm-3.col-lg-3
+          .form-group.col-xs-3.col-sm-12.col-md-3.col-lg-3
             dl
                 dt
                     label.aria-label Your API key:
@@ -63,9 +63,9 @@ html(lang="en")
                     label.area-label  Select your city
                 dd
                     div#cities
-          .widget-form__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
+          .widget-form__cities.col-xs-12.col-sm-12.col-md-5.col-lg-5
             dl
-                dt
+                dt.widget-form__title
                     label.area-label  Select type widgets
                 dd
                   a.widget-form__link-cities(href="#widgets-type-brown")
