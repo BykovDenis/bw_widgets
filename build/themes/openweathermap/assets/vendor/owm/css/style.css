@@ -1786,7 +1786,8 @@ th {
     -webkit-align-content: stretch;
         -ms-flex-line-pack: stretch;
             align-content: stretch;
-    padding: 10px; }
+    padding: 10px;
+    margin-top: 40px; }
     .container-custom__item--type1 {
       -webkit-box-align: baseline;
       -webkit-align-items: baseline;

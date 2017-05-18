@@ -365,252 +365,253 @@ html(lang="en")
                       |  Get a code                             
       // Коричневый виджет                      
       a(name="widgets-type-blue")                     
-      .container-custom__item.col-xs-12.col-sm-12.col-lg-12
-        .main
-          .container-custom__item
-            .container-custom__left
-              .container-custom__left-row1
-                .container-custom-card
-                  .container-custom-card__item
-                    // Виджет: 1, цвет: blue
-                    .widget-left.widget-left--blue
-                      .widget-left-menu.widget-left-menu--blue
-                        .widget-left-menu__layout
-                          h1.widget-left-menu__header Weather for London
-                          .widget-left-menu__links
-                            span More at
-                            a.widget-left-menu__link(href="//openweathermap.org/" ) OpenWeatherMap
-                      .widget-left__body
-                        .weather-left-card
-                          .weather-left-card__row1
-                            img.weather-left-card__img( width="128" height="128" alt="Weather")
-                            .weather-left-card__col
-                              p.weather-left-card__number 0
-                                span.weather-left-card__degree &176;
-                              span.weather-left-card__rising and rising
-                          .weather-left-card__row2
-                            p.weather-left-card__means -
-                            p.weather-left-card__wind Wind:
-                        .widget-left__calendar
-                          ul.calendar
-                            li.calendar__item Today
-                              img( width="32" height="32" alt="Today")
-                            li.calendar__item Sat
-                              img( width="32" height="32" alt="Sat")
-                            li.calendar__item Sun
-                              img( width="32" height="32" alt="Sun")
-                            li.calendar__item Mon
-                              img( width="32" height="32" alt="Mon")
-                            li.calendar__item Tue
-                              img( width="32" height="32" alt="Tue")
-                            li.calendar__item Wed
-                              img( width="32" height="32" alt="Wed")
-                            li.calendar__item Thu
-                              img( width="32" height="32" alt="Thu")
-                            li.calendar__item Fri
-                              img( width="32" height="32" alt="Fri")
-                          div.widget-left__graphic(id="graphic1")
-                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-1-left-blue
-                    i.fa.fa-clone
-                    |  Get a code
-              .container-custom__left-row2
-                .container-custom__left-row2-col1
+      .widget__layout      
+        .container-custom__item.col-xs-12.col-sm-12.col-lg-12
+          .main
+            .container-custom__item
+              .container-custom__left
+                .container-custom__left-row1
                   .container-custom-card
                     .container-custom-card__item
-                      // Виджет: 2, цвет: blue
-                      .widget-left.widget-left--compact
-                        .widget-left-menu.widget-left-menu--compact.widget-left-menu--blue
-                          .widget-left-menu__layout.widget-left-menu__layout--blue
+                      // Виджет: 1, цвет: blue
+                      .widget-left.widget-left--blue
+                        .widget-left-menu.widget-left-menu--blue
+                          .widget-left-menu__layout
                             h1.widget-left-menu__header Weather for London
-                        .widget-left__body.widget-left__body--compact.widget-left__body--blue
-                          .weather-left-card.weather-left-card--compact
+                            .widget-left-menu__links
+                              span More at
+                              a.widget-left-menu__link(href="//openweathermap.org/" ) OpenWeatherMap
+                        .widget-left__body
+                          .weather-left-card
                             .weather-left-card__row1
-                              img.weather-left-card__img( width="128" height="128" alt="Weather for London")
+                              img.weather-left-card__img( width="128" height="128" alt="Weather")
                               .weather-left-card__col
-                                p.weather-left-card__number -
+                                p.weather-left-card__number 0
                                   span.weather-left-card__degree &176;
                                 span.weather-left-card__rising and rising
                             .weather-left-card__row2
                               p.weather-left-card__means -
                               p.weather-left-card__wind Wind:
-                          .widget-left-menu__links.widget-left-menu__links--compact.widget-left-menu__links--blue
-                            .widget-left-menu__layout.widget-left-menu__layout--blue
-                              span More at
-                              a.widget-left-menu__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-2-left-blue
+                          .widget-left__calendar
+                            ul.calendar
+                              li.calendar__item Today
+                                img( width="32" height="32" alt="Today")
+                              li.calendar__item Sat
+                                img( width="32" height="32" alt="Sat")
+                              li.calendar__item Sun
+                                img( width="32" height="32" alt="Sun")
+                              li.calendar__item Mon
+                                img( width="32" height="32" alt="Mon")
+                              li.calendar__item Tue
+                                img( width="32" height="32" alt="Tue")
+                              li.calendar__item Wed
+                                img( width="32" height="32" alt="Wed")
+                              li.calendar__item Thu
+                                img( width="32" height="32" alt="Thu")
+                              li.calendar__item Fri
+                                img( width="32" height="32" alt="Fri")
+                            div.widget-left__graphic(id="graphic1")
+                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-1-left-blue
                       i.fa.fa-clone
                       |  Get a code
-                .container-custom__left-row2-col1
+                .container-custom__left-row2
+                  .container-custom__left-row2-col1
+                    .container-custom-card
+                      .container-custom-card__item
+                        // Виджет: 2, цвет: blue
+                        .widget-left.widget-left--compact
+                          .widget-left-menu.widget-left-menu--compact.widget-left-menu--blue
+                            .widget-left-menu__layout.widget-left-menu__layout--blue
+                              h1.widget-left-menu__header Weather for London
+                          .widget-left__body.widget-left__body--compact.widget-left__body--blue
+                            .weather-left-card.weather-left-card--compact
+                              .weather-left-card__row1
+                                img.weather-left-card__img( width="128" height="128" alt="Weather for London")
+                                .weather-left-card__col
+                                  p.weather-left-card__number -
+                                    span.weather-left-card__degree &176;
+                                  span.weather-left-card__rising and rising
+                              .weather-left-card__row2
+                                p.weather-left-card__means -
+                                p.weather-left-card__wind Wind:
+                            .widget-left-menu__links.widget-left-menu__links--compact.widget-left-menu__links--blue
+                              .widget-left-menu__layout.widget-left-menu__layout--blue
+                                span More at
+                                a.widget-left-menu__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                      span.container-custom-card__btn.container-custom-card__btn--blue#widget-2-left-blue
+                        i.fa.fa-clone
+                        |  Get a code
+                  .container-custom__left-row2-col1
+                    .container-custom-card
+                      .container-custom-card__item
+                        // Виджет: 3, цвет: blue
+                        .widget-left.widget-left--small.widget-left--blue
+                          .widget-left-menu.widget-left-menu--small.widget-left-menu--blue
+                            h1.widget-left-menu__header London
+                            ul.calendar.calendar--small
+                              li.calendar__item.calendar__item--blue
+                                img.weather-left-card__img.weather-left-card__img--small( width="32" height="32" alt="Today")
+                            p.weather-left-card__number.weather-left-card__number--small 0
+                              sup.weather-left-card__degree
+                          .widget-left__footer.widget-left__footer--blue
+                            .widget-left__layout
+                              a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                              .widget-left__date.widget__date 20:16 Mar 28
+                      span.container-custom-card__btn.container-custom-card__btn--blue#widget-3-left-blue
+                        i.fa.fa-clone
+                        |  Get a code                      
+                    .container-custom-card
+                      .container-custom-card__item
+                        // Виджет: 4, цвет: blue
+                        .widget-left.widget-left--small.widget-left--blue
+                          .widget-left-menu.widget-left-menu--small.widget-left-menu--blue
+                            h1.widget-left-menu__header London
+                            ul.calendar.calendar--small2
+                              li.calendar__item.calendar__item--blue
+                                img.weather-left-card__img.weather-left-card__img--small( width="32" height="32" alt="Today")
+                            p.weather-left-card__number.weather-left-card__number--small 0
+                              sup.weather-left-card__degree
+                          .widget-left__footer.widget-left__footer--blue
+                            .widget-left__layout
+                              a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                              .widget-left__date.widget__date 20:16 Mar 28
+                      span.container-custom-card__btn.container-custom-card__btn--blue#widget-4-left-blue
+                        i.fa.fa-clone
+                        |  Get a code                      
+                  .container-custom__left-row2-col1.container-custom__item--type1
+                        .container-custom-card
+                          .container-custom-card__item
+                            // Виджет: 6, цвет: blue
+                            .widget-right.widget-right--type2.widget-right--blue
+                              .widget-right__header.widget-right__header--blue
+                                .widget-right__layout
+                                  h1.widget-right__title London
+                                  p.widget-right__description Cloudy Skies
+                              .weather-right.weather-right--blue.weather-right--type2
+                                .weather-right__layout
+                                  .weather-right__temperature -10
+                                    span.widget-right__units &#176;
+                              .widget-right__footer.widget-right__footer--blue
+                                .widget-right__layout
+                                  a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                          span.container-custom-card__btn.container-custom-card__btn--blue#widget-6-right-blue
+                            i.fa.fa-clone
+                            |  Get a code                    
+                        .container-custom-card
+                          .container-custom-card__item
+                            // Виджет: 7, цвет: blue
+                            .widget-right.widget-right--type3.widget-right--blue
+                              .widget-right__header.widget-right__header--blue
+                                .widget-right__layout
+                                  h1.widget-right__title London
+                                  p.widget-right__description Cloudy Skies
+                              .weather-right.weather-right--blue.weather-right--type3
+                                .weather-right__layout
+                                  .weather-right__temperature -10
+                                    span.widget-right__units &#176;
+                                  table.weather-right-table
+                                    tr.weather-right-table__items
+                                      td.weather-right-table__item Feels Like
+                                      td.weather-right-table__item.weather-right__feels -13 &#176;
+                                    tr.weather-right-table__items
+                                      td.weather-right-table__item Wind
+                                      td.weather-right-table__item.weather-right__wind-speed  3 m/s W
+                                    tr.weather-right-table__items
+                                      td.weather-right-table__item Pessure
+                                      td.weather-right-table__item.weather-right__pressure  1003.0 mb
+                              .widget-right__footer.widget-right__footer--blue
+                                .widget-right__layout
+                                  a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                          span.container-custom-card__btn.container-custom-card__btn--blue#widget-7-right-blue
+                            i.fa.fa-clone
+                            |  Get a code                           
+              .container-custom__right
+                .container-custom-card
+                  // Виджет: 5, цвет: blue
+                  .widget-right.weather-right--type1.widget-right--blue
+                    .widget-right__header.widget-right__header--blue
+                      .widget-right__layout
+                        h1.widget-right__title London
+                        p.widget-right__description Cloudy Skies
+                      img.weather-right__icon.weather-right__icon--type1( width="128" height="128" alt="Cloudy Skies")
+                    .weather-right.weather-right--blue
+                      .weather-right__layout
+                        .weather-right__temperature 10
+                          span.widget-right__units &#176;
+                        .weather-right__weather
+                          .weather-right-card
+                            table.weather-right__table
+                              tr.weather-right__items
+                                th(colspan="2").weather-right__item Details
+                              tr.weather-right__items
+                                td.weather-right__item Feels like
+                                td.weather-right__item.weather-right__feels -13
+                                  span.widget-right-card__units &#176;
+                              tr.weather-right__items
+                                td.weather-right__item Wind
+                                td.weather-right__item.weather-right__wind-speed 3 m/s West
+                              tr.weather-right-card__items
+                                td.weather-right__item Humidity
+                                td.weather-right__item.weather-right__humidity 74%
+                              tr.weather-right-card__items
+                                td.weather-right__item Precip
+                                td.weather-right__item
+                              tr.weather-right-card__items
+                                td.weather-right__item Pressure
+                                td.weather-right__item.weather-right__pressure 1003.0 mb
+                    .widget-right__footer.widget-right__footer--blue
+                      .widget-right__layout
+                        a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                        .widget-right__date.widget__date 20:16 Mar 28
+                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-5-right-blue
+                    i.fa.fa-clone
+                    |  Get a code
+                .container-custom.container-custom--type1
                   .container-custom-card
                     .container-custom-card__item
-                      // Виджет: 3, цвет: blue
-                      .widget-left.widget-left--small.widget-left--blue
-                        .widget-left-menu.widget-left-menu--small.widget-left-menu--blue
-                          h1.widget-left-menu__header London
-                          ul.calendar.calendar--small
-                            li.calendar__item.calendar__item--blue
-                              img.weather-left-card__img.weather-left-card__img--small( width="32" height="32" alt="Today")
-                          p.weather-left-card__number.weather-left-card__number--small 0
-                            sup.weather-left-card__degree
-                        .widget-left__footer.widget-left__footer--blue
-                          .widget-left__layout
-                            a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                            .widget-left__date.widget__date 20:16 Mar 28
-                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-3-left-blue
+                      // Виджет: 8, цвет: blue
+                      .widget-right.widget-right--type5.widget-right--blue
+                        .widget-right__layout.widget-right__layout--blue
+                          .widget-right-card
+                            .widget-right__title London
+                            .widget-right__description Cloudy Skies
+                          img.weather-right__icon.weather-right__icon--type5.weather-right__icon--blue( width="64" height="64" alt="Cloudy Skies")
+                          table.weather-right-card
+                            tr.weather-right-card__items
+                              td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
+                              td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
+                        .widget-right__footer.widget-right__footer--blue
+                          .widget-right__layout
+                            a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                            .widget-right__date.widget__date 20:16 Mar 28
+                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-8-right-blue
                       i.fa.fa-clone
-                      |  Get a code                      
+                      |  Get a code                
                   .container-custom-card
                     .container-custom-card__item
-                      // Виджет: 4, цвет: blue
-                      .widget-left.widget-left--small.widget-left--blue
-                        .widget-left-menu.widget-left-menu--small.widget-left-menu--blue
-                          h1.widget-left-menu__header London
-                          ul.calendar.calendar--small2
-                            li.calendar__item.calendar__item--blue
-                              img.weather-left-card__img.weather-left-card__img--small( width="32" height="32" alt="Today")
-                          p.weather-left-card__number.weather-left-card__number--small 0
-                            sup.weather-left-card__degree
-                        .widget-left__footer.widget-left__footer--blue
-                          .widget-left__layout
-                            a.widget-left__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                            .widget-left__date.widget__date 20:16 Mar 28
-                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-4-left-blue
+                      // Виджет: 9, цвет: blue
+                      .widget-right.widget-right--type4.widget-right--blue
+                        .widget-right__layout.widget-right__layout--blue
+                          .widget-right-card
+                            .widget-right__title London
+                            .widget-right__description Cloudy Skies
+                          img.weather-right__icon.weather-right__icon--type4.weather-right__icon--blue( width="100" alt="Cloudy Skies")
+                          table.weather-right-card
+                            tr.weather-right-card__items
+                              td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
+                              td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
+                        .widget-right__footer.widget-right__footer--blue
+                          .widget-right__layout
+                            a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
+                            .widget-right__date.widget__date 20:16 Mar 28
+                    span.container-custom-card__btn.container-custom-card__btn--blue#widget-9-right-blue
                       i.fa.fa-clone
-                      |  Get a code                      
-                .container-custom__left-row2-col1.container-custom__item--type1
-                      .container-custom-card
-                        .container-custom-card__item
-                          // Виджет: 6, цвет: blue
-                          .widget-right.widget-right--type2.widget-right--blue
-                            .widget-right__header.widget-right__header--blue
-                              .widget-right__layout
-                                h1.widget-right__title London
-                                p.widget-right__description Cloudy Skies
-                            .weather-right.weather-right--blue.weather-right--type2
-                              .weather-right__layout
-                                .weather-right__temperature -10
-                                  span.widget-right__units &#176;
-                            .widget-right__footer.widget-right__footer--blue
-                              .widget-right__layout
-                                a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                        span.container-custom-card__btn.container-custom-card__btn--blue#widget-6-right-blue
-                          i.fa.fa-clone
-                          |  Get a code                    
-                      .container-custom-card
-                        .container-custom-card__item
-                          // Виджет: 7, цвет: blue
-                          .widget-right.widget-right--type3.widget-right--blue
-                            .widget-right__header.widget-right__header--blue
-                              .widget-right__layout
-                                h1.widget-right__title London
-                                p.widget-right__description Cloudy Skies
-                            .weather-right.weather-right--blue.weather-right--type3
-                              .weather-right__layout
-                                .weather-right__temperature -10
-                                  span.widget-right__units &#176;
-                                table.weather-right-table
-                                  tr.weather-right-table__items
-                                    td.weather-right-table__item Feels Like
-                                    td.weather-right-table__item.weather-right__feels -13 &#176;
-                                  tr.weather-right-table__items
-                                    td.weather-right-table__item Wind
-                                    td.weather-right-table__item.weather-right__wind-speed  3 m/s W
-                                  tr.weather-right-table__items
-                                    td.weather-right-table__item Pessure
-                                    td.weather-right-table__item.weather-right__pressure  1003.0 mb
-                            .widget-right__footer.widget-right__footer--blue
-                              .widget-right__layout
-                                a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                        span.container-custom-card__btn.container-custom-card__btn--blue#widget-7-right-blue
-                          i.fa.fa-clone
-                          |  Get a code                           
-            .container-custom__right
-              .container-custom-card
-                // Виджет: 5, цвет: blue
-                .widget-right.weather-right--type1.widget-right--blue
-                  .widget-right__header.widget-right__header--blue
-                    .widget-right__layout
-                      h1.widget-right__title London
-                      p.widget-right__description Cloudy Skies
-                    img.weather-right__icon.weather-right__icon--type1( width="128" height="128" alt="Cloudy Skies")
-                  .weather-right.weather-right--blue
-                    .weather-right__layout
-                      .weather-right__temperature 10
-                        span.widget-right__units &#176;
-                      .weather-right__weather
-                        .weather-right-card
-                          table.weather-right__table
-                            tr.weather-right__items
-                              th(colspan="2").weather-right__item Details
-                            tr.weather-right__items
-                              td.weather-right__item Feels like
-                              td.weather-right__item.weather-right__feels -13
-                                span.widget-right-card__units &#176;
-                            tr.weather-right__items
-                              td.weather-right__item Wind
-                              td.weather-right__item.weather-right__wind-speed 3 m/s West
-                            tr.weather-right-card__items
-                              td.weather-right__item Humidity
-                              td.weather-right__item.weather-right__humidity 74%
-                            tr.weather-right-card__items
-                              td.weather-right__item Precip
-                              td.weather-right__item
-                            tr.weather-right-card__items
-                              td.weather-right__item Pressure
-                              td.weather-right__item.weather-right__pressure 1003.0 mb
-                  .widget-right__footer.widget-right__footer--blue
-                    .widget-right__layout
-                      a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                      .widget-right__date.widget__date 20:16 Mar 28
-                span.container-custom-card__btn.container-custom-card__btn--blue#widget-5-right-blue
-                  i.fa.fa-clone
-                  |  Get a code
-              .container-custom.container-custom--type1
-                .container-custom-card
-                  .container-custom-card__item
-                    // Виджет: 8, цвет: blue
-                    .widget-right.widget-right--type5.widget-right--blue
-                      .widget-right__layout.widget-right__layout--blue
-                        .widget-right-card
-                          .widget-right__title London
-                          .widget-right__description Cloudy Skies
-                        img.weather-right__icon.weather-right__icon--type5.weather-right__icon--blue( width="64" height="64" alt="Cloudy Skies")
-                        table.weather-right-card
-                          tr.weather-right-card__items
-                            td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
-                            td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
-                      .widget-right__footer.widget-right__footer--blue
-                        .widget-right__layout
-                          a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                          .widget-right__date.widget__date 20:16 Mar 28
-                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-8-right-blue
-                    i.fa.fa-clone
-                    |  Get a code                
-                .container-custom-card
-                  .container-custom-card__item
-                    // Виджет: 9, цвет: blue
-                    .widget-right.widget-right--type4.widget-right--blue
-                      .widget-right__layout.widget-right__layout--blue
-                        .widget-right-card
-                          .widget-right__title London
-                          .widget-right__description Cloudy Skies
-                        img.weather-right__icon.weather-right__icon--type4.weather-right__icon--blue( width="100" alt="Cloudy Skies")
-                        table.weather-right-card
-                          tr.weather-right-card__items
-                            td.weather-right-card__item.weather-right-card__temperature-min -10&#176;
-                            td.weather-right-card__item.weather-right-card__temperature-max -14&#176;
-                      .widget-right__footer.widget-right__footer--blue
-                        .widget-right__layout
-                          a.widget-right__link(href="http://openweathermap.org/" ) OpenWeatherMap
-                          .widget-right__date.widget__date 20:16 Mar 28
-                  span.container-custom-card__btn.container-custom-card__btn--blue#widget-9-right-blue
-                    i.fa.fa-clone
-                    |  Get a code                             
-      <!-- Бесцветный виджет -->
+                      |  Get a code                             
+      // Бесцветный виджет
       // Первый контейнер
       a(name="widgets-type-gray")
       .widget__layout
-        .container-custom__item          
+        .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
           .main
           .container-custom__item
             .container-custom__left
