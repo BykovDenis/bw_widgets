@@ -19,9 +19,11 @@ export default class Cities {
       return false;
     }
 
+    this.selectedCity = this.selectedCity.bind(this);
+
     this.cityName = cityName.value.replace(/(\s)+/g,'-').toLowerCase();
     this.container = container || '';
-    this.url = `http://openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
+    this.url = `${document.location.protocol}//openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
 
     this.selCitySign = document.createElement('span');
     this.selCitySign.innerText = ' selected ';
@@ -72,32 +74,31 @@ export default class Cities {
     this.container.insertAdjacentHTML('afterbegin', html);
     const tableCities = document.getElementById('table-cities');
 
-    let that = this;
-    tableCities.addEventListener('click', function(event) {
-      event.preventDefault();
-      if (event.target.tagName.toLowerCase() === ('A').toLowerCase() && event.target.classList.contains('widget-form__link')) {
-        let selectedCity = event.target.parentElement.querySelector('#selectedCity');
-        if (!selectedCity) {
-          event.target.parentElement.insertBefore(that.selCitySign, event.target.parentElement.children[1]);
+    tableCities.addEventListener('click', this.selectedCity);
+  }
 
-          const generateWidget = new GeneratorWidget();
-          
-          // Подстановка найденого города
-          generateWidget.paramsWidget.cityId = event.target.id;
-          generateWidget.paramsWidget.cityName = event.target.textContent;
-          generateWidget.paramsWidget.units = this.units;
-          generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
-          window.cityId = event.target.id;
-          window.cityName = event.target.textContent;
+  selectedCity(event) {
+    event.preventDefault();
+    if (event.target.tagName.toLowerCase() === ('A').toLowerCase() && event.target.classList.contains('widget-form__link')) {
+      let selectedCity = event.target.parentElement.querySelector('#selectedCity');
+      if (!selectedCity) {
+        event.target.parentElement.insertBefore(this.selCitySign, event.target.parentElement.children[1]);
 
+        const generateWidget = new GeneratorWidget();
 
-          const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
-          objWidget.render();
-          
-        }
+        // Подстановка найденого города
+        generateWidget.paramsWidget.cityId = event.target.id;
+        generateWidget.paramsWidget.cityName = event.target.textContent;
+        generateWidget.paramsWidget.units = this.units;
+        generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
+        window.cityId = event.target.id;
+        window.cityName = event.target.textContent;
+
+        const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
+        objWidget.render();
+
       }
-      
-    });
+    }
   }
 
   /**

@@ -1,6 +1,12 @@
 .widget{
 
-  min-width: 960px;
+  max-width: 1050px;
+
+  &__layout::after {
+    display: table;
+    content: '';
+    clear: both;
+  }
 
   &__title {
     text-align: center;

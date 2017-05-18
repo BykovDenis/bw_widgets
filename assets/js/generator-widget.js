@@ -6,7 +6,7 @@ import Cookies from './Cookies';
 export default class GeneratorWidget {
     constructor() {
 
-        this.baseURL = 'http://openweathermap.org/themes/openweathermap/assets/vendor/owm';
+        this.baseURL = `${document.location.protocol}//openweathermap.org/themes/openweathermap/assets/vendor/owm`;
         this.scriptD3SRC = `${this.baseURL}/js/libs/d3.min.js`;
         this.scriptSRC = `${this.baseURL}/js/weather-widget-generator.js`;
 
@@ -228,7 +228,7 @@ export default class GeneratorWidget {
 
     validationAPIkey() {
         let validationAPI = function() {
-        let url = `http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&units=${this.unitsTemp[0]}&cnt=8&appid=${this.controlsWidget.apiKey.value}`;
+        let url = `${document.location.protocol}//api.openweathermap.org/data/2.5/forecast/daily?id=524901&units=${this.unitsTemp[0]}&cnt=8&appid=${this.controlsWidget.apiKey.value}`;
         const xhr = new XMLHttpRequest();
         var that = this;
         xhr.onload = function () {
@@ -257,15 +257,13 @@ export default class GeneratorWidget {
         this.boundValidationMethod = validationAPI.bind(this);
         this.controlsWidget.apiKey.addEventListener('change',this.boundValidationMethod);
         //this.removeEventListener(this.boundValidationMethod);
-
-
     }
 
-    getCodeForGenerateWidget(id) {        
+    getCodeForGenerateWidget(id) {
         if(id && (this.paramsWidget.cityId || this.paramsWidget.cityName) && this.paramsWidget.appid) {
             let code = '';
             if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21 || parseInt(id) === 31) {
-                code = `<script src='http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
+                code = `<script src='${document.location.protocol}//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
             }
             return `${code}<div id='openweathermap-widget'></div>
                     <script type='text/javascript'>
@@ -273,13 +271,14 @@ export default class GeneratorWidget {
                         id: ${id},
                         cityid: ${this.paramsWidget.cityId},
                         appid: '${this.paramsWidget.appid.replace(`2d90837ddbaeda36ab487f257829b667`,'')}',
+                        units: '${this.paramsWidget.units}',
                         containerid: 'openweathermap-widget',
                     };
                     (function() {
                         var script = document.createElement('script');
                         script.type = 'text/javascript';
                         script.async = true;
-                        script.src = 'http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
+                        script.src = '${document.location.protocol}//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
                         var s = document.getElementsByTagName('script')[0];
                         s.parentNode.insertBefore(script, s);
                     })();
@@ -289,7 +288,7 @@ export default class GeneratorWidget {
         return null;
     }
 
-    setInitialStateForm(cityId=2022572, cityName='Moscow') {
+    setInitialStateForm(cityId=2643743, cityName='London') {
 
         this.paramsWidget = {
             cityId: cityId,
@@ -299,7 +298,7 @@ export default class GeneratorWidget {
             units: this.unitsTemp[0],
             textUnitTemp: this.unitsTemp[1],  // 248
             baseURL: this.baseURL,
-            urlDomain: 'http://api.openweathermap.org',
+            urlDomain: `${document.location.protocol}//api.openweathermap.org`,
         };
 
         // Работа с формой для инициали
@@ -316,5 +315,4 @@ export default class GeneratorWidget {
         naturalPhenomenon: `${this.baseURL}/data/natural-phenomenon-data.json`,
         };
     }
-
 }

@@ -6,13 +6,19 @@
     <link href="themes/openweathermap/assets/vendor/owm/css/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald:100,400,700,300" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,500,400italic,500italic,700italic" rel="stylesheet" type="text/css"/>
-    <script src="themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script><!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/><!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+    <!-- Latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- Optional theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"> </script>
   </head>
-  <body><!-- Переключатель параметров единиц измерения температуры -->
+  <body class="body-orange">  
+    <!-- Переключатель параметров единиц измерения температуры-->
     <label style="width:100px" onclick="" class="toggle candy blue">
       <input id="units_check" type="checkbox" checked="checked"/>
       <p><span id="metric">  °C</span><span id="imperial">°F</span></p><a class="slide-button"></a><a class="slide-button"></a>
@@ -23,7 +29,7 @@
       <div class="popup__window">
         <div class="popup__layout">
           <h2 class="popup__title">Get a code for posting a weather forecast widget on your site.</h2>
-          <textarea id="js-code-generate" readonly="readonly" class="popup__items"></textarea><span id="copy-js-code" class="popup__btn">Copy in buffer</span>
+          <textarea id="js-code-generate" readonly="readonly" class="popup__items"></textarea><span id="copy-js-code" class="popup__btn"><i class="fa fa-clone"></i> Copy in buffer</span>
         </div>
         <div id="popup-close" class="popup__close"></div>
       </div>
@@ -32,8 +38,8 @@
       <div class="widget__layout">
         <!-- Лендинг с информацией по виджетам-->
         <h1 class="widget__title">Get a code for posting a weather forecast widget on your site.</h1>
-        <form class="widget-form navbar-form">
-          <div class="form-group col-xs-4 col-sm-4 col-lg-4">
+        <form class="widget-form navbar-form">               
+          <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <dl>
               <dt>
                 <label class="aria-label">Your API key:</label>
@@ -47,10 +53,12 @@
                 <label class="aria-label">Your city name</label>
               </dt>
               <dd>
-                <input id="city-name" type="text" value="Moscow" class="form-control"/>
-                <button type="button" id="search-city" class="btn-btn-default">Search city</button>
+                <input id="city-name" type="text" value="London" class="form-control"/>
               </dd>
             </dl>
+            <button id="search-city" type="button" class="container-custom-card__btn-search"> <i class="fa fa-question-circle"></i> Search city</button>
+          </div>
+          <div class="container-custom-card__cities col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <dl>
               <dt>
                 <label class="area-label"> Select your city</label>
@@ -60,18 +68,26 @@
               </dd>
             </dl>
           </div>
-          <div style="padding-top: 30px;" class="container-custom-card col-xs-8 col-sm-8 col-lg-8">
-            <div class="container-custom-card__item">
+          <div class="widget-form__cities col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <dl>
+              <dt class="widget-form__title">
+                <label class="area-label"> Select type widgets</label>
+              </dt>
+              <dd><a href="#widgets-type-brown" class="widget-form__link-cities"><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown"/></a></dd>
+              <dd><a href="#widgets-type-blue" class="widget-form__link-cities"><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray"/></a></dd>
+              <dd><a href="#widgets-type-gray" class="widget-form__link-cities"><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown"/></a></dd>
+            </dl>
+            <div style="display:none;" class="container-custom-card__item">
               <!-- Виджет: 1, цвет: brown-->
               <div class="widget-left">
                 <div class="widget-left-menu widget-left-menu--brown">
                   <div class="widget-left-menu__layout">
-                    <h1 class="widget-left-menu__header">Weather for Moscow</h1><img src="themes/openweathermap/assets/vendor/owm/img/widgets/vetochki01.png" alt="Merry Christmas" class="widget-left-menu__christmas"/>
+                    <h1 class="widget-left-menu__header">Weather for London</h1><img src="themes/openweathermap/assets/vendor/owm/img/widgets/vetochki01.png" alt="Merry Christmas" class="widget-left-menu__christmas"/>
                   </div>
                 </div>
                 <div class="widget-left__body">
                   <div class="weather-left-card">
-                    <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                    <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for London" class="weather-left-card__img"/>
                       <div class="weather-left-card__col">
                         <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
                       </div>
@@ -97,67 +113,32 @@
                   </div>
                 </div>
               </div>
-            </div><span id="widget-31-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+            </div><span id="widget-31-right-brown" style="display:none;" class="container-custom-card__btn container-custom-card__btn--brown"> <i class="fa fa-clone"></i> Get a code</span>
           </div>
-        </form><!-- Коричневый виджет -->
+        </form>
+      </div>
+      <!-- Коричневый виджет--><a name="widgets-type-brown">   </a>
+      <div class="widget__layout">   
         <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">
-          <div class="main main--brown">
+          <div class="main">
             <div class="container-custom__item">
-              <div class="container-custom">
-                <div class="container-custom-card">
-                  <div class="container-custom-card__item">
-                    <!-- Виджет: 1, цвет: brown-->
-                    <div class="widget-left">
-                      <div class="widget-left-menu widget-left-menu--brown">
-                        <div class="widget-left-menu__layout">
-                          <h1 class="widget-left-menu__header">Weather for Moscow</h1>
-                          <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
-                        </div>
-                      </div>
-                      <div class="widget-left__body">
-                        <div class="weather-left-card">
-                          <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
-                            <div class="weather-left-card__col">
-                              <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
-                            </div>
-                          </div>
-                          <div class="weather-left-card__row2">
-                            <p class="weather-left-card__means">-</p>
-                            <p class="weather-left-card__wind">Wind:</p>
-                          </div>
-                        </div>
-                        <div class="widget-left__calendar">
-                          <ul class="calendar">
-                            <li class="calendar__item">Today<img width="32" height="32" alt="Today"/></li>
-                            <li class="calendar__item">Sat<img width="32" height="32" alt="Sat"/></li>
-                            <li class="calendar__item">Sun<img width="32" height="32" alt="Sun"/></li>
-                            <li class="calendar__item">Mon<img width="32" height="32" alt="Mon"/></li>
-                            <li class="calendar__item">Tue<img width="32" height="32" alt="Tue"/></li>
-                            <li class="calendar__item">Wed<img width="32" height="32" alt="Wed"/></li>
-                            <li class="calendar__item">Thu<img width="32" height="32" alt="Thu"/></li>
-                            <li class="calendar__item">Fri<img width="32" height="32" alt="Fri"/></li>
-                          </ul>
-                          <div id="graphic2" class="widget-left__graphic"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
-                </div>
-                <div class="container-custom__item">
+              <div class="container-custom__left">
+                <div class="container-custom__left-row1">
                   <div class="container-custom-card">
                     <div class="container-custom-card__item">
-                      <!-- Виджет: 2, цвет: brown-->
-                      <div class="widget-left widget-left--compact">
-                        <div class="widget-left-menu widget-left-menu--compact widget-left-menu--brown">
-                          <div class="widget-left-menu__layout widget-left-menu__layout--brown">
-                            <h1 class="widget-left-menu__header">Weather for Moscow</h1>
+                      <!-- Виджет: 1, цвет: brown-->
+                      <div class="widget-left">
+                        <div class="widget-left-menu widget-left-menu--brown">
+                          <div class="widget-left-menu__layout">
+                            <h1 class="widget-left-menu__header">Weather for London</h1>
+                            <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
                           </div>
                         </div>
-                        <div class="widget-left__body widget-left__body--compact">
-                          <div class="weather-left-card weather-left-card--compact">
-                            <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
+                        <div class="widget-left__body">
+                          <div class="weather-left-card">
+                            <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for London" class="weather-left-card__img"/>
                               <div class="weather-left-card__col">
-                                <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+                                <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
                               </div>
                             </div>
                             <div class="weather-left-card__row2">
@@ -165,20 +146,62 @@
                               <p class="weather-left-card__wind">Wind:</p>
                             </div>
                           </div>
-                          <div class="widget-left-menu__links widget-left-menu__links--compact widget-left-menu__links--brown">
-                            <div class="widget-left-menu__layout widget-left-menu__layout--brown"><span>More at</span><a href="http://openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
+                          <div class="widget-left__calendar">
+                            <ul class="calendar">
+                              <li class="calendar__item">Today<img width="32" height="32" alt="Today"/></li>
+                              <li class="calendar__item">Sat<img width="32" height="32" alt="Sat"/></li>
+                              <li class="calendar__item">Sun<img width="32" height="32" alt="Sun"/></li>
+                              <li class="calendar__item">Mon<img width="32" height="32" alt="Mon"/></li>
+                              <li class="calendar__item">Tue<img width="32" height="32" alt="Tue"/></li>
+                              <li class="calendar__item">Wed<img width="32" height="32" alt="Wed"/></li>
+                              <li class="calendar__item">Thu<img width="32" height="32" alt="Thu"/></li>
+                              <li class="calendar__item">Fri<img width="32" height="32" alt="Fri"/></li>
+                            </ul>
+                            <div id="graphic2" class="widget-left__graphic"></div>
                           </div>
                         </div>
                       </div>
-                    </div><span id="widget-2-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                    </div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
                   </div>
-                  <div class="container-custom">
+                </div>
+                <div class="container-custom__left-row2">
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 2, цвет: brown-->
+                        <div class="widget-left widget-left--compact">
+                          <div class="widget-left-menu widget-left-menu--compact widget-left-menu--brown">
+                            <div class="widget-left-menu__layout widget-left-menu__layout--brown">
+                              <h1 class="widget-left-menu__header">Weather for London</h1>
+                            </div>
+                          </div>
+                          <div class="widget-left__body widget-left__body--compact">
+                            <div class="weather-left-card weather-left-card--compact">
+                              <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for London" class="weather-left-card__img"/>
+                                <div class="weather-left-card__col">
+                                  <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+                                </div>
+                              </div>
+                              <div class="weather-left-card__row2">
+                                <p class="weather-left-card__means">-</p>
+                                <p class="weather-left-card__wind">Wind:</p>
+                              </div>
+                            </div>
+                            <div class="widget-left-menu__links widget-left-menu__links--compact widget-left-menu__links--brown">
+                              <div class="widget-left-menu__layout widget-left-menu__layout--brown"><span>More at</span><a href="http://openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><span id="widget-2-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1">
                     <div class="container-custom-card">
                       <div class="container-custom-card__item">
                         <!-- Виджет: 3, цвет: brown-->
                         <div class="widget-left widget-left--small widget-left--brown">
                           <div class="widget-left-menu widget-left-menu--small widget-left-menu--brown">
-                            <h1 class="widget-left-menu__header">Moscow</h1>
+                            <h1 class="widget-left-menu__header">London</h1>
                             <ul class="calendar calendar--small">
                               <li class="calendar__item calendar__item--brown"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                             </ul>
@@ -190,14 +213,14 @@
                             </div>
                           </div>
                         </div>
-                      </div><span id="widget-3-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                      </div><span id="widget-3-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                      </span>
                     </div>
                     <div class="container-custom-card">
                       <div class="container-custom-card__item">
                         <!-- Виджет: 4, цвет: brown-->
                         <div class="widget-left widget-left--small widget-left--brown">
                           <div class="widget-left-menu widget-left-menu--small widget-left-menu--brown">
-                            <h1 class="widget-left-menu__header">Moscow</h1>
+                            <h1 class="widget-left-menu__header">London</h1>
                             <ul class="calendar calendar--small2">
                               <li class="calendar__item calendar__item--brown"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
                             </ul>
@@ -209,303 +232,364 @@
                             </div>
                           </div>
                         </div>
-                      </div><span id="widget-4-left-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                      </div><span id="widget-4-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                      </span>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="container-custom">
-                <div class="container-custom-card">
-                  <div class="container-custom-card__item">
-                    <!-- Виджет: 5, цвет: brown-->
-                    <div class="widget-right weather-right--type1 widget-right--brown">
-                      <div class="widget-right__header widget-right__header--brown">
-                        <div class="widget-right__layout">
-                          <h1 class="widget-right__title">Moscow</h1>
-                          <p class="widget-right__description">Cloudy Skies</p>
-                        </div><img width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
-                      </div>
-                      <div class="weather-right weather-right--brown">
-                        <div class="weather-right__layout">
-                          <div class="weather-right__temperature">10<span class="widget-right__units">&#176;</span></div>
-                          <div class="weather-right__weather">
-                            <div class="weather-right-card">
-                              <table class="weather-right__table">
-                                <tr class="weather-right__items">
-                                  <th colspan="2" class="weather-right__item">Details</th>
+                  <div class="container-custom__left-row2-col1 container-custom__item--type1">
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 6, цвет: brown-->
+                        <div class="widget-right widget-right--type2 widget-right--brown">
+                          <div class="widget-right__header widget-right__header--brown">
+                            <div class="widget-right__layout">
+                              <h1 class="widget-right__title">London</h1>
+                              <p class="widget-right__description">Cloudy Skies</p>
+                            </div>
+                          </div>
+                          <div class="weather-right weather-right--brown weather-right--type2">
+                            <div class="weather-right__layout">
+                              <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
+                            </div>
+                          </div>
+                          <div class="widget-right__footer widget-right__footer--brown">
+                            <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
+                          </div>
+                        </div>
+                      </div><span id="widget-6-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                    </span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 7, цвет: brown-->
+                        <div class="widget-right widget-right--type3 widget-right--brown">
+                          <div class="widget-right__header widget-right__header--brown">
+                            <div class="widget-right__layout">
+                              <h1 class="widget-right__title">London</h1>
+                              <p class="widget-right__description">Cloudy Skies</p>
+                            </div>
+                          </div>
+                          <div class="weather-right weather-right--brown weather-right--type3">
+                            <div class="weather-right__layout">
+                              <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
+                              <table class="weather-right-table">
+                                <tr class="weather-right-table__items">
+                                  <td class="weather-right-table__item">Feels Like</td>
+                                  <td class="weather-right-table__item weather-right__feels">-13 &#176;</td>
                                 </tr>
-                                <tr class="weather-right__items">
-                                  <td class="weather-right__item">Feels like</td>
-                                  <td class="weather-right__item weather-right__feels">-13<span class="widget-right-card__units">&#176;</span></td>
+                                <tr class="weather-right-table__items">
+                                  <td class="weather-right-table__item">Wind</td>
+                                  <td class="weather-right-table__item weather-right__wind-speed"> 3 m/s W</td>
                                 </tr>
-                                <tr class="weather-right__items">
-                                  <td class="weather-right__item">Wind</td>
-                                  <td class="weather-right__item weather-right__wind-speed">3 m/s West</td>
-                                </tr>
-                                <tr class="weather-right-card__items">
-                                  <td class="weather-right__item">Humidity</td>
-                                  <td class="weather-right__item weather-right__humidity">74%</td>
-                                </tr>
-                                <tr class="weather-right-card__items">
-                                  <td class="weather-right__item">Precip</td>
-                                  <td class="weather-right__item"></td>
-                                </tr>
-                                <tr class="weather-right-card__items">
-                                  <td class="weather-right__item">Pressure</td>
-                                  <td class="weather-right__item weather-right__pressure">1003.0 mb</td>
+                                <tr class="weather-right-table__items">
+                                  <td class="weather-right-table__item">Pessure</td>
+                                  <td class="weather-right-table__item weather-right__pressure"> 1003.0 mb</td>
                                 </tr>
                               </table>
                             </div>
                           </div>
+                          <div class="widget-right__footer widget-right__footer--brown">
+                            <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="widget-right__footer widget-right__footer--brown">
-                        <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
-                          <div class="widget-right__date widget__date">20:16 Mar 28</div>
-                        </div>
-                      </div>
+                      </div><span id="widget-7-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                           </span>
                     </div>
-                  </div><span id="widget-5-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
-                </div>
-                <div class="container-custom__item container-custom__item--type1">
-                  <div class="container-custom-card">
-                    <div class="container-custom-card__item">
-                      <!-- Виджет: 6, цвет: brown-->
-                      <div class="widget-right widget-right--type2 widget-right--brown">
-                        <div class="widget-right__header widget-right__header--brown">
-                          <div class="widget-right__layout">
-                            <h1 class="widget-right__title">Moscow</h1>
-                            <p class="widget-right__description">Cloudy Skies</p>
-                          </div>
-                        </div>
-                        <div class="weather-right weather-right--brown weather-right--type2">
-                          <div class="weather-right__layout">
-                            <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
-                          </div>
-                        </div>
-                        <div class="widget-right__footer widget-right__footer--brown">
-                          <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
-                        </div>
-                      </div>
-                    </div><span id="widget-6-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
                   </div>
-                  <div class="container-custom-card">
-                    <div class="container-custom-card__item">
-                      <!-- Виджет: 7, цвет: brown-->
-                      <div class="widget-right widget-right--type3 widget-right--brown">
-                        <div class="widget-right__header widget-right__header--brown">
-                          <div class="widget-right__layout">
-                            <h1 class="widget-right__title">Moscow</h1>
-                            <p class="widget-right__description">Cloudy Skies</p>
-                          </div>
-                        </div>
-                        <div class="weather-right weather-right--brown weather-right--type3">
-                          <div class="weather-right__layout">
-                            <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
-                            <table class="weather-right-table">
-                              <tr class="weather-right-table__items">
-                                <td class="weather-right-table__item">Feels Like</td>
-                                <td class="weather-right-table__item weather-right__feels">-13 &#176;</td>
+                </div>
+              </div>
+              <div class="container-custom__right">
+                <div class="container-custom-card">
+                  <!-- Виджет: 5, цвет: brown-->
+                  <div class="widget-right weather-right--type1 widget-right--brown">
+                    <div class="widget-right__header widget-right__header--brown">
+                      <div class="widget-right__layout">
+                        <h1 class="widget-right__title">London</h1>
+                        <p class="widget-right__description">Cloudy Skies</p>
+                      </div><img width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
+                    </div>
+                    <div class="weather-right weather-right--brown">
+                      <div class="weather-right__layout">
+                        <div class="weather-right__temperature">10<span class="widget-right__units">&#176;</span></div>
+                        <div class="weather-right__weather">
+                          <div class="weather-right-card">
+                            <table class="weather-right__table">
+                              <tr class="weather-right__items">
+                                <th colspan="2" class="weather-right__item">Details</th>
                               </tr>
-                              <tr class="weather-right-table__items">
-                                <td class="weather-right-table__item">Wind</td>
-                                <td class="weather-right-table__item weather-right__wind-speed"> 3 m/s W</td>
+                              <tr class="weather-right__items">
+                                <td class="weather-right__item">Feels like</td>
+                                <td class="weather-right__item weather-right__feels">-13<span class="widget-right-card__units">&#176;</span></td>
                               </tr>
-                              <tr class="weather-right-table__items">
-                                <td class="weather-right-table__item">Pessure</td>
-                                <td class="weather-right-table__item weather-right__pressure"> 1003.0 mb</td>
+                              <tr class="weather-right__items">
+                                <td class="weather-right__item">Wind</td>
+                                <td class="weather-right__item weather-right__wind-speed">3 m/s West</td>
+                              </tr>
+                              <tr class="weather-right-card__items">
+                                <td class="weather-right__item">Humidity</td>
+                                <td class="weather-right__item weather-right__humidity">74%</td>
+                              </tr>
+                              <tr class="weather-right-card__items">
+                                <td class="weather-right__item">Precip</td>
+                                <td class="weather-right__item"></td>
+                              </tr>
+                              <tr class="weather-right-card__items">
+                                <td class="weather-right__item">Pressure</td>
+                                <td class="weather-right__item weather-right__pressure">1003.0 mb</td>
                               </tr>
                             </table>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                    <div class="widget-right__footer widget-right__footer--brown">
+                      <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
+                        <div class="widget-right__date widget__date">20:16 Mar 28</div>
+                      </div>
+                    </div>
+                  </div><span id="widget-5-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                </div>
+                <div class="container-custom container-custom--type1">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
+                      <!-- Виджет: 8, цвет: brown-->
+                      <div class="widget-right widget-right--type5 widget-right--brown">
+                        <div class="widget-right__layout widget-right__layout--brown">
+                          <div class="widget-right-card">
+                            <div class="widget-right__title">London</div>
+                            <div class="widget-right__description">Cloudy Skies</div>
+                          </div><img width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--brown"/>
+                          <table class="weather-right-card">
+                            <tr class="weather-right-card__items">
+                              <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
+                              <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
+                            </tr>
+                          </table>
+                        </div>
                         <div class="widget-right__footer widget-right__footer--brown">
-                          <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
+                          <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
+                            <div class="widget-right__date widget__date">20:16 Mar 28</div>
+                          </div>
                         </div>
                       </div>
-                    </div><span id="widget-7-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
+                    </div><span id="widget-8-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                </span>
+                  </div>
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
+                      <!-- Виджет: 9, цвет: brown-->
+                      <div class="widget-right widget-right--type4 widget-right--brown">
+                        <div class="widget-right__layout widget-right__layout--brown">
+                          <div class="widget-right-card">
+                            <div class="widget-right__title">London</div>
+                            <div class="widget-right__description">Cloudy Skies</div>
+                          </div><img width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--brown"/>
+                          <table class="weather-right-card">
+                            <tr class="weather-right-card__items">
+                              <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
+                              <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="widget-right__footer widget-right__footer--brown">
+                          <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
+                            <div class="widget-right__date widget__date">20:16 Mar 28</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><span id="widget-9-right-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                             </span>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="container-custom container-custom--type1">
-              <div class="container-custom-card">
-                <div class="container-custom-card__item">
-                  <!-- Виджет: 8, цвет: brown-->
-                  <div class="widget-right widget-right--type5 widget-right--brown">
-                    <div class="widget-right__layout widget-right__layout--brown">
-                      <div class="widget-right-card">
-                        <div class="widget-right__title">Moscow</div>
-                        <div class="widget-right__description">Cloudy Skies</div>
-                      </div><img width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--brown"/>
-                      <table class="weather-right-card">
-                        <tr class="weather-right-card__items">
-                          <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
-                          <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div class="widget-right__footer widget-right__footer--brown">
-                      <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
-                        <div class="widget-right__date widget__date">20:16 Mar 28</div>
-                      </div>
-                    </div>
-                  </div>
-                </div><span id="widget-8-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
-              </div>
-              <div class="container-custom-card">
-                <div class="container-custom-card__item">
-                  <!-- Виджет: 9, цвет: brown-->
-                  <div class="widget-right widget-right--type4 widget-right--brown">
-                    <div class="widget-right__layout widget-right__layout--brown">
-                      <div class="widget-right-card">
-                        <div class="widget-right__title">Moscow</div>
-                        <div class="widget-right__description">Cloudy Skies</div>
-                      </div><img width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--brown"/>
-                      <table class="weather-right-card">
-                        <tr class="weather-right-card__items">
-                          <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
-                          <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div class="widget-right__footer widget-right__footer--brown">
-                      <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
-                        <div class="widget-right__date widget__date">20:16 Mar 28</div>
-                      </div>
-                    </div>
-                  </div>
-                </div><span id="widget-9-right-brown" class="container-custom-card__btn container-custom-card__btn--brown">Get a code</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-custom__item">
-        <div class="main main--blue">
-          <div class="container-custom__item">
-            <div class="container-custom">
-              <div class="container-custom-card">
-                <div class="container-custom-card__item">
-                  <!--Виджет: 1, цвет: blue-->
-                  <div class="widget-left widget-left--blue">
-                    <div class="widget-left-menu widget-left-menu--blue">
-                      <div class="widget-left-menu__layout">
-                        <h1 class="widget-left-menu__header">Weather for Moscow</h1>
-                        <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
-                      </div>
-                    </div>
-                    <div class="widget-left__body">
-                      <div class="weather-left-card">
-                        <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
-                          <div class="weather-left-card__col">
-                            <p class="weather-left-card__number">0<sup class="weather-left-card__degree">0</sup></p><span class="weather-left-card__rising">and rising</span>
+      <!-- Коричневый виджет                      --><a name="widgets-type-blue">                    </a>
+      <div class="widget__layout">     
+        <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">
+          <div class="main">
+            <div class="container-custom__item">
+              <div class="container-custom__left">
+                <div class="container-custom__left-row1">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
+                      <!-- Виджет: 1, цвет: blue-->
+                      <div class="widget-left widget-left--blue">
+                        <div class="widget-left-menu widget-left-menu--blue">
+                          <div class="widget-left-menu__layout">
+                            <h1 class="widget-left-menu__header">Weather for London</h1>
+                            <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
                           </div>
                         </div>
-                        <div class="weather-left-card__row2">
-                          <p class="weather-left-card__means">-</p>
-                          <p class="weather-left-card__wind">Wind:</p>
-                        </div>
-                      </div>
-                      <div class="widget-left__calendar">
-                        <ul class="calendar">
-                          <li class="calendar__item">Today<img width="32" height="32" alt="Today"/></li>
-                          <li class="calendar__item">Sat<img width="32" height="32" alt="Sat"/></li>
-                          <li class="calendar__item">Sun<img width="32" height="32" alt="Sun"/></li>
-                          <li class="calendar__item">Mon<img width="32" height="32" alt="Mon"/></li>
-                          <li class="calendar__item">Tue<img width="32" height="32" alt="Tue"/></li>
-                          <li class="calendar__item">Wed<img width="32" height="32" alt="Wed"/></li>
-                          <li class="calendar__item">Thu<img width="32" height="32" alt="Thu"/></li>
-                          <li class="calendar__item">Fri<img width="32" height="32" alt="Fri"/></li>
-                        </ul>
-                        <div id="graphic1" class="widget-left__graphic"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div><span id="widget-1-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
-              </div>
-              <div class="container-custom__item">
-                <div class="container-custom-card">
-                  <div class="container-custom-card__item">
-                    <!-- Виджет: 2, цвет: blue-->
-                    <div class="widget-left widget-left--compact widget-left--blue">
-                      <div class="widget-left-menu widget-left-menu--compact widget-left-menu--blue">
-                        <div class="widget-left-menu__layout widget-left-menu__layout--blue">
-                          <h1 class="widget-left-menu__header">Weather for Moscow</h1>
-                        </div>
-                      </div>
-                      <div class="widget-left__body widget-left__body--compact widget-left__body--blue">
-                        <div class="weather-left-card weather-left-card--compact">
-                          <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
-                            <div class="weather-left-card__col">
-                              <p class="weather-left-card__number">-<span class="weather-left-card__degree">0</span></p><span class="weather-left-card__rising">and rising</span>
+                        <div class="widget-left__body">
+                          <div class="weather-left-card">
+                            <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather" class="weather-left-card__img"/>
+                              <div class="weather-left-card__col">
+                                <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+                              </div>
+                            </div>
+                            <div class="weather-left-card__row2">
+                              <p class="weather-left-card__means">-</p>
+                              <p class="weather-left-card__wind">Wind:</p>
                             </div>
                           </div>
-                          <div class="weather-left-card__row2">
-                            <p class="weather-left-card__means">-</p>
-                            <p class="weather-left-card__wind">Wind:</p>
-                          </div>
-                        </div>
-                        <div class="widget-left-menu__links widget-left-menu__links--compact widget-left-menu__links--blue">
-                          <div class="widget-left-menu__layout widget-left-menu__layout--blue"><span>More at</span><a href="http://openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><span id="widget-2-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
-                </div>
-                <div class="container-custom">
-                  <div class="container-custom-card">
-                    <div class="container-custom-card__item">
-                      <!-- Виджет: 3, цвет: blue-->
-                      <div class="widget-left widget-left--small widget-left--blue">
-                        <div class="widget-left-menu widget-left-menu--small widget-left-menu--blue">
-                          <h1 class="widget-left-menu__header">Moscow</h1>
-                          <ul class="calendar calendar--small">
-                            <li class="calendar__item calendar__item--blue"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
-                          </ul>
-                          <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
-                        </div>
-                        <div class="widget-left__footer widget-left__footer--blue">
-                          <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
-                            <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                          <div class="widget-left__calendar">
+                            <ul class="calendar">
+                              <li class="calendar__item">Today<img width="32" height="32" alt="Today"/></li>
+                              <li class="calendar__item">Sat<img width="32" height="32" alt="Sat"/></li>
+                              <li class="calendar__item">Sun<img width="32" height="32" alt="Sun"/></li>
+                              <li class="calendar__item">Mon<img width="32" height="32" alt="Mon"/></li>
+                              <li class="calendar__item">Tue<img width="32" height="32" alt="Tue"/></li>
+                              <li class="calendar__item">Wed<img width="32" height="32" alt="Wed"/></li>
+                              <li class="calendar__item">Thu<img width="32" height="32" alt="Thu"/></li>
+                              <li class="calendar__item">Fri<img width="32" height="32" alt="Fri"/></li>
+                            </ul>
+                            <div id="graphic1" class="widget-left__graphic"></div>
                           </div>
                         </div>
                       </div>
-                    </div><span id="widget-3-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                    </div><span id="widget-1-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code</span>
                   </div>
-                  <div class="container-custom-card">
-                    <div class="container-custom-card__item">
-                      <!-- Виджет: 4, цвет: blue-->
-                      <div class="widget-left widget-left--small widget-left--blue">
-                        <div class="widget-left-menu widget-left-menu--small widget-left-menu--blue">
-                          <h1 class="widget-left-menu__header">Moscow</h1>
-                          <ul class="calendar calendar--small2">
-                            <li class="calendar__item calendar__item--blue"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
-                          </ul>
-                          <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
-                        </div>
-                        <div class="widget-left__footer widget-left__footer--blue">
-                          <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
-                            <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                </div>
+                <div class="container-custom__left-row2">
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 2, цвет: blue-->
+                        <div class="widget-left widget-left--compact">
+                          <div class="widget-left-menu widget-left-menu--compact widget-left-menu--blue">
+                            <div class="widget-left-menu__layout widget-left-menu__layout--blue">
+                              <h1 class="widget-left-menu__header">Weather for London</h1>
+                            </div>
+                          </div>
+                          <div class="widget-left__body widget-left__body--compact widget-left__body--blue">
+                            <div class="weather-left-card weather-left-card--compact">
+                              <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for London" class="weather-left-card__img"/>
+                                <div class="weather-left-card__col">
+                                  <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+                                </div>
+                              </div>
+                              <div class="weather-left-card__row2">
+                                <p class="weather-left-card__means">-</p>
+                                <p class="weather-left-card__wind">Wind:</p>
+                              </div>
+                            </div>
+                            <div class="widget-left-menu__links widget-left-menu__links--compact widget-left-menu__links--blue">
+                              <div class="widget-left-menu__layout widget-left-menu__layout--blue"><span>More at</span><a href="http://openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div><span id="widget-4-left-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                      </div><span id="widget-2-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 3, цвет: blue-->
+                        <div class="widget-left widget-left--small widget-left--blue">
+                          <div class="widget-left-menu widget-left-menu--small widget-left-menu--blue">
+                            <h1 class="widget-left-menu__header">London</h1>
+                            <ul class="calendar calendar--small">
+                              <li class="calendar__item calendar__item--blue"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                            </ul>
+                            <p class="weather-left-card__number weather-left-card__number--small">0<sup class="weather-left-card__degree"></sup></p>
+                          </div>
+                          <div class="widget-left__footer widget-left__footer--blue">
+                            <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
+                              <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><span id="widget-3-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                      </span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 4, цвет: blue-->
+                        <div class="widget-left widget-left--small widget-left--blue">
+                          <div class="widget-left-menu widget-left-menu--small widget-left-menu--blue">
+                            <h1 class="widget-left-menu__header">London</h1>
+                            <ul class="calendar calendar--small2">
+                              <li class="calendar__item calendar__item--blue"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                            </ul>
+                            <p class="weather-left-card__number weather-left-card__number--small">0<sup class="weather-left-card__degree"></sup></p>
+                          </div>
+                          <div class="widget-left__footer widget-left__footer--blue">
+                            <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
+                              <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><span id="widget-4-left-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                      </span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1 container-custom__item--type1">
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 6, цвет: blue-->
+                        <div class="widget-right widget-right--type2 widget-right--blue">
+                          <div class="widget-right__header widget-right__header--blue">
+                            <div class="widget-right__layout">
+                              <h1 class="widget-right__title">London</h1>
+                              <p class="widget-right__description">Cloudy Skies</p>
+                            </div>
+                          </div>
+                          <div class="weather-right weather-right--blue weather-right--type2">
+                            <div class="weather-right__layout">
+                              <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
+                            </div>
+                          </div>
+                          <div class="widget-right__footer widget-right__footer--blue">
+                            <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
+                          </div>
+                        </div>
+                      </div><span id="widget-6-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                    </span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div class="container-custom-card__item">
+                        <!-- Виджет: 7, цвет: blue-->
+                        <div class="widget-right widget-right--type3 widget-right--blue">
+                          <div class="widget-right__header widget-right__header--blue">
+                            <div class="widget-right__layout">
+                              <h1 class="widget-right__title">London</h1>
+                              <p class="widget-right__description">Cloudy Skies</p>
+                            </div>
+                          </div>
+                          <div class="weather-right weather-right--blue weather-right--type3">
+                            <div class="weather-right__layout">
+                              <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
+                              <table class="weather-right-table">
+                                <tr class="weather-right-table__items">
+                                  <td class="weather-right-table__item">Feels Like</td>
+                                  <td class="weather-right-table__item weather-right__feels">-13 &#176;</td>
+                                </tr>
+                                <tr class="weather-right-table__items">
+                                  <td class="weather-right-table__item">Wind</td>
+                                  <td class="weather-right-table__item weather-right__wind-speed"> 3 m/s W</td>
+                                </tr>
+                                <tr class="weather-right-table__items">
+                                  <td class="weather-right-table__item">Pessure</td>
+                                  <td class="weather-right-table__item weather-right__pressure"> 1003.0 mb</td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="widget-right__footer widget-right__footer--blue">
+                            <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
+                          </div>
+                        </div>
+                      </div><span id="widget-7-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                           </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="container-custom">
-              <div class="container-custom-card">
-                <div class="container-custom-card__item">
+              <div class="container-custom__right">
+                <div class="container-custom-card">
                   <!-- Виджет: 5, цвет: blue-->
                   <div class="widget-right weather-right--type1 widget-right--blue">
                     <div class="widget-right__header widget-right__header--blue">
                       <div class="widget-right__layout">
-                        <h1 class="widget-right__title">Moscow</h1>
+                        <h1 class="widget-right__title">London</h1>
                         <p class="widget-right__description">Cloudy Skies</p>
                       </div><img width="128" height="128" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type1"/>
                     </div>
-                    <div class="weather-right weather-right--type1 weather-right--blue">
+                    <div class="weather-right weather-right--blue">
                       <div class="weather-right__layout">
                         <div class="weather-right__temperature">10<span class="widget-right__units">&#176;</span></div>
                         <div class="weather-right__weather">
@@ -544,232 +628,180 @@
                         <div class="widget-right__date widget__date">20:16 Mar 28</div>
                       </div>
                     </div>
-                  </div>
-                </div><span id="widget-5-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
-              </div>
-              <div class="container-custom__item container-custom__item--type1">
-                <div class="container-custom-card">
-                  <div class="container-custom-card__item">
-                    <!-- Виджет: 6, цвет: blue-->
-                    <div class="widget-right widget-right--type2 widget-right--blue">
-                      <div class="widget-right__header widget-right__header--blue">
-                        <div class="widget-right__layout">
-                          <h1 class="widget-right__title">Moscow</h1>
-                          <p class="widget-right__description">Cloudy Skies</p>
-                        </div>
-                      </div>
-                      <div class="weather-right weather-right--blue weather-right--type2">
-                        <div class="weather-right__layout">
-                          <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
-                        </div>
-                      </div>
-                      <div class="widget-right__footer widget-right__footer--blue">
-                        <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
-                      </div>
-                    </div>
-                  </div><span id="widget-6-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                  </div><span id="widget-5-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code</span>
                 </div>
-                <div class="container-custom-card">
-                  <div class="container-custom-card__item">
-                    <!-- Виджет: 7, цвет: blue-->
-                    <div class="widget-right widget-right--type3 widget-right--blue">
-                      <div class="widget-right__header widget-right__header--blue">
-                        <div class="widget-right__layout">
-                          <h1 class="widget-right__title">Moscow</h1>
-                          <p class="widget-right__description">Cloudy Skies</p>
-                        </div>
-                      </div>
-                      <div class="weather-right weather-right--blue weather-right--type3">
-                        <div class="weather-right__layout">
-                          <div class="weather-right__temperature">-10<span class="widget-right__units">&#176;</span></div>
-                          <table class="weather-right-table weather-right-table--blue">
-                            <tr class="weather-right-table__items">
-                              <td class="weather-right-table__item">Feels Like</td>
-                              <td class="weather-right-table__item weather-right__feels">-13 &#176;</td>
-                            </tr>
-                            <tr class="weather-right-table__items">
-                              <td class="weather-right-table__item">Wind</td>
-                              <td class="weather-right-table__item weather-right__wind-speed">3 m/s W</td>
-                            </tr>
-                            <tr class="weather-right-table__items">
-                              <td class="weather-right-table__item">Pessure</td>
-                              <td class="weather-right-table__item weather-right__pressure"> 1003.0 mb</td>
+                <div class="container-custom container-custom--type1">
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
+                      <!-- Виджет: 8, цвет: blue-->
+                      <div class="widget-right widget-right--type5 widget-right--blue">
+                        <div class="widget-right__layout widget-right__layout--blue">
+                          <div class="widget-right-card">
+                            <div class="widget-right__title">London</div>
+                            <div class="widget-right__description">Cloudy Skies</div>
+                          </div><img width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--blue"/>
+                          <table class="weather-right-card">
+                            <tr class="weather-right-card__items">
+                              <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
+                              <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
                             </tr>
                           </table>
                         </div>
+                        <div class="widget-right__footer widget-right__footer--blue">
+                          <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
+                            <div class="widget-right__date widget__date">20:16 Mar 28</div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="widget-right__footer widget-right__footer--blue">
-                        <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a></div>
+                    </div><span id="widget-8-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                </span>
+                  </div>
+                  <div class="container-custom-card">
+                    <div class="container-custom-card__item">
+                      <!-- Виджет: 9, цвет: blue-->
+                      <div class="widget-right widget-right--type4 widget-right--blue">
+                        <div class="widget-right__layout widget-right__layout--blue">
+                          <div class="widget-right-card">
+                            <div class="widget-right__title">London</div>
+                            <div class="widget-right__description">Cloudy Skies</div>
+                          </div><img width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--blue"/>
+                          <table class="weather-right-card">
+                            <tr class="weather-right-card__items">
+                              <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
+                              <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="widget-right__footer widget-right__footer--blue">
+                          <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
+                            <div class="widget-right__date widget__date">20:16 Mar 28</div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div><span id="widget-7-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
+                    </div><span id="widget-9-right-blue" class="container-custom-card__btn container-custom-card__btn--blue"><i class="fa fa-clone"></i> Get a code                             </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="container-custom container-custom--type1">
-            <div class="container-custom-card">
-              <div class="container-custom-card__item">
-                <!-- Виджет: 8, цвет: blue-->
-                <div class="widget-right widget-right--type5 widget-right--blue">
-                  <div class="widget-right__layout widget-right__layout--blue">
-                    <div class="widget-right-card">
-                      <div class="widget-right__title">Moscow</div>
-                      <div class="widget-right__description">Cloudy Skies</div>
-                    </div><img width="64" height="64" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type5 weather-right__icon--blue"/>
-                    <table class="weather-right-card">
-                      <tr class="weather-right-card__items">
-                        <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
-                        <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="widget-right__footer widget-right__footer--blue">
-                    <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
-                      <div class="widget-right__date widget__date">20:16 Mar 28</div>
-                    </div>
-                  </div>
-                </div>
-              </div><span id="widget-8-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
-            </div>
-            <div class="container-custom-card">
-              <div class="container-custom-card__item">
-                <!-- Виджет: 9, цвет: blue-->
-                <div class="widget-right widget-right--type4 widget-right--blue">
-                  <div class="widget-right__layout widget-right__layout--blue">
-                    <div class="widget-right-card">
-                      <div class="widget-right__title">Moscow</div>
-                      <div class="widget-right__description">Cloudy Skies</div>
-                    </div><img width="100" alt="Cloudy Skies" class="weather-right__icon weather-right__icon--type4 weather-right__icon--blue"/>
-                    <table class="weather-right-card weather-right-card--type4 weather-right-card--blue">
-                      <tr class="weather-right-card__items">
-                        <td class="weather-right-card__item weather-right-card__temperature-min">-10&#176;</td>
-                        <td class="weather-right-card__item weather-right-card__temperature-max">-14&#176;</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="widget-right__footer widget-right__footer--blue">
-                    <div class="widget-right__layout"><a href="http://openweathermap.org/" class="widget-right__link">OpenWeatherMap</a>
-                      <div class="widget-right__date widget__date">20:16 Mar 28</div>
-                    </div>
-                  </div>
-                </div>
-              </div><span id="widget-9-right-blue" class="container-custom-card__btn container-custom-card__btn--blue">Get a code</span>
             </div>
           </div>
         </div>
-      </div><!-- Бесцветный виджет -->
-      <!-- Первый контейнер-->
-      <div class="container-custom__item">
-        <div class="main main--gray">
-          <div class="container-custom">
-            <div class="container-custom-card">
-              <div class="container-custom-card__item">
-                <!-- Основной виджет: 1,  цвет: 0-->
-                <div class="widget-left">
-                  <div class="widget-left-menu">
-                    <div class="widget-left-menu__layout">
-                      <h1 class="widget-left-menu__header">Weather for Moscow</h1>
-                      <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
-                    </div>
-                  </div>
-                  <div class="widget-left__body">
-                    <div class="weather-left-card weather-left-card--grayscale">
-                      <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
-                        <div class="weather-left-card__col">
-                          <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
-                        </div>
-                      </div>
-                      <div class="weather-left-card__row2">
-                        <p class="weather-left-card__means">-</p>
-                        <p class="weather-left-card__wind">Wind:</p>
-                      </div>
-                    </div>
-                    <div class="widget-left__calendar">
-                      <ul class="calendar calendar--grayscale">
-                        <li class="calendar__item">Today<img width="32" height="32" alt="Today"/></li>
-                        <li class="calendar__item">Sat<img width="32" height="32" alt="Sat"/></li>
-                        <li class="calendar__item">Sun<img width="32" height="32" alt="Sun"/></li>
-                        <li class="calendar__item">Mon<img width="32" height="32" alt="Mon"/></li>
-                        <li class="calendar__item">Tue<img width="32" height="32" alt="Tue"/></li>
-                        <li class="calendar__item">Wed<img width="32" height="32" alt="Wed"/></li>
-                        <li class="calendar__item">Thu<img width="32" height="32" alt="Thu"/></li>
-                        <li class="calendar__item">Fri<img width="32" height="32" alt="Fri"/></li>
-                      </ul>
-                      <div id="graphic" class="widget-left__graphic"></div>
-                    </div>
-                  </div>
-                </div>
-              </div><span id="widget-1-left-white" class="container-custom-card__btn">Get a code</span>
-            </div>
-          </div>
+      </div>
+      <!-- Бесцветный виджет-->
+      <!-- Первый контейнер--><a name="widgets-type-gray"></a>
+      <div class="widget__layout">
+        <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">         
+          <div class="main"></div>
           <div class="container-custom__item">
-            <div class="container-custom-card">
-              <div class="container-custom-card__item">
-                <!-- Виджет: 2, цвет: 0-->
-                <div class="widget-left widget-left--compact">
-                  <div class="widget-left-menu widget-left-menu--compact">
-                    <div class="widget-left-menu__layout">
-                      <h1 class="widget-left-menu__header">Weather for Moscow</h1>
-                    </div>
-                  </div>
-                  <div class="widget-left__body widget-left__body--compact">
-                    <div class="weather-left-card weather-left-card--compact weather-left-card--grayscale">
-                      <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for Moscow" class="weather-left-card__img"/>
-                        <div class="weather-left-card__col">
-                          <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+            <div class="container-custom__left">
+              <div class="container-custom__left-row1">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
+                    <!-- Основной виджет: 1,  цвет: 0-->
+                    <div class="widget-left">
+                      <div class="widget-left-menu">
+                        <div class="widget-left-menu__layout">
+                          <h1 class="widget-left-menu__header">Weather for London</h1>
+                          <div class="widget-left-menu__links"><span>More at</span><a href="//openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
                         </div>
                       </div>
-                      <div class="weather-left-card__row2">
-                        <p class="weather-left-card__means">-</p>
-                        <p class="weather-left-card__wind">Wind:</p>
+                      <div class="widget-left__body">
+                        <div class="weather-left-card weather-left-card--grayscale">
+                          <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for London" class="weather-left-card__img"/>
+                            <div class="weather-left-card__col">
+                              <p class="weather-left-card__number">0<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+                            </div>
+                          </div>
+                          <div class="weather-left-card__row2">
+                            <p class="weather-left-card__means">-</p>
+                            <p class="weather-left-card__wind">Wind:</p>
+                          </div>
+                        </div>
+                        <div class="widget-left__calendar">
+                          <ul class="calendar calendar--grayscale">
+                            <li class="calendar__item">Today<img width="32" height="32" alt="Today"/></li>
+                            <li class="calendar__item">Sat<img width="32" height="32" alt="Sat"/></li>
+                            <li class="calendar__item">Sun<img width="32" height="32" alt="Sun"/></li>
+                            <li class="calendar__item">Mon<img width="32" height="32" alt="Mon"/></li>
+                            <li class="calendar__item">Tue<img width="32" height="32" alt="Tue"/></li>
+                            <li class="calendar__item">Wed<img width="32" height="32" alt="Wed"/></li>
+                            <li class="calendar__item">Thu<img width="32" height="32" alt="Thu"/></li>
+                            <li class="calendar__item">Fri<img width="32" height="32" alt="Fri"/></li>
+                          </ul>
+                          <div id="graphic" class="widget-left__graphic"></div>
+                        </div>
                       </div>
                     </div>
-                    <div class="widget-left-menu__links widget-left-menu__links--compact">
-                      <div class="widget-left-menu__layout"><span>More at</span><a href="http://openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
-                    </div>
-                  </div>
+                  </div><span id="widget-1-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code              </span>
                 </div>
-              </div><span id="widget-2-left-white" class="container-custom-card__btn">Get a code</span>
-            </div>
-            <div class="container-custom">
-              <div class="container-custom-card">
-                <div class="container-custom-card__item">
-                  <!-- Виджет: 3, цвет: 0-->
-                  <div class="widget-left widget-left--small">
-                    <div class="widget-left-menu widget-left-menu--small">
-                      <h1 class="widget-left-menu__header">Moscow</h1>
-                      <ul class="calendar calendar--grayscale calendar--small">
-                        <li class="calendar__item"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
-                      </ul>
-                      <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
-                    </div>
-                    <div class="widget-left__footer widget-left__footer--grayscale">
-                      <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
-                        <div class="widget-left__date widget__date">20:16 Mar 28</div>
-                      </div>
-                    </div>
-                  </div>
-                </div><span id="widget-3-left-white" class="container-custom-card__btn">Get a code</span>
               </div>
+              <div class="container-custom__left-row2">
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
+                    <!-- Виджет: 3, цвет: 0-->
+                    <div class="widget-left widget-left--small">
+                      <div class="widget-left-menu widget-left-menu--small">
+                        <h1 class="widget-left-menu__header">London</h1>
+                        <ul class="calendar calendar--grayscale calendar--small">
+                          <li class="calendar__item"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                        </ul>
+                        <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
+                      </div>
+                      <div class="widget-left__footer widget-left__footer--grayscale">
+                        <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
+                          <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><span id="widget-3-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code                </span>
+                </div>
+                <div class="container-custom-card">
+                  <div class="container-custom-card__item">
+                    <!-- Виджет: 4, цвет: 0-->
+                    <div class="widget-left widget-left--small">
+                      <div class="widget-left-menu widget-left-menu--small">
+                        <h1 class="widget-left-menu__header">London</h1>
+                        <ul class="calendar calendar--grayscale calendar--small2">
+                          <li class="calendar__item"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
+                        </ul>
+                        <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
+                      </div>
+                      <div class="widget-left__footer widget-left__footer--grayscale">
+                        <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
+                          <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><span id="widget-4-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code                                    </span>
+                </div>
+              </div>
+            </div>
+            <div class="container-custom__right">                                                 
               <div class="container-custom-card">
                 <div class="container-custom-card__item">
-                  <!-- Виджет: 4, цвет: 0-->
-                  <div class="widget-left widget-left--small">
-                    <div class="widget-left-menu widget-left-menu--small">
-                      <h1 class="widget-left-menu__header">Moscow</h1>
-                      <ul class="calendar calendar--grayscale calendar--small2">
-                        <li class="calendar__item"><img width="32" height="32" alt="Today" class="weather-left-card__img weather-left-card__img--small"/></li>
-                      </ul>
-                      <p class="weather-left-card__number weather-left-card__number--small">0<span class="weather-left-card__degree"></span></p>
+                  <!-- Виджет: 2, цвет: 0-->
+                  <div class="widget-left widget-left--compact">
+                    <div class="widget-left-menu widget-left-menu--compact">
+                      <div class="widget-left-menu__layout">
+                        <h1 class="widget-left-menu__header">Weather for London</h1>
+                      </div>
                     </div>
-                    <div class="widget-left__footer widget-left__footer--grayscale">
-                      <div class="widget-left__layout"><a href="http://openweathermap.org/" class="widget-left__link">OpenWeatherMap</a>
-                        <div class="widget-left__date widget__date">20:16 Mar 28</div>
+                    <div class="widget-left__body widget-left__body--compact">
+                      <div class="weather-left-card weather-left-card--compact weather-left-card--grayscale">
+                        <div class="weather-left-card__row1"><img width="128" height="128" alt="Weather for London" class="weather-left-card__img"/>
+                          <div class="weather-left-card__col">
+                            <p class="weather-left-card__number">-<span class="weather-left-card__degree">&176;</span></p><span class="weather-left-card__rising">and rising</span>
+                          </div>
+                        </div>
+                        <div class="weather-left-card__row2">
+                          <p class="weather-left-card__means">-</p>
+                          <p class="weather-left-card__wind">Wind:</p>
+                        </div>
+                      </div>
+                      <div class="widget-left-menu__links widget-left-menu__links--compact">
+                        <div class="widget-left-menu__layout"><span>More at</span><a href="http://openweathermap.org/" class="widget-left-menu__link">OpenWeatherMap</a></div>
                       </div>
                     </div>
                   </div>
-                </div><span id="widget-4-left-white" class="container-custom-card__btn">Get a code</span>
+                </div><span id="widget-2-left-white" class="container-custom-card__btn"><i class="fa fa-clone"></i> Get a code              </span>
               </div>
             </div>
           </div>

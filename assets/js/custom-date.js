@@ -128,7 +128,7 @@ export default class CustomDate extends Date {
   */
   timestampToDateTime(unixtime) {
     const date = new Date(unixtime * 1000);
-    return date.toLocaleString().replace(/,/, '').replace(/:\w+$/, '');
+    return date.toLocaleString();
   }
 
 
