@@ -95,7 +95,13 @@
                 </div>
               </div>
             </div>
-            <div class="container-custom__right">                     </div>
+            <div class="container-custom__right">           
+              <div class="container-custom-card">
+                <div class="container-custom-card__item">
+                  <div id="widget-12"></div>
+                </div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code                                  </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -116,7 +122,24 @@
           script.src = 'http://phase.owm.io/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
           var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(script, s);
-      })();                               
+      })();
+    </script>
+    <script>
+      window.myWidgetParam = {
+          id: 12,
+          cityid: 2643743,
+          appid: '16979421081cf40c2ab9ea2d94b9145d',
+          units: 'metric',
+          containerid: 'widget-12',
+      };
+      (function() {
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.async = true;
+          script.src = 'http://phase.owm.io/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(script, s);
+      })();      
     </script>
     <script src="/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js"></script>
   </body>
