@@ -1,7 +1,6 @@
 /**
  * Created by Denis on 29.09.2016.
  */
-
 const Promise = require('es6-promise').Promise;
 import CustomDate from './custom-date';
 import Graphic from './graphic-d3js';
@@ -99,28 +98,28 @@ export default class WeatherWidget extends CustomDate {
    */
   getWeatherFromApi() {
     this.httpGet(this.urls.urlWeatherAPI)
-        .then(
-            (response) => {
-              this.weather.fromAPI = response;
-              this.weather.naturalPhenomenon = naturalPhenomenon.naturalPhenomenon[this.params.lang].description;
-              this.weather.windSpeed = windSpeed.windSpeed[this.params.lang];
-              this.httpGet(this.urls.paramsUrlForeDaily)
-                  .then(
-                      (response) => {
-                        this.weather.forecastDaily = response;
-                        this.parseDataFromServer();
-                      },
-                      (error) => {
-                        console.log(`Возникла ошибка ${error}`);
-                        this.parseDataFromServer();
-                      }
-                  );
-            },
-            (error) => {
-              console.log(`Возникла ошибка ${error}`);
-              this.parseDataFromServer();
-            }
-        );
+      .then(
+        (response) => {
+          this.weather.fromAPI = response;
+          this.weather.naturalPhenomenon = naturalPhenomenon.naturalPhenomenon[this.params.lang].description;
+          this.weather.windSpeed = windSpeed.windSpeed[this.params.lang];
+          this.httpGet(this.urls.paramsUrlForeDaily)
+              .then(
+                  (response) => {
+                    this.weather.forecastDaily = response;
+                    this.parseDataFromServer();
+                  },
+                  (error) => {
+                    console.log(`Возникла ошибка ${error}`);
+                    this.parseDataFromServer();
+                  }
+              );
+        },
+        (error) => {
+          console.log(`Возникла ошибка ${error}`);
+          this.parseDataFromServer();
+        }
+      );
   }
 
   /**
@@ -186,7 +185,7 @@ export default class WeatherWidget extends CustomDate {
     }
     if (weather.windSpeed) {
       metadata.windSpeed = `Wind: ${weather.fromAPI.wind.speed.toFixed(1)} m/s ${this.getParentSelectorFromObject(weather.windSpeed, weather.fromAPI.wind.speed.toFixed(1), 'speed_interval')}`;
-      metadata.windSpeed2 = `${weather.fromAPI.wind.speed.toFixed(1)} m/s ${this.getParentSelectorFromObject(weather.windSpeed, weather.fromAPI.wind.speed.toFixed(1), 'speed_interval').substr(0,1)}`;
+      metadata.windSpeed2 = `${weather.fromAPI.wind.speed.toFixed(1)} m/s`;
     }
     if (weather.windDirection) {
       metadata.windDirection = `${this.getParentSelectorFromObject(weather["windDirection"], weather["fromAPI"]["wind"]["deg"], "deg_interval")}`
@@ -252,9 +251,7 @@ export default class WeatherWidget extends CustomDate {
         }
       }
       if (this.controls.temperatureFeels.hasOwnProperty(elem)) {
-        if (this.controls.temperatureFeels[elem]) {
-          this.controls.temperatureFeels[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
-        }
+        this.controls.temperatureFeels[elem].innerHTML = `${metadata.temperature}<span>${this.params.textUnitTemp}</span>`;
       }
     }
 
@@ -279,7 +276,7 @@ export default class WeatherWidget extends CustomDate {
     }
 
     if (metadata.windSpeed2 && metadata.windDirection) {
-      for (let elem in this.controls.windSpeed2) {
+      for (const elem in this.controls.windSpeed2) {
         if (this.controls.windSpeed2.hasOwnProperty(elem)) {
           this.controls.windSpeed2[elem].innerText = `${metadata.windSpeed2} ${metadata.windDirection}`;
         }
@@ -308,6 +305,7 @@ export default class WeatherWidget extends CustomDate {
         }
       }
     }
+
     // Прописываем текущую дату в виджеты
     for (let elem in this.controls.dateReport) {
       if (this.controls.dateReport.hasOwnProperty(elem)) {
@@ -315,9 +313,10 @@ export default class WeatherWidget extends CustomDate {
       }
     }
 
-
-    if (this.weather.forecastDaily) {
-      this.prepareDataForGraphic();
+    if(this.controls.graphic || this.controls.graphic1 || this.controls.graphic2 || this.controls.graphic3  ) {
+      if (this.weather.forecastDaily) {
+        this.prepareDataForGraphic();
+      }
     }
   }
 
@@ -344,16 +343,13 @@ export default class WeatherWidget extends CustomDate {
    */
   renderIconsDaysOfWeek(data) {
     const that = this;
-
     data.forEach((elem, index) => {
       const date = new Date(elem.dt * 1000);
       that.controls.calendarItem[index].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
-      that.controls.calendarItem[index + 8].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
-      that.controls.calendarItem[index + 18].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
-      that.controls.calendarItem[index + 28].innerHTML = `${elem.day}<br>${date.getDate()} ${this.getMonthNameByMonthNumber(date.getMonth())}<img src="http://openweathermap.org/img/w/${elem.icon}.png" width="32" height="32" alt="${elem.day}">`;
     });
     return data;
   }
+
 
   getURLMainIcon(nameIcon, color = false) {
     // Создаем и инициализируем карту сопоставлений
@@ -390,9 +386,9 @@ export default class WeatherWidget extends CustomDate {
       mapIcons.set('13n', '13dbw');
 
       if (mapIcons.get(nameIcon)) {
-        return `${this.params.baseURL}/img/widgets/${mapIcons.get(nameIcon)}.png`;
+        return `${this.params.baseURL}/img/widgets/${nameIcon}img/${mapIcons.get(nameIcon)}.png`;
       }
-      return `http://openweathermap.org/img/w/${nameIcon}.png`;
+      return `http://openweathermap.org/img/w/${nameIcon}.png`; // Захардковежно до времен https
     }
     return `${this.params.baseURL}/img/widgets/${nameIcon}.png`;
   }
@@ -402,27 +398,14 @@ export default class WeatherWidget extends CustomDate {
    */
   drawGraphicD3(data) {
     this.renderIconsDaysOfWeek(data);
-
     // Очистка контейнеров для графиков
     const svg = document.getElementById('graphic');
-    const svg1 = document.getElementById('graphic1');
-    const svg2 = document.getElementById('graphic2');
-    const svg3 = document.getElementById('graphic3');
 
-    if(svg.querySelector('svg')) {
-      svg.removeChild(svg.querySelector('svg'));
+    if (svg) {
+      if (svg.querySelector('svg')) {
+        svg.removeChild(svg.querySelector('svg'));
+      }
     }
-    if(svg1.querySelector('svg')) {
-      svg1.removeChild(svg1.querySelector('svg'));
-    }
-    if(svg2.querySelector('svg')){
-      svg2.removeChild(svg2.querySelector('svg'));
-    }
-    if(svg3.querySelector('svg')){
-        svg3.removeChild(svg3.querySelector('svg'));
-    }
-
-
     // Параметризуем область отрисовки графика
     const params = {
       id: '#graphic',
@@ -433,88 +416,14 @@ export default class WeatherWidget extends CustomDate {
       height: 79,
       rawData: [],
       margin: 10,
-      colorPolilyne: '#333',
+      colorPolilyne: '#FEB020',
       fontSize: '12px',
       fontColor: '#333',
       strokeWidth: '1px',
     };
-
     // Реконструкция процедуры рендеринга графика температуры
     let objGraphicD3 = new Graphic(params);
     objGraphicD3.render();
-
-    // отрисовка остальных графиков
-    params.id = '#graphic1';
-    params.colorPolilyne = '#DDF730';
-    objGraphicD3 = new Graphic(params);
-    objGraphicD3.render();
-
-    params.id = '#graphic2';
-    params.colorPolilyne = '#FEB020';
-    objGraphicD3 = new Graphic(params);
-    objGraphicD3.render();
-
-    params.id = '#graphic3';
-    params.colorPolilyne = '#FEB020';
-    objGraphicD3 = new Graphic(params);
-    objGraphicD3.render();
-  }
-
-
-  /**
-   * Отображение графика погоды на неделю
-   */
-  drawGraphic(arr) {
-    this.renderIconsDaysOfWeek(arr);
-
-    const context = this.controls.graphic.getContext('2d');
-    this.controls.graphic.width = 465;
-    this.controls.graphic.height = 70;
-
-    context.fillStyle = '#fff';
-    context.fillRect(0, 0, 600, 300);
-
-    context.font = 'Oswald-Medium, Arial, sans-seri 14px';
-
-    let step = 55;
-    let i = 0;
-    const zoom = 4;
-    const stepY = 64;
-    const stepYTextUp = 58;
-    const stepYTextDown = 75;
-    context.beginPath();
-    context.moveTo(step - 10, (-1 * arr[i].min * zoom) + stepY);
-    context.strokeText(`${arr[i].max}º`, step, (-1 * arr[i].max * zoom) + stepYTextUp);
-    context.lineTo(step - 10, (-1 * arr[i].max * zoom) + stepY);
-    i += 1;
-    while (i < arr.length) {
-      step += 55;
-      context.lineTo(step, (-1 * arr[i].max * zoom) + stepY);
-      context.strokeText(`${arr[i].max}º`, step, (-1 * arr[i].max * zoom) + stepYTextUp);
-      i += 1;
-    }
-    i -= 1;
-    context.lineTo(step + 30, (-1 * arr[i].max * zoom) + stepY);
-    step = 55;
-    i = 0;
-    context.moveTo(step - 10, (-1 * arr[i].min * zoom) + stepY);
-    context.strokeText(`${arr[i].min}º`, step, (-1 * arr[i].min * zoom) + stepYTextDown);
-    context.lineTo(step - 10, (-1 * arr[i].min * zoom) + stepY);
-    i += 1;
-    while (i < arr.length) {
-      step += 55;
-      context.lineTo(step, (-1 * arr[i].min * zoom) + stepY);
-      context.strokeText(`${arr[i].min}º`, step, (-1 * arr[i].min * zoom) + stepYTextDown);
-      i += 1;
-    }
-    i -= 1;
-    context.lineTo(step + 30, (-1 * arr[i].min * zoom) + stepY);
-    context.fillStyle = '#333';
-    context.lineTo(step + 30, (-1 * arr[i].max * zoom) + stepY);
-    context.closePath();
-    context.strokeStyle = '#333';
-    context.stroke();
-    context.fill();
   }
 
   render() {
