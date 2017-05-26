@@ -16,7 +16,7 @@ export default class Cities {
     this.params = params;
     const generateWidget = new GeneratorWidget();
     generateWidget.setInitialStateForm();
-    this.units = generateWidget.unitsTemp[1];
+    this.params.units = generateWidget.unitsTemp[0];
     if (!this.params.cityName) {
       return false;
     }
@@ -50,7 +50,7 @@ export default class Cities {
 
   renderWidget() {
     clearWidgetContainer();
-    renderWidgets(this.params.cityId, this.params.widgetTypeActive);
+    renderWidgets(this.params.cityId, this.params.widgetTypeActive, this.params.units);
   }
 
   getSearchData(JSONobject) {
@@ -94,7 +94,7 @@ export default class Cities {
         generateWidget.paramsWidget.units = this.units;
         generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
         this.params.cityId = event.target.id;
-        this.params.cityName = event.target.textContent;
+        this.paramscityName = event.target.textContent;
 
         this.renderWidget();
       }

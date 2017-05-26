@@ -368,6 +368,7 @@ th {
 .widget {
   max-width: 1050px; }
   .widget__layout {
+    position: relative;
     border-top: 1px solid transparent;
     display: none;
     width: auto;
@@ -383,6 +384,16 @@ th {
   .widget__title {
     text-align: center;
     font-family: "Roboto", Arial, sans-serif; }
+  .widget__img-loader {
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -15%);
+        -ms-transform: translate(-50%, -15%);
+            transform: translate(-50%, -15%); }
 
 .widget-form {
   margin: 0 auto;
