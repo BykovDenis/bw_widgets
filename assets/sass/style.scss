@@ -11,7 +11,6 @@
 @import "mixin";
 
 /* Блоки */
-@import "blocks/main";
 @import "blocks/widget";
 @import "blocks/widget-form";
 @import "blocks/popup";
@@ -34,6 +33,7 @@
 /* Сервисный контейнеры для лендинг страницы */
 @import "services/container-custom";
 @import "services/container-custom-card";
+@import "services/widget-choose";
 
 /* При переносе в общую сборку закоментить */
 @import "toggle-switch";

@@ -2,14 +2,29 @@
 
   max-width: 1050px;
 
-  &__layout::after {
-    display: table;
-    content: '';
-    clear: both;
+  &__layout {
+    border-top:1px solid transparent;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 0;
+
+    &::after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+
+    &--red {
+      color: red !important;
+      outline: 3px solid green;
+    }
   }
 
   &__title {
     text-align: center;
     font-family: $font-roboto;
   }
+
 }

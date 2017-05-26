@@ -68,65 +68,162 @@ html(lang="en")
                 dt.widget-form__title
                     label.area-label  Select type widgets
                 dd
-                  a.widget-form__link-cities(href="#widgets-type-brown")
-                    img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown")                                                            
-                dd
-                  a.widget-form__link-cities(href="#widgets-type-blue")
-                    img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray")                    
-                dd
-                  a.widget-form__link-cities(href="#widgets-type-gray")
-                    img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                                            
+                ul.widget-choose
+                  li.widget-choose__item
+                    label.widget-choose__label
+                      input(type="radio" id="widget-brown" name="type-widget" checked)
+                      a.widget-form__link-cities(href="#widgets-type-brown")
+                        img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown")                                                            
+                  li
+                    label
+                      input(type="radio" id="widget-blue" name="type-widget")
+                      a.widget-form__link-cities(href="#widgets-type-blue")
+                        img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray")                    
+                  li
+                    label
+                      input(type="radio" id="widget-gray" name="type-widget")
+                      a.widget-form__link-cities(href="#widgets-type-gray")
+                        img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                                            
             .container-custom-card__item(style="display:none;")
-    .widget__layout    
+    .widget__layout.widget__layout--red   
       .container-custom__item.col-xs-12.col-sm-12.col-lg-12
-        .main
-          .container-custom__item
-            .container-custom__left
-              .container-custom__left-row1
-                .container-custom-card
-                  .container-custom-card__item
-                    div#widget-11
-                  span.container-custom-card__btn.container-custom-card__btn--brown#widget-1-left-brown
+        .container-custom__item
+          .container-custom__left
+            .container-custom__left-row1
+              .container-custom-card                  
+                div#openweathermap-widget-11
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+            .container-custom__left-row2
+              .container-custom__left-row2-col1
+                .container-custom-card                    
+                  div#openweathermap-widget-12
+                  span.container-custom-card__btn.container-custom-card__btn--brown
                     i.fa.fa-clone
                     |  Get a code
-            .container-custom__right            
+              .container-custom__left-row2-col1
+                .container-custom-card
+                  div#openweathermap-widget-13
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code
+                .container-custom-card
+                  div#openweathermap-widget-14
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code
+              .container-custom__left-row2-col1.container-custom__item--type1
+                .container-custom-card
+                  div#openweathermap-widget-16
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code 
+                .container-custom-card
+                  div#openweathermap-widget-17
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code         
+          .container-custom__right            
+            .container-custom-card
+              div#openweathermap-widget-15
+              span.container-custom-card__btn.container-custom-card__btn--brown
+                i.fa.fa-clone
+                |  Get a code 
+            .container-custom.container-custom--type1
               .container-custom-card
-                .container-custom-card__item
-                  div#widget-12
-                span.container-custom-card__btn.container-custom-card__btn--brown#widget-1-left-brown
+                div#openweathermap-widget-18
+                span.container-custom-card__btn.container-custom-card__btn--brown
                   i.fa.fa-clone
-                  |  Get a code                                  
-    script(src='http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js')
-    script.
-      window.myWidgetParam = {
-          id: 11,
-          cityid: 2643743,
-          appid: '16979421081cf40c2ab9ea2d94b9145d',
-          units: 'metric',
-          containerid: 'widget-11',
-      };
-      (function() {
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.async = true;
-          script.src = 'http://phase.owm.io/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(script, s);
-      })();
-    script.
-      window.myWidgetParam = {
-          id: 12,
-          cityid: 2643743,
-          appid: '16979421081cf40c2ab9ea2d94b9145d',
-          units: 'metric',
-          containerid: 'widget-12',
-      };
-      (function() {
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.async = true;
-          script.src = 'http://phase.owm.io/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(script, s);
-      })();      
-    script(src="/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js")
+                  |  Get a code  
+              .container-custom-card
+                div#openweathermap-widget-19
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+    .widget__layout    
+      .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
+        .container-custom__item
+          .container-custom__left
+            .container-custom__left-row1
+              .container-custom-card                  
+                div#openweathermap-widget-1
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+            .container-custom__left-row2
+              .container-custom__left-row2-col1
+                .container-custom-card                    
+                  div#openweathermap-widget-2
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code
+              .container-custom__left-row2-col1
+                .container-custom-card
+                  div#openweathermap-widget-3
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code
+                .container-custom-card
+                  div#openweathermap-widget-4
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code
+              .container-custom__left-row2-col1.container-custom__item--type1
+                .container-custom-card
+                  div#openweathermap-widget-6
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code 
+                .container-custom-card
+                  div#openweathermap-widget-7
+                  span.container-custom-card__btn.container-custom-card__btn--brown
+                    i.fa.fa-clone
+                    |  Get a code         
+          .container-custom__right            
+            .container-custom-card
+              div#openweathermap-widget-5
+              span.container-custom-card__btn.container-custom-card__btn--brown
+                i.fa.fa-clone
+                |  Get a code 
+            .container-custom.container-custom--type1
+              .container-custom-card
+                div#openweathermap-widget-8
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code  
+              .container-custom-card
+                div#openweathermap-widget-9
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+    .widget__layout    
+      .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
+        .container-custom__item
+          .container-custom__left
+            .container-custom__left-row1
+              .container-custom-card                  
+                div#openweathermap-widget-21
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+            .container-custom__left-row2
+              .container-custom-card
+                div#openweathermap-widget-23
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+              .container-custom-card
+                div#openweathermap-widget-24
+                span.container-custom-card__btn.container-custom-card__btn--brown
+                  i.fa.fa-clone
+                  |  Get a code
+          .container-custom__right                                                  
+            .container-custom-card
+              div#openweathermap-widget-22
+              span.container-custom-card__btn.container-custom-card__btn--brown
+                i.fa.fa-clone
+                |  Get a code
+    div#scripts   
+    script(src='themes/openweathermap/assets/vendor/owm/js/d3.min.js')              
+    script(src='/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js')  
