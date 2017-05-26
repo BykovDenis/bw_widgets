@@ -1,3 +1,10 @@
 .widget-choose {
-  outline: 3px solid yellow;
+  list-style: none;
+  padding: 0;
+  &__item {
+    cursor: pointer;
+  }
+  &__label {
+    cursor: pointer;
+  }
 }

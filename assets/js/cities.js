@@ -11,31 +11,29 @@ import clearWidgetContainer from './clearWidgetContainer';
 
 export default class Cities {
 
-  constructor(cityName, container) {
-
+  constructor(params) {
+    //cityName, container, widgetTypeActive
+    this.params = params;
     const generateWidget = new GeneratorWidget();
     generateWidget.setInitialStateForm();
     this.units = generateWidget.unitsTemp[1];
-    if (!cityName.value) {
+    if (!this.params.cityName) {
       return false;
     }
 
     this.selectedCity = this.selectedCity.bind(this);
 
-    this.cityName = cityName.value.replace(/(\s)+/g,'-').toLowerCase();
-    this.container = container || '';
+    this.cityName = this.params.cityName.replace(/(\s)+/g,'-').toLowerCase();
+    this.container = this.container || '';
     this.url = `${document.location.protocol}//openweathermap.org/data/2.5/find?q=${this.cityName}&type=like&sort=population&cnt=30&appid=b1b15e88fa797225412429c1c50c122a1`;
 
     this.selCitySign = document.createElement('span');
     this.selCitySign.innerText = ' selected ';
     this.selCitySign.class = 'widget-form__selected';
-
-    this.cityId = 2643743;
-    renderWidgets(this.cityId);
   }
 
   getCities() {
-    if (!this.cityName) {
+    if (!this.params.cityName) {
       return null;
     }
 
@@ -48,6 +46,11 @@ export default class Cities {
         console.log(`Возникла ошибка ${error}`);
       }
       );
+  }
+
+  renderWidget() {
+    clearWidgetContainer();
+    renderWidgets(this.params.cityId, this.params.widgetTypeActive);
   }
 
   getSearchData(JSONobject) {
@@ -70,7 +73,7 @@ export default class Cities {
     }
 
     html = `<table class="table" id="table-cities">${html}</table>`;
-    this.container.insertAdjacentHTML('afterbegin', html);
+    this.params.container.insertAdjacentHTML('afterbegin', html);
     const tableCities = document.getElementById('table-cities');
 
     tableCities.addEventListener('click', this.selectedCity);
@@ -90,12 +93,10 @@ export default class Cities {
         generateWidget.paramsWidget.cityName = event.target.textContent;
         generateWidget.paramsWidget.units = this.units;
         generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
-        this.cityId = event.target.id;
-        this.cityName = event.target.textContent;
+        this.params.cityId = event.target.id;
+        this.params.cityName = event.target.textContent;
 
-        clearWidgetContainer();
-        renderWidgets(this.cityId);
-
+        this.renderWidget();
       }
     }
   }

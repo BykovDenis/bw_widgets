@@ -4,7 +4,7 @@
 
   &__layout {
     border-top:1px solid transparent;
-    display: block;
+    display: none;
     width: auto;
     margin: 0 auto;
     max-width: 970px;
@@ -16,9 +16,8 @@
       clear: both;
     }
 
-    &--red {
-      color: red !important;
-      outline: 3px solid green;
+    &--visible {
+      display: block;
     }
   }
 

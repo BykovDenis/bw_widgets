@@ -36,9 +36,7 @@ html(lang="en")
             i.fa.fa-clone
             |  Copy in buffer
         .popup__close#popup-close
-    <!-- Синий виджет -->
     .container.widget#frm-landing-widget
-      .widget__layout
         // Лендинг с информацией по виджетам
         h1.widget__title Get a code for posting a weather forecast widget on your site.
         form.widget-form.navbar-form                
@@ -67,25 +65,22 @@ html(lang="en")
             dl
                 dt.widget-form__title
                     label.area-label  Select type widgets
-                dd
-                ul.widget-choose
-                  li.widget-choose__item
-                    label.widget-choose__label
-                      input(type="radio" id="widget-brown" name="type-widget" checked)
-                      a.widget-form__link-cities(href="#widgets-type-brown")
+                dd.widget-form__types
+                  ul.widget-choose
+                    li.widget-choose__item
+                      label.widget-choose__label
+                        input(type="radio" id="widget-brown" name="type-widget" checked)
                         img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown")                                                            
-                  li
-                    label
-                      input(type="radio" id="widget-blue" name="type-widget")
-                      a.widget-form__link-cities(href="#widgets-type-blue")
+                    li.widget-choose__item
+                      label.widget-choose__label
+                        input(type="radio" id="widget-blue" name="type-widget")
                         img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray")                    
-                  li
-                    label
-                      input(type="radio" id="widget-gray" name="type-widget")
-                      a.widget-form__link-cities(href="#widgets-type-gray")
+                    li.widget-choose__item
+                      label.widget-choose__label
+                        input(type="radio" id="widget-gray" name="type-widget")
                         img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                                            
             .container-custom-card__item(style="display:none;")
-    .widget__layout.widget__layout--red   
+    .widget__layout#widget-brown-container  
       .container-custom__item.col-xs-12.col-sm-12.col-lg-12
         .container-custom__item
           .container-custom__left
@@ -141,7 +136,7 @@ html(lang="en")
                 span.container-custom-card__btn.container-custom-card__btn--brown
                   i.fa.fa-clone
                   |  Get a code
-    .widget__layout    
+    .widget__layout#widget-blue-container    
       .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
         .container-custom__item
           .container-custom__left
@@ -197,7 +192,7 @@ html(lang="en")
                 span.container-custom-card__btn.container-custom-card__btn--brown
                   i.fa.fa-clone
                   |  Get a code
-    .widget__layout    
+    .widget__layout#widget-gray-container    
       .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
         .container-custom__item
           .container-custom__left

@@ -369,7 +369,7 @@ th {
   max-width: 1050px; }
   .widget__layout {
     border-top: 1px solid transparent;
-    display: block;
+    display: none;
     width: auto;
     margin: 0 auto;
     max-width: 970px;
@@ -378,9 +378,8 @@ th {
       display: table;
       content: '';
       clear: both; }
-    .widget__layout--red {
-      color: red !important;
-      outline: 3px solid green; }
+    .widget__layout--visible {
+      display: block; }
   .widget__title {
     text-align: center;
     font-family: "Roboto", Arial, sans-serif; }
@@ -463,6 +462,25 @@ th {
       color: #B9C4C5;
       opacity: .7;
       cursor: pointer; }
+  .widget-form__types {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   .widget-form__item {
     font-weight: 600; }
   .widget-form__selected {
@@ -1777,7 +1795,7 @@ th {
         -ms-flex-line-pack: stretch;
             align-content: stretch;
     padding: 0 !important;
-    margin-top: 40px; }
+    margin-top: 0; }
     .container-custom__item--type1 {
       -webkit-box-align: baseline;
       -webkit-align-items: baseline;
@@ -1886,7 +1904,12 @@ th {
     transition: 1s; }
 
 .widget-choose {
-  outline: 3px solid yellow; }
+  list-style: none;
+  padding: 0; }
+  .widget-choose__item {
+    cursor: pointer; }
+  .widget-choose__label {
+    cursor: pointer; }
 
 /* При переносе в общую сборку закоментить */
 /* ------------------------------------------
