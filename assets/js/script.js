@@ -1,20 +1,19 @@
 'use strict';
+// Модуль диспетчер для отрисовки баннерров на конструкторе
+import Cities from './cities';
+import Popup from './popup';
 
-import renderWidgets from './renderWidgets';
-import clearWidgetContainer from './clearWidgetContainer';
+const searchCity = document.getElementById('search-city');
+const btnRenderWidgets = document.getElementById('append-scripts');
+const scripts = document.getElementById('scripts');
+// Работа с формой для инициали
+const cityName = document.getElementById('city-name');
+const cities = document.getElementById('cities');
 
-const cityId = 524901;
-renderWidgets(cityId);
+const objCities = new Cities(cityName, cities);
+objCities.getCities();
 
-var btn = document.getElementById('search-city');
-var btnRenderWidgets = document.getElementById('append-scripts');
-var scripts = document.getElementById('scripts');
-var scriptsContainer = document.getElementById('container-scripts');
-
-function reRenderDashboardWIdgets() {
-  clearWidgetContainer();
-  const cityId = 2988507;
-  renderWidgets(cityId);
-}
-
-btn.addEventListener('click', reRenderDashboardWIdgets);
+searchCity.addEventListener('click', function() {
+  const objCities = new Cities(cityName, cities);
+  objCities.getCities();
+});

@@ -4,9 +4,10 @@
 
 const Promise = require('es6-promise').Promise;
 require('String.fromCodePoint');
-import WeatherWidget from './weather-widget';
 import GeneratorWidget from './generator-widget';
 
+import renderWidgets from './renderWidgets';
+import clearWidgetContainer from './clearWidgetContainer';
 
 export default class Cities {
 
@@ -29,10 +30,8 @@ export default class Cities {
     this.selCitySign.innerText = ' selected ';
     this.selCitySign.class = 'widget-form__selected';
 
-    const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
-
-    objWidget.render();
-
+    this.cityId = 2643743;
+    renderWidgets(this.cityId);
   }
 
   getCities() {
@@ -91,11 +90,11 @@ export default class Cities {
         generateWidget.paramsWidget.cityName = event.target.textContent;
         generateWidget.paramsWidget.units = this.units;
         generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
-        window.cityId = event.target.id;
-        window.cityName = event.target.textContent;
+        this.cityId = event.target.id;
+        this.cityName = event.target.textContent;
 
-        const objWidget = new WeatherWidget(generateWidget.paramsWidget, generateWidget.controlsWidget, generateWidget.urls);
-        objWidget.render();
+        clearWidgetContainer();
+        renderWidgets(this.cityId);
 
       }
     }
