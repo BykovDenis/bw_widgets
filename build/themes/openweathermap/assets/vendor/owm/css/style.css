@@ -1926,6 +1926,23 @@ th {
   .widget-choose__label {
     cursor: pointer; }
 
+.city-list {
+  padding: 0;
+  list-style: none;
+  color: #333333; }
+  .city-list__link {
+    cursor: pointer; }
+    .city-list__link:hover {
+      text-decoration: underline;
+      color: #6a6a6a; }
+    .city-list__link:active {
+      text-decoration: underline;
+      color: #494949; }
+  .city-list__radio {
+    display: none; }
+  .city-list__radio:checked + .city-list__link::after {
+    content: 'selected'; }
+
 /* При переносе в общую сборку закоментить */
 /* ------------------------------------------
 CSS TOGGLE SWITCHES (Ionu? Colceriu)

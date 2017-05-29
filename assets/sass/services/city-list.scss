@@ -1,0 +1,23 @@
+.city-list {
+  padding: 0;
+  list-style: none;
+  color: $color-black;
+  &__link{
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      color: $color-black + 55;
+    }
+    &:active {
+      text-decoration: underline;
+      color: $color-black + 22;
+    }
+  }
+  &__radio {
+    display: none;
+  }
+
+  &__radio:checked + &__link::after {
+    content: 'selected';
+  }
+}
