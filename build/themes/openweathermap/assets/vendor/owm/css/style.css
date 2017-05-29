@@ -373,7 +373,6 @@ th {
     display: none;
     width: auto;
     margin: 0 auto;
-    max-width: 970px;
     padding: 0; }
     .widget__layout::after {
       display: table;
@@ -583,7 +582,12 @@ th {
     display: block;
     margin: 10px auto;
     width: 570px;
-    height: 450px; }
+    height: 240px;
+    word-break: break-all;
+    border: none;
+    outline: 1px solid #E3E7E8; }
+    .popup__items:focus {
+      outline: 1px solid #D4DBDC; }
   .popup__close {
     position: absolute;
     top: 8px;

@@ -37,188 +37,190 @@
     <div id="frm-landing-widget" class="container widget">
       <!-- Лендинг с информацией по виджетам-->
       <h1 class="widget__title">Get a code for posting a weather forecast widget on your site.</h1>
-      <form class="widget-form navbar-form">               
-        <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <dl>
-            <dt>
-              <label class="aria-label">Your API key:</label>
-            </dt>
-            <dd>
-              <input id="api-key" type="text" required="required" class="form-control"/><span id="error-key"></span>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <label class="aria-label">Your city name</label>
-            </dt>
-            <dd>
-              <input id="city-name" type="text" value="London" class="form-control"/>
-            </dd>
-          </dl>
-          <button id="search-city" type="button" class="container-custom-card__btn-search"> <i class="fa fa-question-circle"></i> Search city</button>
+      <form class="widget-form navbar-form">
+        <div class="row">               
+          <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <dl>
+              <dt>
+                <label class="aria-label">Your API key:</label>
+              </dt>
+              <dd>
+                <input id="api-key" type="text" required="required" class="form-control"/><span id="error-key"></span>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <label class="aria-label">Your city name</label>
+              </dt>
+              <dd>
+                <input id="city-name" type="text" value="London" class="form-control"/>
+              </dd>
+            </dl>
+            <button id="search-city" type="button" class="container-custom-card__btn-search"> <i class="fa fa-question-circle"></i> Search city</button>
+          </div>
+          <div class="container-custom-card__cities col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <dl>
+              <dt>
+                <label class="area-label"> Select your city</label>
+              </dt>
+              <dd>
+                <div id="cities"></div>
+              </dd>
+            </dl>
+          </div>
+          <div class="widget-form__cities col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <dl>
+              <dt class="widget-form__title">
+                <label class="area-label"> Select type widgets</label>
+              </dt>
+              <dd class="widget-form__types">
+                <ul class="widget-choose">
+                  <li class="widget-choose__item">
+                    <label class="widget-choose__label">
+                      <input type="radio" id="widget-brown" name="type-widget" checked="checked"/><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown"/>
+                    </label>
+                  </li>
+                  <li class="widget-choose__item">
+                    <label class="widget-choose__label">
+                      <input type="radio" id="widget-blue" name="type-widget"/><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray"/>
+                    </label>
+                  </li>
+                  <li class="widget-choose__item">
+                    <label class="widget-choose__label">
+                      <input type="radio" id="widget-gray" name="type-widget"/><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown"/>
+                    </label>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <div style="display:none;" class="container-custom-card__item"></div>
+          </div>
         </div>
-        <div class="container-custom-card__cities col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <dl>
-            <dt>
-              <label class="area-label"> Select your city</label>
-            </dt>
-            <dd>
-              <div id="cities"></div>
-            </dd>
-          </dl>
+        <div id="widget-brown-container" class="widget__layout">   
+          <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">
+            <div class="container-custom__item">
+              <div class="container-custom__left">
+                <div class="container-custom__left-row1">
+                  <div class="container-custom-card">                 
+                    <div id="openweathermap-widget-11"></div><span id="widget-1-left-brown" class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                </div>
+                <div class="container-custom__left-row2">
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">                   
+                      <div id="openweathermap-widget-12"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-13"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-14"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1 container-custom__item--type1">
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-16"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-17"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code         </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-custom__right">           
+                <div class="container-custom-card">
+                  <div id="openweathermap-widget-15"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
+                </div>
+                <div class="container-custom container-custom--type1">
+                  <div class="container-custom-card">
+                    <div id="openweathermap-widget-18"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code  </span>
+                  </div>
+                  <div class="container-custom-card">
+                    <div id="openweathermap-widget-19"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="widget-form__cities col-xs-12 col-sm-12 col-md-5 col-lg-5">
-          <dl>
-            <dt class="widget-form__title">
-              <label class="area-label"> Select type widgets</label>
-            </dt>
-            <dd class="widget-form__types">
-              <ul class="widget-choose">
-                <li class="widget-choose__item">
-                  <label class="widget-choose__label">
-                    <input type="radio" id="widget-brown" name="type-widget" checked="checked"/><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown"/>
-                  </label>
-                </li>
-                <li class="widget-choose__item">
-                  <label class="widget-choose__label">
-                    <input type="radio" id="widget-blue" name="type-widget"/><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray"/>
-                  </label>
-                </li>
-                <li class="widget-choose__item">
-                  <label class="widget-choose__label">
-                    <input type="radio" id="widget-gray" name="type-widget"/><img src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown"/>
-                  </label>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-          <div style="display:none;" class="container-custom-card__item"></div>
+        <div id="widget-blue-container" class="widget__layout">   
+          <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">         
+            <div class="container-custom__item">
+              <div class="container-custom__left">
+                <div class="container-custom__left-row1">
+                  <div class="container-custom-card">                 
+                    <div id="openweathermap-widget-1"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                </div>
+                <div class="container-custom__left-row2">
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">                   
+                      <div id="openweathermap-widget-2"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1">
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-3"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-4"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                    </div>
+                  </div>
+                  <div class="container-custom__left-row2-col1 container-custom__item--type1">
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-6"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
+                    </div>
+                    <div class="container-custom-card">
+                      <div id="openweathermap-widget-7"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code         </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-custom__right">           
+                <div class="container-custom-card">
+                  <div id="openweathermap-widget-5"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
+                </div>
+                <div class="container-custom container-custom--type1">
+                  <div class="container-custom-card">
+                    <div id="openweathermap-widget-8"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code  </span>
+                  </div>
+                  <div class="container-custom-card">
+                    <div id="openweathermap-widget-9"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="widget-gray-container" class="widget__layout">   
+          <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">         
+            <div class="container-custom__item">
+              <div class="container-custom__left">
+                <div class="container-custom__left-row1">
+                  <div class="container-custom-card">                 
+                    <div id="openweathermap-widget-21"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                </div>
+                <div class="container-custom__left-row2">
+                  <div class="container-custom-card">
+                    <div id="openweathermap-widget-23"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                  <div class="container-custom-card">
+                    <div id="openweathermap-widget-24"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                  </div>
+                </div>
+              </div>
+              <div class="container-custom__right">                                                 
+                <div class="container-custom-card">
+                  <div id="openweathermap-widget-22"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
-    </div>
-    <div id="widget-brown-container" class="widget__layout">   
-      <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">
-        <div class="container-custom__item">
-          <div class="container-custom__left">
-            <div class="container-custom__left-row1">
-              <div class="container-custom-card">                 
-                <div id="openweathermap-widget-11"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-            </div>
-            <div class="container-custom__left-row2">
-              <div class="container-custom__left-row2-col1">
-                <div class="container-custom-card">                   
-                  <div id="openweathermap-widget-12"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-                </div>
-              </div>
-              <div class="container-custom__left-row2-col1">
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-13"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-                </div>
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-14"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-                </div>
-              </div>
-              <div class="container-custom__left-row2-col1 container-custom__item--type1">
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-16"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
-                </div>
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-17"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code         </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-custom__right">           
-            <div class="container-custom-card">
-              <div id="openweathermap-widget-15"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
-            </div>
-            <div class="container-custom container-custom--type1">
-              <div class="container-custom-card">
-                <div id="openweathermap-widget-18"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code  </span>
-              </div>
-              <div class="container-custom-card">
-                <div id="openweathermap-widget-19"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="widget-blue-container" class="widget__layout">   
-      <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">         
-        <div class="container-custom__item">
-          <div class="container-custom__left">
-            <div class="container-custom__left-row1">
-              <div class="container-custom-card">                 
-                <div id="openweathermap-widget-1"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-            </div>
-            <div class="container-custom__left-row2">
-              <div class="container-custom__left-row2-col1">
-                <div class="container-custom-card">                   
-                  <div id="openweathermap-widget-2"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-                </div>
-              </div>
-              <div class="container-custom__left-row2-col1">
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-3"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-                </div>
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-4"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-                </div>
-              </div>
-              <div class="container-custom__left-row2-col1 container-custom__item--type1">
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-6"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
-                </div>
-                <div class="container-custom-card">
-                  <div id="openweathermap-widget-7"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code         </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-custom__right">           
-            <div class="container-custom-card">
-              <div id="openweathermap-widget-5"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code </span>
-            </div>
-            <div class="container-custom container-custom--type1">
-              <div class="container-custom-card">
-                <div id="openweathermap-widget-8"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code  </span>
-              </div>
-              <div class="container-custom-card">
-                <div id="openweathermap-widget-9"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="widget-gray-container" class="widget__layout">   
-      <div class="container-custom__item col-xs-12 col-sm-12 col-lg-12">         
-        <div class="container-custom__item">
-          <div class="container-custom__left">
-            <div class="container-custom__left-row1">
-              <div class="container-custom-card">                 
-                <div id="openweathermap-widget-21"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-            </div>
-            <div class="container-custom__left-row2">
-              <div class="container-custom-card">
-                <div id="openweathermap-widget-23"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-              <div class="container-custom-card">
-                <div id="openweathermap-widget-24"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-              </div>
-            </div>
-          </div>
-          <div class="container-custom__right">                                                 
-            <div class="container-custom-card">
-              <div id="openweathermap-widget-22"></div><span class="container-custom-card__btn container-custom-card__btn--brown"><i class="fa fa-clone"></i> Get a code</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <div id="scripts">  </div>
     <script src="themes/openweathermap/assets/vendor/owm/js/d3.min.js">             </script>

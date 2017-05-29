@@ -39,186 +39,187 @@ html(lang="en")
     .container.widget#frm-landing-widget
         // Лендинг с информацией по виджетам
         h1.widget__title Get a code for posting a weather forecast widget on your site.
-        form.widget-form.navbar-form                
-          .form-group.col-xs-12.col-sm-12.col-md-3.col-lg-3
-            dl
-                dt
-                    label.aria-label Your API key:
-                dd
-                    input.form-control#api-key(type="text" required)
-                    span#error-key
-            dl
-                dt
-                    label.aria-label Your city name
-                dd
-                    input.form-control#city-name(type="text" value="London")
-            button#search-city.container-custom-card__btn-search(type="button") 
-              i.fa.fa-question-circle
-              |  Search city
-          .container-custom-card__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
-            dl
-                dt
-                    label.area-label  Select your city
-                dd
-                    div#cities
-          .widget-form__cities.col-xs-12.col-sm-12.col-md-5.col-lg-5
-            dl
-                dt.widget-form__title
-                    label.area-label  Select type widgets
-                dd.widget-form__types
-                  ul.widget-choose
-                    li.widget-choose__item
-                      label.widget-choose__label
-                        input(type="radio" id="widget-brown" name="type-widget" checked)
-                        img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown")                                                            
-                    li.widget-choose__item
-                      label.widget-choose__label
-                        input(type="radio" id="widget-blue" name="type-widget")
-                        img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray")                    
-                    li.widget-choose__item
-                      label.widget-choose__label
-                        input(type="radio" id="widget-gray" name="type-widget")
-                        img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                                            
-            .container-custom-card__item(style="display:none;")
-    .widget__layout#widget-brown-container    
-      .container-custom__item.col-xs-12.col-sm-12.col-lg-12
-        .container-custom__item
-          .container-custom__left
-            .container-custom__left-row1
-              .container-custom-card                  
-                div#openweathermap-widget-11
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-            .container-custom__left-row2
-              .container-custom__left-row2-col1
-                .container-custom-card                    
-                  div#openweathermap-widget-12
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code
-              .container-custom__left-row2-col1
-                .container-custom-card
-                  div#openweathermap-widget-13
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code
-                .container-custom-card
-                  div#openweathermap-widget-14
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code
-              .container-custom__left-row2-col1.container-custom__item--type1
-                .container-custom-card
-                  div#openweathermap-widget-16
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code 
-                .container-custom-card
-                  div#openweathermap-widget-17
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code         
-          .container-custom__right            
-            .container-custom-card
-              div#openweathermap-widget-15
-              span.container-custom-card__btn.container-custom-card__btn--brown
-                i.fa.fa-clone
-                |  Get a code 
-            .container-custom.container-custom--type1
-              .container-custom-card
-                div#openweathermap-widget-18
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code  
-              .container-custom-card
-                div#openweathermap-widget-19
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-    .widget__layout#widget-blue-container    
-      .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
-        .container-custom__item
-          .container-custom__left
-            .container-custom__left-row1
-              .container-custom-card                  
-                div#openweathermap-widget-1
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-            .container-custom__left-row2
-              .container-custom__left-row2-col1
-                .container-custom-card                    
-                  div#openweathermap-widget-2
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code
-              .container-custom__left-row2-col1
-                .container-custom-card
-                  div#openweathermap-widget-3
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code
-                .container-custom-card
-                  div#openweathermap-widget-4
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code
-              .container-custom__left-row2-col1.container-custom__item--type1
-                .container-custom-card
-                  div#openweathermap-widget-6
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code 
-                .container-custom-card
-                  div#openweathermap-widget-7
-                  span.container-custom-card__btn.container-custom-card__btn--brown
-                    i.fa.fa-clone
-                    |  Get a code         
-          .container-custom__right            
-            .container-custom-card
-              div#openweathermap-widget-5
-              span.container-custom-card__btn.container-custom-card__btn--brown
-                i.fa.fa-clone
-                |  Get a code 
-            .container-custom.container-custom--type1
-              .container-custom-card
-                div#openweathermap-widget-8
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code  
-              .container-custom-card
-                div#openweathermap-widget-9
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-    .widget__layout#widget-gray-container    
-      .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
-        .container-custom__item
-          .container-custom__left
-            .container-custom__left-row1
-              .container-custom-card                  
-                div#openweathermap-widget-21
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-            .container-custom__left-row2
-              .container-custom-card
-                div#openweathermap-widget-23
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-              .container-custom-card
-                div#openweathermap-widget-24
-                span.container-custom-card__btn.container-custom-card__btn--brown
-                  i.fa.fa-clone
-                  |  Get a code
-          .container-custom__right                                                  
-            .container-custom-card
-              div#openweathermap-widget-22
-              span.container-custom-card__btn.container-custom-card__btn--brown
-                i.fa.fa-clone
-                |  Get a code
+        form.widget-form.navbar-form
+          .row                
+            .form-group.col-xs-12.col-sm-12.col-md-3.col-lg-3
+              dl
+                  dt
+                      label.aria-label Your API key:
+                  dd
+                      input.form-control#api-key(type="text" required)
+                      span#error-key
+              dl
+                  dt
+                      label.aria-label Your city name
+                  dd
+                      input.form-control#city-name(type="text" value="London")
+              button#search-city.container-custom-card__btn-search(type="button") 
+                i.fa.fa-question-circle
+                |  Search city
+            .container-custom-card__cities.col-xs-12.col-sm-12.col-md-4.col-lg-4
+              dl
+                  dt
+                      label.area-label  Select your city
+                  dd
+                      div#cities
+            .widget-form__cities.col-xs-12.col-sm-12.col-md-5.col-lg-5
+              dl
+                  dt.widget-form__title
+                      label.area-label  Select type widgets
+                  dd.widget-form__types
+                    ul.widget-choose
+                      li.widget-choose__item
+                        label.widget-choose__label
+                          input(type="radio" id="widget-brown" name="type-widget" checked)
+                          img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-brown.jpg" width="250" alt="type brown")                                                            
+                      li.widget-choose__item
+                        label.widget-choose__label
+                          input(type="radio" id="widget-blue" name="type-widget")
+                          img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-blue.jpg" width="250" alt="type gray")                    
+                      li.widget-choose__item
+                        label.widget-choose__label
+                          input(type="radio" id="widget-gray" name="type-widget")
+                          img(src="themes/openweathermap/assets/vendor/owm/img/widgets/type-gray.jpg" width="250" alt="type brown")                                                            
+              .container-custom-card__item(style="display:none;")
+          .widget__layout#widget-brown-container    
+            .container-custom__item.col-xs-12.col-sm-12.col-lg-12
+              .container-custom__item
+                .container-custom__left
+                  .container-custom__left-row1
+                    .container-custom-card                  
+                      div#openweathermap-widget-11
+                      span#widget-1-left-brown.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+                  .container-custom__left-row2
+                    .container-custom__left-row2-col1
+                      .container-custom-card                    
+                        div#openweathermap-widget-12
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code
+                    .container-custom__left-row2-col1
+                      .container-custom-card
+                        div#openweathermap-widget-13
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code
+                      .container-custom-card
+                        div#openweathermap-widget-14
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code
+                    .container-custom__left-row2-col1.container-custom__item--type1
+                      .container-custom-card
+                        div#openweathermap-widget-16
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code 
+                      .container-custom-card
+                        div#openweathermap-widget-17
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code         
+                .container-custom__right            
+                  .container-custom-card
+                    div#openweathermap-widget-15
+                    span.container-custom-card__btn.container-custom-card__btn--brown
+                      i.fa.fa-clone
+                      |  Get a code 
+                  .container-custom.container-custom--type1
+                    .container-custom-card
+                      div#openweathermap-widget-18
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code  
+                    .container-custom-card
+                      div#openweathermap-widget-19
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+          .widget__layout#widget-blue-container    
+            .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
+              .container-custom__item
+                .container-custom__left
+                  .container-custom__left-row1
+                    .container-custom-card                  
+                      div#openweathermap-widget-1
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+                  .container-custom__left-row2
+                    .container-custom__left-row2-col1
+                      .container-custom-card                    
+                        div#openweathermap-widget-2
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code
+                    .container-custom__left-row2-col1
+                      .container-custom-card
+                        div#openweathermap-widget-3
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code
+                      .container-custom-card
+                        div#openweathermap-widget-4
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code
+                    .container-custom__left-row2-col1.container-custom__item--type1
+                      .container-custom-card
+                        div#openweathermap-widget-6
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code 
+                      .container-custom-card
+                        div#openweathermap-widget-7
+                        span.container-custom-card__btn.container-custom-card__btn--brown
+                          i.fa.fa-clone
+                          |  Get a code         
+                .container-custom__right            
+                  .container-custom-card
+                    div#openweathermap-widget-5
+                    span.container-custom-card__btn.container-custom-card__btn--brown
+                      i.fa.fa-clone
+                      |  Get a code 
+                  .container-custom.container-custom--type1
+                    .container-custom-card
+                      div#openweathermap-widget-8
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code  
+                    .container-custom-card
+                      div#openweathermap-widget-9
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+          .widget__layout#widget-gray-container    
+            .container-custom__item.col-xs-12.col-sm-12.col-lg-12          
+              .container-custom__item
+                .container-custom__left
+                  .container-custom__left-row1
+                    .container-custom-card                  
+                      div#openweathermap-widget-21
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+                  .container-custom__left-row2
+                    .container-custom-card
+                      div#openweathermap-widget-23
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+                    .container-custom-card
+                      div#openweathermap-widget-24
+                      span.container-custom-card__btn.container-custom-card__btn--brown
+                        i.fa.fa-clone
+                        |  Get a code
+                .container-custom__right                                                  
+                  .container-custom-card
+                    div#openweathermap-widget-22
+                    span.container-custom-card__btn.container-custom-card__btn--brown
+                      i.fa.fa-clone
+                      |  Get a code
     div#scripts   
     script(src='themes/openweathermap/assets/vendor/owm/js/d3.min.js')              
     script(src='/themes/openweathermap/assets/vendor/owm/js/weather-widgets-constructor.js')  

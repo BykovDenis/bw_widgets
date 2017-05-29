@@ -14,9 +14,9 @@ export default class Cities {
   constructor(params) {
     //cityName, container, widgetTypeActive
     this.params = params;
-    const generateWidget = new GeneratorWidget();
-    generateWidget.setInitialStateForm();
-    this.params.units = generateWidget.unitsTemp[0];
+    this.generateWidget = new GeneratorWidget();
+    this.generateWidget.setInitialStateForm();
+    this.params.units = this.generateWidget.unitsTemp[0];
     if (!this.params.cityName) {
       return false;
     }
@@ -85,14 +85,11 @@ export default class Cities {
       let selectedCity = event.target.parentElement.querySelector('#selectedCity');
       if (!selectedCity) {
         event.target.parentElement.insertBefore(this.selCitySign, event.target.parentElement.children[1]);
-
-        const generateWidget = new GeneratorWidget();
-
         // Подстановка найденого города
-        generateWidget.paramsWidget.cityId = event.target.id;
-        generateWidget.paramsWidget.cityName = event.target.textContent;
-        generateWidget.paramsWidget.units = this.units;
-        generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
+        this.generateWidget.paramsWidget.cityId = event.target.id;
+        this.generateWidget.paramsWidget.cityName = event.target.textContent;
+        this.generateWidget.paramsWidget.units = this.units;
+        this.generateWidget.setInitialStateForm(event.target.id, event.target.textContent);
         this.params.cityId = event.target.id;
         this.paramscityName = event.target.textContent;
 

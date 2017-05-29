@@ -6,10 +6,9 @@ import Cookies from './Cookies';
 export default class GeneratorWidget {
     constructor() {
 
-        this.baseURL = `${document.location.protocol}//openweathermap.org/themes/openweathermap/assets/vendor/owm`;
+        this.baseURL = `${document.location.protocol}//phase.owm.io/themes/openweathermap/assets/vendor/owm`;
         this.scriptD3SRC = `${this.baseURL}/js/libs/d3.min.js`;
         this.scriptSRC = `${this.baseURL}/js/weather-widget-generator.js`;
-
         this.controlsWidget = {
             // Первая половина виджетов
             cityName: document.querySelectorAll('.widget-left-menu__header'),
@@ -34,130 +33,198 @@ export default class GeneratorWidget {
             apiKey: document.getElementById('api-key'),
             errorKey: document.getElementById('error-key'),
         };
-
+        this.initForm = false;
         this.initialMetricTemperature();
         this.validationAPIkey();
         this.setInitialStateForm();
+    }
 
-        // объект-карта для сопоставления всех виджетов с кнопкой-инициатором их вызова для генерации кода
-        this.mapWidgets = {
-            'widget-1-left-blue' : {
-                id: 1,
-                code: this.getCodeForGenerateWidget(1),
-                schema: 'blue',
-            },
-            'widget-2-left-blue' : {
-                id: 2,
-                code: this.getCodeForGenerateWidget(2),
-                schema: 'blue',
-            },
-            'widget-3-left-blue' : {
-                id: 3,
-                code: this.getCodeForGenerateWidget(3),
-                schema: 'blue',
-            },
-            'widget-4-left-blue' : {
-                id: 4,
-                code: this.getCodeForGenerateWidget(4),
-                schema: 'blue',
-            },
-            'widget-5-right-blue' : {
-                id: 5,
-                code: this.getCodeForGenerateWidget(5),
-                schema: 'blue',
-            },
-            'widget-6-right-blue' : {
-                id: 6,
-                code: this.getCodeForGenerateWidget(6),
-                schema: 'blue',
-            },
-            'widget-7-right-blue' : {
-                id: 7,
-                code: this.getCodeForGenerateWidget(7),
-                schema: 'blue',
-            },
-            'widget-8-right-blue' : {
-                id: 8,
-                code: this.getCodeForGenerateWidget(8),
-                schema: 'blue',
-            },
-            'widget-9-right-blue' : {
-                id: 9,
-                code: this.getCodeForGenerateWidget(9),
-                schema: 'blue',
-            },
-            'widget-1-left-brown' : {
-                id: 11,
-                code: this.getCodeForGenerateWidget(11),
-                schema: 'brown',
-            },
-            'widget-2-left-brown' : {
-                id: 12,
-                code: this.getCodeForGenerateWidget(12),
-                schema: 'brown',
-            },
-            'widget-3-left-brown' : {
-                id: 13,
-                code: this.getCodeForGenerateWidget(13),
-                schema: 'brown',
-            },
-            'widget-4-left-brown' : {
-                id: 14,
-                code: this.getCodeForGenerateWidget(14),
-                schema: 'brown',
-            },
-            'widget-5-right-brown' : {
-                id: 15,
-                code: this.getCodeForGenerateWidget(15),
-                schema: 'brown',
-            },
-            'widget-6-right-brown' : {
-                id: 16,
-                code: this.getCodeForGenerateWidget(16),
-                schema: 'brown',
-            },
-            'widget-7-right-brown' : {
-                id: 17,
-                code: this.getCodeForGenerateWidget(17),
-                schema: 'brown',
-            },
-            'widget-8-right-brown' : {
-                id: 18,
-                code: this.getCodeForGenerateWidget(18),
-                schema: 'brown',
-            },
-            'widget-9-right-brown' : {
-                id: 19,
-                code: this.getCodeForGenerateWidget(19),
-                schema: 'brown',
-            },
-            'widget-1-left-white' : {
-                id: 21,
-                code: this.getCodeForGenerateWidget(21),
-                schema: 'none',
-            },
-            'widget-2-left-white' : {
-                id: 22,
-                code: this.getCodeForGenerateWidget(22),
-                schema: 'none',
-            },
-            'widget-3-left-white' : {
-                id: 23,
-                code: this.getCodeForGenerateWidget(23),
-                schema: 'none',
-            },
-            'widget-4-left-white' : {
-                id: 24,
-                code: this.getCodeForGenerateWidget(24),
-                schema: 'none',
-            },
-            'widget-31-right-brown' : {
-                id: 31,
-                code: this.getCodeForGenerateWidget(31),
-                schema: 'brown',
-            },
-        };
+    /**
+     * [mapWidgets метод для сопоставления всех виджетов с
+     * кнопкой-инициатором их вызова для генерации кода]
+     * @param  {[type]} widgetID [description]
+     * @return {[type]}          [description]
+     */
+    mapWidgets(widgetID) {
+      switch(widgetID) {
+        case 'widget-1-left-blue' :
+          return {
+            id: 1,
+            code: this.getCodeForGenerateWidget(1),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-2-left-blue' :
+          return {
+            id: 2,
+            code: this.getCodeForGenerateWidget(2),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-3-left-blue' :
+          return {
+            id: 3,
+            code: this.getCodeForGenerateWidget(3),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-4-left-blue' :
+          return {
+            id: 4,
+            code: this.getCodeForGenerateWidget(4),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-5-right-blue' :
+          return {
+            id: 5,
+            code: this.getCodeForGenerateWidget(5),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-6-right-blue' :
+          return {
+            id: 6,
+            code: this.getCodeForGenerateWidget(6),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-7-right-blue' :
+          return {
+            id: 7,
+            code: this.getCodeForGenerateWidget(7),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-8-right-blue' :
+          return {
+            id: 8,
+            code: this.getCodeForGenerateWidget(8),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-9-right-blue' :
+          return {
+            id: 9,
+            code: this.getCodeForGenerateWidget(9),
+            schema: 'blue',
+          };
+          break;
+        case 'widget-1-left-brown' :
+          return {
+            id: 11,
+            code: this.getCodeForGenerateWidget(11),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-2-left-brown' :
+          return {
+            id: 12,
+            code: this.getCodeForGenerateWidget(12),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-3-left-brown' :
+          return {
+            id: 13,
+            code: this.getCodeForGenerateWidget(13),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-4-left-brown' :
+          return {
+            id: 14,
+            code: this.getCodeForGenerateWidget(14),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-5-right-brown' :
+          return {
+            id: 15,
+            code: this.getCodeForGenerateWidget(15),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-6-right-brown' :
+          return {
+            id: 16,
+            code: this.getCodeForGenerateWidget(16),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-7-right-brown' :
+          return {
+            id: 17,
+            code: this.getCodeForGenerateWidget(17),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-8-right-brown' :
+          return {
+            id: 18,
+            code: this.getCodeForGenerateWidget(18),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-9-right-brown' :
+          return {
+            id: 19,
+            code: this.getCodeForGenerateWidget(19),
+            schema: 'brown',
+          };
+          break;
+        case 'widget-1-left-white' :
+          return {
+            id: 21,
+            code: this.getCodeForGenerateWidget(21),
+            schema: 'none',
+          };
+          break;
+        case 'widget-2-left-white' :
+          return {
+            id: 22,
+            code: this.getCodeForGenerateWidget(22),
+            schema: 'none',
+          };
+          break;
+        case 'widget-3-left-white' :
+          return {
+            id: 23,
+            code: this.getCodeForGenerateWidget(23),
+            schema: 'none',
+          };
+          break;
+        case 'widget-4-left-white' :
+          return {
+            id: 24,
+            code: this.getCodeForGenerateWidget(24),
+            schema: 'none',
+          };
+          break;
+        case 'widget-31-right-brown' :
+          return {
+            id: 31,
+            code: this.getCodeForGenerateWidget(31),
+            schema: 'brown',
+          };
+          break;
+      }
+    };
 
+    /**
+     * [defaultAppIdProps description]
+     * @return {[type]} [description]
+     */
+    get defaultAppIdProps() {
+      return this.defaultAppid;
+    }
+    /**
+     * [defaultAppIdProps description]
+     * @param  {[type]} appid [description]
+     * @return {[type]}       [description]
+     */
+    set defaultAppIdProps(appid) {
+      this.defaultAppid = appid;
     }
 
     /**
@@ -260,32 +327,39 @@ export default class GeneratorWidget {
     }
 
     getCodeForGenerateWidget(id) {
-        if(id && (this.paramsWidget.cityId || this.paramsWidget.cityName) && this.paramsWidget.appid) {
-            let code = '';
-            if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21 || parseInt(id) === 31) {
-                code = `<script src='${document.location.protocol}//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>`;
-            }
-            return `${code}<div id='openweathermap-widget'></div>
-                    <script type='text/javascript'>
-                    window.myWidgetParam = {
-                        id: ${id},
-                        cityid: ${this.paramsWidget.cityId},
-                        appid: '${this.paramsWidget.appid.replace(`2d90837ddbaeda36ab487f257829b667`,'')}',
-                        units: '${this.paramsWidget.units}',
-                        containerid: 'openweathermap-widget',
-                    };
-                    (function() {
-                        var script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.async = true;
-                        script.src = '${document.location.protocol}//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js';
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(script, s);
-                    })();
-                  </script>`;
-        }
+      const appid = this.paramsWidget.appid;
+      if (!appid) {
+        this.controlsWidget.errorKey.innerText = 'Validation error';
+        this.controlsWidget.errorKey.classList.remove('widget-form--good');
+        this.controlsWidget.errorKey.classList.add('widget-form--error');
+        //alert('append your APIKEY');
+        console.log('append your APIKEY');
+        return;
+      }
+      if(id && (this.paramsWidget.cityId || this.paramsWidget.cityName)) {
+          let code = '';
+          if(parseInt(id) === 1 || parseInt(id) === 11 || parseInt(id) === 21 || parseInt(id) === 31) {
+              code = `<script src='${this.baseURL}/js/d3.min.js'></script>`;
+          }
+          const codeWidget = `<div id="openweathermap-widget-${id}"></div>\r\n${code}${(`<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+            window.myWidgetParam.push({
+                id: ${id},
+                cityid: ${appid}',
+                units: '${this.paramsWidget.units}',
+                containerid: 'openweathermap-widget-${id}',
+            });
+            (function() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = "${this.baseURL}/js/weather-widget-generator-2.0.js";
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(script, s);
+            })();
+          </script>`).replace(/[\r\n] | [\s] /g,'')}`;
+          return codeWidget;
+      }
 
-        return null;
+      return null;
     }
 
     setInitialStateForm(cityId=2643743, cityName='London') {
@@ -294,7 +368,7 @@ export default class GeneratorWidget {
             cityId: cityId,
             cityName: cityName,
             lang: 'en',
-            appid: document.getElementById('api-key').value ||  '2d90837ddbaeda36ab487f257829b667',
+            appid: document.getElementById('api-key').value,
             units: this.unitsTemp[0],
             textUnitTemp: this.unitsTemp[1],  // 248
             baseURL: this.baseURL,

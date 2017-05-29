@@ -21,6 +21,7 @@ const params = {
   container: cities
 };
 
+const popup = new Popup(params.cityId, params.cityName);
 widgetChoosen = widgetChoosen.bind(this);
 // прослушивание событий изменения по отображению типа виджетов
 widgetChoose.addEventListener('change', widgetChoosen, false);
